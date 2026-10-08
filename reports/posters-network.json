@@ -1,0 +1,1538 @@
+{
+  "checkedAt": "2026-10-08T21:23:41.922Z",
+  "total": 255,
+  "passed": 255,
+  "missing": [],
+  "results": [
+    {
+      "id": "mcu-2008-iron-man",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg"
+    },
+    {
+      "id": "mcu-2008-the-incredible-hulk",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg"
+    },
+    {
+      "id": "mcu-2010-iron-man-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg"
+    },
+    {
+      "id": "mcu-2011-captain-america-the-first-avenger",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg"
+    },
+    {
+      "id": "mcu-2011-thor",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg"
+    },
+    {
+      "id": "mcu-2013-iron-man-3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg"
+    },
+    {
+      "id": "mcu-2014-captain-america-the-winter-soldier",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg"
+    },
+    {
+      "id": "mcu-2013-thor-the-dark-world",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg"
+    },
+    {
+      "id": "mcu-2015-ant-man",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg"
+    },
+    {
+      "id": "mcu-2012-the-avengers",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg"
+    },
+    {
+      "id": "mcu-2015-avengers-age-of-ultron",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg"
+    },
+    {
+      "id": "mcu-2014-guardians-of-the-galaxy",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg"
+    },
+    {
+      "id": "mcu-2016-captain-america-civil-war",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg"
+    },
+    {
+      "id": "mcu-2016-doctor-strange",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg"
+    },
+    {
+      "id": "mcu-2017-spider-man-homecoming",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg"
+    },
+    {
+      "id": "mcu-2017-guardians-of-the-galaxy-vol-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg"
+    },
+    {
+      "id": "mcu-2018-black-panther",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+    },
+    {
+      "id": "mcu-2018-ant-man-and-the-wasp",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cFQEO687n1K6umXbInzocxcnAQz.jpg"
+    },
+    {
+      "id": "mcu-2017-thor-ragnarok",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg"
+    },
+    {
+      "id": "mcu-2018-avengers-infinity-war",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+    },
+    {
+      "id": "mcu-2019-captain-marvel",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg"
+    },
+    {
+      "id": "mcu-2019-spider-man-far-from-home",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg"
+    },
+    {
+      "id": "mcu-2019-avengers-endgame",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg"
+    },
+    {
+      "id": "mcu-2021-black-widow",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg"
+    },
+    {
+      "id": "mcu-2021-shang-chi-and-the-legend-of-the-ten-rings",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg"
+    },
+    {
+      "id": "mcu-2021-spider-man-no-way-home",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"
+    },
+    {
+      "id": "mcu-2022-doctor-strange-in-the-multiverse-of-madness",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg"
+    },
+    {
+      "id": "mcu-2021-eternals",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/lFByFSLV5WDJEv3KabbdAF959F2.jpg"
+    },
+    {
+      "id": "mcu-2022-black-panther-wakanda-forever",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg"
+    },
+    {
+      "id": "mcu-2023-ant-man-and-the-wasp-quantumania",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg"
+    },
+    {
+      "id": "mcu-2024-deadpool-wolverine",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+    },
+    {
+      "id": "mcu-2022-thor-love-and-thunder",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
+    },
+    {
+      "id": "mcu-2023-guardians-of-the-galaxy-vol-3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg"
+    },
+    {
+      "id": "mcu-2025-captain-america-brave-new-world",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg"
+    },
+    {
+      "id": "mcu-2023-the-marvels",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg"
+    },
+    {
+      "id": "mcu-2026-spider-man-brand-new-day",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg"
+    },
+    {
+      "id": "mcu-2025-the-fantastic-four-first-steps",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nf5qaSEvyYSNeFH0YhSs5EsBLX9.jpg"
+    },
+    {
+      "id": "mcu-2025-thunderbolts",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg"
+    },
+    {
+      "id": "mcu-2027-avengers-secret-wars",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/f0YBuh4hyiAheXhh4JnJWoKi9g5.jpg"
+    },
+    {
+      "id": "mcu-2026-avengers-doomsday",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg"
+    },
+    {
+      "id": "x-men-2009-x-men-origins-wolverine",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/yj8LbTju1p7CUJg7US2unSBk33s.jpg"
+    },
+    {
+      "id": "x-men-2006-x-men-the-last-stand",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg"
+    },
+    {
+      "id": "x-men-2003-x2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bst4alFUXCxISwdRUKSMhhkrX1M.jpg"
+    },
+    {
+      "id": "x-men-2011-x-men-first-class",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hNEokmUke0dazoBhttFN0o3L7Xv.jpg"
+    },
+    {
+      "id": "x-men-2014-x-men-days-of-future-past",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/tYfijzolzgoMOtegh1Y7j2Enorg.jpg"
+    },
+    {
+      "id": "x-men-2000-x-men",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bRDAc4GogyS9ci3ow7UnInOcriN.jpg"
+    },
+    {
+      "id": "x-men-2013-the-wolverine",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/t2wVAcoRlKvEIVSbiYDb8d0QqqS.jpg"
+    },
+    {
+      "id": "x-men-2018-deadpool-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg"
+    },
+    {
+      "id": "x-men-2016-deadpool",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg"
+    },
+    {
+      "id": "x-men-2016-x-men-apocalypse",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/ikA8UhYdTGpqbatFa93nIf6noSr.jpg"
+    },
+    {
+      "id": "x-men-2017-logan",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg"
+    },
+    {
+      "id": "x-men-2019-dark-phoenix",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cCTJPelKGLhALq3r51A9uMonxKj.jpg"
+    },
+    {
+      "id": "spider-man-2002-spider-man",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/or6XJBVpcEbIkma0V9zshnbEtx4.jpg"
+    },
+    {
+      "id": "spider-man-2007-spider-man-3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg"
+    },
+    {
+      "id": "spider-man-2012-the-amazing-spider-man",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg"
+    },
+    {
+      "id": "spider-man-2004-spider-man-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg"
+    },
+    {
+      "id": "x-men-2020-the-new-mutants",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xiDGcXJTvu1lazFRYip6g1eLt9c.jpg"
+    },
+    {
+      "id": "sony-venom-2018-venom",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
+    },
+    {
+      "id": "spider-man-2014-the-amazing-spider-man-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bU7nTmvmy0h3VUP01v1T2imgH6N.jpg"
+    },
+    {
+      "id": "sony-venom-2021-venom-let-there-be-carnage",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pzKsRuKLFmYrW5Q0q8E8G78Tcgo.jpg"
+    },
+    {
+      "id": "sony-venom-2024-madame-web",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg"
+    },
+    {
+      "id": "sony-venom-2022-morbius",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/Av8Z2jZhEm1FLkFzMThzz9hndJF.jpg"
+    },
+    {
+      "id": "sony-venom-2024-venom-the-last-dance",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg"
+    },
+    {
+      "id": "spider-verse-2018-spider-man-into-the-spider-verse",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
+    },
+    {
+      "id": "spider-verse-2023-spider-man-across-the-spider-verse",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg"
+    },
+    {
+      "id": "fantastic-four-2005-fantastic-four",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4YMcYEFS8sFuW3soP1HVmgR3cSm.jpg"
+    },
+    {
+      "id": "fantastic-four-2007-fantastic-four-rise-of-the-silver-surfer",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9wRfzTcMyyzkQxVDqBHv8RwuZOv.jpg"
+    },
+    {
+      "id": "spider-verse-2027-spider-man-beyond-the-spider-verse",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9KAe39xqyZnv9J4W3DRGdQqX82h.jpg"
+    },
+    {
+      "id": "spider-verse-2023-the-spider-within-a-spider-verse-story",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2xlk27ZW2WI6Q77SLEmwhUpz190.jpg"
+    },
+    {
+      "id": "legacy-1998-blade",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oWT70TvbsmQaqyphCZpsnQR7R32.jpg"
+    },
+    {
+      "id": "legacy-2002-blade-ii",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/wAn6VYamKbnOtfyTZ6arVtkMzDv.jpg"
+    },
+    {
+      "id": "legacy-2004-blade-trinity",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/6f7iXvPOnf83MaLB1JmPzUor1rr.jpg"
+    },
+    {
+      "id": "fantastic-four-2015-fantastic-four",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cDroz5qSlP8xZ6tOpeYoPkBvKyL.jpg"
+    },
+    {
+      "id": "legacy-2003-daredevil",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oCDBwSkntYamuw8VJIxMRCtDBmi.jpg"
+    },
+    {
+      "id": "sony-venom-2024-kraven-the-hunter",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/1GvBhRxY6MELDfxFrete6BNhBB5.jpg"
+    },
+    {
+      "id": "legacy-2005-elektra",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/Z4dAOxjAHTUZO6DJ2WVAsxzwe3.jpg"
+    },
+    {
+      "id": "legacy-2003-hulk",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/UllIft2jLSBaay3zQyMV4GNdfy.jpg"
+    },
+    {
+      "id": "legacy-1989-the-punisher",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/tA0O0hYyHX7Hl2Fl8VEtGtfBtjI.jpg"
+    },
+    {
+      "id": "legacy-2008-punisher-war-zone",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oOvKJgYUIpfswGHAdW6159bPbvM.jpg"
+    },
+    {
+      "id": "legacy-2004-the-punisher",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/7rmA1HwYp2GKM85BL0cVwCaosGr.jpg"
+    },
+    {
+      "id": "legacy-2007-ghost-rider",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4quwR1VwZouD0YF9AaD72kQAjxH.jpg"
+    },
+    {
+      "id": "legacy-2011-ghost-rider-spirit-of-vengeance",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xEoBT6lYfQNpSpTm8gJMTrQytiw.jpg"
+    },
+    {
+      "id": "legacy-1986-howard-the-duck",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/30tnH0hy6S5FjGCfCdnkBd3wqS2.jpg"
+    },
+    {
+      "id": "legacy-1990-captain-america",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vdHrLFfHcJX9nlvUfG3LK2a2hq4.jpg"
+    },
+    {
+      "id": "legacy-1978-dr-strange",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hEyHVgBE28Jl13h2Qpbr3LH77sP.jpg"
+    },
+    {
+      "id": "legacy-1996-generation-x",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9LeTRxm04eW6Ls4429DTT4MU9b7.jpg"
+    },
+    {
+      "id": "legacy-1998-nick-fury-agent-of-s-h-i-e-l-d",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4T0YjvnBaMASZkkRKxMIe6IoWO0.jpg"
+    },
+    {
+      "id": "legacy-2005-man-thing",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/kfPPnOygXSGaBFpsCUyu7xQdkoO.jpg"
+    },
+    {
+      "id": "legacy-1979-captain-america",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gNGq4u0cymxZqGADZrx7AWrSB5m.jpg"
+    },
+    {
+      "id": "legacy-1979-captain-america-ii-death-too-soon",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pocmh0P8Ddf5w33pP3Vuqm0JRP9.jpg"
+    },
+    {
+      "id": "legacy-1988-the-incredible-hulk-returns",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rDAWdpW0uzUj9c4YPeuanPGWHBq.jpg"
+    },
+    {
+      "id": "mcu-2011-marvel-one-shot-the-consultant",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xqNLXUUvBnfVk6m3QFGGU0Grgs7.jpg"
+    },
+    {
+      "id": "legacy-1989-the-trial-of-the-incredible-hulk",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/jaaeLvonWry3TdTXaGSu2VveNEG.jpg"
+    },
+    {
+      "id": "legacy-1990-the-death-of-the-incredible-hulk",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/6q6CviMLR97ssODmKhxgyxQuoYp.jpg"
+    },
+    {
+      "id": "mcu-2011-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/njrOqsmFH4pxBrhcoslqLfw2OGk.jpg"
+    },
+    {
+      "id": "mcu-2012-marvel-one-shot-item-47",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hnSxG8clwLuAXEkp9emc8HCUcHD.jpg"
+    },
+    {
+      "id": "mcu-2014-marvel-one-shot-all-hail-the-king",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/y0QYZPWgeGKOvyrzi6Oz3aJPxJa.jpg"
+    },
+    {
+      "id": "mcu-2013-marvel-one-shot-agent-carter",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4vFKKWPvCVDJTOWiwReBfpAMScP.jpg"
+    },
+    {
+      "id": "mcu-2016-team-thor",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hpHvGuMc46pppwpcW0Xk7eys3L4.jpg"
+    },
+    {
+      "id": "mcu-2017-team-thor-part-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2jmP71A5Un0jDNqBesDPQSN8hjJ.jpg"
+    },
+    {
+      "id": "mcu-2018-team-darryl",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/edroTAeTEM9ILyAnumA0ALxRSne.jpg"
+    },
+    {
+      "id": "mcu-2026-the-punisher-one-last-kill",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg"
+    },
+    {
+      "id": "mcu-2022-werewolf-by-night",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/mvIvNKRIJPPS7WSFarFhOAGIVnU.jpg"
+    },
+    {
+      "id": "mcu-2022-the-guardians-of-the-galaxy-holiday-special",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg"
+    },
+    {
+      "id": "mcu-2021-wandavision-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8BSVNGpZwZDScVv8e5S1c8XIjeJ.jpg"
+    },
+    {
+      "id": "mcu-2021-loki-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8uVqe9ThcuYVNdh4O0kuijIWMLL.jpg"
+    },
+    {
+      "id": "mcu-2021-the-falcon-and-the-winter-soldier-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg"
+    },
+    {
+      "id": "mcu-2021-loki-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oJdVHUYrjdS2IqiNztVIP4GPB1p.jpg"
+    },
+    {
+      "id": "mcu-2022-moon-knight-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zPFm8ZbvdzoViRHnLi8cH7TBS1B.jpg"
+    },
+    {
+      "id": "mcu-2021-what-if-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg"
+    },
+    {
+      "id": "mcu-2021-hawkeye-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nGcqeKieycPFvsxOeLJssCTt3mL.jpg"
+    },
+    {
+      "id": "mcu-2021-what-if-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/3yhoq5LVMgKy9rEriH6ytq9BoJV.jpg"
+    },
+    {
+      "id": "mcu-2021-what-if-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bbGeKXKoualYRYqvFYiv8fPZK0d.jpg"
+    },
+    {
+      "id": "mcu-2023-secret-invasion-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8fQckSuTR8NEN3mXeledSQCISZJ.jpg"
+    },
+    {
+      "id": "mcu-2022-ms-marvel-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4qoFtoPvFGjlIXYfFVNKhOwZ6zD.jpg"
+    },
+    {
+      "id": "mcu-2024-echo-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/eVqz9zgvGYVqvHOg1QlHWrGTpz3.jpg"
+    },
+    {
+      "id": "mcu-2024-agatha-all-along-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cXEE6EsLJNwEwOCedX04Uixfq5O.jpg"
+    },
+    {
+      "id": "mcu-2022-she-hulk-attorney-at-law-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/41Iekrap0j80u808Z2004t88r6o.jpg"
+    },
+    {
+      "id": "mcu-2025-ironheart-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/1V4rcxP9Dk0TKHkVAc2sigcdDXc.jpg"
+    },
+    {
+      "id": "mcu-2025-daredevil-born-again-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9lLuhV703HGCbnz6FxnqCwIwzAZ.jpg"
+    },
+    {
+      "id": "mcu-2025-marvel-zombies-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/wofiHMsXxmp0lTafcBrgciSxBVx.jpg"
+    },
+    {
+      "id": "mcu-2025-eyes-of-wakanda-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/64RsvJMVUfhs5CDV7xXRjiLK4w6.jpg"
+    },
+    {
+      "id": "mcu-2025-daredevil-born-again-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/timvsedxh5ce795tsv6EDTZmmXW.jpg"
+    },
+    {
+      "id": "animazione-2025-your-friendly-neighborhood-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bifTEU63VFt2ugUte9LqNBb1Dno.jpg"
+    },
+    {
+      "id": "mcu-2026-wonder-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/z5xlxga7oc2eGVpS9vw38ULA9nr.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-jessica-jones-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9wwfowgVJDouHQdUsIcNhgbIUlG.jpg"
+    },
+    {
+      "id": "mcu-2026-visionquest-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xK27l5uwaVyZSlENWnmLlWwDQNS.jpg"
+    },
+    {
+      "id": "mcu-2022-i-am-groot-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oZmqHnWJVQLOKOibDa34W4iGBZU.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-daredevil-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zFmJQzl6bFrdpHhDkxXmboyykqD.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-daredevil-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/opHoslNCxkgoCaGhfO66fvCSH83.jpg"
+    },
+    {
+      "id": "mcu-2022-i-am-groot-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/7b4qBnExIjuANVDKWyVN8gVVOXS.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-jessica-jones-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/tKirVNmDmwYjqehjPpyjr1n3U2F.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-daredevil-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zH6sgePlr1XX0jSZypbfQmr70Lf.jpg"
+    },
+    {
+      "id": "defenders-2016-marvel-s-luke-cage-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hBbPrnlkpxod0Zq14wsPlaLOemG.jpg"
+    },
+    {
+      "id": "defenders-2017-marvel-s-iron-fist-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/usGfoL4RfX15f1sQcX3Sgw4YRf4.jpg"
+    },
+    {
+      "id": "defenders-2017-marvel-s-the-punisher-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dOkJ6TJKQjsz2XwXyp2VYpkeE5g.jpg"
+    },
+    {
+      "id": "defenders-2015-marvel-s-jessica-jones-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dOPx3bj3x6eXYXQJUUIHXvWRSSB.jpg"
+    },
+    {
+      "id": "defenders-2017-marvel-s-the-defenders-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4COAMPA6LPkPBd1xdm9paN4LCD8.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/1CaKyPcZvzzMSwbNFJObxNsxTkK.jpg"
+    },
+    {
+      "id": "defenders-2017-marvel-s-iron-fist-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vXYvfCWvz5W0rErCpNIq09urhzW.jpg"
+    },
+    {
+      "id": "defenders-2016-marvel-s-luke-cage-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xe9VGtjJ1vsSKtAnoXEnVdUqyxb.jpg"
+    },
+    {
+      "id": "defenders-2017-marvel-s-the-punisher-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/agNYq5XZnGfmYetUMyyM2RdPY70.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/p8Qy60OIf0OaJ29KPw6ld51MSP7.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/y0cxxcvCk9lEG4DEorTz5GxC9sj.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s5",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pwZedE4CB3E73lvH9A5yRaszll0.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/mgyMzTTIFVdKoejD0gKIyaCgWOP.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s6",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/QU0NjcvDonZLKhjRuxRv6AVo5l.jpg"
+    },
+    {
+      "id": "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s7",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qM95u55G8xVyfgoSZ2qTlY3MDl6.jpg"
+    },
+    {
+      "id": "marvel-television-2017-marvel-s-inhumans-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/doCIoaV9ffAJbK3TW2AsGp4ytOQ.jpg"
+    },
+    {
+      "id": "marvel-television-2018-marvel-s-cloak-dagger-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nluzawv8wEo0AeECpnLo3wO2YLZ.jpg"
+    },
+    {
+      "id": "marvel-television-2020-helstrom-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8fPIcaRIZgsoBcgA5yAm3GNz61M.jpg"
+    },
+    {
+      "id": "marvel-television-2015-marvel-s-agent-carter-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/h3yPRRiWZk6HrFD2oo3xqpLt6bc.jpg"
+    },
+    {
+      "id": "marvel-television-2017-marvel-s-runaways-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hMsaGkDyCM3Y3EWcdYK5Uu8qEok.jpg"
+    },
+    {
+      "id": "marvel-television-2015-marvel-s-agent-carter-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gqyjmfFOrKY8iouNTXWj9KW7cC5.jpg"
+    },
+    {
+      "id": "marvel-television-2018-marvel-s-cloak-dagger-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pYnRJuBPEqZO1o4fcxBTgmKNHfy.jpg"
+    },
+    {
+      "id": "marvel-television-2017-marvel-s-runaways-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/r2e50wFzTsMgsSVLAyIB8uX1EGu.jpg"
+    },
+    {
+      "id": "spider-man-2026-spider-noir-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oD8WSVqz84ZRfelkr7JPeJwR9Iv.jpg"
+    },
+    {
+      "id": "marvel-television-2017-marvel-s-runaways-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/m83skvEvoFQoo1szIMpFQ6kbCe6.jpg"
+    },
+    {
+      "id": "marvel-television-2016-marvel-s-agents-of-s-h-i-e-l-d-slingshot-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/kbS1aQMNUUam4NWdXws98bKEBVV.jpg"
+    },
+    {
+      "id": "x-men-2017-the-gifted-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nYkGYVzn4Df3V5fZS9xYyKZn551.jpg"
+    },
+    {
+      "id": "x-men-2017-legion-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/au5hsZ20QzOVXSOWgx7umAhHC6A.jpg"
+    },
+    {
+      "id": "x-men-2017-the-gifted-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bUL8MBcB4OeVA2YkA3q1AMbpJL1.jpg"
+    },
+    {
+      "id": "legacy-2006-blade-the-series-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bdpbXGczc9zvRyYVUvNci1KWnfx.jpg"
+    },
+    {
+      "id": "x-men-2017-legion-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4THIqrWWYdsxy6zkfzzYvWnXR6Z.jpg"
+    },
+    {
+      "id": "x-men-2017-legion-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/wMPFWmM7VLu2AwBzpF3JiWTnTkt.jpg"
+    },
+    {
+      "id": "legacy-1978-the-amazing-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/jrGZYtAmcrTBnvFqQ2LgGVTOvlb.jpg"
+    },
+    {
+      "id": "legacy-1977-the-incredible-hulk-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/b2oVBGDFG7FaAKGkXIwadN4Sn7A.jpg"
+    },
+    {
+      "id": "animazione-1992-x-men-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qVwe6nEnJpJbjisnDka0yoeDaT2.jpg"
+    },
+    {
+      "id": "legacy-1978-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vZP7Bp7cxbQSkZLsWLLTCi1CscZ.jpg"
+    },
+    {
+      "id": "animazione-2024-x-men-97-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/383PV0WolYYQvTriH0NfvMUA28R.jpg"
+    },
+    {
+      "id": "legacy-1978-the-amazing-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/aTD8FCWHt2osF8nQPXdooiIwFNH.jpg"
+    },
+    {
+      "id": "legacy-1977-the-incredible-hulk-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/sVrBMT28xOBlNCdgF8Uo1idutMv.jpg"
+    },
+    {
+      "id": "animazione-1992-x-men-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/eEy7kDNgxsn2IYZad0FCk9uRhpn.jpg"
+    },
+    {
+      "id": "legacy-1977-the-incredible-hulk-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xjJYdXRCTewz2hNSCe5hKxsnXPr.jpg"
+    },
+    {
+      "id": "animazione-1992-x-men-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dmQWZoWr8lAR0aFhBjsieVddlLf.jpg"
+    },
+    {
+      "id": "animazione-1992-x-men-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rKqwgDcLiM08KEP2a3ac4shf5tt.jpg"
+    },
+    {
+      "id": "animazione-2024-x-men-97-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2HKBc5UiFw8JrruHq8S1Y7TnlW0.jpg"
+    },
+    {
+      "id": "legacy-1977-the-incredible-hulk-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8N8RfbDIZ0Wn2WGWTHMgqX9ZwOl.jpg"
+    },
+    {
+      "id": "animazione-1992-x-men-s5",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nREygs8ZRcqyqBT9mSzPhlkmLtS.jpg"
+    },
+    {
+      "id": "legacy-1977-the-incredible-hulk-s5",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/wxTDW9hakq8kH5oGL8iM0PjJ6P7.jpg"
+    },
+    {
+      "id": "animazione-2008-the-spectacular-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/p4MOucpDNuRuQ1ZPrErZMKU3s0k.jpg"
+    },
+    {
+      "id": "animazione-1994-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/f1Dy2F8of9uZiSz6Z3kTlzpWz6L.jpg"
+    },
+    {
+      "id": "animazione-2010-the-avengers-earth-s-mightiest-heroes-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/far2i8Wk57CYaGtHfwl63w5vWai.jpg"
+    },
+    {
+      "id": "animazione-2012-ultimate-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/p276PkRJ5Wexq91DA5RkbxTYMDn.jpg"
+    },
+    {
+      "id": "animazione-1994-fantastic-four-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gHMRD0dcG2mKiOrurxnNev4vh2d.jpg"
+    },
+    {
+      "id": "animazione-2008-the-spectacular-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rONBGuiggABjRSQcvxw1z0KboVI.jpg"
+    },
+    {
+      "id": "animazione-1994-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qIDlAgHTlVxc0Htyi5TPUSuePNJ.jpg"
+    },
+    {
+      "id": "animazione-2010-the-avengers-earth-s-mightiest-heroes-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/qQqndwtPzgZMKtn6cZGYtqZW8PY.jpg"
+    },
+    {
+      "id": "animazione-1994-fantastic-four-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/ccjFJsaeAJDMQqfqHaj7mHmhrq9.jpg"
+    },
+    {
+      "id": "animazione-2012-ultimate-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/eXtlDP6kgUyYw0G2L9AxSWUp14Q.jpg"
+    },
+    {
+      "id": "animazione-1994-spider-man-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hCUkmIr50UnOuU9MasUZ7s0y3vf.jpg"
+    },
+    {
+      "id": "animazione-2012-ultimate-spider-man-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/iicBAyyU56hr2pgNA5YCnTIu9tJ.jpg"
+    },
+    {
+      "id": "animazione-1994-spider-man-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/lQFu9auCwZLUTJigBZsSL2Kwp80.jpg"
+    },
+    {
+      "id": "animazione-2012-ultimate-spider-man-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/fgmcIYoUjo14yIErawolG6pv8Nf.jpg"
+    },
+    {
+      "id": "animazione-1994-spider-man-s5",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/naOSAwubTLs2PSrJIAyNPNz7cVh.jpg"
+    },
+    {
+      "id": "animazione-1994-iron-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gsGYxzA0NywHZvPTyV6xJ1XdSgy.jpg"
+    },
+    {
+      "id": "animazione-2000-x-men-evolution-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/vZiwKpAf4jH7jGDZTmzCoMOQijE.jpg"
+    },
+    {
+      "id": "animazione-2009-wolverine-and-the-x-men-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/97GtkN7LEVUYMTSdbuhpr057v8A.jpg"
+    },
+    {
+      "id": "animazione-2015-marvel-s-guardians-of-the-galaxy-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/bGktl9BtbNfx3S0NmbGvb2abP8Q.jpg"
+    },
+    {
+      "id": "animazione-2013-marvel-s-avengers-assemble-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/3hDR6u7vy0UgFp64KwzWCj73TKm.jpg"
+    },
+    {
+      "id": "animazione-1994-iron-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9jAP0UPnfGeQn5gtEkzZoC7z4TB.jpg"
+    },
+    {
+      "id": "animazione-2013-marvel-s-avengers-assemble-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/5xXLD7bR8RpXYAxlo9eIfC6VHSo.jpg"
+    },
+    {
+      "id": "animazione-2015-marvel-s-guardians-of-the-galaxy-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zfjvbYRfLlHfKMdvBEKeztEZYWv.jpg"
+    },
+    {
+      "id": "animazione-2000-x-men-evolution-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/mz0hpKOIsCOyMlCHIkxQLFoiWxB.jpg"
+    },
+    {
+      "id": "animazione-2000-x-men-evolution-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cZgBg7bw0fdDL6OsYgfJVfgcgJR.jpg"
+    },
+    {
+      "id": "animazione-2013-marvel-s-avengers-assemble-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/tfwczYRkDmhHjpd5Pmzog8ZsWJD.jpg"
+    },
+    {
+      "id": "animazione-2015-marvel-s-guardians-of-the-galaxy-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oXwe3wVhdvvxiixL9UJf6PgBybZ.jpg"
+    },
+    {
+      "id": "animazione-2000-x-men-evolution-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/jmvMfpVtYCbeq49vuGzybkeFkrN.jpg"
+    },
+    {
+      "id": "animazione-2013-marvel-s-avengers-assemble-s4",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/k8Nv5b6WQUlyR6U6DLr2E5hpJ4b.jpg"
+    },
+    {
+      "id": "animazione-2013-marvel-s-avengers-assemble-s5",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rw9kT0ogOPmVbSlyxUFOp0jxspA.jpg"
+    },
+    {
+      "id": "animazione-2017-marvel-s-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/3GLe7l5rBCn1qB0gKuaQgDvv9hN.jpg"
+    },
+    {
+      "id": "animazione-2009-the-super-hero-squad-show-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/uBRAUJkP5qCaEOqRcxlKnUq9yRR.jpg"
+    },
+    {
+      "id": "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rK36bSFkjcWDnFLH3I9uakFrDJv.jpg"
+    },
+    {
+      "id": "animazione-1967-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/9h3fut1TTsyLw1RDw1a4jRjeCLA.jpg"
+    },
+    {
+      "id": "animazione-2017-marvel-s-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/467Madt1P0ZF1pYOvd55cjn4OCo.jpg"
+    },
+    {
+      "id": "animazione-1981-spider-man-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/cuZCE0S4LBxYk6dI1eLrcoJuZ7a.jpg"
+    },
+    {
+      "id": "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/ywlL7O2Goet4QlRZUJDJScdCtUD.jpg"
+    },
+    {
+      "id": "animazione-2009-the-super-hero-squad-show-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/uxh1Mpuks8EH6zFH2HiXt40EcsC.jpg"
+    },
+    {
+      "id": "animazione-1967-spider-man-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/a5414YLz3zBbsW9sVSMpgifpAux.jpg"
+    },
+    {
+      "id": "animazione-1982-the-incredible-hulk-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hGlou195mPi8s8gdfOxZoxyVLbD.jpg"
+    },
+    {
+      "id": "animazione-2017-marvel-s-spider-man-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/gGgLtVOVL0AObZh2ydndWwV7JDR.jpg"
+    },
+    {
+      "id": "animazione-1967-spider-man-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/8QqMKeXKZQAjAfumL9bOLCPDdxk.jpg"
+    },
+    {
+      "id": "animazione-1981-spider-man-and-his-amazing-friends-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zmLyvS0a5D1b6anaWtWfJUDigvx.jpg"
+    },
+    {
+      "id": "animazione-1999-spider-man-unlimited-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/hNdf1WmFil9IV7rabBe6PnAmYnI.jpg"
+    },
+    {
+      "id": "animazione-1996-the-incredible-hulk-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/AauXTKQBejmD0jcEIxlve0hRIme.jpg"
+    },
+    {
+      "id": "animazione-1996-the-incredible-hulk-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/alMxSGCtD65X8afcIcj23mu9KoJ.jpg"
+    },
+    {
+      "id": "animazione-2006-fantastic-four-world-s-greatest-heroes-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/oOsmznLNc8LXDg90sMAvScBnWuO.jpg"
+    },
+    {
+      "id": "animazione-1981-spider-man-and-his-amazing-friends-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dra6H45lLnYmkK4YIdzvBTRd7PM.jpg"
+    },
+    {
+      "id": "animazione-1981-spider-man-and-his-amazing-friends-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dra6H45lLnYmkK4YIdzvBTRd7PM.jpg"
+    },
+    {
+      "id": "animazione-2009-iron-man-armored-adventures-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xCL3turAIJufCtrbcZcnGdPHL72.jpg"
+    },
+    {
+      "id": "animazione-2014-marvel-disk-wars-the-avengers-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/pj54OHLwyh7kUngX0f3YVrfIGdB.jpg"
+    },
+    {
+      "id": "animazione-2021-marvel-s-hit-monkey-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4gxSNlDMDFFi9SJvNBGb8TcoxHq.jpg"
+    },
+    {
+      "id": "animazione-2021-marvel-s-m-o-d-o-k-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2kXRzRjQZs9kAIm3K9MkQgsZR9C.jpg"
+    },
+    {
+      "id": "animazione-2017-marvel-future-avengers-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/g8cNLdlLvwhACezUBTg5XbZHR4Y.jpg"
+    },
+    {
+      "id": "animazione-2009-iron-man-armored-adventures-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/sBims3imQuR9OuSxfXlSqJoLkvV.jpg"
+    },
+    {
+      "id": "animazione-2021-marvel-s-hit-monkey-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/zXkK4Ikcskyd6GdID6IofKKOWkW.jpg"
+    },
+    {
+      "id": "animazione-2017-marvel-future-avengers-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/rIO0LXiZbqYHx5kri4UKxYwu8wA.jpg"
+    },
+    {
+      "id": "animazione-2007-the-invincible-iron-man",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/eebNTSRa5Hh5skPKGdGJIJpo9Ls.jpg"
+    },
+    {
+      "id": "animazione-2006-ultimate-avengers-the-movie",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/iMCkGHVrYRdqKROPRPmVaJVSlg3.jpg"
+    },
+    {
+      "id": "animazione-2006-ultimate-avengers-2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/sMFyYZR9krqcQC99G6jnb10Zv4P.jpg"
+    },
+    {
+      "id": "animazione-2007-doctor-strange",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/7ygcpWXsWmEc83j7zE8P0lvC0Q.jpg"
+    },
+    {
+      "id": "animazione-2021-spidey-and-his-amazing-friends-s1",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dA4S18rnLx4sWW8agmLLKUvRM7n.jpg"
+    },
+    {
+      "id": "animazione-2021-spidey-and-his-amazing-friends-s3",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/dG0qTd7pyEmjKaKwOKF316W815Y.jpg"
+    },
+    {
+      "id": "animazione-2021-spidey-and-his-amazing-friends-s2",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/etO5jDS5WgR4Y1lTyXhQcilJ6u2.jpg"
+    },
+    {
+      "id": "animazione-2009-hulk-vs-thor",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/4NS7L9xtGEOsZA0gnqdQBI7QiXu.jpg"
+    },
+    {
+      "id": "animazione-2009-hulk-vs-wolverine",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/p8PZfkrCuXanfYr3k6xAS6WzN8Y.jpg"
+    },
+    {
+      "id": "animazione-2008-next-avengers-heroes-of-tomorrow",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/1y4J9HZJoTIMdt77wCq80uXaQJ.jpg"
+    },
+    {
+      "id": "animazione-2011-thor-tales-of-asgard",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/nM2rBqEMrAFiNFHXKWOhUgdKK45.jpg"
+    },
+    {
+      "id": "animazione-2010-planet-hulk",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/5wCzY3sAs6zHIzzHIcTKN2g0pu8.jpg"
+    },
+    {
+      "id": "animazione-2014-iron-man-captain-america-heroes-united",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/CX7eRlaxFXiW3UGQBdQUoSVZRi.jpg"
+    },
+    {
+      "id": "animazione-2013-iron-man-rise-of-technovore",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/eHDez1uN5X2ZAq4niX7HvhyZIIO.jpg"
+    },
+    {
+      "id": "animazione-2013-iron-man-hulk-heroes-united",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/xCBBQMPxXsqIlZUAbpeSo1SVj6R.jpg"
+    },
+    {
+      "id": "animazione-2014-big-hero-6",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/2mxS4wUimwlLmI1xp6QW6NSU361.jpg"
+    },
+    {
+      "id": "animazione-2014-avengers-confidential-black-widow-punisher",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/z6KvqfkAdmdCcNpCecPioEDjxfq.jpg"
+    },
+    {
+      "id": "animazione-2016-hulk-where-monsters-dwell",
+      "ok": true,
+      "status": 200,
+      "url": "https://media.themoviedb.org/t/p/w500/udUnSnQKzYddDpU6WNdTMB5XVEE.jpg"
+    }
+  ]
+}
