@@ -1,0 +1,1164 @@
+{
+  "cutoff": "2026-10-08",
+  "release": {
+    "label": "Ordine di uscita",
+    "description": "Prima distribuzione cinematografica / streaming o prima trasmissione di stagione. Date di riferimento prevalentemente USA; non indica la disponibilità nei servizi italiani.",
+    "ids": [
+      "animazione-1967-spider-man-s1",
+      "animazione-1967-spider-man-s2",
+      "animazione-1967-spider-man-s3",
+      "legacy-1977-the-incredible-hulk-s1",
+      "legacy-1978-the-amazing-spider-man-s1",
+      "legacy-1978-spider-man-s1",
+      "legacy-1978-the-amazing-spider-man-s2",
+      "legacy-1978-dr-strange",
+      "legacy-1977-the-incredible-hulk-s2",
+      "legacy-1979-captain-america",
+      "legacy-1977-the-incredible-hulk-s3",
+      "legacy-1979-captain-america-ii-death-too-soon",
+      "legacy-1977-the-incredible-hulk-s4",
+      "animazione-1981-spider-man-and-his-amazing-friends-s1",
+      "animazione-1981-spider-man-s1",
+      "legacy-1977-the-incredible-hulk-s5",
+      "animazione-1981-spider-man-and-his-amazing-friends-s2",
+      "animazione-1982-the-incredible-hulk-s1",
+      "animazione-1981-spider-man-and-his-amazing-friends-s3",
+      "legacy-1986-howard-the-duck",
+      "legacy-1988-the-incredible-hulk-returns",
+      "legacy-1989-the-trial-of-the-incredible-hulk",
+      "legacy-1989-the-punisher",
+      "legacy-1990-the-death-of-the-incredible-hulk",
+      "legacy-1990-captain-america",
+      "animazione-1992-x-men-s1",
+      "animazione-1992-x-men-s2",
+      "animazione-1992-x-men-s3",
+      "animazione-1994-fantastic-four-s1",
+      "animazione-1994-iron-man-s1",
+      "animazione-1994-spider-man-s1",
+      "animazione-1992-x-men-s4",
+      "animazione-1994-spider-man-s2",
+      "animazione-1994-fantastic-four-s2",
+      "animazione-1994-iron-man-s2",
+      "legacy-1996-generation-x",
+      "animazione-1994-spider-man-s3",
+      "animazione-1992-x-men-s5",
+      "animazione-1996-the-incredible-hulk-s1",
+      "animazione-1994-spider-man-s4",
+      "animazione-1994-spider-man-s5",
+      "animazione-1996-the-incredible-hulk-s2",
+      "legacy-1998-nick-fury-agent-of-s-h-i-e-l-d",
+      "legacy-1998-blade",
+      "animazione-1999-spider-man-unlimited-s1",
+      "x-men-2000-x-men",
+      "animazione-2000-x-men-evolution-s1",
+      "animazione-2000-x-men-evolution-s2",
+      "legacy-2002-blade-ii",
+      "spider-man-2002-spider-man",
+      "animazione-2000-x-men-evolution-s3",
+      "legacy-2003-daredevil",
+      "x-men-2003-x2",
+      "legacy-2003-hulk",
+      "animazione-2000-x-men-evolution-s4",
+      "legacy-2004-the-punisher",
+      "spider-man-2004-spider-man-2",
+      "legacy-2004-blade-trinity",
+      "legacy-2005-elektra",
+      "legacy-2005-man-thing",
+      "fantastic-four-2005-fantastic-four",
+      "animazione-2006-ultimate-avengers-the-movie",
+      "x-men-2006-x-men-the-last-stand",
+      "legacy-2006-blade-the-series-s1",
+      "animazione-2006-ultimate-avengers-2",
+      "animazione-2006-fantastic-four-world-s-greatest-heroes-s1",
+      "animazione-2007-the-invincible-iron-man",
+      "legacy-2007-ghost-rider",
+      "spider-man-2007-spider-man-3",
+      "fantastic-four-2007-fantastic-four-rise-of-the-silver-surfer",
+      "animazione-2007-doctor-strange",
+      "animazione-2008-the-spectacular-spider-man-s1",
+      "mcu-2008-iron-man",
+      "mcu-2008-the-incredible-hulk",
+      "animazione-2008-next-avengers-heroes-of-tomorrow",
+      "legacy-2008-punisher-war-zone",
+      "animazione-2009-wolverine-and-the-x-men-s1",
+      "animazione-2009-hulk-vs-thor",
+      "animazione-2009-hulk-vs-wolverine",
+      "animazione-2009-iron-man-armored-adventures-s1",
+      "x-men-2009-x-men-origins-wolverine",
+      "animazione-2008-the-spectacular-spider-man-s2",
+      "animazione-2009-the-super-hero-squad-show-s1",
+      "animazione-2010-planet-hulk",
+      "mcu-2010-iron-man-2",
+      "animazione-2010-the-avengers-earth-s-mightiest-heroes-s1",
+      "animazione-2009-the-super-hero-squad-show-s2",
+      "mcu-2011-thor",
+      "animazione-2011-thor-tales-of-asgard",
+      "x-men-2011-x-men-first-class",
+      "animazione-2009-iron-man-armored-adventures-s2",
+      "mcu-2011-captain-america-the-first-avenger",
+      "mcu-2011-marvel-one-shot-the-consultant",
+      "mcu-2011-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer",
+      "legacy-2011-ghost-rider-spirit-of-vengeance",
+      "animazione-2010-the-avengers-earth-s-mightiest-heroes-s2",
+      "animazione-2012-ultimate-spider-man-s1",
+      "mcu-2012-the-avengers",
+      "spider-man-2012-the-amazing-spider-man",
+      "mcu-2012-marvel-one-shot-item-47",
+      "animazione-2012-ultimate-spider-man-s2",
+      "animazione-2013-iron-man-rise-of-technovore",
+      "mcu-2013-iron-man-3",
+      "animazione-2013-marvel-s-avengers-assemble-s1",
+      "x-men-2013-the-wolverine",
+      "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s1",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s1",
+      "mcu-2013-marvel-one-shot-agent-carter",
+      "mcu-2013-thor-the-dark-world",
+      "animazione-2013-iron-man-hulk-heroes-united",
+      "mcu-2014-marvel-one-shot-all-hail-the-king",
+      "animazione-2014-avengers-confidential-black-widow-punisher",
+      "animazione-2014-marvel-disk-wars-the-avengers-s1",
+      "mcu-2014-captain-america-the-winter-soldier",
+      "spider-man-2014-the-amazing-spider-man-2",
+      "x-men-2014-x-men-days-of-future-past",
+      "animazione-2012-ultimate-spider-man-s3",
+      "animazione-2014-iron-man-captain-america-heroes-united",
+      "mcu-2014-guardians-of-the-galaxy",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s2",
+      "animazione-2013-marvel-s-avengers-assemble-s2",
+      "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s2",
+      "animazione-2014-big-hero-6",
+      "marvel-television-2015-marvel-s-agent-carter-s1",
+      "defenders-2015-marvel-s-daredevil-s1",
+      "mcu-2015-avengers-age-of-ultron",
+      "mcu-2015-ant-man",
+      "fantastic-four-2015-fantastic-four",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s1",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s3",
+      "defenders-2015-marvel-s-jessica-jones-s1",
+      "marvel-television-2015-marvel-s-agent-carter-s2",
+      "x-men-2016-deadpool",
+      "animazione-2012-ultimate-spider-man-s4",
+      "animazione-2013-marvel-s-avengers-assemble-s3",
+      "defenders-2015-marvel-s-daredevil-s2",
+      "mcu-2016-captain-america-civil-war",
+      "x-men-2016-x-men-apocalypse",
+      "mcu-2016-team-thor",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s4",
+      "defenders-2016-marvel-s-luke-cage-s1",
+      "animazione-2016-hulk-where-monsters-dwell",
+      "mcu-2016-doctor-strange",
+      "marvel-television-2016-marvel-s-agents-of-s-h-i-e-l-d-slingshot-s1",
+      "x-men-2017-legion-s1",
+      "mcu-2017-team-thor-part-2",
+      "x-men-2017-logan",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s2",
+      "defenders-2017-marvel-s-iron-fist-s1",
+      "mcu-2017-guardians-of-the-galaxy-vol-2",
+      "animazione-2013-marvel-s-avengers-assemble-s4",
+      "mcu-2017-spider-man-homecoming",
+      "animazione-2017-marvel-future-avengers-s1",
+      "defenders-2017-marvel-s-the-defenders-s1",
+      "animazione-2017-marvel-s-spider-man-s1",
+      "marvel-television-2017-marvel-s-inhumans-s1",
+      "x-men-2017-the-gifted-s1",
+      "mcu-2017-thor-ragnarok",
+      "defenders-2017-marvel-s-the-punisher-s1",
+      "marvel-television-2017-marvel-s-runaways-s1",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s5",
+      "mcu-2018-black-panther",
+      "mcu-2018-team-darryl",
+      "defenders-2015-marvel-s-jessica-jones-s2",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s3",
+      "x-men-2017-legion-s2",
+      "mcu-2018-avengers-infinity-war",
+      "x-men-2018-deadpool-2",
+      "marvel-television-2018-marvel-s-cloak-dagger-s1",
+      "animazione-2017-marvel-s-spider-man-s2",
+      "defenders-2016-marvel-s-luke-cage-s2",
+      "mcu-2018-ant-man-and-the-wasp",
+      "animazione-2017-marvel-future-avengers-s2",
+      "defenders-2017-marvel-s-iron-fist-s2",
+      "animazione-2013-marvel-s-avengers-assemble-s5",
+      "x-men-2017-the-gifted-s2",
+      "sony-venom-2018-venom",
+      "defenders-2015-marvel-s-daredevil-s3",
+      "spider-verse-2018-spider-man-into-the-spider-verse",
+      "marvel-television-2017-marvel-s-runaways-s2",
+      "defenders-2017-marvel-s-the-punisher-s2",
+      "mcu-2019-captain-marvel",
+      "marvel-television-2018-marvel-s-cloak-dagger-s2",
+      "mcu-2019-avengers-endgame",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s6",
+      "x-men-2019-dark-phoenix",
+      "defenders-2015-marvel-s-jessica-jones-s3",
+      "x-men-2017-legion-s3",
+      "mcu-2019-spider-man-far-from-home",
+      "marvel-television-2017-marvel-s-runaways-s3",
+      "animazione-2017-marvel-s-spider-man-s3",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s7",
+      "x-men-2020-the-new-mutants",
+      "marvel-television-2020-helstrom-s1",
+      "mcu-2021-wandavision-s1",
+      "mcu-2021-the-falcon-and-the-winter-soldier-s1",
+      "animazione-2021-marvel-s-m-o-d-o-k-s1",
+      "mcu-2021-loki-s1",
+      "mcu-2021-black-widow",
+      "animazione-2021-spidey-and-his-amazing-friends-s1",
+      "mcu-2021-what-if-s1",
+      "mcu-2021-shang-chi-and-the-legend-of-the-ten-rings",
+      "sony-venom-2021-venom-let-there-be-carnage",
+      "mcu-2021-eternals",
+      "animazione-2021-marvel-s-hit-monkey-s1",
+      "mcu-2021-hawkeye-s1",
+      "mcu-2021-spider-man-no-way-home",
+      "mcu-2022-moon-knight-s1",
+      "sony-venom-2022-morbius",
+      "mcu-2022-doctor-strange-in-the-multiverse-of-madness",
+      "mcu-2022-ms-marvel-s1",
+      "mcu-2022-thor-love-and-thunder",
+      "mcu-2022-i-am-groot-s1",
+      "mcu-2022-she-hulk-attorney-at-law-s1",
+      "animazione-2021-spidey-and-his-amazing-friends-s2",
+      "mcu-2022-werewolf-by-night",
+      "mcu-2022-black-panther-wakanda-forever",
+      "mcu-2022-the-guardians-of-the-galaxy-holiday-special",
+      "mcu-2023-ant-man-and-the-wasp-quantumania",
+      "mcu-2023-guardians-of-the-galaxy-vol-3",
+      "spider-verse-2023-spider-man-across-the-spider-verse",
+      "mcu-2023-secret-invasion-s1",
+      "mcu-2022-i-am-groot-s2",
+      "mcu-2021-loki-s2",
+      "mcu-2023-the-marvels",
+      "mcu-2021-what-if-s2",
+      "animazione-2021-spidey-and-his-amazing-friends-s3",
+      "mcu-2024-echo-s1",
+      "sony-venom-2024-madame-web",
+      "animazione-2024-x-men-97-s1",
+      "spider-verse-2023-the-spider-within-a-spider-verse-story",
+      "animazione-2021-marvel-s-hit-monkey-s2",
+      "mcu-2024-deadpool-wolverine",
+      "mcu-2024-agatha-all-along-s1",
+      "sony-venom-2024-venom-the-last-dance",
+      "sony-venom-2024-kraven-the-hunter",
+      "mcu-2021-what-if-s3",
+      "animazione-2025-your-friendly-neighborhood-spider-man-s1",
+      "mcu-2025-captain-america-brave-new-world",
+      "mcu-2025-daredevil-born-again-s1",
+      "mcu-2025-thunderbolts",
+      "mcu-2025-ironheart-s1",
+      "mcu-2025-the-fantastic-four-first-steps",
+      "mcu-2025-eyes-of-wakanda-s1",
+      "mcu-2025-marvel-zombies-s1",
+      "mcu-2026-wonder-man-s1",
+      "mcu-2025-daredevil-born-again-s2",
+      "mcu-2026-the-punisher-one-last-kill",
+      "spider-man-2026-spider-noir-s1",
+      "animazione-2024-x-men-97-s2",
+      "mcu-2026-spider-man-brand-new-day",
+      "mcu-2026-visionquest-s1",
+      "mcu-2026-avengers-doomsday",
+      "spider-verse-2027-spider-man-beyond-the-spider-verse",
+      "mcu-2027-avengers-secret-wars"
+    ]
+  },
+  "chronological": {
+    "label": "Cronologia per universo",
+    "description": "Continuità separate. Ordini interni approssimativi dove indicato; i titoli senza collocazione certa compaiono in uscita relativa.",
+    "groups": [
+      {
+        "id": "avengers-emh",
+        "label": "Avengers EMH",
+        "ids": [
+          "animazione-2010-the-avengers-earth-s-mightiest-heroes-s1",
+          "animazione-2010-the-avengers-earth-s-mightiest-heroes-s2"
+        ]
+      },
+      {
+        "id": "blade",
+        "label": "Blade",
+        "ids": [
+          "legacy-2006-blade-the-series-s1"
+        ]
+      },
+      {
+        "id": "disk-wars",
+        "label": "Disk Wars",
+        "ids": [
+          "animazione-2014-marvel-disk-wars-the-avengers-s1"
+        ]
+      },
+      {
+        "id": "fantastic-four-fox-2005",
+        "label": "Fantastic Four Fox 2005",
+        "ids": [
+          "fantastic-four-2005-fantastic-four",
+          "fantastic-four-2007-fantastic-four-rise-of-the-silver-surfer"
+        ]
+      },
+      {
+        "id": "fantastic-four-fox-2015",
+        "label": "Fantastic Four Fox 2015",
+        "ids": [
+          "fantastic-four-2015-fantastic-four"
+        ]
+      },
+      {
+        "id": "fantastic-four-animato-2006",
+        "label": "Fantastic Four animato 2006",
+        "ids": [
+          "animazione-2006-fantastic-four-world-s-greatest-heroes-s1"
+        ]
+      },
+      {
+        "id": "future-avengers",
+        "label": "Future Avengers",
+        "ids": [
+          "animazione-2017-marvel-future-avengers-s1",
+          "animazione-2017-marvel-future-avengers-s2"
+        ]
+      },
+      {
+        "id": "helstrom-continuita-indipendente",
+        "label": "Helstrom — Continuità indipendente",
+        "ids": [
+          "marvel-television-2020-helstrom-s1"
+        ]
+      },
+      {
+        "id": "hit-monkey",
+        "label": "Hit-Monkey",
+        "ids": [
+          "animazione-2021-marvel-s-hit-monkey-s1",
+          "animazione-2021-marvel-s-hit-monkey-s2"
+        ]
+      },
+      {
+        "id": "hulk-animato-1982",
+        "label": "Hulk animato 1982",
+        "ids": [
+          "animazione-1982-the-incredible-hulk-s1"
+        ]
+      },
+      {
+        "id": "hulk-televisivo-1977",
+        "label": "Hulk televisivo 1977",
+        "ids": [
+          "legacy-1977-the-incredible-hulk-s1",
+          "legacy-1977-the-incredible-hulk-s2",
+          "legacy-1977-the-incredible-hulk-s3",
+          "legacy-1977-the-incredible-hulk-s4",
+          "legacy-1977-the-incredible-hulk-s5"
+        ]
+      },
+      {
+        "id": "iron-man-armored-adventures",
+        "label": "Iron Man Armored Adventures",
+        "ids": [
+          "animazione-2009-iron-man-armored-adventures-s1",
+          "animazione-2009-iron-man-armored-adventures-s2"
+        ]
+      },
+      {
+        "id": "legacy-blade",
+        "label": "Legacy — Blade",
+        "ids": [
+          "legacy-1998-blade",
+          "legacy-2002-blade-ii",
+          "legacy-2004-blade-trinity"
+        ]
+      },
+      {
+        "id": "legacy-captain-america-1979",
+        "label": "Legacy — Captain America 1979",
+        "ids": [
+          "legacy-1979-captain-america",
+          "legacy-1979-captain-america-ii-death-too-soon"
+        ]
+      },
+      {
+        "id": "legacy-captain-america-1990",
+        "label": "Legacy — Captain America 1990",
+        "ids": [
+          "legacy-1990-captain-america"
+        ]
+      },
+      {
+        "id": "legacy-daredevil",
+        "label": "Legacy — Daredevil",
+        "ids": [
+          "legacy-2003-daredevil",
+          "legacy-2005-elektra"
+        ]
+      },
+      {
+        "id": "legacy-doctor-strange-1978",
+        "label": "Legacy — Doctor Strange 1978",
+        "ids": [
+          "legacy-1978-dr-strange"
+        ]
+      },
+      {
+        "id": "legacy-ghost-rider",
+        "label": "Legacy — Ghost Rider",
+        "ids": [
+          "legacy-2007-ghost-rider",
+          "legacy-2011-ghost-rider-spirit-of-vengeance"
+        ]
+      },
+      {
+        "id": "legacy-howard-the-duck-1986",
+        "label": "Legacy — Howard the Duck 1986",
+        "ids": [
+          "legacy-1986-howard-the-duck"
+        ]
+      },
+      {
+        "id": "legacy-hulk-2003",
+        "label": "Legacy — Hulk 2003",
+        "ids": [
+          "legacy-1988-the-incredible-hulk-returns",
+          "legacy-1989-the-trial-of-the-incredible-hulk",
+          "legacy-1990-the-death-of-the-incredible-hulk",
+          "legacy-2003-hulk"
+        ]
+      },
+      {
+        "id": "legacy-man-thing",
+        "label": "Legacy — Man-Thing",
+        "ids": [
+          "legacy-2005-man-thing"
+        ]
+      },
+      {
+        "id": "legacy-nick-fury",
+        "label": "Legacy — Nick Fury",
+        "ids": [
+          "legacy-1998-nick-fury-agent-of-s-h-i-e-l-d"
+        ]
+      },
+      {
+        "id": "legacy-punisher",
+        "label": "Legacy — Punisher",
+        "ids": [
+          "legacy-2004-the-punisher",
+          "legacy-2008-punisher-war-zone"
+        ]
+      },
+      {
+        "id": "legacy-punisher-1989",
+        "label": "Legacy — Punisher 1989",
+        "ids": [
+          "legacy-1989-the-punisher"
+        ]
+      },
+      {
+        "id": "legacy-x-men",
+        "label": "Legacy — X-Men",
+        "ids": [
+          "legacy-1996-generation-x"
+        ]
+      },
+      {
+        "id": "legion",
+        "label": "Legion",
+        "ids": [
+          "x-men-2017-legion-s1",
+          "x-men-2017-legion-s2",
+          "x-men-2017-legion-s3"
+        ]
+      },
+      {
+        "id": "mcu",
+        "label": "MCU",
+        "ids": [
+          "mcu-2011-captain-america-the-first-avenger",
+          "mcu-2013-marvel-one-shot-agent-carter",
+          "mcu-2019-captain-marvel",
+          "mcu-2008-iron-man",
+          "mcu-2010-iron-man-2",
+          "mcu-2008-the-incredible-hulk",
+          "mcu-2011-marvel-one-shot-the-consultant",
+          "mcu-2011-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer",
+          "mcu-2011-thor",
+          "mcu-2012-the-avengers",
+          "mcu-2012-marvel-one-shot-item-47",
+          "mcu-2013-thor-the-dark-world",
+          "mcu-2013-iron-man-3",
+          "mcu-2014-marvel-one-shot-all-hail-the-king",
+          "mcu-2014-captain-america-the-winter-soldier",
+          "mcu-2014-guardians-of-the-galaxy",
+          "mcu-2017-guardians-of-the-galaxy-vol-2",
+          "mcu-2022-i-am-groot-s1",
+          "mcu-2022-i-am-groot-s2",
+          "mcu-2015-avengers-age-of-ultron",
+          "mcu-2015-ant-man",
+          "mcu-2016-captain-america-civil-war",
+          "mcu-2021-black-widow",
+          "mcu-2018-black-panther",
+          "mcu-2017-spider-man-homecoming",
+          "mcu-2016-doctor-strange",
+          "mcu-2017-thor-ragnarok",
+          "mcu-2018-ant-man-and-the-wasp",
+          "mcu-2018-avengers-infinity-war",
+          "mcu-2019-avengers-endgame",
+          "mcu-2021-wandavision-s1",
+          "mcu-2021-shang-chi-and-the-legend-of-the-ten-rings",
+          "mcu-2021-the-falcon-and-the-winter-soldier-s1",
+          "mcu-2019-spider-man-far-from-home",
+          "mcu-2021-eternals",
+          "mcu-2021-spider-man-no-way-home",
+          "mcu-2022-doctor-strange-in-the-multiverse-of-madness",
+          "mcu-2021-hawkeye-s1",
+          "mcu-2022-moon-knight-s1",
+          "mcu-2022-black-panther-wakanda-forever",
+          "mcu-2024-echo-s1",
+          "mcu-2022-she-hulk-attorney-at-law-s1",
+          "mcu-2022-ms-marvel-s1",
+          "mcu-2022-thor-love-and-thunder",
+          "mcu-2022-werewolf-by-night",
+          "mcu-2022-the-guardians-of-the-galaxy-holiday-special",
+          "mcu-2023-ant-man-and-the-wasp-quantumania",
+          "mcu-2023-guardians-of-the-galaxy-vol-3",
+          "mcu-2023-secret-invasion-s1",
+          "mcu-2023-the-marvels",
+          "mcu-2024-agatha-all-along-s1",
+          "mcu-2025-daredevil-born-again-s1",
+          "mcu-2025-daredevil-born-again-s2",
+          "mcu-2025-ironheart-s1",
+          "mcu-2025-captain-america-brave-new-world",
+          "mcu-2025-thunderbolts",
+          "mcu-2026-wonder-man-s1",
+          "mcu-2026-the-punisher-one-last-kill",
+          "mcu-2026-spider-man-brand-new-day",
+          "mcu-2025-eyes-of-wakanda-s1",
+          "mcu-2026-visionquest-s1",
+          "mcu-2026-avengers-doomsday",
+          "mcu-2027-avengers-secret-wars"
+        ]
+      },
+      {
+        "id": "mcu-defenders-saga",
+        "label": "MCU — Defenders Saga",
+        "ids": [
+          "defenders-2015-marvel-s-daredevil-s1",
+          "defenders-2015-marvel-s-jessica-jones-s1",
+          "defenders-2015-marvel-s-daredevil-s2",
+          "defenders-2016-marvel-s-luke-cage-s1",
+          "defenders-2017-marvel-s-iron-fist-s1",
+          "defenders-2017-marvel-s-the-defenders-s1",
+          "defenders-2017-marvel-s-the-punisher-s1",
+          "defenders-2015-marvel-s-jessica-jones-s2",
+          "defenders-2016-marvel-s-luke-cage-s2",
+          "defenders-2017-marvel-s-iron-fist-s2",
+          "defenders-2015-marvel-s-daredevil-s3",
+          "defenders-2017-marvel-s-the-punisher-s2",
+          "defenders-2015-marvel-s-jessica-jones-s3"
+        ]
+      },
+      {
+        "id": "mcu-marvel-zombies",
+        "label": "MCU — Marvel Zombies",
+        "ids": [
+          "mcu-2025-marvel-zombies-s1"
+        ]
+      },
+      {
+        "id": "mcu-multiverso-animato",
+        "label": "MCU — Multiverso animato",
+        "ids": [
+          "mcu-2021-what-if-s1",
+          "mcu-2021-what-if-s2",
+          "mcu-2021-what-if-s3"
+        ]
+      },
+      {
+        "id": "mcu-tva-multiverso",
+        "label": "MCU — TVA / Multiverso",
+        "ids": [
+          "mcu-2021-loki-s1",
+          "mcu-2021-loki-s2",
+          "mcu-2024-deadpool-wolverine"
+        ]
+      },
+      {
+        "id": "mcu-terra-828",
+        "label": "MCU — Terra-828",
+        "ids": [
+          "mcu-2025-the-fantastic-four-first-steps"
+        ]
+      },
+      {
+        "id": "modok",
+        "label": "MODOK",
+        "ids": [
+          "animazione-2021-marvel-s-m-o-d-o-k-s1"
+        ]
+      },
+      {
+        "id": "marvel-television-agent-carter",
+        "label": "Marvel Television — Agent Carter",
+        "ids": [
+          "marvel-television-2015-marvel-s-agent-carter-s1",
+          "marvel-television-2015-marvel-s-agent-carter-s2"
+        ]
+      },
+      {
+        "id": "marvel-television-cloak-dagger",
+        "label": "Marvel Television — Cloak & Dagger",
+        "ids": [
+          "marvel-television-2018-marvel-s-cloak-dagger-s1",
+          "marvel-television-2018-marvel-s-cloak-dagger-s2"
+        ]
+      },
+      {
+        "id": "marvel-television-inhumans",
+        "label": "Marvel Television — Inhumans",
+        "ids": [
+          "marvel-television-2017-marvel-s-inhumans-s1"
+        ]
+      },
+      {
+        "id": "marvel-television-runaways",
+        "label": "Marvel Television — Runaways",
+        "ids": [
+          "marvel-television-2017-marvel-s-runaways-s1",
+          "marvel-television-2017-marvel-s-runaways-s2",
+          "marvel-television-2017-marvel-s-runaways-s3"
+        ]
+      },
+      {
+        "id": "marvel-television-shield",
+        "label": "Marvel Television — SHIELD",
+        "ids": [
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s1",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s2",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s3",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s4",
+          "marvel-television-2016-marvel-s-agents-of-s-h-i-e-l-d-slingshot-s1",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s5",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s6",
+          "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s7"
+        ]
+      },
+      {
+        "id": "marvel-animato-1990s",
+        "label": "Marvel animato 1990s",
+        "ids": [
+          "animazione-1994-fantastic-four-s1",
+          "animazione-1994-iron-man-s1",
+          "animazione-1994-fantastic-four-s2",
+          "animazione-1994-iron-man-s2",
+          "animazione-1996-the-incredible-hulk-s1",
+          "animazione-1996-the-incredible-hulk-s2"
+        ]
+      },
+      {
+        "id": "marvel-animato-2010s",
+        "label": "Marvel animato 2010s",
+        "ids": [
+          "animazione-2012-ultimate-spider-man-s1",
+          "animazione-2012-ultimate-spider-man-s2",
+          "animazione-2013-marvel-s-avengers-assemble-s1",
+          "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s1",
+          "animazione-2012-ultimate-spider-man-s3",
+          "animazione-2013-marvel-s-avengers-assemble-s2",
+          "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s2",
+          "animazione-2015-marvel-s-guardians-of-the-galaxy-s1",
+          "animazione-2012-ultimate-spider-man-s4",
+          "animazione-2013-marvel-s-avengers-assemble-s3",
+          "animazione-2015-marvel-s-guardians-of-the-galaxy-s2",
+          "animazione-2013-marvel-s-avengers-assemble-s4",
+          "animazione-2015-marvel-s-guardians-of-the-galaxy-s3",
+          "animazione-2013-marvel-s-avengers-assemble-s5"
+        ]
+      },
+      {
+        "id": "marvel-animato-film-indipendenti",
+        "label": "Marvel animato — Film indipendenti",
+        "ids": [
+          "animazione-2006-ultimate-avengers-the-movie",
+          "animazione-2006-ultimate-avengers-2",
+          "animazione-2007-the-invincible-iron-man",
+          "animazione-2007-doctor-strange",
+          "animazione-2008-next-avengers-heroes-of-tomorrow",
+          "animazione-2009-hulk-vs-thor",
+          "animazione-2009-hulk-vs-wolverine",
+          "animazione-2010-planet-hulk",
+          "animazione-2011-thor-tales-of-asgard",
+          "animazione-2013-iron-man-rise-of-technovore",
+          "animazione-2013-iron-man-hulk-heroes-united",
+          "animazione-2014-avengers-confidential-black-widow-punisher",
+          "animazione-2014-iron-man-captain-america-heroes-united",
+          "animazione-2014-big-hero-6",
+          "animazione-2016-hulk-where-monsters-dwell"
+        ]
+      },
+      {
+        "id": "sony-spider-man-universe",
+        "label": "Sony Spider-Man Universe",
+        "ids": [
+          "sony-venom-2018-venom",
+          "sony-venom-2021-venom-let-there-be-carnage",
+          "sony-venom-2022-morbius",
+          "sony-venom-2024-madame-web",
+          "sony-venom-2024-venom-the-last-dance",
+          "sony-venom-2024-kraven-the-hunter"
+        ]
+      },
+      {
+        "id": "spectacular-spider-man",
+        "label": "Spectacular Spider-Man",
+        "ids": [
+          "animazione-2008-the-spectacular-spider-man-s1",
+          "animazione-2008-the-spectacular-spider-man-s2"
+        ]
+      },
+      {
+        "id": "spider-man-raimi",
+        "label": "Spider-Man Raimi",
+        "ids": [
+          "spider-man-2002-spider-man",
+          "spider-man-2004-spider-man-2",
+          "spider-man-2007-spider-man-3"
+        ]
+      },
+      {
+        "id": "spider-man-toei",
+        "label": "Spider-Man Toei",
+        "ids": [
+          "legacy-1978-spider-man-s1"
+        ]
+      },
+      {
+        "id": "spider-man-unlimited",
+        "label": "Spider-Man Unlimited",
+        "ids": [
+          "animazione-1999-spider-man-unlimited-s1"
+        ]
+      },
+      {
+        "id": "spider-man-webb",
+        "label": "Spider-Man Webb",
+        "ids": [
+          "spider-man-2012-the-amazing-spider-man",
+          "spider-man-2014-the-amazing-spider-man-2"
+        ]
+      },
+      {
+        "id": "spider-man-animato-1967",
+        "label": "Spider-Man animato 1967",
+        "ids": [
+          "animazione-1967-spider-man-s1",
+          "animazione-1967-spider-man-s2",
+          "animazione-1967-spider-man-s3"
+        ]
+      },
+      {
+        "id": "spider-man-animato-1981",
+        "label": "Spider-Man animato 1981",
+        "ids": [
+          "animazione-1981-spider-man-and-his-amazing-friends-s1",
+          "animazione-1981-spider-man-s1",
+          "animazione-1981-spider-man-and-his-amazing-friends-s2",
+          "animazione-1981-spider-man-and-his-amazing-friends-s3"
+        ]
+      },
+      {
+        "id": "spider-man-animato-1994",
+        "label": "Spider-Man animato 1994",
+        "ids": [
+          "animazione-1994-spider-man-s1",
+          "animazione-1994-spider-man-s2",
+          "animazione-1994-spider-man-s3",
+          "animazione-1994-spider-man-s4",
+          "animazione-1994-spider-man-s5"
+        ]
+      },
+      {
+        "id": "spider-man-animato-2017",
+        "label": "Spider-Man animato 2017",
+        "ids": [
+          "animazione-2017-marvel-s-spider-man-s1",
+          "animazione-2017-marvel-s-spider-man-s2",
+          "animazione-2017-marvel-s-spider-man-s3"
+        ]
+      },
+      {
+        "id": "spider-man-televisivo-1977",
+        "label": "Spider-Man televisivo 1977",
+        "ids": [
+          "legacy-1978-the-amazing-spider-man-s1",
+          "legacy-1978-the-amazing-spider-man-s2"
+        ]
+      },
+      {
+        "id": "spider-man-continuita-alternativa",
+        "label": "Spider-Man — Continuità alternativa",
+        "ids": [
+          "animazione-2025-your-friendly-neighborhood-spider-man-s1"
+        ]
+      },
+      {
+        "id": "spider-noir",
+        "label": "Spider-Noir",
+        "ids": [
+          "spider-man-2026-spider-noir-s1"
+        ]
+      },
+      {
+        "id": "spider-verse",
+        "label": "Spider-Verse",
+        "ids": [
+          "spider-verse-2018-spider-man-into-the-spider-verse",
+          "spider-verse-2023-spider-man-across-the-spider-verse",
+          "spider-verse-2023-the-spider-within-a-spider-verse-story",
+          "spider-verse-2027-spider-man-beyond-the-spider-verse"
+        ]
+      },
+      {
+        "id": "spidey-and-friends",
+        "label": "Spidey and Friends",
+        "ids": [
+          "animazione-2021-spidey-and-his-amazing-friends-s1",
+          "animazione-2021-spidey-and-his-amazing-friends-s2",
+          "animazione-2021-spidey-and-his-amazing-friends-s3"
+        ]
+      },
+      {
+        "id": "super-hero-squad",
+        "label": "Super Hero Squad",
+        "ids": [
+          "animazione-2009-the-super-hero-squad-show-s1",
+          "animazione-2009-the-super-hero-squad-show-s2"
+        ]
+      },
+      {
+        "id": "team-thor-parodia",
+        "label": "Team Thor (parodia)",
+        "ids": [
+          "mcu-2016-team-thor",
+          "mcu-2017-team-thor-part-2",
+          "mcu-2018-team-darryl"
+        ]
+      },
+      {
+        "id": "the-gifted",
+        "label": "The Gifted",
+        "ids": [
+          "x-men-2017-the-gifted-s1",
+          "x-men-2017-the-gifted-s2"
+        ]
+      },
+      {
+        "id": "wolverine-and-the-x-men",
+        "label": "Wolverine and the X-Men",
+        "ids": [
+          "animazione-2009-wolverine-and-the-x-men-s1"
+        ]
+      },
+      {
+        "id": "x-men-fox",
+        "label": "X-Men / Fox",
+        "ids": [
+          "x-men-2011-x-men-first-class",
+          "x-men-2014-x-men-days-of-future-past",
+          "x-men-2009-x-men-origins-wolverine",
+          "x-men-2000-x-men",
+          "x-men-2003-x2",
+          "x-men-2006-x-men-the-last-stand",
+          "x-men-2013-the-wolverine",
+          "x-men-2016-x-men-apocalypse",
+          "x-men-2019-dark-phoenix",
+          "x-men-2016-deadpool",
+          "x-men-2018-deadpool-2",
+          "x-men-2020-the-new-mutants",
+          "x-men-2017-logan"
+        ]
+      },
+      {
+        "id": "x-men-evolution",
+        "label": "X-Men Evolution",
+        "ids": [
+          "animazione-2000-x-men-evolution-s1",
+          "animazione-2000-x-men-evolution-s2",
+          "animazione-2000-x-men-evolution-s3",
+          "animazione-2000-x-men-evolution-s4"
+        ]
+      },
+      {
+        "id": "x-men-animato-1992",
+        "label": "X-Men animato 1992",
+        "ids": [
+          "animazione-1992-x-men-s1",
+          "animazione-1992-x-men-s2",
+          "animazione-1992-x-men-s3",
+          "animazione-1992-x-men-s4",
+          "animazione-1992-x-men-s5",
+          "animazione-2024-x-men-97-s1",
+          "animazione-2024-x-men-97-s2"
+        ]
+      }
+    ]
+  },
+  "recommended": {
+    "label": "Percorso consigliato",
+    "description": "Consiglio editoriale fan-made: inizia da Iron Man (2008), segue MCU e serie collegate in uscita, introduce Raimi e Webb prima di No Way Home e Fox / alcuni classici prima di Deadpool & Wolverine. Gli altri universi sono percorsi complementari in appendice; le uscite future vengono alla fine. Non è una cronologia ufficiale.",
+    "ids": [
+      "mcu-2008-iron-man",
+      "mcu-2008-the-incredible-hulk",
+      "mcu-2010-iron-man-2",
+      "mcu-2011-thor",
+      "mcu-2011-captain-america-the-first-avenger",
+      "mcu-2011-marvel-one-shot-the-consultant",
+      "mcu-2011-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer",
+      "mcu-2012-the-avengers",
+      "mcu-2012-marvel-one-shot-item-47",
+      "mcu-2013-iron-man-3",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s1",
+      "mcu-2013-marvel-one-shot-agent-carter",
+      "mcu-2013-thor-the-dark-world",
+      "mcu-2014-marvel-one-shot-all-hail-the-king",
+      "mcu-2014-captain-america-the-winter-soldier",
+      "mcu-2014-guardians-of-the-galaxy",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s2",
+      "marvel-television-2015-marvel-s-agent-carter-s1",
+      "defenders-2015-marvel-s-daredevil-s1",
+      "mcu-2015-avengers-age-of-ultron",
+      "mcu-2015-ant-man",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s3",
+      "defenders-2015-marvel-s-jessica-jones-s1",
+      "marvel-television-2015-marvel-s-agent-carter-s2",
+      "defenders-2015-marvel-s-daredevil-s2",
+      "mcu-2016-captain-america-civil-war",
+      "mcu-2016-team-thor",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s4",
+      "defenders-2016-marvel-s-luke-cage-s1",
+      "mcu-2016-doctor-strange",
+      "marvel-television-2016-marvel-s-agents-of-s-h-i-e-l-d-slingshot-s1",
+      "mcu-2017-team-thor-part-2",
+      "defenders-2017-marvel-s-iron-fist-s1",
+      "mcu-2017-guardians-of-the-galaxy-vol-2",
+      "mcu-2017-spider-man-homecoming",
+      "defenders-2017-marvel-s-the-defenders-s1",
+      "marvel-television-2017-marvel-s-inhumans-s1",
+      "mcu-2017-thor-ragnarok",
+      "defenders-2017-marvel-s-the-punisher-s1",
+      "marvel-television-2017-marvel-s-runaways-s1",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s5",
+      "mcu-2018-black-panther",
+      "mcu-2018-team-darryl",
+      "defenders-2015-marvel-s-jessica-jones-s2",
+      "mcu-2018-avengers-infinity-war",
+      "marvel-television-2018-marvel-s-cloak-dagger-s1",
+      "defenders-2016-marvel-s-luke-cage-s2",
+      "mcu-2018-ant-man-and-the-wasp",
+      "defenders-2017-marvel-s-iron-fist-s2",
+      "defenders-2015-marvel-s-daredevil-s3",
+      "marvel-television-2017-marvel-s-runaways-s2",
+      "defenders-2017-marvel-s-the-punisher-s2",
+      "mcu-2019-captain-marvel",
+      "marvel-television-2018-marvel-s-cloak-dagger-s2",
+      "mcu-2019-avengers-endgame",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s6",
+      "defenders-2015-marvel-s-jessica-jones-s3",
+      "mcu-2019-spider-man-far-from-home",
+      "marvel-television-2017-marvel-s-runaways-s3",
+      "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s7",
+      "marvel-television-2020-helstrom-s1",
+      "mcu-2021-wandavision-s1",
+      "mcu-2021-the-falcon-and-the-winter-soldier-s1",
+      "mcu-2021-loki-s1",
+      "mcu-2021-black-widow",
+      "mcu-2021-what-if-s1",
+      "mcu-2021-shang-chi-and-the-legend-of-the-ten-rings",
+      "mcu-2021-eternals",
+      "mcu-2021-hawkeye-s1",
+      "spider-man-2002-spider-man",
+      "spider-man-2004-spider-man-2",
+      "spider-man-2007-spider-man-3",
+      "spider-man-2012-the-amazing-spider-man",
+      "spider-man-2014-the-amazing-spider-man-2",
+      "mcu-2021-spider-man-no-way-home",
+      "mcu-2022-moon-knight-s1",
+      "mcu-2022-doctor-strange-in-the-multiverse-of-madness",
+      "mcu-2022-ms-marvel-s1",
+      "mcu-2022-thor-love-and-thunder",
+      "mcu-2022-i-am-groot-s1",
+      "mcu-2022-she-hulk-attorney-at-law-s1",
+      "mcu-2022-werewolf-by-night",
+      "mcu-2022-black-panther-wakanda-forever",
+      "mcu-2022-the-guardians-of-the-galaxy-holiday-special",
+      "mcu-2023-ant-man-and-the-wasp-quantumania",
+      "mcu-2023-guardians-of-the-galaxy-vol-3",
+      "mcu-2023-secret-invasion-s1",
+      "mcu-2022-i-am-groot-s2",
+      "mcu-2021-loki-s2",
+      "mcu-2023-the-marvels",
+      "mcu-2021-what-if-s2",
+      "mcu-2024-echo-s1",
+      "legacy-1998-blade",
+      "x-men-2000-x-men",
+      "legacy-2003-daredevil",
+      "x-men-2003-x2",
+      "legacy-2005-elektra",
+      "fantastic-four-2005-fantastic-four",
+      "x-men-2006-x-men-the-last-stand",
+      "fantastic-four-2007-fantastic-four-rise-of-the-silver-surfer",
+      "x-men-2009-x-men-origins-wolverine",
+      "x-men-2011-x-men-first-class",
+      "x-men-2013-the-wolverine",
+      "x-men-2014-x-men-days-of-future-past",
+      "x-men-2016-deadpool",
+      "x-men-2016-x-men-apocalypse",
+      "x-men-2017-logan",
+      "x-men-2018-deadpool-2",
+      "x-men-2019-dark-phoenix",
+      "x-men-2020-the-new-mutants",
+      "mcu-2024-deadpool-wolverine",
+      "mcu-2024-agatha-all-along-s1",
+      "mcu-2021-what-if-s3",
+      "mcu-2025-captain-america-brave-new-world",
+      "mcu-2025-daredevil-born-again-s1",
+      "mcu-2025-thunderbolts",
+      "mcu-2025-ironheart-s1",
+      "mcu-2025-the-fantastic-four-first-steps",
+      "mcu-2025-eyes-of-wakanda-s1",
+      "mcu-2025-marvel-zombies-s1",
+      "mcu-2026-wonder-man-s1",
+      "mcu-2025-daredevil-born-again-s2",
+      "mcu-2026-the-punisher-one-last-kill",
+      "mcu-2026-spider-man-brand-new-day",
+      "sony-venom-2018-venom",
+      "sony-venom-2021-venom-let-there-be-carnage",
+      "sony-venom-2022-morbius",
+      "sony-venom-2024-madame-web",
+      "sony-venom-2024-venom-the-last-dance",
+      "sony-venom-2024-kraven-the-hunter",
+      "spider-verse-2018-spider-man-into-the-spider-verse",
+      "spider-verse-2023-spider-man-across-the-spider-verse",
+      "spider-verse-2023-the-spider-within-a-spider-verse-story",
+      "spider-man-2026-spider-noir-s1",
+      "fantastic-four-2015-fantastic-four",
+      "x-men-2017-legion-s1",
+      "x-men-2017-legion-s2",
+      "x-men-2017-legion-s3",
+      "x-men-2017-the-gifted-s1",
+      "x-men-2017-the-gifted-s2",
+      "legacy-1977-the-incredible-hulk-s1",
+      "legacy-1977-the-incredible-hulk-s2",
+      "legacy-1977-the-incredible-hulk-s3",
+      "legacy-1977-the-incredible-hulk-s4",
+      "legacy-1977-the-incredible-hulk-s5",
+      "legacy-1978-the-amazing-spider-man-s1",
+      "legacy-1978-the-amazing-spider-man-s2",
+      "legacy-1978-spider-man-s1",
+      "legacy-1978-dr-strange",
+      "legacy-1979-captain-america",
+      "legacy-1979-captain-america-ii-death-too-soon",
+      "legacy-1986-howard-the-duck",
+      "legacy-1988-the-incredible-hulk-returns",
+      "legacy-1989-the-trial-of-the-incredible-hulk",
+      "legacy-1989-the-punisher",
+      "legacy-1990-the-death-of-the-incredible-hulk",
+      "legacy-1990-captain-america",
+      "legacy-1996-generation-x",
+      "legacy-1998-nick-fury-agent-of-s-h-i-e-l-d",
+      "legacy-2002-blade-ii",
+      "legacy-2003-hulk",
+      "legacy-2004-the-punisher",
+      "legacy-2004-blade-trinity",
+      "legacy-2005-man-thing",
+      "legacy-2007-ghost-rider",
+      "legacy-2008-punisher-war-zone",
+      "legacy-2011-ghost-rider-spirit-of-vengeance",
+      "legacy-2006-blade-the-series-s1",
+      "animazione-1967-spider-man-s1",
+      "animazione-1967-spider-man-s2",
+      "animazione-1967-spider-man-s3",
+      "animazione-1981-spider-man-and-his-amazing-friends-s1",
+      "animazione-1981-spider-man-s1",
+      "animazione-1981-spider-man-and-his-amazing-friends-s2",
+      "animazione-1981-spider-man-and-his-amazing-friends-s3",
+      "animazione-1982-the-incredible-hulk-s1",
+      "animazione-1992-x-men-s1",
+      "animazione-1992-x-men-s2",
+      "animazione-1992-x-men-s3",
+      "animazione-1992-x-men-s4",
+      "animazione-1992-x-men-s5",
+      "animazione-2024-x-men-97-s1",
+      "animazione-2024-x-men-97-s2",
+      "animazione-1994-fantastic-four-s1",
+      "animazione-1994-iron-man-s1",
+      "animazione-1994-fantastic-four-s2",
+      "animazione-1994-iron-man-s2",
+      "animazione-1996-the-incredible-hulk-s1",
+      "animazione-1996-the-incredible-hulk-s2",
+      "animazione-1994-spider-man-s1",
+      "animazione-1994-spider-man-s2",
+      "animazione-1994-spider-man-s3",
+      "animazione-1994-spider-man-s4",
+      "animazione-1994-spider-man-s5",
+      "animazione-1999-spider-man-unlimited-s1",
+      "animazione-2000-x-men-evolution-s1",
+      "animazione-2000-x-men-evolution-s2",
+      "animazione-2000-x-men-evolution-s3",
+      "animazione-2000-x-men-evolution-s4",
+      "animazione-2006-ultimate-avengers-the-movie",
+      "animazione-2006-ultimate-avengers-2",
+      "animazione-2007-the-invincible-iron-man",
+      "animazione-2007-doctor-strange",
+      "animazione-2008-next-avengers-heroes-of-tomorrow",
+      "animazione-2009-hulk-vs-thor",
+      "animazione-2009-hulk-vs-wolverine",
+      "animazione-2010-planet-hulk",
+      "animazione-2011-thor-tales-of-asgard",
+      "animazione-2013-iron-man-rise-of-technovore",
+      "animazione-2013-iron-man-hulk-heroes-united",
+      "animazione-2014-avengers-confidential-black-widow-punisher",
+      "animazione-2014-iron-man-captain-america-heroes-united",
+      "animazione-2014-big-hero-6",
+      "animazione-2016-hulk-where-monsters-dwell",
+      "animazione-2006-fantastic-four-world-s-greatest-heroes-s1",
+      "animazione-2008-the-spectacular-spider-man-s1",
+      "animazione-2008-the-spectacular-spider-man-s2",
+      "animazione-2009-wolverine-and-the-x-men-s1",
+      "animazione-2009-iron-man-armored-adventures-s1",
+      "animazione-2009-iron-man-armored-adventures-s2",
+      "animazione-2009-the-super-hero-squad-show-s1",
+      "animazione-2009-the-super-hero-squad-show-s2",
+      "animazione-2010-the-avengers-earth-s-mightiest-heroes-s1",
+      "animazione-2010-the-avengers-earth-s-mightiest-heroes-s2",
+      "animazione-2012-ultimate-spider-man-s1",
+      "animazione-2012-ultimate-spider-man-s2",
+      "animazione-2013-marvel-s-avengers-assemble-s1",
+      "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s1",
+      "animazione-2012-ultimate-spider-man-s3",
+      "animazione-2013-marvel-s-avengers-assemble-s2",
+      "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s2",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s1",
+      "animazione-2012-ultimate-spider-man-s4",
+      "animazione-2013-marvel-s-avengers-assemble-s3",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s2",
+      "animazione-2013-marvel-s-avengers-assemble-s4",
+      "animazione-2015-marvel-s-guardians-of-the-galaxy-s3",
+      "animazione-2013-marvel-s-avengers-assemble-s5",
+      "animazione-2014-marvel-disk-wars-the-avengers-s1",
+      "animazione-2017-marvel-future-avengers-s1",
+      "animazione-2017-marvel-future-avengers-s2",
+      "animazione-2017-marvel-s-spider-man-s1",
+      "animazione-2017-marvel-s-spider-man-s2",
+      "animazione-2017-marvel-s-spider-man-s3",
+      "animazione-2021-marvel-s-m-o-d-o-k-s1",
+      "animazione-2021-spidey-and-his-amazing-friends-s1",
+      "animazione-2021-spidey-and-his-amazing-friends-s2",
+      "animazione-2021-spidey-and-his-amazing-friends-s3",
+      "animazione-2021-marvel-s-hit-monkey-s1",
+      "animazione-2021-marvel-s-hit-monkey-s2",
+      "animazione-2025-your-friendly-neighborhood-spider-man-s1",
+      "mcu-2026-visionquest-s1",
+      "mcu-2026-avengers-doomsday",
+      "spider-verse-2027-spider-man-beyond-the-spider-verse",
+      "mcu-2027-avengers-secret-wars"
+    ]
+  }
+}

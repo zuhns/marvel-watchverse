@@ -1,0 +1,2042 @@
+{
+  "mcu-2008-iron-man": {
+    "url": "https://media.themoviedb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1726?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2008-the-incredible-hulk": {
+    "url": "https://media.themoviedb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1724?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2011-thor": {
+    "url": "https://media.themoviedb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/10195?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2011-captain-america-the-first-avenger": {
+    "url": "https://media.themoviedb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1771?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2010-iron-man-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/10138?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2013-thor-the-dark-world": {
+    "url": "https://media.themoviedb.org/t/p/w500/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/76338?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2012-the-avengers": {
+    "url": "https://media.themoviedb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/24428?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2013-iron-man-3": {
+    "url": "https://media.themoviedb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/68721?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2014-captain-america-the-winter-soldier": {
+    "url": "https://media.themoviedb.org/t/p/w500/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/100402?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2014-guardians-of-the-galaxy": {
+    "url": "https://media.themoviedb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/118340?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2015-avengers-age-of-ultron": {
+    "url": "https://media.themoviedb.org/t/p/w500/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/99861?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2016-captain-america-civil-war": {
+    "url": "https://media.themoviedb.org/t/p/w500/rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/271110?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2015-ant-man": {
+    "url": "https://media.themoviedb.org/t/p/w500/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/102899?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2016-doctor-strange": {
+    "url": "https://media.themoviedb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/284052?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2017-guardians-of-the-galaxy-vol-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/283995?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2017-spider-man-homecoming": {
+    "url": "https://media.themoviedb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/315635?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2017-thor-ragnarok": {
+    "url": "https://media.themoviedb.org/t/p/w500/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/284053?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2018-ant-man-and-the-wasp": {
+    "url": "https://media.themoviedb.org/t/p/w500/cFQEO687n1K6umXbInzocxcnAQz.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/363088?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2018-avengers-infinity-war": {
+    "url": "https://media.themoviedb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/299536?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2018-black-panther": {
+    "url": "https://media.themoviedb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/284054?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2019-captain-marvel": {
+    "url": "https://media.themoviedb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/299537?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2019-avengers-endgame": {
+    "url": "https://media.themoviedb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/299534?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2019-spider-man-far-from-home": {
+    "url": "https://media.themoviedb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/429617?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2021-shang-chi-and-the-legend-of-the-ten-rings": {
+    "url": "https://media.themoviedb.org/t/p/w500/9f2Q0U3IOsLgrI2HkvldwSABZy5.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/566525?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2021-black-widow": {
+    "url": "https://media.themoviedb.org/t/p/w500/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/497698?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2021-eternals": {
+    "url": "https://media.themoviedb.org/t/p/w500/lFByFSLV5WDJEv3KabbdAF959F2.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/524434?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2021-spider-man-no-way-home": {
+    "url": "https://media.themoviedb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/634649?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2022-thor-love-and-thunder": {
+    "url": "https://media.themoviedb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/616037?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2022-doctor-strange-in-the-multiverse-of-madness": {
+    "url": "https://media.themoviedb.org/t/p/w500/ddJcSKbcp4rKZTmuyWaMhuwcfMz.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/453395?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2022-black-panther-wakanda-forever": {
+    "url": "https://media.themoviedb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/505642?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2023-ant-man-and-the-wasp-quantumania": {
+    "url": "https://media.themoviedb.org/t/p/w500/qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/640146?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2023-the-marvels": {
+    "url": "https://media.themoviedb.org/t/p/w500/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/609681?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2023-guardians-of-the-galaxy-vol-3": {
+    "url": "https://media.themoviedb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/447365?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2024-deadpool-wolverine": {
+    "url": "https://media.themoviedb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/533535?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2025-captain-america-brave-new-world": {
+    "url": "https://media.themoviedb.org/t/p/w500/pzIddUEMWhWzfvLI3TwxUG2wGoi.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/822119?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2025-thunderbolts": {
+    "url": "https://media.themoviedb.org/t/p/w500/hqcexYHbiTBfDIdDWxrxPtVndBX.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/986056?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2025-the-fantastic-four-first-steps": {
+    "url": "https://media.themoviedb.org/t/p/w500/nf5qaSEvyYSNeFH0YhSs5EsBLX9.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/617126?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "mcu-2026-spider-man-brand-new-day": {
+    "url": "https://media.themoviedb.org/t/p/w500/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/969681?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2027-avengers-secret-wars": {
+    "url": "https://media.themoviedb.org/t/p/w500/f0YBuh4hyiAheXhh4JnJWoKi9g5.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1003598?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2026-avengers-doomsday": {
+    "url": "https://media.themoviedb.org/t/p/w500/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1003596?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2000-x-men": {
+    "url": "https://media.themoviedb.org/t/p/w500/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36657?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2006-x-men-the-last-stand": {
+    "url": "https://media.themoviedb.org/t/p/w500/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36668?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2003-x2": {
+    "url": "https://media.themoviedb.org/t/p/w500/bst4alFUXCxISwdRUKSMhhkrX1M.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36658?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2011-x-men-first-class": {
+    "url": "https://media.themoviedb.org/t/p/w500/hNEokmUke0dazoBhttFN0o3L7Xv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/49538?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2009-x-men-origins-wolverine": {
+    "url": "https://media.themoviedb.org/t/p/w500/yj8LbTju1p7CUJg7US2unSBk33s.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/2080?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2013-the-wolverine": {
+    "url": "https://media.themoviedb.org/t/p/w500/t2wVAcoRlKvEIVSbiYDb8d0QqqS.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/76170?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2016-x-men-apocalypse": {
+    "url": "https://media.themoviedb.org/t/p/w500/ikA8UhYdTGpqbatFa93nIf6noSr.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/246655?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2014-x-men-days-of-future-past": {
+    "url": "https://media.themoviedb.org/t/p/w500/tYfijzolzgoMOtegh1Y7j2Enorg.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/127585?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2016-deadpool": {
+    "url": "https://media.themoviedb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/293660?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2017-logan": {
+    "url": "https://media.themoviedb.org/t/p/w500/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/263115?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2019-dark-phoenix": {
+    "url": "https://media.themoviedb.org/t/p/w500/cCTJPelKGLhALq3r51A9uMonxKj.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/320288?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2018-deadpool-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/to0spRl1CMDvyUbOnbb4fTk3VAd.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/383498?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "x-men-2020-the-new-mutants": {
+    "url": "https://media.themoviedb.org/t/p/w500/xiDGcXJTvu1lazFRYip6g1eLt9c.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/340102?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-man-2002-spider-man": {
+    "url": "https://media.themoviedb.org/t/p/w500/or6XJBVpcEbIkma0V9zshnbEtx4.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/557?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-man-2004-spider-man-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/558?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-man-2007-spider-man-3": {
+    "url": "https://media.themoviedb.org/t/p/w500/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/559?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-man-2014-the-amazing-spider-man-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/bU7nTmvmy0h3VUP01v1T2imgH6N.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/102382?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-man-2012-the-amazing-spider-man": {
+    "url": "https://media.themoviedb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1930?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2018-venom": {
+    "url": "https://media.themoviedb.org/t/p/w500/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/335983?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2021-venom-let-there-be-carnage": {
+    "url": "https://media.themoviedb.org/t/p/w500/pzKsRuKLFmYrW5Q0q8E8G78Tcgo.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/580489?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2022-morbius": {
+    "url": "https://media.themoviedb.org/t/p/w500/Av8Z2jZhEm1FLkFzMThzz9hndJF.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/526896?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2024-madame-web": {
+    "url": "https://media.themoviedb.org/t/p/w500/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/634492?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2024-venom-the-last-dance": {
+    "url": "https://media.themoviedb.org/t/p/w500/vGXptEdgZIhPg3cGlc7e8sNPC2e.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/912649?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "sony-venom-2024-kraven-the-hunter": {
+    "url": "https://media.themoviedb.org/t/p/w500/1GvBhRxY6MELDfxFrete6BNhBB5.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/539972?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-verse-2018-spider-man-into-the-spider-verse": {
+    "url": "https://media.themoviedb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/324857?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-verse-2023-spider-man-across-the-spider-verse": {
+    "url": "https://media.themoviedb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/569094?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-verse-2027-spider-man-beyond-the-spider-verse": {
+    "url": "https://media.themoviedb.org/t/p/w500/9KAe39xqyZnv9J4W3DRGdQqX82h.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/911916?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "fantastic-four-2007-fantastic-four-rise-of-the-silver-surfer": {
+    "url": "https://media.themoviedb.org/t/p/w500/9wRfzTcMyyzkQxVDqBHv8RwuZOv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1979?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "spider-verse-2023-the-spider-within-a-spider-verse-story": {
+    "url": "https://media.themoviedb.org/t/p/w500/2xlk27ZW2WI6Q77SLEmwhUpz190.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1106299?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": false
+  },
+  "fantastic-four-2005-fantastic-four": {
+    "url": "https://media.themoviedb.org/t/p/w500/4YMcYEFS8sFuW3soP1HVmgR3cSm.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/9738?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "fantastic-four-2015-fantastic-four": {
+    "url": "https://media.themoviedb.org/t/p/w500/cDroz5qSlP8xZ6tOpeYoPkBvKyL.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/166424?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2002-blade-ii": {
+    "url": "https://media.themoviedb.org/t/p/w500/wAn6VYamKbnOtfyTZ6arVtkMzDv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36586?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1998-blade": {
+    "url": "https://media.themoviedb.org/t/p/w500/oWT70TvbsmQaqyphCZpsnQR7R32.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36647?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2004-blade-trinity": {
+    "url": "https://media.themoviedb.org/t/p/w500/6f7iXvPOnf83MaLB1JmPzUor1rr.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/36648?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2003-daredevil": {
+    "url": "https://media.themoviedb.org/t/p/w500/oCDBwSkntYamuw8VJIxMRCtDBmi.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/9480?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2005-elektra": {
+    "url": "https://media.themoviedb.org/t/p/w500/Z4dAOxjAHTUZO6DJ2WVAsxzwe3.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/9947?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2004-the-punisher": {
+    "url": "https://media.themoviedb.org/t/p/w500/7rmA1HwYp2GKM85BL0cVwCaosGr.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/7220?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2003-hulk": {
+    "url": "https://media.themoviedb.org/t/p/w500/UllIft2jLSBaay3zQyMV4GNdfy.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1927?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2008-punisher-war-zone": {
+    "url": "https://media.themoviedb.org/t/p/w500/oOvKJgYUIpfswGHAdW6159bPbvM.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/13056?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1989-the-punisher": {
+    "url": "https://media.themoviedb.org/t/p/w500/tA0O0hYyHX7Hl2Fl8VEtGtfBtjI.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/8867?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2007-ghost-rider": {
+    "url": "https://media.themoviedb.org/t/p/w500/4quwR1VwZouD0YF9AaD72kQAjxH.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1250?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1986-howard-the-duck": {
+    "url": "https://media.themoviedb.org/t/p/w500/30tnH0hy6S5FjGCfCdnkBd3wqS2.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/10658?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1990-captain-america": {
+    "url": "https://media.themoviedb.org/t/p/w500/vdHrLFfHcJX9nlvUfG3LK2a2hq4.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/13995?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2011-ghost-rider-spirit-of-vengeance": {
+    "url": "https://media.themoviedb.org/t/p/w500/xEoBT6lYfQNpSpTm8gJMTrQytiw.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/71676?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1978-dr-strange": {
+    "url": "https://media.themoviedb.org/t/p/w500/hEyHVgBE28Jl13h2Qpbr3LH77sP.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/50468?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-2005-man-thing": {
+    "url": "https://media.themoviedb.org/t/p/w500/kfPPnOygXSGaBFpsCUyu7xQdkoO.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/18882?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1996-generation-x": {
+    "url": "https://media.themoviedb.org/t/p/w500/9LeTRxm04eW6Ls4429DTT4MU9b7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/26623?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1998-nick-fury-agent-of-s-h-i-e-l-d": {
+    "url": "https://media.themoviedb.org/t/p/w500/4T0YjvnBaMASZkkRKxMIe6IoWO0.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/27460?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "legacy-1979-captain-america": {
+    "url": "https://media.themoviedb.org/t/p/w500/gNGq4u0cymxZqGADZrx7AWrSB5m.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/197467?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1979-captain-america-ii-death-too-soon": {
+    "url": "https://media.themoviedb.org/t/p/w500/pocmh0P8Ddf5w33pP3Vuqm0JRP9.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/197481?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1988-the-incredible-hulk-returns": {
+    "url": "https://media.themoviedb.org/t/p/w500/rDAWdpW0uzUj9c4YPeuanPGWHBq.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/26881?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1990-the-death-of-the-incredible-hulk": {
+    "url": "https://media.themoviedb.org/t/p/w500/6q6CviMLR97ssODmKhxgyxQuoYp.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/19593?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "legacy-1989-the-trial-of-the-incredible-hulk": {
+    "url": "https://media.themoviedb.org/t/p/w500/jaaeLvonWry3TdTXaGSu2VveNEG.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/26883?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "mcu-2011-marvel-one-shot-the-consultant": {
+    "url": "https://media.themoviedb.org/t/p/w500/xqNLXUUvBnfVk6m3QFGGU0Grgs7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/76122?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2011-marvel-one-shot-a-funny-thing-happened-on-the-way-to-thor-s-hammer": {
+    "url": "https://media.themoviedb.org/t/p/w500/njrOqsmFH4pxBrhcoslqLfw2OGk.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/76535?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2012-marvel-one-shot-item-47": {
+    "url": "https://media.themoviedb.org/t/p/w500/hnSxG8clwLuAXEkp9emc8HCUcHD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/119569?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2014-marvel-one-shot-all-hail-the-king": {
+    "url": "https://media.themoviedb.org/t/p/w500/y0QYZPWgeGKOvyrzi6Oz3aJPxJa.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/253980?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2016-team-thor": {
+    "url": "https://media.themoviedb.org/t/p/w500/hpHvGuMc46pppwpcW0Xk7eys3L4.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/413279?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2013-marvel-one-shot-agent-carter": {
+    "url": "https://media.themoviedb.org/t/p/w500/4vFKKWPvCVDJTOWiwReBfpAMScP.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/211387?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2017-team-thor-part-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/2jmP71A5Un0jDNqBesDPQSN8hjJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/441829?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2022-werewolf-by-night": {
+    "url": "https://media.themoviedb.org/t/p/w500/mvIvNKRIJPPS7WSFarFhOAGIVnU.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/894205?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2026-the-punisher-one-last-kill": {
+    "url": "https://media.themoviedb.org/t/p/w500/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/1439930?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2018-team-darryl": {
+    "url": "https://media.themoviedb.org/t/p/w500/edroTAeTEM9ILyAnumA0ALxRSne.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/505945?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2022-the-guardians-of-the-galaxy-holiday-special": {
+    "url": "https://media.themoviedb.org/t/p/w500/8dqXyslZ2hv49Oiob9UjlGSHSTR.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/774752?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "mcu-2021-wandavision-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/8BSVNGpZwZDScVv8e5S1c8XIjeJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/85271/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-the-falcon-and-the-winter-soldier-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/88396/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-what-if-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/lztz5XBMG1x6Y5ubz7CxfPFsAcW.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/91363/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-loki-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/8uVqe9ThcuYVNdh4O0kuijIWMLL.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/84958/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-hawkeye-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/nGcqeKieycPFvsxOeLJssCTt3mL.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/88329/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2022-moon-knight-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/zPFm8ZbvdzoViRHnLi8cH7TBS1B.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/92749/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-what-if-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/3yhoq5LVMgKy9rEriH6ytq9BoJV.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/91363/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-loki-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/oJdVHUYrjdS2IqiNztVIP4GPB1p.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/84958/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2021-what-if-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/bbGeKXKoualYRYqvFYiv8fPZK0d.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/91363/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2022-ms-marvel-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/4qoFtoPvFGjlIXYfFVNKhOwZ6zD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/92782/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2024-echo-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/eVqz9zgvGYVqvHOg1QlHWrGTpz3.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/122226/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2024-agatha-all-along-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/cXEE6EsLJNwEwOCedX04Uixfq5O.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/138501/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2023-secret-invasion-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/8fQckSuTR8NEN3mXeledSQCISZJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/114472/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2022-she-hulk-attorney-at-law-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/41Iekrap0j80u808Z2004t88r6o.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/92783/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2025-ironheart-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/1V4rcxP9Dk0TKHkVAc2sigcdDXc.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/114471/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2026-wonder-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/z5xlxga7oc2eGVpS9vw38ULA9nr.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/198178/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2025-marvel-zombies-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/wofiHMsXxmp0lTafcBrgciSxBVx.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/138505/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2025-eyes-of-wakanda-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/64RsvJMVUfhs5CDV7xXRjiLK4w6.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/241388/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "mcu-2025-daredevil-born-again-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/9lLuhV703HGCbnz6FxnqCwIwzAZ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/202555/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2025-daredevil-born-again-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/timvsedxh5ce795tsv6EDTZmmXW.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/202555/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2022-i-am-groot-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/oZmqHnWJVQLOKOibDa34W4iGBZU.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/232125/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2025-your-friendly-neighborhood-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/bifTEU63VFt2ugUte9LqNBb1Dno.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/138503/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-daredevil-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/zFmJQzl6bFrdpHhDkxXmboyykqD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/61889/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2026-visionquest-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/xK27l5uwaVyZSlENWnmLlWwDQNS.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/213375/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-jessica-jones-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/9wwfowgVJDouHQdUsIcNhgbIUlG.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/38472/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "mcu-2022-i-am-groot-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/7b4qBnExIjuANVDKWyVN8gVVOXS.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/232125/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-daredevil-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/opHoslNCxkgoCaGhfO66fvCSH83.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/61889/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-jessica-jones-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/tKirVNmDmwYjqehjPpyjr1n3U2F.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/38472/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-daredevil-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/zH6sgePlr1XX0jSZypbfQmr70Lf.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/61889/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2015-marvel-s-jessica-jones-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/dOPx3bj3x6eXYXQJUUIHXvWRSSB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/38472/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2016-marvel-s-luke-cage-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/hBbPrnlkpxod0Zq14wsPlaLOemG.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/62126/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2017-marvel-s-the-defenders-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/4COAMPA6LPkPBd1xdm9paN4LCD8.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/62285/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2017-marvel-s-iron-fist-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/usGfoL4RfX15f1sQcX3Sgw4YRf4.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/62127/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2017-marvel-s-the-punisher-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/dOkJ6TJKQjsz2XwXyp2VYpkeE5g.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67178/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/1CaKyPcZvzzMSwbNFJObxNsxTkK.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2016-marvel-s-luke-cage-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/xe9VGtjJ1vsSKtAnoXEnVdUqyxb.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/62126/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2017-marvel-s-iron-fist-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/vXYvfCWvz5W0rErCpNIq09urhzW.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/62127/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "defenders-2017-marvel-s-the-punisher-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/agNYq5XZnGfmYetUMyyM2RdPY70.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67178/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/p8Qy60OIf0OaJ29KPw6ld51MSP7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/y0cxxcvCk9lEG4DEorTz5GxC9sj.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/mgyMzTTIFVdKoejD0gKIyaCgWOP.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s5": {
+    "url": "https://media.themoviedb.org/t/p/w500/pwZedE4CB3E73lvH9A5yRaszll0.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/5?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s6": {
+    "url": "https://media.themoviedb.org/t/p/w500/QU0NjcvDonZLKhjRuxRv6AVo5l.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/6?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2013-marvel-s-agents-of-s-h-i-e-l-d-s7": {
+    "url": "https://media.themoviedb.org/t/p/w500/qM95u55G8xVyfgoSZ2qTlY3MDl6.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1403/season/7?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2015-marvel-s-agent-carter-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/gqyjmfFOrKY8iouNTXWj9KW7cC5.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/61550/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2017-marvel-s-inhumans-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/doCIoaV9ffAJbK3TW2AsGp4ytOQ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/68716/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2017-marvel-s-runaways-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/hMsaGkDyCM3Y3EWcdYK5Uu8qEok.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67466/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2020-helstrom-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/8fPIcaRIZgsoBcgA5yAm3GNz61M.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/88987/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2018-marvel-s-cloak-dagger-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/nluzawv8wEo0AeECpnLo3wO2YLZ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/66190/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2015-marvel-s-agent-carter-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/h3yPRRiWZk6HrFD2oo3xqpLt6bc.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/61550/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2017-marvel-s-runaways-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/r2e50wFzTsMgsSVLAyIB8uX1EGu.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67466/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2018-marvel-s-cloak-dagger-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/pYnRJuBPEqZO1o4fcxBTgmKNHfy.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/66190/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2017-marvel-s-runaways-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/m83skvEvoFQoo1szIMpFQ6kbCe6.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67466/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "marvel-television-2016-marvel-s-agents-of-s-h-i-e-l-d-slingshot-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/kbS1aQMNUUam4NWdXws98bKEBVV.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/69088/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-2006-blade-the-series-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/bdpbXGczc9zvRyYVUvNci1KWnfx.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4619/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "spider-man-2026-spider-noir-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/oD8WSVqz84ZRfelkr7JPeJwR9Iv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/220102/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "x-men-2017-legion-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/au5hsZ20QzOVXSOWgx7umAhHC6A.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67195/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "x-men-2017-the-gifted-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/nYkGYVzn4Df3V5fZS9xYyKZn551.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/69629/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "x-men-2017-legion-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/wMPFWmM7VLu2AwBzpF3JiWTnTkt.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67195/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "x-men-2017-the-gifted-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/bUL8MBcB4OeVA2YkA3q1AMbpJL1.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/69629/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "x-men-2017-legion-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/4THIqrWWYdsxy6zkfzzYvWnXR6Z.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/67195/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1978-the-amazing-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/jrGZYtAmcrTBnvFqQ2LgGVTOvlb.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4552/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "legacy-1977-the-incredible-hulk-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/b2oVBGDFG7FaAKGkXIwadN4Sn7A.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/648/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1992-x-men-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/qVwe6nEnJpJbjisnDka0yoeDaT2.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4574/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1978-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/vZP7Bp7cxbQSkZLsWLLTCi1CscZ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/2640/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:45.927Z",
+    "seasonSpecific": true
+  },
+  "animazione-2024-x-men-97-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/383PV0WolYYQvTriH0NfvMUA28R.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/138502/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1992-x-men-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/eEy7kDNgxsn2IYZad0FCk9uRhpn.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4574/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1977-the-incredible-hulk-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/sVrBMT28xOBlNCdgF8Uo1idutMv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/648/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "legacy-1978-the-amazing-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/aTD8FCWHt2osF8nQPXdooiIwFNH.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4552/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "animazione-2024-x-men-97-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/2HKBc5UiFw8JrruHq8S1Y7TnlW0.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/138502/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1992-x-men-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/dmQWZoWr8lAR0aFhBjsieVddlLf.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4574/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1977-the-incredible-hulk-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/xjJYdXRCTewz2hNSCe5hKxsnXPr.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/648/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1992-x-men-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/rKqwgDcLiM08KEP2a3ac4shf5tt.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4574/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1977-the-incredible-hulk-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/8N8RfbDIZ0Wn2WGWTHMgqX9ZwOl.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/648/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1992-x-men-s5": {
+    "url": "https://media.themoviedb.org/t/p/w500/nREygs8ZRcqyqBT9mSzPhlkmLtS.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/4574/season/5?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "legacy-1977-the-incredible-hulk-s5": {
+    "url": "https://media.themoviedb.org/t/p/w500/wxTDW9hakq8kH5oGL8iM0PjJ6P7.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/648/season/5?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2010-the-avengers-earth-s-mightiest-heroes-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/far2i8Wk57CYaGtHfwl63w5vWai.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/33623/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/f1Dy2F8of9uZiSz6Z3kTlzpWz6L.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/888/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-fantastic-four-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/gHMRD0dcG2mKiOrurxnNev4vh2d.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/2901/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2008-the-spectacular-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/p4MOucpDNuRuQ1ZPrErZMKU3s0k.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/3854/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2012-ultimate-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/p276PkRJ5Wexq91DA5RkbxTYMDn.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/34391/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2010-the-avengers-earth-s-mightiest-heroes-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/qQqndwtPzgZMKtn6cZGYtqZW8PY.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/33623/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/qIDlAgHTlVxc0Htyi5TPUSuePNJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/888/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-fantastic-four-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/ccjFJsaeAJDMQqfqHaj7mHmhrq9.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/2901/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2008-the-spectacular-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/rONBGuiggABjRSQcvxw1z0KboVI.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/3854/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2012-ultimate-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/eXtlDP6kgUyYw0G2L9AxSWUp14Q.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/34391/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-spider-man-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/hCUkmIr50UnOuU9MasUZ7s0y3vf.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/888/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2012-ultimate-spider-man-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/iicBAyyU56hr2pgNA5YCnTIu9tJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/34391/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-spider-man-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/lQFu9auCwZLUTJigBZsSL2Kwp80.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/888/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2012-ultimate-spider-man-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/fgmcIYoUjo14yIErawolG6pv8Nf.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/34391/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-spider-man-s5": {
+    "url": "https://media.themoviedb.org/t/p/w500/naOSAwubTLs2PSrJIAyNPNz7cVh.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/888/season/5?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2009-wolverine-and-the-x-men-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/97GtkN7LEVUYMTSdbuhpr057v8A.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/6549/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-iron-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/gsGYxzA0NywHZvPTyV6xJ1XdSgy.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/3097/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2015-marvel-s-guardians-of-the-galaxy-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/bGktl9BtbNfx3S0NmbGvb2abP8Q.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/63181/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-marvel-s-avengers-assemble-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/3hDR6u7vy0UgFp64KwzWCj73TKm.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/59427/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "animazione-2000-x-men-evolution-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/vZiwKpAf4jH7jGDZTmzCoMOQijE.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/668/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1994-iron-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/9jAP0UPnfGeQn5gtEkzZoC7z4TB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/3097/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2015-marvel-s-guardians-of-the-galaxy-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/zfjvbYRfLlHfKMdvBEKeztEZYWv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/63181/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-marvel-s-avengers-assemble-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/5xXLD7bR8RpXYAxlo9eIfC6VHSo.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/59427/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2000-x-men-evolution-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/mz0hpKOIsCOyMlCHIkxQLFoiWxB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/668/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2015-marvel-s-guardians-of-the-galaxy-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/oXwe3wVhdvvxiixL9UJf6PgBybZ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/63181/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-marvel-s-avengers-assemble-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/tfwczYRkDmhHjpd5Pmzog8ZsWJD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/59427/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "animazione-2000-x-men-evolution-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/cZgBg7bw0fdDL6OsYgfJVfgcgJR.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/668/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-marvel-s-avengers-assemble-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/k8Nv5b6WQUlyR6U6DLr2E5hpJ4b.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/59427/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2000-x-men-evolution-s4": {
+    "url": "https://media.themoviedb.org/t/p/w500/jmvMfpVtYCbeq49vuGzybkeFkrN.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/668/season/4?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-marvel-s-avengers-assemble-s5": {
+    "url": "https://media.themoviedb.org/t/p/w500/rw9kT0ogOPmVbSlyxUFOp0jxspA.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/59427/season/5?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2017-marvel-s-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/3GLe7l5rBCn1qB0gKuaQgDvv9hN.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/72705/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2009-the-super-hero-squad-show-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/uBRAUJkP5qCaEOqRcxlKnUq9yRR.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/21781/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1967-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/9h3fut1TTsyLw1RDw1a4jRjeCLA.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1482/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/rK36bSFkjcWDnFLH3I9uakFrDJv.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/40044/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1981-spider-man-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/cuZCE0S4LBxYk6dI1eLrcoJuZ7a.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/3973/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2017-marvel-s-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/467Madt1P0ZF1pYOvd55cjn4OCo.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/72705/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2013-hulk-and-the-agents-of-s-m-a-s-h-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/ywlL7O2Goet4QlRZUJDJScdCtUD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/40044/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2009-the-super-hero-squad-show-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/uxh1Mpuks8EH6zFH2HiXt40EcsC.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/21781/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1967-spider-man-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/a5414YLz3zBbsW9sVSMpgifpAux.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1482/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2017-marvel-s-spider-man-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/gGgLtVOVL0AObZh2ydndWwV7JDR.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/72705/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1967-spider-man-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/8QqMKeXKZQAjAfumL9bOLCPDdxk.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1482/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1999-spider-man-unlimited-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/hNdf1WmFil9IV7rabBe6PnAmYnI.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/10079/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1981-spider-man-and-his-amazing-friends-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/zmLyvS0a5D1b6anaWtWfJUDigvx.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1269/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1982-the-incredible-hulk-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/hGlou195mPi8s8gdfOxZoxyVLbD.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/11328/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2006-fantastic-four-world-s-greatest-heroes-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/oOsmznLNc8LXDg90sMAvScBnWuO.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/132/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1996-the-incredible-hulk-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/AauXTKQBejmD0jcEIxlve0hRIme.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/6332/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1981-spider-man-and-his-amazing-friends-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/dra6H45lLnYmkK4YIdzvBTRd7PM.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1269/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-1996-the-incredible-hulk-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/alMxSGCtD65X8afcIcj23mu9KoJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/6332/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-1981-spider-man-and-his-amazing-friends-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/dra6H45lLnYmkK4YIdzvBTRd7PM.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/1269/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2014-marvel-disk-wars-the-avengers-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/pj54OHLwyh7kUngX0f3YVrfIGdB.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/70801/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2021-marvel-s-hit-monkey-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/4gxSNlDMDFFi9SJvNBGb8TcoxHq.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/133903/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2009-iron-man-armored-adventures-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/xCL3turAIJufCtrbcZcnGdPHL72.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/7330/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2021-marvel-s-m-o-d-o-k-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/2kXRzRjQZs9kAIm3K9MkQgsZR9C.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/111312/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2017-marvel-future-avengers-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/g8cNLdlLvwhACezUBTg5XbZHR4Y.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/91278/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "animazione-2021-marvel-s-hit-monkey-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/zXkK4Ikcskyd6GdID6IofKKOWkW.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/133903/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": true
+  },
+  "animazione-2009-iron-man-armored-adventures-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/sBims3imQuR9OuSxfXlSqJoLkvV.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/7330/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2017-marvel-future-avengers-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/rIO0LXiZbqYHx5kri4UKxYwu8wA.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/91278/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:20:17.311Z",
+    "seasonSpecific": true
+  },
+  "animazione-2006-ultimate-avengers-the-movie": {
+    "url": "https://media.themoviedb.org/t/p/w500/iMCkGHVrYRdqKROPRPmVaJVSlg3.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/14609?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2006-ultimate-avengers-2": {
+    "url": "https://media.themoviedb.org/t/p/w500/sMFyYZR9krqcQC99G6jnb10Zv4P.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/14611?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2007-the-invincible-iron-man": {
+    "url": "https://media.themoviedb.org/t/p/w500/eebNTSRa5Hh5skPKGdGJIJpo9Ls.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/13647?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2007-doctor-strange": {
+    "url": "https://media.themoviedb.org/t/p/w500/7ygcpWXsWmEc83j7zE8P0lvC0Q.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/14830?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2021-spidey-and-his-amazing-friends-s1": {
+    "url": "https://media.themoviedb.org/t/p/w500/dA4S18rnLx4sWW8agmLLKUvRM7n.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/127635/season/1?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2021-spidey-and-his-amazing-friends-s2": {
+    "url": "https://media.themoviedb.org/t/p/w500/etO5jDS5WgR4Y1lTyXhQcilJ6u2.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/127635/season/2?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2021-spidey-and-his-amazing-friends-s3": {
+    "url": "https://media.themoviedb.org/t/p/w500/dG0qTd7pyEmjKaKwOKF316W815Y.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/tv/127635/season/3?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": true
+  },
+  "animazione-2008-next-avengers-heroes-of-tomorrow": {
+    "url": "https://media.themoviedb.org/t/p/w500/1y4J9HZJoTIMdt77wCq80uXaQJ.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/14613?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2009-hulk-vs-wolverine": {
+    "url": "https://media.themoviedb.org/t/p/w500/p8PZfkrCuXanfYr3k6xAS6WzN8Y.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/15257?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "animazione-2009-hulk-vs-thor": {
+    "url": "https://media.themoviedb.org/t/p/w500/4NS7L9xtGEOsZA0gnqdQBI7QiXu.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/101907?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "animazione-2011-thor-tales-of-asgard": {
+    "url": "https://media.themoviedb.org/t/p/w500/nM2rBqEMrAFiNFHXKWOhUgdKK45.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/63686?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "animazione-2010-planet-hulk": {
+    "url": "https://media.themoviedb.org/t/p/w500/5wCzY3sAs6zHIzzHIcTKN2g0pu8.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/30675?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:17:36.432Z",
+    "seasonSpecific": false
+  },
+  "animazione-2013-iron-man-rise-of-technovore": {
+    "url": "https://media.themoviedb.org/t/p/w500/eHDez1uN5X2ZAq4niX7HvhyZIIO.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/169934?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2013-iron-man-hulk-heroes-united": {
+    "url": "https://media.themoviedb.org/t/p/w500/xCBBQMPxXsqIlZUAbpeSo1SVj6R.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/230896?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2014-avengers-confidential-black-widow-punisher": {
+    "url": "https://media.themoviedb.org/t/p/w500/z6KvqfkAdmdCcNpCecPioEDjxfq.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/257346?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2014-big-hero-6": {
+    "url": "https://media.themoviedb.org/t/p/w500/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/177572?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2014-iron-man-captain-america-heroes-united": {
+    "url": "https://media.themoviedb.org/t/p/w500/CX7eRlaxFXiW3UGQBdQUoSVZRi.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/284274?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  },
+  "animazione-2016-hulk-where-monsters-dwell": {
+    "url": "https://media.themoviedb.org/t/p/w500/udUnSnQKzYddDpU6WNdTMB5XVEE.jpg",
+    "localPath": null,
+    "sourceUrl": "https://www.themoviedb.org/movie/422153?language=en-US",
+    "verified": true,
+    "checkedAt": "2026-10-08T21:12:13.945Z",
+    "seasonSpecific": false
+  }
+}
