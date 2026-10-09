@@ -3,7 +3,6 @@ import { Menu, X, Search, Download, UserRound } from "lucide-react";
 export const navigation = [
   ["home", "Home"],
   ["archive", "Archivio"],
-  ["orders", "Ordini di visione"],
   ["universes", "Universi"],
   ["progress", "I miei progressi"],
   ["friends", "Amici & Maratone"],

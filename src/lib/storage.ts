@@ -68,6 +68,9 @@ export function parseBackup(value: unknown): Backup {
     state: p.state as string,
     availability: p.availability as string,
     search: p.search as string,
+    ...(typeof p.earthId === "string" && /^[a-z0-9-]{1,80}$/.test(p.earthId)
+      ? { earthId: p.earthId }
+      : {}),
   };
   return {
     version: 1,

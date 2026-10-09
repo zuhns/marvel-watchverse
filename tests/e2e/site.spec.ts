@@ -72,8 +72,17 @@ test("le undici locandine obbligatorie sono immagini reali decodificate", async 
   page,
 }) => {
   await page.goto("#archive");
-  await page.getByRole("switch", { name: "Modalità Nerd" }).check();
-  await page.getByRole("switch", { name: "Nerd Multiverso" }).check();
+  await page.getByLabel("Modalità Nerd: Disattivata", { exact: true }).click();
+  await page
+    .getByRole("checkbox", { name: "Nerd — Serie extra", exact: true })
+    .check();
+  await page
+    .getByRole("checkbox", {
+      name: "Nerd Multiverso — Animazione & Legacy",
+      exact: true,
+    })
+    .check();
+  await page.keyboard.press("Escape");
   for (const name of [
     "Iron Man",
     "Avengers: Endgame",

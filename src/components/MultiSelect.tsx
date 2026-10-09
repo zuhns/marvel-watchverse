@@ -5,11 +5,17 @@ export function MultiSelect({
   options,
   values,
   onChange,
+  emptyLabel = "Tutti",
+  resetLabel = "Tutti · nessun filtro",
+  multipleLabel,
 }: {
   label: string;
   options: { value: string; label: string }[];
   values: string[];
   onChange: (v: string[]) => void;
+  emptyLabel?: string;
+  resetLabel?: string;
+  multipleLabel?: string;
 }) {
   const ref = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
@@ -22,10 +28,10 @@ export function MultiSelect({
   }, []);
   const text =
     values.length === 0
-      ? "Tutti"
+      ? emptyLabel
       : values.length === 1
         ? (options.find((o) => o.value === values[0])?.label ?? values[0])
-        : `${values.length} selezionati`;
+        : (multipleLabel ?? `${values.length} selezionati`);
   return (
     <details
       ref={ref}
@@ -50,7 +56,7 @@ export function MultiSelect({
               checked={!values.length}
               onChange={() => onChange([])}
             />
-            <span>Tutti · nessun filtro</span>
+            <span>{resetLabel}</span>
           </label>
           {options.map((o) => (
             <label key={o.value}>

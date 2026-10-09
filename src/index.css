@@ -2446,3 +2446,815 @@ footer p a {
     font-size: 10px;
   }
 }
+/* Chronology headings sit above complete grids, never inside a poster cell. */
+.archive-groups {
+  display: grid;
+  gap: 44px;
+}
+.chronology-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  margin-bottom: 22px;
+  border-top: 1px solid #ed1d2440;
+  border-bottom: 1px solid var(--line);
+}
+.chronology-index {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 42px;
+  line-height: 1;
+  color: #ed1d24;
+  opacity: 0.8;
+}
+.chronology-heading .eyebrow {
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+.chronology-heading h3 {
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+.chronology-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-caption {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-caption h3 {
+  flex: 1;
+}
+.watch-button {
+  margin-top: auto;
+}
+.nerd-dropdown {
+  gap: 12px;
+}
+.nerd-dropdown > svg {
+  flex-shrink: 0;
+  color: #f36d75;
+}
+.nerd-dropdown .multi-select {
+  min-width: 245px;
+  flex-shrink: 0;
+}
+.nerd-dropdown .multi-options {
+  width: 335px;
+  max-width: calc(100vw - 80px);
+  left: 0 !important;
+  right: auto !important;
+}
+.nerd-dropdown .multi-options label {
+  white-space: normal;
+  font-size: 11px;
+}
+.nerd-dropdown p {
+  max-width: 610px;
+}
+.archive-earth-context {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  margin-top: 20px;
+  border: 1px solid #eec58b30;
+  background: #eec58b08;
+  font-size: 11px;
+}
+.archive-earth-context b {
+  color: #eec58b;
+}
+/* Loki-inspired observatory: vector filaments, flowing energy and selectable realities. */
+.multiverse-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+}
+.multiverse-page .page-title {
+  margin-bottom: 0;
+}
+.multiverse-page .page-intro {
+  margin: 25px 0 35px;
+  max-width: 660px;
+}
+.multiverse-head-count {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+  border-left: 1px solid #eec58b33;
+}
+.multiverse-head-count strong {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  color: #eec58b;
+  line-height: 1;
+}
+.multiverse-head-count span {
+  font-size: 9px;
+  color: #a99b87;
+  letter-spacing: 1.5px;
+  line-height: 1.9;
+}
+.tva-observatory {
+  position: relative;
+  border: 1px solid #dcb67d35;
+  border-radius: 12px;
+  background: #0b0c10;
+  overflow: hidden;
+  box-shadow: 0 25px 80px #0005;
+}
+.tva-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 27px;
+  gap: 15px;
+  border-bottom: 1px solid #eec58b18;
+  background: linear-gradient(90deg, #e4ad6510, transparent);
+}
+.tva-signal {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #efc891;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 2.2px;
+}
+.tva-signal small {
+  display: block;
+  color: #a09483;
+  font-size: 7px;
+  margin-top: 5px;
+  letter-spacing: 1.8px;
+}
+.tva-motion {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #baa78c;
+  border: 1px solid #eec58b28;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 10px;
+  min-height: 36px;
+}
+.tva-motion:hover {
+  color: #fff1d7;
+  border-color: #eec58b80;
+}
+.tva-sector-tabs {
+  display: flex;
+  gap: 7px;
+  padding: 17px 25px 0;
+  background: linear-gradient(#0f1014, transparent);
+  position: relative;
+  z-index: 2;
+}
+.tva-sector-tabs button {
+  font-size: 11px;
+  min-height: 38px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: #a49f97;
+  border: 1px solid transparent;
+}
+.tva-sector-tabs button[aria-pressed="true"] {
+  color: #f2d6ab;
+  background: #bd8b4220;
+  border-color: #dcb67d40;
+}
+.tva-sector-tabs button:hover {
+  color: #fff2dc;
+}
+.timeline-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-color: #897151 #121319;
+  scrollbar-width: thin;
+}
+.timeline-viewport:focus-visible {
+  outline: 2px solid #eec58b;
+  outline-offset: -2px;
+}
+.timeline-scene {
+  height: 570px;
+  min-width: 1000px;
+  position: relative;
+  isolation: isolate;
+}
+.timeline-scene:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.16;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    #ccb28b17 4px
+  );
+}
+.timeline-nebula {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse at 15% 53%, #98602122, transparent 36%),
+    radial-gradient(ellipse at 95% 54%, #47794938, transparent 37%),
+    radial-gradient(ellipse at 45% 20%, #6a406723, transparent 40%),
+    radial-gradient(ellipse at 65% 90%, #24446730, transparent 38%);
+  animation: nebula-breathe 12s ease-in-out infinite alternate;
+}
+.timeline-art {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  overflow: hidden;
+}
+.timeline-art path {
+  fill: none;
+}
+.timeline-filament {
+  stroke-width: 0.7;
+}
+.sacred-aura {
+  stroke-width: 16;
+  opacity: 0.65;
+}
+.sacred-thread {
+  stroke-width: 2;
+}
+.timeline-energy {
+  stroke-width: 2;
+  stroke-dasharray: 8 90 2 165 12 310;
+  animation: temporal-flow 24s linear infinite;
+  animation-delay: var(--branch-delay, 0s);
+  opacity: 0.9;
+}
+.sacred-energy {
+  stroke-width: 3;
+  stroke-dasharray: 18 230 3 185;
+  animation-duration: 18s;
+}
+.branch-strand {
+  stroke-width: 0.8;
+  opacity: 0.25;
+  transition: opacity 0.3s;
+}
+.branch-aura {
+  stroke-width: 5;
+  opacity: 0.08;
+  transition: opacity 0.3s;
+}
+.timeline-branch.active .branch-strand {
+  opacity: 0.8;
+  stroke-width: 1.3;
+}
+.timeline-branch.active .branch-aura {
+  opacity: 0.6;
+  stroke-width: 9;
+}
+.timeline-coordinate {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  color: #a78d64;
+  font-family: ui-monospace, monospace;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.timeline-coordinate.top {
+  top: 18px;
+}
+.timeline-coordinate.bottom {
+  bottom: 20px;
+  opacity: 0.65;
+}
+.sacred-caption {
+  position: absolute;
+  top: 52%;
+  left: 28px;
+  color: #e9c28b;
+  font-size: 8px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+.earth-node {
+  position: absolute;
+  width: 176px;
+  padding: 16px 10px 12px;
+  min-height: 98px;
+  transform: translate(-50%, -42%);
+  text-align: center;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+  z-index: 2;
+  background: linear-gradient(#0b0d1394, #0b0d13b0);
+}
+.earth-node:hover,
+.earth-node:focus-visible {
+  background: #17191fef;
+  border-color: color-mix(in srgb, var(--earth-color) 50%, transparent);
+  box-shadow: 0 0 35px color-mix(in srgb, var(--earth-color) 12%, transparent);
+  outline-color: var(--earth-color);
+}
+.earth-node.selected {
+  border-color: color-mix(in srgb, var(--earth-color) 60%, transparent);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--earth-color) 11%, #0d0f15),
+    #0d0f15e8
+  );
+  box-shadow: 0 0 40px color-mix(in srgb, var(--earth-color) 9%, transparent);
+}
+.earth-node.prime {
+  width: 216px;
+}
+.earth-orbit {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: -30px auto 12px;
+  border: 1px solid color-mix(in srgb, var(--earth-color) 35%, transparent);
+  border-radius: 50%;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--earth-color) 22%, transparent);
+}
+.earth-orbit:before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid color-mix(in srgb, var(--earth-color) 13%, transparent);
+  border-radius: 50%;
+}
+.earth-orbit span {
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+  background: var(--earth-color);
+  box-shadow: 0 0 14px var(--earth-color);
+}
+.earth-node.selected .earth-orbit:before {
+  animation: earth-pulse 3.5s ease-out infinite;
+}
+.earth-node-code {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--earth-color);
+  display: block;
+}
+.earth-node-name {
+  display: block;
+  font-size: 9px;
+  color: #d6d0c7;
+  line-height: 1.5;
+  margin-top: 7px;
+  text-wrap: balance;
+}
+.earth-node-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #a49d92;
+  font-size: 8px;
+  margin-top: 6px;
+}
+.tva-map-footer {
+  border-top: 1px solid #eec58b18;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 15px 25px;
+  font-size: 10px;
+  color: #b9ac97;
+  background: #eec58b05;
+  min-height: 57px;
+}
+.tva-map-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.swipe-hint {
+  display: none;
+}
+.tva-pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: ui-monospace, monospace;
+  white-space: nowrap;
+}
+.tva-pagination button {
+  border: 1px solid #eec58b25;
+  border-radius: 4px;
+  padding: 6px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.earth-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.earth-navigation label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  color: #bfb6a6;
+  min-width: 0;
+}
+.earth-navigation select {
+  min-width: 0;
+  max-width: 410px;
+  width: 100%;
+  padding: 12px;
+  background: #14161d;
+  border: 1px solid #eec58b30;
+  border-radius: 4px;
+  color: #eee3d0;
+  font-size: 11px;
+}
+.earth-navigation label > span {
+  white-space: nowrap;
+}
+.earth-navigation .text-link {
+  color: #d6b584;
+  flex-shrink: 0;
+}
+.earth-dossier {
+  margin-top: 35px;
+  scroll-margin-top: 25px;
+}
+.earth-dossier-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 24px;
+}
+.earth-identity {
+  max-width: 700px;
+}
+.earth-classification {
+  display: inline-flex;
+  padding: 5px 8px;
+  border: 1px solid color-mix(in srgb, var(--earth-color) 30%, transparent);
+  border-radius: 3px;
+  color: var(--earth-color);
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+.earth-identity h2 {
+  font-size: clamp(50px, 6vw, 78px);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 14px 0 5px;
+  color: var(--earth-color);
+}
+.earth-identity h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.earth-identity p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #abaeb9;
+  margin-top: 13px;
+  max-width: 560px;
+}
+.earth-progress {
+  flex-shrink: 0;
+  width: 180px;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+.earth-progress .eyebrow {
+  font-size: 8px;
+  color: #a9a294;
+}
+.earth-progress > strong {
+  display: block;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 62px;
+  font-weight: 700;
+  color: var(--earth-color);
+  line-height: 1;
+  margin: 10px 0 14px;
+}
+.earth-progress strong small {
+  font-size: 23px;
+}
+.earth-progress > span:last-child {
+  display: block;
+  color: #a4a7b2;
+  font-size: 9px;
+  line-height: 1.7;
+  margin-top: 9px;
+}
+.earth-progress .progress-fill {
+  background: var(--earth-color);
+}
+.earth-canon-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 16px 20px;
+  border-left: 2px solid var(--earth-color);
+  background: #ffffff04;
+  margin-bottom: 28px;
+}
+.earth-canon-note p {
+  font-size: 10px;
+  color: #9d9fa9;
+  line-height: 1.8;
+  max-width: 770px;
+}
+.earth-canon-note a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--earth-color);
+  font-size: 9px;
+  flex-shrink: 0;
+  max-width: 230px;
+}
+.earth-list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.earth-format-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.earth-format-tabs button {
+  padding: 9px 13px;
+  border: 1px solid var(--line);
+  color: #a2a5b1;
+  border-radius: 4px;
+  font-size: 10px;
+  min-height: 36px;
+}
+.earth-format-tabs button[aria-pressed="true"] {
+  background: #ed1d241c;
+  border-color: #ed1d2450;
+  color: #ff767c;
+}
+.earth-format-tabs button:disabled {
+  opacity: 0.3;
+}
+.earth-result-count {
+  font-size: 9px;
+  color: #9296a4;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+.earth-crossovers {
+  margin-top: 35px;
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+.earth-crossovers .eyebrow {
+  font-size: 8px;
+  color: var(--earth-color);
+}
+.earth-crossovers h3 {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 28px;
+  margin: 8px 0;
+}
+.earth-crossovers p {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.earth-crossovers > div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.earth-crossovers button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #ffffff18;
+  border-radius: 4px;
+  padding: 13px 16px;
+  font-size: 11px;
+  text-align: left;
+}
+.earth-crossovers button:hover {
+  border-color: var(--earth-color);
+}
+.multiverse-editorial-note {
+  font-size: 9px;
+  color: #777e8f;
+  line-height: 1.9;
+  margin-top: 40px;
+  max-width: 850px;
+}
+@keyframes temporal-flow {
+  to {
+    stroke-dashoffset: -1800;
+  }
+}
+@keyframes nebula-breathe {
+  to {
+    opacity: 0.55;
+    transform: scale(1.03);
+  }
+}
+@keyframes earth-pulse {
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.tva-observatory[data-paused="true"] * {
+  animation-play-state: paused !important;
+}
+@media (max-width: 1100px) {
+  .swipe-hint {
+    display: inline;
+  }
+  .earth-navigation label > span {
+    display: none;
+  }
+  .earth-canon-note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .multiverse-head-count {
+    display: none;
+  }
+  .multiverse-page .page-title {
+    font-size: 56px;
+  }
+  .multiverse-page .page-intro {
+    font-size: 12px;
+    margin: 20px 0 25px;
+  }
+  .tva-toolbar {
+    padding: 18px 16px;
+  }
+  .tva-signal {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    gap: 8px;
+  }
+  .tva-signal small {
+    font-size: 6px;
+    letter-spacing: 1.3px;
+  }
+  .tva-motion {
+    padding: 8px;
+  }
+  .tva-sector-tabs {
+    padding: 12px 10px 0;
+    gap: 3px;
+  }
+  .tva-sector-tabs button {
+    font-size: 9px;
+    padding: 8px 10px;
+    flex: 1;
+  }
+  .timeline-scene {
+    height: 470px;
+    min-width: 1100px;
+  }
+  .tva-map-footer {
+    padding: 13px 15px;
+    font-size: 9px;
+  }
+  .earth-navigation {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+  }
+  .earth-navigation label {
+    width: 100%;
+  }
+  .earth-navigation select {
+    max-width: none;
+    font-size: 10px;
+  }
+  .earth-dossier-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .earth-identity h2 {
+    font-size: 52px;
+    overflow-wrap: anywhere;
+  }
+  .earth-identity h3 {
+    font-size: 24px;
+  }
+  .earth-progress {
+    width: 100%;
+    border-left: 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 20px;
+    align-items: center;
+  }
+  .earth-progress > strong {
+    grid-column: 2;
+    grid-row: 1/4;
+    margin: 0;
+    font-size: 52px;
+  }
+  .earth-progress > span:last-child {
+    margin-top: 0;
+  }
+  .earth-canon-note {
+    padding: 13px 15px;
+    margin-top: 0;
+  }
+  .chronology-heading {
+    gap: 12px;
+  }
+  .chronology-heading h3 {
+    font-size: 14px;
+  }
+  .chronology-count {
+    font-size: 8px;
+  }
+  .nerd-dropdown {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .nerd-dropdown p {
+    flex-basis: 100%;
+  }
+  .nerd-dropdown .multi-select {
+    min-width: 0;
+    max-width: calc(100% - 35px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .tva-observatory * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+.earth-progress .progress-track > div {
+  background: var(--earth-color);
+}

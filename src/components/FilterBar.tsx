@@ -1,5 +1,5 @@
 import { Search, RotateCcw, SlidersHorizontal, Glasses } from "lucide-react";
-import { titles, defaults, labels } from "../lib/catalog";
+import { titles, defaults, labels, modeTitles } from "../lib/catalog";
 import type { Preferences } from "../types";
 import { MultiSelect } from "./MultiSelect";
 export const categories = [
@@ -117,51 +117,63 @@ export function FilterBar({
         <MultiSelect
           label="Universi"
           values={p.universes}
-          options={[...new Set(titles.map((t) => t.universe))]
+          options={[
+            ...new Set(
+              modeTitles(titles, p.nerdMode, p.advancedNerdMode).map(
+                (t) => t.universe,
+              ),
+            ),
+          ]
             .sort()
             .map((value) => ({ value, label: value }))}
-          onChange={(universes) => change({ ...p, universes })}
+          onChange={(universes) =>
+            change({ ...p, universes, earthId: undefined })
+          }
         />
       </div>
-      <div className="nerd-control">
-        <label>
-          <input
-            type="checkbox"
-            role="switch"
-            aria-label="Modalità Nerd"
-            checked={p.nerdMode}
-            onChange={(e) => change({ ...p, nerdMode: e.target.checked })}
-          />
-          <Glasses size={17} />
-          <strong>Modalità Nerd</strong>
-          <span className="nerd-indicator">{p.nerdMode ? "ON" : "OFF"}</span>
-        </label>
+      <div className="nerd-control nerd-dropdown">
+        <Glasses size={20} />
+        <MultiSelect
+          label="Modalità Nerd"
+          emptyLabel="Disattivata"
+          resetLabel="Disattiva tutte le modalità Nerd"
+          multipleLabel="Completa"
+          values={[
+            ...(p.nerdMode ? ["side"] : []),
+            ...(p.advancedNerdMode ? ["multiverse"] : []),
+          ]}
+          options={[
+            { value: "side", label: "Nerd — Serie extra" },
+            {
+              value: "multiverse",
+              label: "Nerd Multiverso — Animazione & Legacy",
+            },
+          ]}
+          onChange={(values) => {
+            const nerdMode = values.includes("side");
+            const advancedNerdMode = values.includes("multiverse");
+            const available = new Set(
+              modeTitles(titles, nerdMode, advancedNerdMode).map(
+                (t) => t.universe,
+              ),
+            );
+            change({
+              ...p,
+              nerdMode,
+              advancedNerdMode,
+              earthId: undefined,
+              universes: p.universes.filter((u) => available.has(u)),
+            });
+          }}
+        />
         <p>
-          {p.nerdMode
-            ? "Serie laterali aggiunte: SHIELD, Legion, The Gifted, Blade e altre storie extra."
-            : "Aggiungi i percorsi TV laterali: SHIELD, Legion, The Gifted, Blade e altre serie extra."}
-        </p>
-      </div>
-      <div className="nerd-control">
-        <label>
-          <input
-            type="checkbox"
-            role="switch"
-            aria-label="Nerd Multiverso"
-            checked={p.advancedNerdMode}
-            onChange={(e) =>
-              change({ ...p, advancedNerdMode: e.target.checked })
-            }
-          />
-          <Glasses size={17} />
-          <strong>Nerd Multiverso</strong>
-          <span className="nerd-indicator">
-            {p.advancedNerdMode ? "ON" : "OFF"}
-          </span>
-        </label>
-        <p>
-          Animazione extra: Avengers EMH, X-Men, Spectacular Spider-Man,
-          Hit-Monkey e le altre serie. Include l’archivio storico dal 1967.
+          {p.nerdMode && p.advancedNerdMode
+            ? "Tutte le ramificazioni: serie extra, animazione e produzioni storiche."
+            : p.advancedNerdMode
+              ? "Animazione e Legacy: dai classici del 1967 agli universi animati moderni."
+              : p.nerdMode
+                ? "Serie extra: SHIELD, Agent Carter, Legion, The Gifted, Blade e altri percorsi laterali."
+                : "Percorso essenziale. Apri il menu per aggiungere serie extra o animazione e Legacy."}
         </p>
       </div>
     </div>

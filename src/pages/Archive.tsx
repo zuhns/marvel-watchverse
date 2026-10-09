@@ -6,11 +6,13 @@ import {
   filterTitles,
   orderLabels,
   pathTitles,
+  defaults,
 } from "../lib/catalog";
 import { OrderSelector } from "../components/OrderSelector";
 import { FilterBar } from "../components/FilterBar";
 import { MovieCard } from "../components/MovieCard";
 import type { Preferences, Watched, Title } from "../types";
+import { earths } from "../lib/multiverse";
 export function Archive({
   p,
   change,
@@ -28,10 +30,18 @@ export function Archive({
 }) {
   const [limit, setLimit] = useState(compact ? 12 : 30);
   useEffect(() => setLimit(compact ? 12 : 30), [p, compact]);
-  const sorted = sortTitles(pathTitles(titles, p), p.order);
+  const earth = earths.find((e) => e.id === p.earthId);
+  const sorted = sortTitles(pathTitles(earth?.titles ?? titles, p), p.order);
   const filtered = filterTitles(sorted, p, watched);
   const positions = new Map(sorted.map((t, i) => [t.id, i + 1]));
   const show = filtered.slice(0, limit);
+  const groups =
+    p.order === "chronology"
+      ? [...new Set(show.map((t) => t.timelineGroup))].map((name) => ({
+          name,
+          list: show.filter((t) => t.timelineGroup === name),
+        }))
+      : [{ name: "", list: show }];
   return (
     <section className="archive-section">
       <div className="section-heading">
@@ -63,6 +73,29 @@ export function Archive({
             : "Prima pubblicazione internazionale, in ordine globale tra tutti i franchise."}
       </p>
       <FilterBar p={p} change={change} />
+      {earth && (
+        <div className="archive-earth-context">
+          <span>
+            Dossier{" "}
+            <b>
+              {earth.designation} · {earth.name}
+            </b>
+          </span>
+          <button
+            className="text-link"
+            onClick={() =>
+              change({
+                ...defaults,
+                order: p.order,
+                nerdMode: p.nerdMode,
+                advancedNerdMode: p.advancedNerdMode,
+              })
+            }
+          >
+            Torna a tutto l’archivio
+          </button>
+        </div>
+      )}
       <div className="results-info">
         <span>
           <b>{filtered.length}</b> storie nel tuo percorso
@@ -70,21 +103,41 @@ export function Archive({
         <span>{orderLabels[p.order]}</span>
       </div>
       {show.length ? (
-        <div className="movie-grid">
-          {show.map((t, i) => (
-            <div key={t.id}>
-              {p.order === "chronology" &&
-                (i === 0 || show[i - 1].timelineGroup !== t.timelineGroup) && (
-                  <div className="timeline-label">{t.timelineGroup}</div>
-                )}
-              <MovieCard
-                title={t}
-                index={positions.get(t.id)!}
-                seen={!!watched[t.id]}
-                onOpen={() => open(t)}
-                onToggle={() => toggle(t.id)}
-              />
-            </div>
+        <div className="archive-groups">
+          {groups.map(({ name, list }, groupIndex) => (
+            <section
+              className="chronology-group"
+              key={name || "catalog"}
+              aria-label={name || "Catalogo"}
+            >
+              {name && (
+                <header className="chronology-heading">
+                  <span className="chronology-index">
+                    {String(groupIndex + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <span className="eyebrow">LINEA TEMPORALE</span>
+                    <h3>{name}</h3>
+                  </div>
+                  <span className="chronology-count">
+                    {filtered.filter((t) => t.timelineGroup === name).length}{" "}
+                    storie
+                  </span>
+                </header>
+              )}
+              <div className="movie-grid">
+                {list.map((t) => (
+                  <MovieCard
+                    key={t.id}
+                    title={t}
+                    index={positions.get(t.id)!}
+                    seen={!!watched[t.id]}
+                    onOpen={() => open(t)}
+                    onToggle={() => toggle(t.id)}
+                  />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       ) : (

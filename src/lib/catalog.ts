@@ -81,6 +81,14 @@ export function nextTitle(list: Title[], order: Order, w: Watched) {
   );
 }
 export const multiverseUniverses = [
+  "Hulk animato 1982",
+  "Hulk televisivo 1977",
+  "Marvel animato 1990s",
+  "Spider-Man animato 1967",
+  "Spider-Man animato 1981",
+  "Spider-Man animato 1994",
+  "Spider-Man televisivo 1977",
+  "Spider-Man Toei",
   "Avengers EMH",
   "Disk Wars",
   "Fantastic Four animato 2006",
@@ -113,9 +121,16 @@ export const sideUniverses = [
   "Spider-Man — Continuità alternativa",
 ];
 export function contentTier(t: Title): "core" | "nerd" | "multiverse" {
-  if (multiverseUniverses.includes(t.universe) || t.year < 1998)
-    return "multiverse";
+  // A series belongs to one tier, including seasons released after 1998.
+  // MCU animation has its own narrative branches and stays in the main path.
   if (sideUniverses.includes(t.universe)) return "nerd";
+  if (
+    multiverseUniverses.includes(t.universe) ||
+    (t.category === "Animazione" && !t.universe.startsWith("MCU")) ||
+    t.year < 1998 ||
+    t.originalTitle === "Nick Fury: Agent of S.H.I.E.L.D."
+  )
+    return "multiverse";
   return "core";
 }
 export function includedInMode(t: Title, nerdMode: boolean, advanced = false) {

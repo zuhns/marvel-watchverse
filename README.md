@@ -14,7 +14,7 @@ L'apertura iniziale usa **Film + Serie**, **Percorso consigliato** e le due moda
 
 **Nerd** aggiunge i percorsi TV laterali scelti dal proprietario: Blade (la serie, non i film), The Gifted, Legion, Helstrom, SHIELD, Agent Carter, Inhumans, Runaways, Cloak & Dagger e le altre continuità alternative. È una scelta editoriale di visione, non una dichiarazione sul canone ufficiale.
 
-**Nerd Multiverso** aggiunge Avengers EMH, Disk Wars, Fantastic Four animato 2006, Future Avengers, Hit-Monkey, Iron Man Armored Adventures, i film animati indipendenti, Marvel animato 2010s, Spectacular Spider-Man, Spider-Man animato 2017, Spider-Man Unlimited, Spidey and Friends, Super Hero Squad, X-Men animato 1992, X-Men Evolution e Wolverine and the X-Men. Include anche l'archivio storico precedente al 1998, mantenendo accessibili le produzioni dal 1967. I due interruttori sono indipendenti: aggiungono i propri contenuti al percorso principale. Corti e speciali richiedono la selezione del relativo formato.
+**Nerd Multiverso** aggiunge Avengers EMH, Disk Wars, Fantastic Four animato 2006, Future Avengers, Hit-Monkey, Iron Man Armored Adventures, i film animati indipendenti, Marvel animato 2010s, Spectacular Spider-Man, Spider-Man animato 2017, Spider-Man Unlimited, Spidey and Friends, Super Hero Squad, X-Men animato 1992, X-Men Evolution e Wolverine and the X-Men. Include anche l'archivio storico, mantenendo accessibili le produzioni dal 1967. Le due scelte sono nel menu a tendina **Modalità Nerd**: puoi attivarle singolarmente, entrambe o disattivarle tutte. Le serie vengono classificate per continuità, includendo tutte le stagioni. Corti e speciali richiedono la selezione del relativo formato.
 
 Il percorso e le statistiche seguono le modalità scelte. Disattivare una modalità nasconde i suoi contenuti senza cancellarne i progressi.
 
@@ -23,6 +23,12 @@ Tre ordini di visione:
 1. **Uscita**: prima distribuzione internazionale di riferimento, ordinata globalmente. Le date possono differire dall’uscita italiana.
 2. **Cronologia interna**: titoli raggruppati per continuità. Gli X-Men hanno timeline ramificate; le posizioni approssimative sono dichiarate nei dettagli. Le produzioni di canone incerto e l’animazione legacy restano separate.
 3. **Consigliato**: consiglio editoriale indipendente; inserisce Raimi/Webb prima di No Way Home e Deadpool/Wolverine prima del crossover. Non è una timeline canonica ufficiale.
+
+**Archivio** è l’unica sezione per catalogo e ordini. Il vecchio collegamento `#orders` apre lo stesso archivio. Nella cronologia ogni intestazione occupa una riga completa sopra la propria griglia, conservando l’allineamento delle locandine.
+
+**Universi** contiene un osservatorio TVA ispirato alla Sacra Linea Temporale di Loki: filamenti vettoriali, rami luminosi, energia animata e Terre selezionabili. I settori Cinema & MCU, Universi animati e Serie & Legacy raccolgono tutti i 255 titoli. Le Terre numerate distinguono designazioni sullo schermo e numeri di repertorio, con fonti nei dossier. Le raccolte con più continuità e quelle senza un numero verificato sono dichiarate esplicitamente. La geometria dei rami è editoriale, non una genealogia canonica.
+
+Ogni dossier mostra film, serie, corti e speciali, progressi personali e crossover separati. **Ordina nell’archivio** trasferisce esattamente il dossier, abilita i contenuti Nerd necessari e conserva il filtro al refresh e nel backup. L’atlante è completo e indipendente dai filtri del percorso. Il selettore raggiunge qualsiasi Terra; Tab e frecce navigano fra i nodi, su telefono la mappa si scorre orizzontalmente. Il comando Pausa e la preferenza di sistema per movimento ridotto fermano le animazioni.
 
 I progressi usano ID stabili e timestamp in `localStorage`, chiave `marvel-watchverse.v1`. Cambiare ordine o filtri non cambia lo stato visto. I vecchi backup con filtri singoli vengono migrati automaticamente. La pagina progressi mostra dati complessivi e per universo, gli ultimi titoli visti e il prossimo capitolo.
 

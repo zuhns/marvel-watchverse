@@ -45,6 +45,7 @@ export interface Preferences {
   state: string;
   availability: string;
   search: string;
+  earthId?: string;
 }
 export interface Backup {
   version: 1;

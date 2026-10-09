@@ -18,12 +18,15 @@ import { download, exportExcel, importExcel } from "./lib/export";
 import { makeBackup, parseBackup, mergeWatched } from "./lib/storage";
 import { useTracker } from "./hooks/useTracker";
 import type { Title } from "./types";
+import { earthMode } from "./lib/multiverse";
 const pageFromHash = () =>
-  ["home", "archive", "orders", "universes", "progress", "friends"].includes(
-    location.hash.slice(1),
-  )
-    ? location.hash.slice(1)
-    : "home";
+  location.hash === "#orders"
+    ? "archive"
+    : ["home", "archive", "universes", "progress", "friends"].includes(
+          location.hash.slice(1),
+        )
+      ? location.hash.slice(1)
+      : "home";
 type Tracker = ReturnType<typeof useTracker>;
 function readMarathon(): Marathon | null {
   try {
@@ -264,7 +267,7 @@ function Watchverse({
                 <div className="editorial-strip">
                   <span>
                     <ShieldCheck size={17} />
-                    Il tuo archivio, senza login.
+                    Il tuo profilo, su ogni dispositivo.
                   </span>
                   <span>
                     <Compass size={17} />
@@ -291,43 +294,19 @@ function Watchverse({
             <div className="page-section">
               <Archive {...props} />
             </div>
-          ) : page === "orders" ? (
-            <div className="page-section">
-              <div className="eyebrow">SCEGLI LA TUA ROTTA</div>
-              <h1 className="page-title">
-                LA SAGA.
-                <br />
-                <span>IL TUO ORDINE.</span>
-              </h1>
-              <p className="page-intro">
-                Uscita globale, cronologie separate o percorso consigliato: i
-                titoli visti restano al loro posto nel tuo viaggio.
-              </p>
-              <Archive {...props} />
-            </div>
           ) : page === "universes" ? (
             <Universes
               watched={watched}
-              nerdMode={p.nerdMode}
-              advancedNerdMode={p.advancedNerdMode}
-              formats={p.formats}
-              exploreCategory={(category) => {
+              open={setSelected}
+              toggle={toggle}
+              explore={(earth) => {
                 change({
                   ...defaults,
                   order: p.order,
-                  categories: [category],
-                  nerdMode: p.nerdMode,
-                  advancedNerdMode: p.advancedNerdMode,
-                });
-                location.hash = "archive";
-              }}
-              explore={(universe) => {
-                change({
-                  ...defaults,
-                  order: p.order,
-                  universes: [universe],
-                  nerdMode: p.nerdMode,
-                  advancedNerdMode: p.advancedNerdMode,
+                  universes: [...new Set(earth.titles.map((t) => t.universe))],
+                  ...earthMode(earth),
+                  earthId: earth.id,
+                  formats: [],
                 });
                 location.hash = "archive";
               }}

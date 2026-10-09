@@ -7,21 +7,31 @@ test("filtri multipli, modalità Nerd e migrazione delle preferenze persistenti"
     page.getByRole("button", { name: "Percorso consigliato", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
   await expect(
-    page.getByRole("switch", { name: "Modalità Nerd", exact: true }),
-  ).not.toBeChecked();
-  await expect(
-    page.getByRole("switch", { name: "Nerd Multiverso", exact: true }),
-  ).not.toBeChecked();
+    page.getByLabel("Modalità Nerd: Disattivata", { exact: true }),
+  ).toBeVisible();
   await page
     .getByRole("button", { name: "Ordine di uscita", exact: true })
     .click();
   await expect(page.locator(".movie-card").first()).not.toContainText("1967");
-  await page.getByRole("switch", { name: "Modalità Nerd" }).check();
+  await page.getByLabel("Modalità Nerd: Disattivata", { exact: true }).click();
+  await page
+    .getByRole("checkbox", { name: "Nerd — Serie extra", exact: true })
+    .check();
   await expect(page.locator(".movie-card").first()).not.toContainText("1967");
-  await page.getByRole("switch", { name: "Nerd Multiverso" }).check();
+  await page
+    .getByRole("checkbox", {
+      name: "Nerd Multiverso — Animazione & Legacy",
+      exact: true,
+    })
+    .check();
   await expect(page.locator(".movie-card").first()).toContainText("1967");
-  await page.getByRole("switch", { name: "Nerd Multiverso" }).uncheck();
-  await page.getByRole("switch", { name: "Modalità Nerd" }).uncheck();
+  await page
+    .getByRole("checkbox", {
+      name: "Disattiva tutte le modalità Nerd",
+      exact: true,
+    })
+    .check();
+  await page.keyboard.press("Escape");
   await page.getByLabel("Formati: 2 selezionati", { exact: true }).click();
   await page.getByRole("checkbox", { name: "Film", exact: true }).check();
   await page.getByRole("checkbox", { name: "Serie", exact: true }).uncheck();
