@@ -22,7 +22,9 @@ export function Header({
 }) {
   const [open, setOpen] = useState(false);
   return (
-    <header className="site-header">
+    <header
+      className={`site-header ${page === "universes" ? "tva-site-header" : ""}`}
+    >
       <a href="#home" className="brand" aria-label="Marvel Watchverse Home">
         <span>MARVEL</span>
         <b>WATCHVERSE</b>

@@ -65,12 +65,10 @@ test("Terre interattive, crossover, dossier esatto e animazioni accessibili", as
     }),
   ).toBeVisible();
   await page.emulateMedia({ reducedMotion: "reduce" });
-  expect(
-    await page
-      .locator(".timeline-energy")
-      .first()
-      .evaluate((el) => getComputedStyle(el).animationName),
-  ).toBe("none");
+  await expect(page.locator(".temporal-canvas")).toHaveAttribute(
+    "data-motion",
+    "still",
+  );
   for (const width of info.project.name === "mobile"
     ? [320, 390, 768]
     : [1024, 1366, 1920]) {

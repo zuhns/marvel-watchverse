@@ -526,6 +526,13 @@ export const earths: Earth[] = entries.map((e, i) => ({
   crossovers: e.crossovers ?? [],
 }));
 export const earthById = (id: string) => earths.find((e) => e.id === id)!;
+// Only individually numbered, sourced Earths appear in the TVA observatory.
+// Catalog collections stay available to the archive and existing backups.
+export const confirmedEarths = earths.filter(
+  (e) =>
+    (e.kind === "screen" || e.kind === "reference") &&
+    /^Terra-\d+$/.test(e.designation),
+);
 export function earthMode(earth: Earth) {
   return {
     nerdMode: earth.titles.some((t) => contentTier(t) === "nerd"),

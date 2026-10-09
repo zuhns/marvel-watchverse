@@ -1,5 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { earths, earthById, earthMode } from "../src/lib/multiverse";
+import {
+  earths,
+  confirmedEarths,
+  earthById,
+  earthMode,
+} from "../src/lib/multiverse";
 import {
   titles,
   modeTitles,
@@ -9,6 +14,15 @@ import {
 } from "../src/lib/catalog";
 import { makeBackup, parseBackup } from "../src/lib/storage";
 describe("atlante e percorsi", () => {
+  it("l’osservatorio mostra soltanto Terre numerate con una fonte verificabile", () => {
+    expect(confirmedEarths.length).toBeGreaterThan(20);
+    expect(confirmedEarths.length).toBeLessThan(earths.length);
+    for (const earth of confirmedEarths) {
+      expect(["screen", "reference"]).toContain(earth.kind);
+      expect(earth.designation).toMatch(/^Terra-\d+$/);
+      expect(earth.source?.url).toMatch(/^https:\/\//);
+    }
+  });
   it("copre ogni titolo senza assegnare un numero inventato alle raccolte", () => {
     expect(new Set(earths.map((e) => e.id)).size).toBe(earths.length);
     const covered = new Set(earths.flatMap((e) => e.titles.map((t) => t.id)));

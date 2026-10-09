@@ -1,6 +1,7 @@
 import { SacredTimeline } from "../components/SacredTimeline";
-import { earths, type Earth } from "../lib/multiverse";
+import { confirmedEarths, type Earth } from "../lib/multiverse";
 import type { Title, Watched } from "../types";
+import "../styles/tva.css";
 export function Universes({
   watched,
   open,
@@ -13,41 +14,56 @@ export function Universes({
   explore: (earth: Earth) => void;
 }) {
   return (
-    <section className="page-section multiverse-page">
-      <div className="multiverse-page-heading">
-        <div>
-          <div className="eyebrow">OLTRE LA SACRA LINEA TEMPORALE</div>
-          <h1 className="page-title">
-            OGNI TERRA.
+    <section className="tva-page">
+      <div className="tva-page-inner">
+        <header className="tva-page-heading">
+          <div className="tva-wordmark" aria-label="Time Variance Authority">
+            <strong>TVA</strong>
+            <span>
+              TIME VARIANCE
+              <br />
+              AUTHORITY
+            </span>
+          </div>
+          <div className="tva-file-stamp">
+            <span>DIVISIONE OSSERVAZIONE</span>
+            <b>TERMINALE 07</b>
+            <small>{confirmedEarths.length} TERRE IDENTIFICATE</small>
+          </div>
+        </header>
+        <div className="tva-page-intro">
+          <div>
+            <span className="tva-kicker">
+              ARCHIVIO DELLE REALTÀ / ACCESSO AUTORIZZATO
+            </span>
+            <h1>
+              Per ogni tempo.
+              <br />
+              <em>Sempre.</em>
+            </h1>
+          </div>
+          <p>
+            Il tempo scorre. Le realtà si ramificano.
             <br />
-            <span>UNA NUOVA STORIA.</span>
-          </h1>
+            Esplora il flusso, sfiora un segnale e scopri la sua Terra.
+          </p>
         </div>
-        <div className="multiverse-head-count">
-          <strong>{earths.length}</strong>
-          <span>
-            REALTÀ & DOSSIER
-            <br />
-            UN SOLO MULTIVERSO
-          </span>
+        <SacredTimeline
+          watched={watched}
+          open={open}
+          toggle={toggle}
+          explore={explore}
+        />
+        <div className="tva-closing-strip">
+          <span>PER OGNI TEMPO. SEMPRE.</span>
+          <p>
+            Interfaccia fan-made ispirata alla TVA. Solo Terre numerate con una
+            fonte; i dossier distinguono identificazioni sullo schermo e numeri
+            di repertorio. Il flusso visualizza connessioni narrative.
+          </p>
+          <b>TVA / WV—07</b>
         </div>
       </div>
-      <p className="page-intro">
-        Segui il filo. Esplora le ramificazioni. Seleziona una Terra per
-        scoprire i film, le serie e le connessioni che le appartengono.
-      </p>
-      <SacredTimeline
-        watched={watched}
-        open={open}
-        toggle={toggle}
-        explore={explore}
-      />
-      <p className="multiverse-editorial-note">
-        Atlante narrativo fan-made ispirato a Loki. Le ramificazioni
-        visualizzano percorsi da esplorare, non origini canoniche condivise.
-        Ogni dossier distingue i numeri mostrati nei film dalle designazioni di
-        repertorio e dalle realtà non confermate.
-      </p>
     </section>
   );
 }

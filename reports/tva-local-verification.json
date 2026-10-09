@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:4173/marvel-watchverse/#universes",
+  "checkedAt": "2026-10-09T14:00:47.762Z",
+  "http": 200,
+  "imageStatus": 200,
+  "identifiedEarths": 32,
+  "flow": true,
+  "hover": true,
+  "audioRunningAndSuspended": true,
+  "closedOnExit": true,
+  "mobileOverflow": false,
+  "raimiFilms": 3,
+  "errors": []
+}

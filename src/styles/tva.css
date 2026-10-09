@@ -1,0 +1,1157 @@
+/* A separate TVA visual language: aged paper, burnt orange and a physical CRT. */
+.tva-site-header.site-header {
+  background: #c2ab89;
+  border-color: #5b412b38;
+  color: #3d2b20;
+}
+.tva-site-header .brand span {
+  background: #843d25;
+  color: #f6e4c5;
+}
+.tva-site-header.site-header nav a {
+  color: #624b36;
+}
+.tva-site-header.site-header nav a:hover,
+.tva-site-header.site-header nav a.current {
+  color: #3e2a1e;
+  border-color: #93472a;
+}
+.tva-site-header .account-button {
+  border-color: #74523445;
+  background: #9a765410;
+  color: #452f20;
+}
+.tva-site-header .completion {
+  color: #4b3524;
+}
+.tva-site-header .completion-dot {
+  border-color: #93472a;
+}
+.tva-site-header .icon-button {
+  color: #513823;
+}
+.tva-page {
+  --tva-ink: #38291f;
+  --tva-rust: #8f452c;
+  --tva-paper: #cab696;
+  color: var(--tva-ink);
+  background:
+    radial-gradient(ellipse at 45% 5%, #e4d6b7aa, transparent 65%),
+    repeating-linear-gradient(
+      0deg,
+      #a1815c07 0,
+      #a1815c07 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    #cbb897;
+  padding: 34px 4.6% 40px;
+  min-height: 100vh;
+}
+.tva-page-inner {
+  max-width: 1480px;
+  margin: auto;
+}
+.tva-page button:focus-visible,
+.tva-page a:focus-visible,
+.tva-page select:focus-visible,
+.tva-page input:focus-visible {
+  outline-color: #93472a;
+}
+.tva-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #62472d55;
+}
+.tva-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tva-wordmark > strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 67px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -8px;
+  padding-right: 7px;
+}
+.tva-wordmark > span {
+  border-left: 1px solid #62472d70;
+  padding-left: 15px;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+  letter-spacing: 3px;
+}
+.tva-file-stamp {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: ui-monospace, "Courier New", monospace;
+  text-align: right;
+}
+.tva-file-stamp > span {
+  font-size: 9px;
+  letter-spacing: 1.7px;
+}
+.tva-file-stamp b {
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.tva-file-stamp small {
+  font-size: 8px;
+  color: #806344;
+}
+.tva-page-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 29px 0 25px;
+}
+.tva-kicker {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #795331;
+}
+.tva-page-intro h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(36px, 4vw, 54px);
+  letter-spacing: -1.8px;
+  line-height: 1.06;
+  margin-top: 13px;
+}
+.tva-page-intro h1 em {
+  font-weight: 500;
+  color: #8f452c;
+}
+.tva-page-intro > p {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.9;
+  color: #735738;
+  max-width: 355px;
+  padding-left: 25px;
+  border-left: 1px solid #62472d40;
+}
+.tva-page .tva-observatory {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+.tva-route-navigation {
+  position: relative;
+  padding-top: 85px;
+  border-top: 1px solid #79573835;
+}
+.tva-menu-mascot {
+  position: absolute;
+  top: 0;
+  width: 94px;
+  height: 94px;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 5px 3px #6d462623);
+}
+.miss-minutes {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.minutes-leg {
+  transform-origin: 65px 90px;
+  animation: minutes-step 1s ease-in-out infinite alternate;
+}
+.minutes-leg.right {
+  animation-delay: -1s;
+}
+.minutes-hand {
+  transform-origin: 108px 38px;
+  animation: minutes-wave 4s ease-in-out infinite;
+}
+.minutes-eyes {
+  transform-origin: 64px 51px;
+  animation: minutes-blink 7s ease-in-out infinite;
+}
+.minutes-clock-hand {
+  transform-origin: 64px 57px;
+  animation: minutes-time 80s linear infinite;
+}
+.minutes-message {
+  position: absolute;
+  right: 14px;
+  top: 21px;
+  color: #865d3d;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 10px;
+  max-width: 220px;
+  text-align: right;
+}
+.tva-page .tva-sector-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0;
+  gap: 0;
+  background: none;
+  border: 1px solid #62472d4d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.tva-page .tva-sector-tabs button {
+  padding: 13px 10px;
+  color: #5e4630;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 11px;
+  border: 0;
+  border-radius: 0;
+  border-right: 1px solid #62472d40;
+  min-height: 46px;
+  background: #f1ddb82c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+}
+.tva-page .tva-sector-tabs button:last-child {
+  border-right: 0;
+}
+.tva-page .tva-sector-tabs button > span {
+  color: #926d4b;
+  font-size: 9px;
+}
+.tva-page .tva-sector-tabs button[aria-pressed="true"] {
+  color: #f7e5c8;
+  background: #725138;
+  box-shadow: inset 0 2px 5px #35241650;
+}
+.tva-page .tva-sector-tabs button[aria-pressed="true"] > span {
+  color: #d8b48d;
+}
+.tva-page .tva-sector-tabs button:hover {
+  background: #97724d;
+  color: #fff2d8;
+}
+.tva-instrument-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 19px 2px;
+  font-family: ui-monospace, "Courier New", monospace;
+}
+.tva-instrument-bar > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+}
+.tva-instrument-bar select {
+  color: #4e3827;
+  background: #e1cfaf;
+  border: 1px solid #87644365;
+  border-radius: 3px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 10px;
+  max-width: 210px;
+}
+.tva-instrument-buttons {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+.tva-page .tva-motion,
+.tva-sound {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 9px;
+  border: 1px solid #79543270;
+  border-radius: 3px;
+  color: #583e2a;
+  background: linear-gradient(#e9d8b9, #c6ab84);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 35px;
+  padding: 8px 11px;
+  box-shadow:
+    0 2px 0 #80614455,
+    inset 0 1px 0 #fff5;
+}
+.tva-page .tva-motion:hover,
+.tva-sound:hover {
+  color: #2f2117;
+  border-color: #795432;
+  background: #e8d3af;
+}
+.tva-sound[aria-pressed="true"] {
+  color: #f1dbb5;
+  background: #74513b;
+  box-shadow: inset 0 2px 3px #35241660;
+}
+.tva-volume {
+  accent-color: #865132;
+  width: 72px;
+  cursor: pointer;
+}
+.tva-audio-error {
+  font-size: 10px;
+  padding-bottom: 13px;
+  color: #7c321f;
+}
+.tva-crt {
+  border: 1px solid #6a503768;
+  border-radius: 28px 28px 16px 16px;
+  padding: 17px 22px 0;
+  background: linear-gradient(
+    125deg,
+    #e0d0ac,
+    #bda57d 45%,
+    #b59971 72%,
+    #dac5a0
+  );
+  box-shadow:
+    inset 0 2px 1px #fff7,
+    inset -3px -3px 5px #76543155,
+    0 16px 25px #69523525,
+    0 3px 0 #957953;
+}
+.crt-bezel-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #6c543a;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+  padding: 0 9px 13px;
+}
+.crt-glass {
+  position: relative;
+  isolation: isolate;
+  border: 8px solid #554b3f;
+  border-radius: 42px / 35px;
+  background: #001126;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 2px #2a2923,
+    inset 0 0 25px #000c,
+    0 2px 0 #efdab880;
+}
+.crt-glass:after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 52% 40%, transparent 43%, #00071370 92%),
+    linear-gradient(
+      135deg,
+      #b8dfff0a,
+      transparent 20%,
+      transparent 80%,
+      #d3e0ff07
+    );
+  box-shadow: inset 0 0 25px 8px #0009;
+}
+.temporal-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  cursor: grab;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #67829b #071421;
+  touch-action: pan-x pan-y;
+}
+.temporal-viewport.dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+.temporal-viewport:focus-visible {
+  outline: 2px solid #aec9e5;
+  outline-offset: -3px;
+}
+.temporal-world {
+  position: relative;
+  height: 490px;
+  background: #021126;
+}
+.temporal-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.crt-scanlines {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.3;
+  background: repeating-linear-gradient(
+    0deg,
+    #0008 0,
+    #0008 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+.crt-scanlines:after {
+  content: "";
+  position: absolute;
+  inset: -100% 0 100%;
+  background: linear-gradient(transparent 40%, #c5d5e415 50%, transparent 60%);
+  animation: crt-sweep 18s linear infinite;
+}
+.crt-hud {
+  position: absolute;
+  top: 22px;
+  left: 28px;
+  right: 28px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  pointer-events: none;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+  color: #8cbbd6;
+  text-shadow: 0 0 9px #a7d4ff6b;
+  letter-spacing: 1.4px;
+}
+.crt-hud small {
+  display: block;
+  margin-top: 7px;
+  color: #b0bbcf;
+  font-size: 7px;
+  letter-spacing: 1.8px;
+}
+.crt-live {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 7px;
+  color: #acb6c9;
+}
+.crt-live i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b3d7ee;
+  box-shadow: 0 0 9px #a7ddff;
+}
+.earth-beacon {
+  position: absolute;
+  width: 54px;
+  height: 55px;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  color: #cce2ff;
+  background: none;
+  border: 0;
+  padding: 0;
+  text-shadow: 0 0 8px #75aaff;
+  cursor: pointer;
+}
+.beacon-ring {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background: #cadfff;
+  box-shadow:
+    0 0 10px #b8daff,
+    0 0 25px #91b2f3;
+  border: 1px solid #eef2ff;
+}
+.beacon-ring:before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 1px solid #c4dcfa60;
+  border-radius: 50%;
+}
+.beacon-ring:after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border: 1px solid #bad9ff55;
+  border-radius: 50%;
+  animation: beacon-breathe 4s ease-out infinite;
+}
+.beacon-code {
+  display: block;
+  margin-top: 10px;
+  padding: 3px 5px;
+  background: #011323aa;
+  border-radius: 2px;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  opacity: 0.78;
+  transition: opacity 0.2s;
+}
+.earth-beacon:hover .beacon-ring,
+.earth-beacon:focus-visible .beacon-ring,
+.earth-beacon.selected .beacon-ring {
+  background: #fff0d5;
+  box-shadow:
+    0 0 12px #fff5e0,
+    0 0 35px #c0cfff;
+  border-color: #fff;
+}
+.earth-beacon.selected .beacon-code {
+  color: #ffe0b2;
+  background: #0e1c32df;
+  opacity: 1;
+}
+.earth-beacon:hover .beacon-code,
+.earth-beacon:focus-visible .beacon-code {
+  opacity: 1;
+}
+.tva-page .earth-beacon:focus-visible {
+  outline: 1px solid #d2e7ff;
+  outline-offset: 3px;
+}
+.earth-preview {
+  position: absolute;
+  z-index: 8;
+  width: 245px;
+  border: 1px solid #98bad37d;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #0b1c32f2, #071325fa);
+  padding: 15px 17px;
+  color: #c1d3e5;
+  box-shadow:
+    0 9px 25px #0008,
+    0 0 20px #719abd22;
+  transform: translate(-50%, 26px);
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+.earth-preview.above {
+  transform: translate(-50%, calc(-100% - 24px));
+}
+.earth-preview.align-right {
+  transform: translate(calc(-100% + 20px), 26px);
+}
+.earth-preview.align-right.above {
+  transform: translate(calc(-100% + 20px), calc(-100% - 24px));
+}
+.earth-preview.align-left {
+  transform: translate(-20px, 26px);
+}
+.earth-preview.align-left.above {
+  transform: translate(-20px, calc(-100% - 24px));
+}
+.earth-preview > span {
+  display: block;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 6px;
+  color: #84abc5;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.earth-preview strong {
+  display: block;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 19px;
+  color: #e0edff;
+  font-weight: 500;
+}
+.earth-preview > b {
+  display: block;
+  font-size: 11px;
+  color: #d5dff1;
+  margin: 7px 0;
+  font-weight: 500;
+}
+.earth-preview p {
+  font-size: 9px;
+  color: #a3b4c9;
+  line-height: 1.8;
+}
+.earth-preview small {
+  display: block;
+  font-size: 7px;
+  font-family: ui-monospace, "Courier New", monospace;
+  color: #b7c2d4;
+  border-top: 1px solid #a1b8cf25;
+  margin-top: 9px;
+  padding-top: 8px;
+}
+.crt-console {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 68px;
+  padding: 8px 13px;
+  color: #513d2a;
+}
+.crt-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.crt-led {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #bf632e;
+  border: 1px solid #73513d;
+  border-radius: 50%;
+  box-shadow:
+    0 0 6px #a0502250,
+    inset 0 1px 2px #f8b061;
+}
+.crt-led.paused {
+  background: #755e44;
+  box-shadow: none;
+}
+.crt-vents {
+  width: 72px;
+  height: 17px;
+  margin-left: 19px;
+  background: repeating-linear-gradient(
+    90deg,
+    #483b2f99 0,
+    #483b2f99 2px,
+    transparent 2px,
+    transparent 5px
+  );
+  border-radius: 2px;
+}
+.crt-explore-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+}
+.crt-explore-controls > span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.crt-explore-controls > i {
+  height: 20px;
+  border-left: 1px solid #85613d70;
+  margin: 0 5px;
+}
+.crt-explore-controls button {
+  min-width: 30px;
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #886f4e;
+  border-radius: 3px;
+  background: linear-gradient(#ddc8a0, #bca07a);
+  box-shadow:
+    0 2px 0 #8b735355,
+    inset 0 1px 0 #f2e5c570;
+}
+.crt-explore-controls button:hover {
+  background: #e7d4ad;
+}
+.tva-page .tva-map-footer {
+  padding: 17px 4px;
+  background: none;
+  border: 0;
+  color: #684a31;
+}
+.tva-selected-signal {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+.tva-selected-signal > i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #8f452c;
+}
+.tva-selected-signal b {
+  font-size: 10px;
+  font-weight: 600;
+}
+.tva-selected-signal small {
+  font-size: 9px;
+  letter-spacing: 0;
+  opacity: 0.75;
+}
+.tva-page .tva-pagination {
+  font-size: 8px;
+  color: #715338;
+}
+.tva-page .tva-pagination button {
+  border-color: #92734f80;
+  border-radius: 3px;
+  padding: 5px;
+  min-width: 29px;
+  min-height: 29px;
+}
+.tva-page .earth-navigation {
+  padding: 20px 0;
+  border-top: 1px solid #62472d45;
+  border-bottom: 1px solid #62472d45;
+}
+.tva-page .earth-navigation label {
+  color: #67482e;
+  font-family: ui-monospace, "Courier New", monospace;
+}
+.tva-page .earth-navigation label > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.tva-page .earth-navigation select {
+  background: #e3d2b5;
+  color: #503825;
+  border-color: #93734b70;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 10px;
+}
+.tva-page .earth-navigation .text-link,
+.tva-page .earth-list-toolbar > .text-link {
+  color: #87472e;
+}
+.tva-page .earth-dossier {
+  padding: 30px 30px 25px;
+  background: linear-gradient(135deg, #f1e3c52b, #ecdabe15);
+  border: 1px solid #80634038;
+  box-shadow: 0 7px 22px #7054390a;
+}
+.tva-page .earth-classification {
+  color: #865334;
+  border-color: #86664277;
+  font-family: ui-monospace, "Courier New", monospace;
+}
+.tva-page .earth-identity h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4.6vw, 60px);
+  font-weight: 500;
+  color: #4b3220;
+  text-transform: none;
+  margin: 16px 0 10px;
+}
+.tva-page .earth-identity h3 {
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.tva-page .earth-identity p {
+  color: #745c44;
+  font-size: 11px;
+}
+.tva-page .earth-progress {
+  border-color: #80634045;
+}
+.tva-page .earth-progress .eyebrow {
+  color: #7c5a3c;
+}
+.tva-page .earth-progress > strong {
+  color: #8a492f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+.tva-page .earth-progress > span:last-child {
+  color: #816347;
+}
+.tva-page .progress-track {
+  background: #61422725;
+}
+.tva-page .earth-progress .progress-track > div {
+  background: #8d5032;
+}
+.tva-page .earth-canon-note {
+  border-color: #986342;
+  background: #6c47250b;
+}
+.tva-page .earth-canon-note p {
+  color: #80644b;
+}
+.tva-page .earth-canon-note a {
+  color: #8a442b;
+}
+.tva-page .earth-format-tabs button {
+  border-color: #8e704a5e;
+  background: #ecdabd35;
+  color: #775a3d;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 9px;
+}
+.tva-page .earth-format-tabs button[aria-pressed="true"] {
+  color: #f3dfc1;
+  background: #765039;
+  border-color: #6f4e39;
+}
+.tva-page .earth-result-count {
+  color: #81684d;
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size: 8px;
+}
+.tva-page .card-caption h3 {
+  color: #3e2a1d;
+}
+.tva-page .card-meta,
+.tva-page .watch-button {
+  color: #795f44;
+}
+.tva-page .watch-button:hover,
+.tva-page .watch-button.active {
+  color: #923e29;
+}
+.tva-page .card-number,
+.tva-page .card-type,
+.tva-page .poster-open {
+  color: #fff;
+}
+.tva-page .button.secondary {
+  color: #60432d;
+  background: #d9bf9740;
+  border-color: #87654275;
+}
+.tva-page .load-more span {
+  color: #896c4c;
+}
+.tva-page .earth-crossovers {
+  border-color: #80634045;
+}
+.tva-page .earth-crossovers .eyebrow {
+  color: #8e4c32;
+}
+.tva-page .earth-crossovers p {
+  color: #7c6247;
+}
+.tva-page .earth-crossovers button {
+  border-color: #87654270;
+  background: #e9d6b426;
+}
+.tva-closing-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 35px;
+  padding-top: 23px;
+  border-top: 1px solid #62472d45;
+  font-family: ui-monospace, "Courier New", monospace;
+}
+.tva-closing-strip > span {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  max-width: 170px;
+}
+.tva-closing-strip p {
+  font-size: 8px;
+  line-height: 1.8;
+  max-width: 640px;
+  color: #897052;
+}
+.tva-closing-strip > b {
+  font-size: 9px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+@keyframes crt-sweep {
+  to {
+    transform: translateY(200%);
+  }
+}
+@keyframes beacon-breathe {
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+@keyframes minutes-step {
+  to {
+    transform: rotate(8deg);
+  }
+}
+@keyframes minutes-wave {
+  0%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+  76%,
+  88% {
+    transform: rotate(-15deg);
+  }
+  82%,
+  94% {
+    transform: rotate(8deg);
+  }
+}
+@keyframes minutes-blink {
+  0%,
+  92%,
+  97%,
+  100% {
+    transform: scaleY(1);
+  }
+  94%,
+  95% {
+    transform: scaleY(0.08);
+  }
+}
+@keyframes minutes-time {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.tva-observatory[data-paused="true"] * {
+  animation-play-state: paused !important;
+}
+@media (max-width: 1000px) {
+  .tva-page .earth-canon-note {
+    align-items: flex-start;
+  }
+  .crt-vents {
+    display: none;
+  }
+  .tva-selected-signal small {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .tva-site-header.site-header nav.open {
+    background: #c2ab89;
+    border-color: #80604050;
+  }
+  .tva-page {
+    padding: 24px 4.6% 30px;
+  }
+  .tva-page-heading {
+    padding-bottom: 20px;
+  }
+  .tva-wordmark > strong {
+    font-size: 46px;
+    letter-spacing: -6px;
+  }
+  .tva-wordmark {
+    gap: 9px;
+  }
+  .tva-wordmark > span {
+    padding-left: 9px;
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+  .tva-file-stamp > span {
+    display: none;
+  }
+  .tva-file-stamp b {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .tva-file-stamp small {
+    font-size: 6px;
+  }
+  .tva-page-intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+  }
+  .tva-page-intro h1 {
+    font-size: 42px;
+  }
+  .tva-kicker {
+    font-size: 6px;
+    letter-spacing: 1.2px;
+  }
+  .tva-page-intro > p {
+    border-left: 0;
+    padding-left: 0;
+    font-size: 9px;
+  }
+  .tva-route-navigation {
+    padding-top: 80px;
+  }
+  .tva-menu-mascot {
+    width: 85px;
+    height: 85px;
+  }
+  .minutes-message {
+    right: 0;
+    top: 22px;
+    font-size: 8px;
+    width: 130px;
+  }
+  .tva-page .tva-sector-tabs button {
+    font-size: 10px;
+    padding: 10px 5px;
+    gap: 4px;
+    min-height: 45px;
+  }
+  .tva-page .tva-sector-tabs button > span {
+    display: none;
+  }
+  .tva-instrument-bar {
+    flex-wrap: wrap;
+    gap: 13px;
+    padding: 15px 0;
+  }
+  .tva-instrument-bar > label {
+    flex: 1;
+    min-width: 150px;
+  }
+  .tva-instrument-bar select {
+    max-width: 180px;
+    flex: 1;
+    font-size: 11px;
+  }
+  .tva-instrument-buttons {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .tva-page .tva-motion,
+  .tva-sound {
+    min-height: 35px;
+    padding: 8px;
+    font-size: 10px;
+  }
+  .tva-volume {
+    width: 65px;
+  }
+  .tva-crt {
+    padding: 12px 10px 0;
+    border-radius: 20px 20px 12px 12px;
+  }
+  .crt-bezel-label {
+    font-size: 5px;
+    letter-spacing: 0.8px;
+    padding: 0 5px 10px;
+  }
+  .crt-bezel-label span:last-child {
+    display: none;
+  }
+  .crt-glass {
+    border-width: 5px;
+    border-radius: 26px / 24px;
+  }
+  .temporal-world {
+    height: 405px;
+  }
+  .crt-hud {
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+  .crt-hud small {
+    font-size: 5px;
+    letter-spacing: 1px;
+  }
+  .crt-live {
+    display: none;
+  }
+  .crt-console {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 3px;
+    justify-content: center;
+  }
+  .crt-status {
+    width: 100%;
+    justify-content: space-between;
+    font-size: 6px;
+  }
+  .crt-explore-controls {
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+    font-size: 7px;
+  }
+  .crt-explore-controls > span {
+    gap: 3px;
+  }
+  .crt-explore-controls button {
+    min-width: 26px;
+    min-height: 29px;
+  }
+  .crt-explore-controls > i {
+    margin: 0 3px;
+  }
+  .tva-page .tva-map-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  .tva-selected-signal {
+    font-size: 6px;
+    gap: 5px;
+  }
+  .tva-selected-signal b {
+    font-size: 9px;
+  }
+  .tva-page .earth-navigation {
+    padding: 15px 0;
+    gap: 12px;
+  }
+  .tva-page .earth-navigation select {
+    font-size: 10px;
+    padding: 11px 8px;
+  }
+  .tva-page .earth-dossier {
+    padding: 22px 14px;
+    margin-top: 25px;
+  }
+  .tva-page .earth-identity h2 {
+    font-size: 36px;
+  }
+  .tva-page .earth-identity h3 {
+    font-size: 13px;
+  }
+  .tva-page .earth-progress {
+    border-color: #80634045;
+  }
+  .tva-page .earth-progress > strong {
+    font-size: 40px;
+  }
+  .tva-page .earth-format-tabs button {
+    padding: 9px;
+    font-size: 10px;
+  }
+  .tva-closing-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tva-closing-strip > span {
+    max-width: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tva-page * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

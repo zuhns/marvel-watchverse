@@ -1,5 +1,7 @@
 # Verifica multiverso e catalogo — 9 ottobre 2026
 
+Questo documento descrive il modello completo del catalogo. Il successivo rifacimento TVA esclude dalla pagina Universi le raccolte non confermate e mostra soltanto 32 Terre numerate con una fonte; vedi `tva-validation.md` per interfaccia, animazione e audio attuali.
+
 La classificazione Nerd copre intere serie e tutte le stagioni. Il menu a tendina mantiene indipendenti Serie extra e Nerd Multiverso; Disattiva tutte le modalità Nerd le azzera. Le scelte di universi non più disponibili vengono rimosse quando si disattiva il relativo percorso. I progressi restano conservati.
 
 L’atlante comprende ogni titolo del catalogo. I numeri mostrati sullo schermo (616, 10005, 688, 828, 838 e le Terre Spider-Verse) sono distinti dai numeri di repertorio. Terra-828 usa la conferma Marvel di Kevin Feige; gli altri dossier rimandano ai film o ai repertori pertinenti. I riferimenti di repertorio verificati includono Raimi, Webb, i Fantastic Four Fox, X-Men ’92/’97, Avengers EMH, Evolution, Spectacular, Disk Wars, Fantastic Four animato 2006, Armored Adventures, Future Avengers, Unlimited, Super Hero Squad, Hit-Monkey/MODOK, Ghost Rider, Blade, Daredevil/Elektra e Hulk. I dossier senza una fonte numerica verificata restano esplicitamente non numerati. Marvel Legacy e altri raggruppamenti non sono presentati come una Terra unica.
