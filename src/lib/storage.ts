@@ -1,4 +1,4 @@
-import type { Backup, Preferences, Watched } from "../types";
+import type { Backup, Preferences, Watched, Format } from "../types";
 import { defaults } from "./catalog";
 export const STORAGE_KEY = "marvel-watchverse.v1";
 export function parseBackup(value: unknown): Backup {
@@ -24,24 +24,45 @@ export function parseBackup(value: unknown): Backup {
     )
       throw Error("Il backup contiene progressi non validi.");
   }
-  const p = b.preferences;
-  if (!["release", "chronology", "recommended"].includes(p.order))
+  const p = b.preferences as unknown as Record<string, unknown>;
+  if (!["release", "chronology", "recommended"].includes(String(p.order)))
     throw Error("Ordine di visione non valido.");
-  for (const k of [
-    "category",
-    "universe",
-    "format",
-    "state",
-    "availability",
-    "search",
-  ] as const)
+  for (const k of ["state", "availability", "search"] as const)
     if (typeof p[k] !== "string") throw Error("Preferenze non valide.");
   if (
-    !["all", "movie", "series", "short", "special"].includes(p.format) ||
-    !["all", "seen", "unseen"].includes(p.state) ||
-    !["all", "released", "upcoming"].includes(p.availability)
+    !["all", "seen", "unseen"].includes(String(p.state)) ||
+    !["all", "released", "upcoming"].includes(String(p.availability))
   )
     throw Error("Filtri non validi.");
+  const selection = (key: string, legacy: string, all: string) => {
+    if (p[key] !== undefined) {
+      const a = p[key];
+      if (
+        !Array.isArray(a) ||
+        a.length > 100 ||
+        a.some((v) => typeof v !== "string" || v.length > 150)
+      )
+        throw Error("Selezione multipla non valida.");
+      return [...new Set(a)] as string[];
+    }
+    if (typeof p[legacy] !== "string") throw Error("Preferenze non valide.");
+    return p[legacy] === all ? [] : [p[legacy] as string];
+  };
+  const formats = selection("formats", "format", "all");
+  if (formats.some((f) => !["movie", "series", "short", "special"].includes(f)))
+    throw Error("Formati non validi.");
+  if (p.nerdMode !== undefined && typeof p.nerdMode !== "boolean")
+    throw Error("Modalità Nerd non valida.");
+  const preferences: Preferences = {
+    order: p.order as Preferences["order"],
+    categories: selection("categories", "category", "Tutti"),
+    universes: selection("universes", "universe", "Tutti"),
+    formats: formats as Format[],
+    nerdMode: p.nerdMode === true,
+    state: p.state as string,
+    availability: p.availability as string,
+    search: p.search as string,
+  };
   return {
     version: 1,
     exportedAt:
@@ -49,7 +70,7 @@ export function parseBackup(value: unknown): Backup {
         ? b.exportedAt
         : new Date().toISOString(),
     watched: Object.fromEntries(Object.entries(b.watched)),
-    preferences: { ...defaults, ...p },
+    preferences,
   };
 }
 export function loadState(storage: Pick<Storage, "getItem">) {

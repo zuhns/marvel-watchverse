@@ -8,7 +8,8 @@ import { MovieModal } from "./components/MovieModal";
 import { Archive } from "./pages/Archive";
 import { Universes } from "./pages/Universes";
 import { Progress } from "./pages/Progress";
-import { titles, stats, nextTitle, defaults } from "./lib/catalog";
+import { ProfilePanel } from "./components/ProfilePanel";
+import { titles, stats, nextTitle, defaults, modeTitles } from "./lib/catalog";
 import { download, exportExcel, importExcel } from "./lib/export";
 import { makeBackup, parseBackup, mergeWatched } from "./lib/storage";
 import { useTracker } from "./hooks/useTracker";
@@ -26,7 +27,8 @@ export default function App() {
   const [busy, setBusy] = useState(false);
   const tracker = useTracker();
   const { watched, preferences: p, setPreferences: change, toggle } = tracker;
-  const s = stats(titles, watched);
+  const activeTitles = modeTitles(titles, p.nerdMode);
+  const s = stats(activeTitles, watched);
   useEffect(() => {
     const handle = () => {
       setPage(pageFromHash());
@@ -120,11 +122,11 @@ export default function App() {
           {page === "home" ? (
             <>
               <Hero
-                next={nextTitle(titles, p.order, watched)}
+                next={nextTitle(activeTitles, p.order, watched)}
                 onOpen={setSelected}
               />
               <div className="home-content">
-                <StatsPanel titles={titles} watched={watched} />
+                <StatsPanel titles={activeTitles} watched={watched} />
                 <div className="editorial-strip">
                   <span>
                     <ShieldCheck size={17} />
@@ -172,25 +174,49 @@ export default function App() {
           ) : page === "universes" ? (
             <Universes
               watched={watched}
+              nerdMode={p.nerdMode}
               exploreCategory={(category) => {
-                change({ ...defaults, order: p.order, category });
+                change({
+                  ...defaults,
+                  order: p.order,
+                  categories: [category],
+                  nerdMode: p.nerdMode,
+                });
                 location.hash = "archive";
               }}
               explore={(universe) => {
-                change({ ...defaults, order: p.order, universe });
+                change({
+                  ...defaults,
+                  order: p.order,
+                  universes: [universe],
+                  nerdMode: p.nerdMode,
+                });
                 location.hash = "archive";
               }}
             />
           ) : (
-            <Progress
-              watched={watched}
-              order={p.order}
-              open={setSelected}
-              exportJSON={json}
-              exportXLSX={excel}
-              importFile={restore}
-              busy={busy}
-            />
+            <>
+              <div className="profile-container">
+                <ProfilePanel
+                  username={tracker.username}
+                  status={tracker.syncStatus}
+                  pending={tracker.pendingCount}
+                  error={tracker.syncError}
+                  onSave={tracker.saveUsername}
+                  onRetry={() => void tracker.sync()}
+                />
+              </div>
+              <Progress
+                watched={watched}
+                order={p.order}
+                nerdMode={p.nerdMode}
+                open={setSelected}
+                exportJSON={json}
+                exportXLSX={excel}
+                importFile={restore}
+                busy={busy}
+              />
+            </>
           )}
         </motion.div>
       </main>

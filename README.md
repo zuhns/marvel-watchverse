@@ -8,7 +8,9 @@
 
 ## Cosa puoi fare
 
-Esplora film, singole stagioni, cortometraggi e speciali. Combina ricerca per titolo originale/italiano, personaggio, anno, franchise e universo con filtri per formato, stato di visione e disponibilità. Le produzioni future sono separate dai titoli pubblicati e non aumentano il denominatore dei progressi.
+Esplora film, singole stagioni, cortometraggi e speciali. Formati, universi e franchise ammettono selezioni multiple: basta selezionare le caselle o i pulsanti desiderati. Le scelte nello stesso filtro sono alternative; filtri diversi si combinano. Le produzioni future sono separate dai titoli pubblicati e non aumentano il denominatore dei progressi.
+
+Il percorso predefinito parte dal **1998, con Blade**. Attiva **Modalità Nerd** per includere le produzioni storiche dal 1967 in tutti gli ordini di visione. Il percorso e le statistiche seguono la modalità scelta; i progressi storici restano conservati quando Nerd è disattivata. La preferenza viene ricordata nel browser.
 
 Tre ordini di visione:
 
@@ -16,11 +18,15 @@ Tre ordini di visione:
 2. **Cronologia interna**: titoli raggruppati per continuità. Gli X-Men hanno timeline ramificate; le posizioni approssimative sono dichiarate nei dettagli. Le produzioni di canone incerto e l’animazione legacy restano separate.
 3. **Consigliato**: consiglio editoriale indipendente; inserisce Raimi/Webb prima di No Way Home e Deadpool/Wolverine prima del crossover. Non è una timeline canonica ufficiale.
 
-I progressi usano ID stabili e timestamp in `localStorage`, chiave `marvel-watchverse.v1`. Cambiare ordine o filtri non cambia lo stato visto. La pagina progressi mostra dati complessivi e per universo, gli ultimi titoli visti e il prossimo capitolo.
+I progressi usano ID stabili e timestamp in `localStorage`, chiave `marvel-watchverse.v1`. Cambiare ordine o filtri non cambia lo stato visto. I vecchi backup con filtri singoli vengono migrati automaticamente. La pagina progressi mostra dati complessivi e per universo, gli ultimi titoli visti e il prossimo capitolo.
+
+In **I miei progressi** puoi associare un nome utente al browser. Il nome viene normalizzato in minuscolo e resta memorizzato, senza un comando per cambiarlo o uscire. Inserendo lo stesso nome su un altro dispositivo accedi agli stessi progressi quando il servizio cloud è configurato. Il profilo usa solo il nome: chi lo conosce può leggere e modificare i progressi, come richiesto dal proprietario. Non ci sono email o password. Il sito GitHub Pages resta pubblico.
+
+La sincronizzazione mantiene una coda locale delle modifiche, funziona nuovamente al ritorno della connessione e legge gli aggiornamenti ogni 15 secondi quando la pagina è visibile. Ogni titolo viene aggiornato separatamente; l'ultima modifica prevale, comprese le rimozioni, secondo il timestamp del dispositivo. Usa un orologio di sistema corretto. Al primo collegamento, i progressi locali si uniscono a quelli del profilo senza ripristinare titoli rimossi nel cloud. Le preferenze dei filtri restano specifiche del dispositivo. Se il cloud non è configurato o non risponde, l'interfaccia lo segnala e conserva i dati locali.
 
 **Backup JSON** esporta progressi e preferenze. L’importazione valida tutto prima di aggiornare lo stato e unisce i titoli visti ai dati esistenti. Un import non cancella progressi: per togliere un titolo visto, usa il suo pulsante nel catalogo.
 
-**Excel `.xlsx`** viene generato nel browser, su richiesta, con tre fogli, filtri, intestazioni, colonne dimensionate, ID stabili e timestamp. Puoi reimportarlo dopo aver cambiato `Stato` in `Visto`; viene letto il primo foglio compatibile. Le righe non viste non cancellano titoli già visti nel browser. Nessuna API o connessione cloud è richiesta per i tuoi progressi.
+**Excel `.xlsx`** viene generato nel browser, su richiesta, con tre fogli, filtri, intestazioni, colonne dimensionate, ID stabili e timestamp. Puoi reimportarlo dopo aver cambiato `Stato` in `Visto`; viene letto il primo foglio compatibile. Le righe non viste non cancellano titoli già visti nel browser. Backup e tracker locale funzionano anche senza il servizio cloud.
 
 ## Sviluppo locale
 
@@ -44,7 +50,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-I test Vitest verificano integrità del catalogo, ordini, filtri combinati, persistenza e validazione dei backup, import non distruttivi e struttura dei file Excel. I test Playwright verificano le undici locandine richieste, dettagli, ricerca, stato dopo refresh, esportazioni/importazioni JSON e Excel, menu mobile e overflow a 320, 390, 768, 1366 e 1920 px.
+I test Vitest verificano catalogo, ordini, filtri multipli, modalità Nerd, vecchi backup, profilo persistente, riconciliazione cloud, API, Excel e schema PostgreSQL con PGlite. I test Playwright verificano locandine, filtri, modalità Nerd, nome utente dopo refresh, esportazioni/importazioni, menu mobile e overflow a 320, 390, 768, 1366 e 1920 px.
 
 ## Architettura
 
@@ -54,8 +60,10 @@ src/data/posters.json         manifest immagini, fonte e verifica
 src/data/viewing-orders.json  indici dei percorsi e note editoriali
 src/components/              componenti UI riutilizzabili
 src/pages/                   archivio, universi e progressi
-src/hooks/useTracker.ts       salvataggio locale e stato personale
+src/hooks/useCloudTracker.ts  salvataggio locale, coda e sincronizzazione
 src/lib/                     ordinamento, filtri, backup, Excel
+supabase/schemas/            schema PostgreSQL e permessi
+supabase/functions/          API pubblica per nome utente
 scripts/                     validazione e sincronizzazione immagini
 reports/                     fonti, verifiche poster e screenshot QA
 .github/workflows/deploy.yml  test, build e GitHub Pages
@@ -96,6 +104,16 @@ Le immagini non sono redistribuite localmente: restano sui server della fonte. I
 ## Pubblicazione
 
 GitHub Pages deve usare **Settings → Pages → Source: GitHub Actions**. Ogni push a `main` esegue installazione con lockfile, validazione, test e build, poi pubblica `dist`. Il workflow usa soltanto `GITHUB_TOKEN` e l’OIDC di Pages; non serve alcuna chiave TMDB per la build.
+
+### Attivare la sincronizzazione Supabase
+
+1. Crea un progetto Supabase separato nell'organizzazione scelta dal proprietario.
+2. Applica lo schema `supabase/schemas/watchverse.sql` al database vuoto. Le tabelle hanno RLS e non sono accessibili con le chiavi pubbliche; la funzione SQL è concessa solo a `service_role`.
+3. Distribuisci la Edge Function `watchverse-sync` con i due file in `supabase/functions/watchverse-sync/`. La verifica JWT è disattivata intenzionalmente perché l'accesso richiesto è basato sul solo nome. La chiave di servizio viene letta dall'ambiente Supabase e resta nel backend.
+4. Imposta la variabile GitHub Actions **VITE_SYNC_URL** all'URL pubblico `https://<project-ref>.supabase.co/functions/v1/watchverse-sync`, poi avvia il workflow. In locale usa la stessa variabile in `.env.local`, escluso da Git.
+5. Verifica con due browser separati: stesso nome, titolo visto, lettura dall'altro browser, rimozione e riapertura. Non inserire chiavi Supabase nel frontend o nel repository.
+
+La funzione consente l'origine GitHub Pages del progetto e le porte locali 4173/5173. Se cambi hosting, aggiorna l'elenco in `handler.ts`. Il servizio non espone un elenco dei profili. La configurazione dell'URL deve avvenire dopo la distribuzione e la verifica del backend.
 
 ## Fonti e limiti
 

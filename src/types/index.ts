@@ -37,9 +37,10 @@ export interface Poster {
 export type Watched = Record<string, { watchedAt: string }>;
 export interface Preferences {
   order: Order;
-  category: string;
-  universe: string;
-  format: string;
+  categories: string[];
+  universes: string[];
+  formats: Format[];
+  nerdMode: boolean;
   state: string;
   availability: string;
   search: string;

@@ -6,13 +6,20 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
-import { titles, stats, nextTitle, labels } from "../lib/catalog";
+import {
+  titles as catalog,
+  stats,
+  nextTitle,
+  labels,
+  modeTitles,
+} from "../lib/catalog";
 import { StatsPanel, ProgressBar } from "../components/StatsPanel";
 import { PosterImage } from "../components/PosterImage";
 import type { Watched, Order, Title } from "../types";
 export function Progress({
   watched,
   order,
+  nerdMode,
   open,
   exportJSON,
   exportXLSX,
@@ -21,12 +28,14 @@ export function Progress({
 }: {
   watched: Watched;
   order: Order;
+  nerdMode: boolean;
   open: (t: Title) => void;
   exportJSON: () => void;
   exportXLSX: () => void;
   importFile: (f: File) => void;
   busy: boolean;
 }) {
+  const titles = modeTitles(catalog, nerdMode);
   const next = nextTitle(titles, order, watched);
   const recent = titles
     .filter((t) => watched[t.id])
@@ -43,8 +52,8 @@ export function Progress({
         <span>WATCHVERSE.</span>
       </h1>
       <p className="page-intro">
-        La tua maratona, un capitolo alla volta. I progressi restano su questo
-        browser.
+        La tua maratona, un capitolo alla volta. Associa il tuo nome utente per
+        ritrovarla su tutti i dispositivi.
       </p>
       <StatsPanel titles={titles} watched={watched} />
       <div className="progress-layout">

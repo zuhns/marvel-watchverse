@@ -16,9 +16,10 @@ export const orderLabels: Record<Order, string> = {
 };
 export const defaults: Preferences = {
   order: "recommended",
-  category: "Tutti",
-  universe: "Tutti",
-  format: "all",
+  categories: [],
+  universes: [],
+  formats: [],
+  nerdMode: false,
   state: "all",
   availability: "released",
   search: "",
@@ -44,9 +45,10 @@ export function filterTitles(list: Title[], p: Preferences, w: Watched) {
   const q = normalize(p.search.trim());
   return list.filter(
     (t) =>
-      (p.category === "Tutti" || t.category === p.category) &&
-      (p.universe === "Tutti" || t.universe === p.universe) &&
-      (p.format === "all" || t.type === p.format) &&
+      (p.nerdMode || t.year >= 1998) &&
+      (!p.categories.length || p.categories.includes(t.category)) &&
+      (!p.universes.length || p.universes.includes(t.universe)) &&
+      (!p.formats.length || p.formats.includes(t.type)) &&
       (p.state === "all" || (p.state === "seen" ? !!w[t.id] : !w[t.id])) &&
       (p.availability === "all" || t.status === p.availability) &&
       (!q ||
@@ -77,3 +79,5 @@ export function nextTitle(list: Title[], order: Order, w: Watched) {
     (t) => t.status === "released" && !w[t.id],
   );
 }
+export const modeTitles = (list: Title[], nerdMode: boolean) =>
+  nerdMode ? list : list.filter((t) => t.year >= 1998);

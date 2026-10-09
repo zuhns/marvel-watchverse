@@ -1,5 +1,5 @@
 import { ArrowUpRight, GitBranch } from "lucide-react";
-import { titles, stats } from "../lib/catalog";
+import { titles as catalog, stats, modeTitles } from "../lib/catalog";
 import { ProgressBar } from "../components/StatsPanel";
 import type { Watched } from "../types";
 const descriptions: Record<string, string> = {
@@ -21,13 +21,16 @@ const descriptions: Record<string, string> = {
 };
 export function Universes({
   watched,
+  nerdMode,
   explore,
   exploreCategory,
 }: {
   watched: Watched;
+  nerdMode: boolean;
   explore: (u: string) => void;
   exploreCategory: (category: string) => void;
 }) {
+  const titles = modeTitles(catalog, nerdMode);
   const priority = [
     "MCU",
     "X-Men / Fox",

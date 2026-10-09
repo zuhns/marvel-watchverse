@@ -21,6 +21,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.3.14",
     "@playwright/test": "^1.56.0",
     "@tailwindcss/vite": "^4.1.0",
     "@types/node": "^24.0.0",

@@ -23,6 +23,9 @@ importers:
         specifier: ^19.2.0
         version: 19.3.0(react@19.3.0)
     devDependencies:
+      "@electric-sql/pglite":
+        specifier: 0.3.14
+        version: 0.3.14
       "@playwright/test":
         specifier: ^1.56.0
         version: 1.64.0
@@ -200,6 +203,12 @@ packages:
         integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==,
       }
     engines: { node: ">=6.9.0" }
+
+  "@electric-sql/pglite@0.3.14":
+    resolution:
+      {
+        integrity: sha512-3DB258dhqdsArOI1fIt7cb9RpUOgcDg5hXWVgVHAeqVQ/qxtFy605QKs4gx6mFq3jWsSPqDN8TgSEsqC3OfV9Q==,
+      }
 
   "@esbuild/aix-ppc64@0.28.2":
     resolution:
@@ -2974,6 +2983,8 @@ snapshots:
     dependencies:
       "@babel/helper-string-parser": 7.29.7
       "@babel/helper-validator-identifier": 7.29.7
+
+  "@electric-sql/pglite@0.3.14": {}
 
   "@esbuild/aix-ppc64@0.28.2":
     optional: true

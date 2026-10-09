@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Film } from "lucide-react";
-import { titles, sortTitles, filterTitles, orderLabels } from "../lib/catalog";
+import {
+  titles,
+  sortTitles,
+  filterTitles,
+  orderLabels,
+  modeTitles,
+} from "../lib/catalog";
 import { OrderSelector } from "../components/OrderSelector";
 import { FilterBar } from "../components/FilterBar";
 import { MovieCard } from "../components/MovieCard";
@@ -22,7 +28,7 @@ export function Archive({
 }) {
   const [limit, setLimit] = useState(compact ? 12 : 30);
   useEffect(() => setLimit(compact ? 12 : 30), [p, compact]);
-  const sorted = sortTitles(titles, p.order);
+  const sorted = sortTitles(modeTitles(titles, p.nerdMode), p.order);
   const filtered = filterTitles(sorted, p, watched);
   const positions = new Map(sorted.map((t, i) => [t.id, i + 1]));
   const show = filtered.slice(0, limit);

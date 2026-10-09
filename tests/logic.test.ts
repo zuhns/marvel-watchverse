@@ -8,6 +8,7 @@ import {
   normalize,
   stats,
   nextTitle,
+  modeTitles,
 } from "../src/lib/catalog";
 import {
   parseBackup,
@@ -84,7 +85,7 @@ describe("ordini e filtri", () => {
     expect(
       filterTitles(
         titles,
-        { ...defaults, search: "IRON MAN", format: "movie", state: "seen" },
+        { ...defaults, search: "IRON MAN", formats: ["movie"], state: "seen" },
         watched,
       ).map((t) => t.id),
     ).toEqual([iron.id]);
@@ -95,6 +96,39 @@ describe("ordini e filtri", () => {
     ).toBe(true);
     expect(stats(titles, watched).seen).toBe(1);
     expect(nextTitle(titles, "release", watched)?.id).not.toBe(iron.id);
+  });
+  it("seleziona più formati e universi con OR interno e AND tra filtri", () => {
+    const preferences = {
+      ...defaults,
+      formats: ["movie", "special"] as const,
+      universes: ["MCU", "X-Men / Fox"],
+    };
+    const list = filterTitles(
+      titles,
+      { ...preferences, formats: [...preferences.formats] },
+      {},
+    );
+    expect(list.length).toBeGreaterThan(10);
+    expect(new Set(list.map((t) => t.universe))).toEqual(
+      new Set(preferences.universes),
+    );
+    expect(list.every((t) => ["movie", "special"].includes(t.type))).toBe(true);
+  });
+  it("la modalità Nerd recupera i titoli storici senza perdere quelli visti", () => {
+    const old = titles.find((t) => t.year === 1967)!;
+    const watched = { [old.id]: { watchedAt: "2026-10-08T12:00:00Z" } };
+    expect(
+      filterTitles(titles, defaults, watched).every((t) => t.year >= 1998),
+    ).toBe(true);
+    expect(
+      filterTitles(titles, { ...defaults, nerdMode: true }, watched).some(
+        (t) => t.id === old.id,
+      ),
+    ).toBe(true);
+    expect(modeTitles(titles, false).length).toBeLessThan(
+      modeTitles(titles, true).length,
+    );
+    expect(watched[old.id]).toBeDefined();
   });
 });
 describe("backup e persistenza", () => {
@@ -131,6 +165,28 @@ describe("backup e persistenza", () => {
         ),
       ),
     ).toEqual(["a", "b"]);
+  });
+  it("migra i backup originali con filtri singoli", () => {
+    const backup = {
+      version: 1,
+      exportedAt: "2026-10-08T12:00:00Z",
+      watched: { abc: { watchedAt: "2026-10-08T12:00:00Z" } },
+      preferences: {
+        order: "release",
+        category: "MCU",
+        universe: "MCU",
+        format: "movie",
+        state: "seen",
+        availability: "released",
+        search: "Iron",
+      },
+    };
+    const migrated = parseBackup(backup);
+    expect(migrated.watched).toEqual(backup.watched);
+    expect(migrated.preferences.formats).toEqual(["movie"]);
+    expect(migrated.preferences.universes).toEqual(["MCU"]);
+    expect(migrated.preferences.categories).toEqual(["MCU"]);
+    expect(migrated.preferences.nerdMode).toBe(false);
   });
 });
 describe("Excel", () => {
