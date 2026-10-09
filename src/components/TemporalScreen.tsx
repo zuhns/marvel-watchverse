@@ -5,7 +5,7 @@ import type { Earth } from "../lib/multiverse";
 import {
   createTemporalRenderer,
   type TemporalControls,
-} from "../lib/temporal-renderer";
+} from "../lib/temporal-flow";
 
 const coordinates = [
   [0.2, 0.21],
@@ -57,11 +57,10 @@ export function TemporalScreen({
     if (!canvas.current) return;
     return createTemporalRenderer(
       canvas.current,
-      `${import.meta.env.BASE_URL}assets/tva-timeline.png`,
       nodes.map(({ earth, x, y }) => ({ id: earth.id, x, y })),
       () => state.current,
     );
-    // Rebuild the branch texture only when a different set of Earths is shown.
+    // Rebuild geometry only when a different set of Earths is shown.
   }, [signature]);
   useEffect(() => {
     const frame = viewport.current;

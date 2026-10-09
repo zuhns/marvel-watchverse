@@ -17,9 +17,9 @@ import {
   type Sector,
 } from "../lib/multiverse";
 import { stats, labels } from "../lib/catalog";
-import { useTvaAmbience } from "../hooks/useTvaAmbience";
+import { useTvaAmbience } from "../hooks/useTemporalScore";
 import { TemporalScreen } from "./TemporalScreen";
-import { TvaMascot } from "./TvaMascot";
+import { TvaMascot } from "./OriginalMissMinutes";
 import { ProgressBar } from "./StatsPanel";
 import { MovieCard } from "./MovieCard";
 import type { Title, Watched, Format } from "../types";
@@ -104,7 +104,7 @@ export function SacredTimeline({
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <TvaMascot />
+            <TvaMascot paused={paused} />
           </motion.div>
           <p
             className="minutes-message"
@@ -184,10 +184,18 @@ export function SacredTimeline({
                   : "Attiva atmosfera sonora"
               }
               aria-pressed={sound.enabled}
+              disabled={sound.loading}
+              aria-busy={sound.loading}
               onClick={() => void sound.toggle()}
             >
               {sound.enabled ? <Volume2 size={15} /> : <VolumeX size={15} />}
-              <span>{sound.enabled ? "Audio attivo" : "Attiva atmosfera"}</span>
+              <span>
+                {sound.loading
+                  ? "Sintonizzo il flusso…"
+                  : sound.enabled
+                    ? "Audio attivo"
+                    : "Attiva atmosfera"}
+              </span>
             </button>
             {sound.enabled && (
               <input

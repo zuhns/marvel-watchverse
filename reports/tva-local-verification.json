@@ -1,8 +1,16 @@
 {
   "url": "http://127.0.0.1:4173/marvel-watchverse/#universes",
-  "checkedAt": "2026-10-09T14:00:47.762Z",
+  "checkedAt": "2026-10-09T14:53:18.001Z",
   "http": 200,
-  "imageStatus": 200,
+  "assets": {
+    "tva-logo.svg": 200,
+    "miss-minutes.webm": 200,
+    "temporal-score.m4a": 200,
+    "fonts/jost.ttf": 200,
+    "fonts/archivo-narrow.ttf": 200
+  },
+  "renderer": "webgl-procedural",
+  "originalMascotPlaying": true,
   "identifiedEarths": 32,
   "flow": true,
   "hover": true,

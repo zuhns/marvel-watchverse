@@ -18,7 +18,11 @@ export function Universes({
       <div className="tva-page-inner">
         <header className="tva-page-heading">
           <div className="tva-wordmark" aria-label="Time Variance Authority">
-            <strong>TVA</strong>
+            <img
+              className="tva-official-logo"
+              src={`${import.meta.env.BASE_URL}assets/tva-logo.svg`}
+              alt="TVA"
+            />
             <span>
               TIME VARIANCE
               <br />
@@ -37,9 +41,9 @@ export function Universes({
               ARCHIVIO DELLE REALTÀ / ACCESSO AUTORIZZATO
             </span>
             <h1>
-              Per ogni tempo.
+              FOR ALL TIME.
               <br />
-              <em>Sempre.</em>
+              <em>ALWAYS.</em>
             </h1>
           </div>
           <p>

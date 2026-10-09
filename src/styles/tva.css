@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "TVA Sans";
+  src: url("/assets/fonts/jost.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TVA Display";
+  src: url("/assets/fonts/archivo-narrow.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
 /* A separate TVA visual language: aged paper, burnt orange and a physical CRT. */
 .tva-site-header.site-header {
   background: #c2ab89;
@@ -35,6 +47,7 @@
   --tva-rust: #8f452c;
   --tva-paper: #cab696;
   color: var(--tva-ink);
+  font-family: "TVA Sans", Futura, sans-serif;
   background:
     radial-gradient(ellipse at 45% 5%, #e4d6b7aa, transparent 65%),
     repeating-linear-gradient(
@@ -44,7 +57,7 @@
       transparent 1px,
       transparent 4px
     ),
-    #cbb897;
+    #bdb596;
   padding: 34px 4.6% 40px;
   min-height: 100vh;
 }
@@ -72,7 +85,7 @@
   gap: 15px;
 }
 .tva-wordmark > strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "TVA Display", "Franklin Gothic Medium", sans-serif;
   font-size: 67px;
   line-height: 1;
   font-weight: 900;
@@ -82,17 +95,25 @@
 .tva-wordmark > span {
   border-left: 1px solid #62472d70;
   padding-left: 15px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 10px;
   font-weight: 600;
   line-height: 1.8;
   letter-spacing: 3px;
 }
+.tva-official-logo {
+  width: 152px;
+  height: 70px;
+  object-fit: contain;
+  opacity: 1;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(42%) saturate(876%)
+    hue-rotate(337deg) brightness(95%) contrast(89%);
+}
 .tva-file-stamp {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   text-align: right;
 }
 .tva-file-stamp > span {
@@ -115,26 +136,27 @@
   padding: 29px 0 25px;
 }
 .tva-kicker {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
   letter-spacing: 2px;
   color: #795331;
 }
 .tva-page-intro h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  font-size: clamp(36px, 4vw, 54px);
-  letter-spacing: -1.8px;
+  font-family: "TVA Display", "Franklin Gothic Medium", sans-serif;
+  font-weight: 700;
+  font-size: clamp(42px, 4.8vw, 68px);
+  letter-spacing: -1px;
   line-height: 1.06;
   margin-top: 13px;
 }
 .tva-page-intro h1 em {
-  font-weight: 500;
+  font-weight: 700;
+  font-style: normal;
   color: #8f452c;
 }
 .tva-page-intro > p {
-  font-family: ui-monospace, "Courier New", monospace;
-  font-size: 11px;
+  font-family: "TVA Sans", "Futura", sans-serif;
+  font-size: 14px;
   line-height: 1.9;
   color: #735738;
   max-width: 355px;
@@ -150,14 +172,14 @@
 }
 .tva-route-navigation {
   position: relative;
-  padding-top: 85px;
+  padding-top: 115px;
   border-top: 1px solid #79573835;
 }
 .tva-menu-mascot {
   position: absolute;
   top: 0;
-  width: 94px;
-  height: 94px;
+  width: 115px;
+  height: 115px;
   transform: translateX(-50%);
   z-index: 2;
   pointer-events: none;
@@ -192,8 +214,8 @@
   right: 14px;
   top: 21px;
   color: #865d3d;
-  font-family: ui-monospace, "Courier New", monospace;
-  font-size: 10px;
+  font-family: "TVA Sans", "Futura", sans-serif;
+  font-size: 13px;
   max-width: 220px;
   text-align: right;
 }
@@ -210,8 +232,10 @@
 .tva-page .tva-sector-tabs button {
   padding: 13px 10px;
   color: #5e4630;
-  font-family: ui-monospace, "Courier New", monospace;
-  font-size: 11px;
+  font-family: "TVA Sans", "Futura", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
   border: 0;
   border-radius: 0;
   border-right: 1px solid #62472d40;
@@ -247,7 +271,7 @@
   justify-content: space-between;
   gap: 20px;
   padding: 19px 2px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
 }
 .tva-instrument-bar > label {
   display: flex;
@@ -273,7 +297,7 @@
 }
 .tva-page .tva-motion,
 .tva-sound {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 9px;
   border: 1px solid #79543270;
   border-radius: 3px;
@@ -331,7 +355,7 @@
   justify-content: space-between;
   gap: 20px;
   color: #6c543a;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
   letter-spacing: 1.8px;
   padding: 0 9px 13px;
@@ -399,7 +423,7 @@
   inset: 0;
   z-index: 3;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.12;
   background: repeating-linear-gradient(
     0deg,
     #0008 0,
@@ -425,7 +449,7 @@
   justify-content: space-between;
   gap: 20px;
   pointer-events: none;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
   color: #8cbbd6;
   text-shadow: 0 0 9px #a7d4ff6b;
@@ -503,7 +527,7 @@
   padding: 3px 5px;
   background: #011323aa;
   border-radius: 2px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -565,7 +589,7 @@
 }
 .earth-preview > span {
   display: block;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 6px;
   color: #84abc5;
   letter-spacing: 1.5px;
@@ -573,7 +597,7 @@
 }
 .earth-preview strong {
   display: block;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 19px;
   color: #e0edff;
   font-weight: 500;
@@ -586,14 +610,14 @@
   font-weight: 500;
 }
 .earth-preview p {
-  font-size: 9px;
+  font-size: 11px;
   color: #a3b4c9;
   line-height: 1.8;
 }
 .earth-preview small {
   display: block;
   font-size: 7px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   color: #b7c2d4;
   border-top: 1px solid #a1b8cf25;
   margin-top: 9px;
@@ -612,7 +636,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
   letter-spacing: 1px;
 }
@@ -648,7 +672,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
 }
 .crt-explore-controls > span {
@@ -684,7 +708,7 @@
   color: #684a31;
 }
 .tva-selected-signal {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 7px;
   letter-spacing: 1px;
 }
@@ -721,7 +745,7 @@
 }
 .tva-page .earth-navigation label {
   color: #67482e;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
 }
 .tva-page .earth-navigation label > span {
   font-size: 8px;
@@ -731,7 +755,7 @@
   background: #e3d2b5;
   color: #503825;
   border-color: #93734b70;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 10px;
 }
 .tva-page .earth-navigation .text-link,
@@ -747,10 +771,10 @@
 .tva-page .earth-classification {
   color: #865334;
   border-color: #86664277;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
 }
 .tva-page .earth-identity h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "TVA Display", "Franklin Gothic Medium", sans-serif;
   font-size: clamp(38px, 4.6vw, 60px);
   font-weight: 500;
   color: #4b3220;
@@ -758,7 +782,7 @@
   margin: 16px 0 10px;
 }
 .tva-page .earth-identity h3 {
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -775,7 +799,7 @@
 }
 .tva-page .earth-progress > strong {
   color: #8a492f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "TVA Display", "Franklin Gothic Medium", sans-serif;
   font-size: 50px;
   font-weight: 400;
 }
@@ -802,7 +826,7 @@
   border-color: #8e704a5e;
   background: #ecdabd35;
   color: #775a3d;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 9px;
 }
 .tva-page .earth-format-tabs button[aria-pressed="true"] {
@@ -812,7 +836,7 @@
 }
 .tva-page .earth-result-count {
   color: #81684d;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
   font-size: 8px;
 }
 .tva-page .card-caption h3 {
@@ -860,7 +884,7 @@
   margin-top: 35px;
   padding-top: 23px;
   border-top: 1px solid #62472d45;
-  font-family: ui-monospace, "Courier New", monospace;
+  font-family: "TVA Sans", "Futura", sans-serif;
 }
 .tva-closing-strip > span {
   font-size: 8px;
@@ -958,6 +982,10 @@
   .tva-wordmark {
     gap: 9px;
   }
+  .tva-official-logo {
+    width: 98px;
+    height: 44px;
+  }
   .tva-wordmark > span {
     padding-left: 9px;
     font-size: 7px;
@@ -989,7 +1017,7 @@
   .tva-page-intro > p {
     border-left: 0;
     padding-left: 0;
-    font-size: 9px;
+    font-size: 12px;
   }
   .tva-route-navigation {
     padding-top: 80px;

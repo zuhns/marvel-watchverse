@@ -4,15 +4,49 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
   page,
 }, info) => {
   const errors: string[] = [];
+  const textures: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
+  page.on("request", (r) => {
+    if (r.url().includes("tva-timeline.png")) textures.push(r.url());
+  });
   await page.goto("#universes");
   const canvas = page.locator(".temporal-canvas");
   await expect(canvas).toHaveAttribute("data-rendered", "ready");
   await expect(canvas).toHaveAttribute("data-motion", "flowing");
+  await expect(canvas).toHaveAttribute("data-renderer", "webgl-procedural");
+  const pixels = () =>
+    canvas.evaluate((element: HTMLCanvasElement) => {
+      const sample = document.createElement("canvas");
+      sample.width = 160;
+      sample.height = 70;
+      const ctx = sample.getContext("2d")!;
+      ctx.drawImage(element, 0, 0, 160, 70);
+      return Array.from(ctx.getImageData(0, 0, 160, 70).data);
+    });
+  const before = await pixels();
   const initial = Number(await canvas.getAttribute("data-time"));
   await expect
     .poll(async () => Number(await canvas.getAttribute("data-time")))
     .toBeGreaterThan(initial + 0.2);
+  await expect
+    .poll(async () => {
+      const after = await pixels();
+      return (
+        after.reduce((sum, n, i) => sum + Math.abs(n - before[i]), 0) /
+        after.length
+      );
+    })
+    .toBeGreaterThan(0.5);
+  expect(textures).toEqual([]);
+  await page.evaluate(() => document.fonts.ready);
+  expect(
+    await page.evaluate(() => document.fonts.check('700 24px "TVA Display"')),
+  ).toBe(true);
+  await expect(page.locator(".tva-official-logo")).toBeVisible();
+  const minutes = page.locator("video.miss-minutes");
+  await expect
+    .poll(() => minutes.evaluate((el: HTMLVideoElement) => el.currentTime))
+    .toBeGreaterThan(0.1);
   const options = await page
     .getByLabel("Seleziona una Terra", { exact: true })
     .locator("option")
@@ -72,6 +106,9 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
   ).toBeVisible();
   await page.getByRole("button", { name: "Pausa animazioni" }).click();
   await expect(canvas).toHaveAttribute("data-motion", "still");
+  await expect
+    .poll(() => minutes.evaluate((el: HTMLVideoElement) => el.paused))
+    .toBe(true);
   const still = await canvas.getAttribute("data-time");
   await page.waitForTimeout(250);
   expect(await canvas.getAttribute("data-time")).toBe(still);
@@ -82,6 +119,30 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
   await page.waitForTimeout(250);
   expect(await canvas.getAttribute("data-time")).toBe(reduced);
   expect(errors).toEqual([]);
+});
+
+test("il flusso rimane animato anche senza WebGL", async ({ page }) => {
+  await page.addInitScript(() => {
+    const original = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (
+      this: HTMLCanvasElement,
+      type: any,
+      ...args: any[]
+    ) {
+      if (type === "webgl" || type === "webgl2") return null;
+      return original.call(this, type, ...args);
+    } as typeof original;
+  });
+  await page.goto("#universes");
+  const canvas = page.locator(".temporal-canvas");
+  await expect(canvas).toHaveAttribute("data-renderer", "canvas-procedural");
+  await expect(canvas).toHaveAttribute("data-rendered", "ready");
+  const first = Number(await canvas.getAttribute("data-time"));
+  await expect
+    .poll(async () => Number(await canvas.getAttribute("data-time")))
+    .toBeGreaterThan(first + 0.3);
+  await page.getByRole("button", { name: "Pausa animazioni" }).click();
+  await expect(canvas).toHaveAttribute("data-motion", "still");
 });
 
 test("atmosfera audio reale: attivazione, volume, pausa e uscita dal terminale", async ({

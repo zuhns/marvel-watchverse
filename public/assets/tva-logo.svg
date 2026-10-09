@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="499.26874mm"
+   height="211.66667mm"
+   viewBox="0 0 499.26874 211.66667"
+   version="1.1"
+   id="svg838"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   sodipodi:docname="Time_Variance_Authority_Logo copy 2.svg"
+   inkscape:export-filename="C:\Users\monar\Pictures\Time Variance Authority Logo PNG.png"
+   inkscape:export-xdpi="143.23399"
+   inkscape:export-ydpi="143.23399"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs832" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.23938677"
+     inkscape:cx="1092.3745"
+     inkscape:cy="-121.14287"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-page="true"
+     inkscape:snap-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="730"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <metadata
+     id="metadata835">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(150.37967,-68.448532)">
+    <path
+       style="fill:#777777;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:15;paint-order:fill markers stroke"
+       d="M -150.37967,68.448532 V 162.91634 L -87.979142,68.448532 V 280.1152 h 75.479984 V 68.448532 L 103.47203,280.1152 164.82237,168.50918 109.14793,68.448532 Z"
+       id="path1415" />
+    <path
+       style="fill:#c7c7c7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 219.82615,68.448532 h -80.28469 l -15.19677,27.312337 40.47768,72.748311 z"
+       id="path1498"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#c7c7c7;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="m 116.12308,280.1152 55.24722,-99.94961 40.44175,72.94454 -15.00362,27.00507 z"
+       id="path1500" />
+    <path
+       style="fill:#777777;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       d="M 226.81567,280.1152 171.3703,180.16559 232.72921,68.448532 348.88907,280.1152 Z"
+       id="path1534" />
+  </g>
+</svg>

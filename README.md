@@ -30,7 +30,9 @@ Tre ordini di visione:
 
 Ogni dossier mostra film, serie, corti e speciali, progressi personali e crossover separati. **Ordina nell’archivio** trasferisce esattamente il dossier, abilita i contenuti Nerd necessari e conserva il filtro al refresh e nel backup. Il menu Tracce filtra le produzioni nella mappa; il selettore raggiunge ogni Terra identificata. Tab e frecce navigano fra i segnali, trascinamento e comandi laterali esplorano il monitor, con zoom fino al 175%. Su telefono la mappa si scorre con il dito. **Ferma il tempo** e la preferenza di sistema per movimento ridotto fermano le animazioni, anche quando quest’ultima cambia a pagina aperta.
 
-**Attiva atmosfera** avvia una composizione ambient originale sintetizzata con Web Audio: droni profondi, armoniche lente, battimenti e riverbero. L’audio richiede il clic dell’utente, ha volume regolabile e sfuma prima di sospendersi quando il terminale è in pausa, silenziato o la scheda non è visibile. Uscire da Universi chiude il contesto audio e ferma il motore grafico.
+La linea temporale è generata in tempo reale con WebGL: filamenti azzurri e viola cambiano forma, si intrecciano e trasportano impulsi luminosi fra ramificazioni e aloni. Non usa un’immagine di sfondo; se WebGL non è disponibile, usa un motore Canvas 2D animato. Il marchio TVA conserva il lettering originale e Miss Minutes usa l’animazione pubblicata da Disney D23. I testi usano Jost e Archivo Narrow, distribuiti localmente con licenza OFL e scelti per avvicinarsi alla segnaletica degli uffici; non sono dichiarati come font ufficiali della produzione. Provenienza degli asset in `public/assets/README.md`.
+
+**Attiva atmosfera** avvia una composizione originale di 96 secondi: accordi che evolvono, coro sintetico, richiami lontani, arpeggi e pulsazioni con riverbero stereo. Il file AAC locale viene caricato solo al clic e riprodotto in ciclo tramite Web Audio. Ha volume regolabile e sfuma prima di sospendersi quando il terminale è in pausa, silenziato o la scheda non è visibile. Uscire da Universi chiude il contesto audio e ferma il motore grafico. La partitura è riproducibile con `scripts/compose-temporal-score.mjs` usando Playwright e FFmpeg.
 
 I progressi usano ID stabili e timestamp in `localStorage`, chiave `marvel-watchverse.v1`. Cambiare ordine o filtri non cambia lo stato visto. I vecchi backup con filtri singoli vengono migrati automaticamente. La pagina progressi mostra dati complessivi e per universo, gli ultimi titoli visti e il prossimo capitolo.
 
@@ -117,7 +119,7 @@ pnpm validate
 
 Lo script cerca per identificativo univoco, controlla anno e tipologia, usa il poster della stagione quando presente e verifica il Content-Type dell’URL. La sincronizzazione scrive `reports/posters-sync.json`; i titoli non verificabili non vengono sostituiti con immagini arbitrarie. `posters:check` scarica temporaneamente i byte per verificare le immagini, senza salvarle nel repository, e produce `reports/posters-network.json`.
 
-Le immagini non sono redistribuite localmente: restano sui server della fonte. Il repository contiene solo riferimenti e metadati. Un URL verificato può diventare indisponibile in futuro: aggiorna il manifest e consulta il report prima di ogni aggiornamento importante.
+Le locandine non sono redistribuite localmente: restano sui server della fonte. Per esse il repository contiene solo riferimenti e metadati. Un URL verificato può diventare indisponibile in futuro: aggiorna il manifest e consulta il report prima di ogni aggiornamento importante.
 
 ## Pubblicazione
 
