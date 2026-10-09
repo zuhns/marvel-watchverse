@@ -53,12 +53,18 @@ export function parseBackup(value: unknown): Backup {
     throw Error("Formati non validi.");
   if (p.nerdMode !== undefined && typeof p.nerdMode !== "boolean")
     throw Error("Modalità Nerd non valida.");
+  if (
+    p.advancedNerdMode !== undefined &&
+    typeof p.advancedNerdMode !== "boolean"
+  )
+    throw Error("Modalità Nerd Multiverso non valida.");
   const preferences: Preferences = {
     order: p.order as Preferences["order"],
     categories: selection("categories", "category", "Tutti"),
     universes: selection("universes", "universe", "Tutti"),
     formats: formats as Format[],
     nerdMode: p.nerdMode === true,
+    advancedNerdMode: p.advancedNerdMode === true,
     state: p.state as string,
     availability: p.availability as string,
     search: p.search as string,
@@ -76,9 +82,18 @@ export function parseBackup(value: unknown): Backup {
 export function loadState(storage: Pick<Storage, "getItem">) {
   try {
     const s = storage.getItem(STORAGE_KEY);
-    return s
-      ? parseBackup(JSON.parse(s))
-      : { watched: {} as Watched, preferences: { ...defaults } };
+    if (!s) return { watched: {} as Watched, preferences: { ...defaults } };
+    const raw = JSON.parse(s);
+    const state = parseBackup(raw);
+    if (raw.preferences?.advancedNerdMode === undefined)
+      state.preferences = {
+        ...state.preferences,
+        order: defaults.order,
+        formats: [...defaults.formats],
+        nerdMode: false,
+        advancedNerdMode: false,
+      };
+    return state;
   } catch {
     return { watched: {} as Watched, preferences: { ...defaults } };
   }

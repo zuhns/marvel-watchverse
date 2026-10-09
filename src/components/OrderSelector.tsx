@@ -15,6 +15,7 @@ export function OrderSelector({
         return (
           <button
             key={o}
+            aria-label={orderLabels[o]}
             aria-pressed={value === o}
             className={value === o ? "selected" : ""}
             onClick={() => onChange(o)}

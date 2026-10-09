@@ -18,8 +18,9 @@ export const defaults: Preferences = {
   order: "recommended",
   categories: [],
   universes: [],
-  formats: [],
+  formats: ["movie", "series"],
   nerdMode: false,
+  advancedNerdMode: false,
   state: "all",
   availability: "released",
   search: "",
@@ -45,7 +46,7 @@ export function filterTitles(list: Title[], p: Preferences, w: Watched) {
   const q = normalize(p.search.trim());
   return list.filter(
     (t) =>
-      (p.nerdMode || t.year >= 1998) &&
+      includedInMode(t, p.nerdMode, p.advancedNerdMode) &&
       (!p.categories.length || p.categories.includes(t.category)) &&
       (!p.universes.length || p.universes.includes(t.universe)) &&
       (!p.formats.length || p.formats.includes(t.type)) &&
@@ -79,5 +80,58 @@ export function nextTitle(list: Title[], order: Order, w: Watched) {
     (t) => t.status === "released" && !w[t.id],
   );
 }
-export const modeTitles = (list: Title[], nerdMode: boolean) =>
-  nerdMode ? list : list.filter((t) => t.year >= 1998);
+export const multiverseUniverses = [
+  "Avengers EMH",
+  "Disk Wars",
+  "Fantastic Four animato 2006",
+  "Future Avengers",
+  "Hit-Monkey",
+  "Iron Man Armored Adventures",
+  "Marvel animato — Film indipendenti",
+  "Marvel animato 2010s",
+  "Spectacular Spider-Man",
+  "Spider-Man animato 2017",
+  "Spider-Man Unlimited",
+  "Spidey and Friends",
+  "Super Hero Squad",
+  "X-Men animato 1992",
+  "X-Men Evolution",
+  "Wolverine and the X-Men",
+];
+export const sideUniverses = [
+  "Blade",
+  "The Gifted",
+  "Legion",
+  "Helstrom — Continuità indipendente",
+  "Marvel Television — SHIELD",
+  "Marvel Television — Agent Carter",
+  "Marvel Television — Inhumans",
+  "Marvel Television — Runaways",
+  "Marvel Television — Cloak & Dagger",
+  "MODOK",
+  "Spider-Noir",
+  "Spider-Man — Continuità alternativa",
+];
+export function contentTier(t: Title): "core" | "nerd" | "multiverse" {
+  if (multiverseUniverses.includes(t.universe) || t.year < 1998)
+    return "multiverse";
+  if (sideUniverses.includes(t.universe)) return "nerd";
+  return "core";
+}
+export function includedInMode(t: Title, nerdMode: boolean, advanced = false) {
+  const tier = contentTier(t);
+  return (
+    tier === "core" ||
+    (tier === "nerd" && nerdMode) ||
+    (tier === "multiverse" && advanced)
+  );
+}
+export const modeTitles = (
+  list: Title[],
+  nerdMode: boolean,
+  advanced = false,
+) => list.filter((t) => includedInMode(t, nerdMode, advanced));
+export const pathTitles = (list: Title[], p: Preferences) =>
+  modeTitles(list, p.nerdMode, p.advancedNerdMode).filter(
+    (t) => !p.formats.length || p.formats.includes(t.type),
+  );

@@ -1,7 +1,7 @@
 import { ArrowUpRight, GitBranch } from "lucide-react";
 import { titles as catalog, stats, modeTitles } from "../lib/catalog";
 import { ProgressBar } from "../components/StatsPanel";
-import type { Watched } from "../types";
+import type { Watched, Format } from "../types";
 const descriptions: Record<string, string> = {
   MCU: "La grande saga condivisa: dagli Avengers alla Saga del Multiverso.",
   "X-Men":
@@ -22,15 +22,21 @@ const descriptions: Record<string, string> = {
 export function Universes({
   watched,
   nerdMode,
+  advancedNerdMode,
+  formats,
   explore,
   exploreCategory,
 }: {
   watched: Watched;
   nerdMode: boolean;
+  advancedNerdMode: boolean;
+  formats: Format[];
   explore: (u: string) => void;
   exploreCategory: (category: string) => void;
 }) {
-  const titles = modeTitles(catalog, nerdMode);
+  const titles = modeTitles(catalog, nerdMode, advancedNerdMode).filter(
+    (t) => !formats.length || formats.includes(t.type),
+  );
   const priority = [
     "MCU",
     "X-Men / Fox",

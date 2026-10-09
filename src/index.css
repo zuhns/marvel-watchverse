@@ -181,6 +181,366 @@ img {
 .mobile-menu {
   display: none;
 }
+.account-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  min-height: 40px;
+}
+@media (min-width: 851px) and (max-width: 1000px) {
+  .site-header nav {
+    display: none;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    right: 0;
+    height: auto;
+    padding: 16px 5%;
+    flex-direction: column;
+    align-items: stretch;
+    background: #11131b;
+    border-bottom: 1px solid #ffffff25;
+  }
+  .site-header nav.open {
+    display: flex;
+  }
+  .site-header nav a {
+    padding: 14px 5px;
+    min-height: 48px;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .export-top {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header-tools > a[aria-label="Cerca nel catalogo"] {
+    display: none;
+  }
+}
+.account-button span {
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.login-dialog {
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: #14161d;
+  width: min(620px, calc(100vw - 32px));
+  margin: auto;
+  overflow: visible;
+}
+.login-dialog::backdrop {
+  background: #000b;
+  backdrop-filter: blur(6px);
+}
+.login-dialog .profile-panel {
+  padding: 36px 28px;
+}
+.login-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 2;
+}
+.marathon-banner {
+  padding: 18px 4.6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(120deg, #25203b, #151420);
+  border-bottom: 1px solid #8e74ff44;
+}
+.marathon-banner > div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+.marathon-banner strong {
+  overflow-wrap: anywhere;
+  font-size: 17px;
+}
+.marathon-banner span:not(.eyebrow) {
+  font-size: 10px;
+  color: #b7aecb;
+}
+.social-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 24px;
+  margin: 35px 0;
+  align-items: start;
+}
+.social-panel,
+.social-empty {
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+.social-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 35px;
+}
+.social-panel p,
+.social-empty p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 10px 0 18px;
+}
+.social-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-panel form {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.social-panel input,
+.friend-filters input,
+.friend-filters select {
+  color: white;
+  background: #08090d;
+  border: 1px solid #ffffff20;
+  border-radius: 5px;
+  padding: 12px;
+  min-width: 0;
+  min-height: 44px;
+  font-size: 12px;
+}
+.social-panel input {
+  flex: 1;
+  width: 100%;
+}
+.social-panel .button {
+  font-size: 10px;
+  padding: 12px;
+}
+.social-panel .marathon-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.marathon-form .button {
+  grid-column: 1 / -1;
+}
+.friend-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 9px 0;
+}
+.friend-row > button:first-child {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  min-height: 45px;
+  text-align: left;
+  font-size: 12px;
+}
+.friend-row strong {
+  overflow-wrap: anywhere;
+}
+.friend-row > button:first-child > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.friend-row .active {
+  color: #ff5c66;
+}
+.user-avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ed1d241c;
+  color: #ff5964;
+  flex-shrink: 0;
+}
+.marathon-card {
+  border: 1px solid #8974c52b;
+  background: #191622;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 15px;
+}
+.marathon-card h3 {
+  font-size: 23px;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+.marathon-card p {
+  overflow-wrap: anywhere;
+}
+.marathon-actions {
+  display: flex;
+  gap: 8px;
+}
+.social-error {
+  color: #ff8a91;
+  padding: 16px;
+  border: 1px solid #ed1d2444;
+  background: #ed1d2410;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.social-empty {
+  display: grid;
+  gap: 15px;
+  max-width: 650px;
+  margin-top: 35px;
+}
+.social-empty h2 {
+  font-size: 34px;
+}
+.social-empty .button {
+  justify-self: start;
+}
+.friend-progress {
+  padding-top: 35px;
+  border-top: 1px solid var(--line);
+}
+.friend-progress h2 {
+  font-size: 40px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.friend-progress details {
+  margin: 25px 0;
+}
+.friend-progress summary {
+  cursor: pointer;
+  font-size: 13px;
+  padding: 12px 0;
+}
+.friend-filters {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+}
+.friend-filters input {
+  flex: 1;
+}
+.friend-titles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 25px 0;
+}
+.friend-title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  min-width: 0;
+}
+.friend-title .poster-image {
+  width: 65px;
+  flex-shrink: 0;
+}
+.friend-title h3 {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.friend-title p,
+.friend-title span {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+@media (min-width: 1001px) and (max-width: 1450px) {
+  .site-header {
+    gap: 15px;
+    padding: 0 3%;
+  }
+  .site-header nav {
+    gap: 14px;
+  }
+  .site-header nav a {
+    font-size: 10px;
+  }
+  .header-tools {
+    gap: 8px;
+  }
+  .account-button span {
+    max-width: 65px;
+  }
+}
+@media (max-width: 1000px) {
+  .social-columns {
+    grid-template-columns: 1fr;
+  }
+  .friend-titles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .account-button {
+    width: 30px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .account-button span {
+    display: none;
+  }
+  .site-header .header-tools {
+    gap: 0;
+  }
+  .marathon-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .marathon-banner .button {
+    align-self: flex-start;
+    font-size: 10px;
+  }
+  .social-panel,
+  .social-empty {
+    padding: 20px;
+  }
+  .social-panel form,
+  .social-panel .marathon-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .friend-titles {
+    grid-template-columns: 1fr;
+  }
+  .friend-progress h2 {
+    font-size: 32px;
+  }
+  .friend-filters {
+    gap: 8px;
+  }
+  .friend-filters select {
+    max-width: 120px;
+  }
+  .marathon-actions {
+    flex-wrap: wrap;
+  }
+  .login-dialog .profile-panel {
+    padding: 35px 20px 25px;
+  }
+}
 .hero {
   min-height: 650px;
   position: relative;

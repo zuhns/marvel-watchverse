@@ -3,15 +3,28 @@ test("filtri multipli, modalità Nerd e migrazione delle preferenze persistenti"
   page,
 }) => {
   await page.goto("#archive");
+  await expect(
+    page.getByRole("button", { name: "Percorso consigliato", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await expect(
+    page.getByRole("switch", { name: "Modalità Nerd", exact: true }),
+  ).not.toBeChecked();
+  await expect(
+    page.getByRole("switch", { name: "Nerd Multiverso", exact: true }),
+  ).not.toBeChecked();
   await page
     .getByRole("button", { name: "Ordine di uscita", exact: true })
     .click();
   await expect(page.locator(".movie-card").first()).not.toContainText("1967");
   await page.getByRole("switch", { name: "Modalità Nerd" }).check();
+  await expect(page.locator(".movie-card").first()).not.toContainText("1967");
+  await page.getByRole("switch", { name: "Nerd Multiverso" }).check();
   await expect(page.locator(".movie-card").first()).toContainText("1967");
+  await page.getByRole("switch", { name: "Nerd Multiverso" }).uncheck();
   await page.getByRole("switch", { name: "Modalità Nerd" }).uncheck();
-  await page.getByLabel("Formati: Tutti", { exact: true }).click();
+  await page.getByLabel("Formati: 2 selezionati", { exact: true }).click();
   await page.getByRole("checkbox", { name: "Film", exact: true }).check();
+  await page.getByRole("checkbox", { name: "Serie", exact: true }).uncheck();
   await page.getByRole("checkbox", { name: "Speciale", exact: true }).check();
   await page.keyboard.press("Escape");
   await page.getByLabel("Universi: Tutti", { exact: true }).click();
@@ -44,7 +57,7 @@ test("filtri multipli, modalità Nerd e migrazione delle preferenze persistenti"
   ).toBeVisible();
   await page.getByRole("button", { name: "Azzera filtri" }).click();
   await expect(
-    page.getByLabel("Formati: Tutti", { exact: true }),
+    page.getByLabel("Formati: 2 selezionati", { exact: true }),
   ).toBeVisible();
   const chips = page.locator(".category-tabs");
   await chips.getByRole("button", { name: "MCU", exact: true }).click();

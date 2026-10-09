@@ -9,25 +9,120 @@ import { Archive } from "./pages/Archive";
 import { Universes } from "./pages/Universes";
 import { Progress } from "./pages/Progress";
 import { ProfilePanel } from "./components/ProfilePanel";
-import { titles, stats, nextTitle, defaults, modeTitles } from "./lib/catalog";
+import { LoginDialog } from "./components/LoginDialog";
+import { Social } from "./pages/Social";
+import type { Marathon } from "./lib/social";
+import { readProfile } from "./lib/profile";
+import { titles, stats, nextTitle, defaults, pathTitles } from "./lib/catalog";
 import { download, exportExcel, importExcel } from "./lib/export";
 import { makeBackup, parseBackup, mergeWatched } from "./lib/storage";
 import { useTracker } from "./hooks/useTracker";
 import type { Title } from "./types";
 const pageFromHash = () =>
-  ["home", "archive", "orders", "universes", "progress"].includes(
+  ["home", "archive", "orders", "universes", "progress", "friends"].includes(
     location.hash.slice(1),
   )
     ? location.hash.slice(1)
     : "home";
+type Tracker = ReturnType<typeof useTracker>;
+function readMarathon(): Marathon | null {
+  try {
+    const username = readProfile(localStorage);
+    const raw = username
+      ? localStorage.getItem(`marvel-watchverse.active.${username}`)
+      : null;
+    const value = raw ? JSON.parse(raw) : null;
+    return value &&
+      typeof value.id === "string" &&
+      typeof value.name === "string" &&
+      value.status === "accepted"
+      ? value
+      : null;
+  } catch {
+    return null;
+  }
+}
 export default function App() {
+  const personal = useTracker();
+  const [marathon, setMarathon] = useState<Marathon | null>(readMarathon);
+  const select = (m: Marathon | null) => {
+    setMarathon(m);
+    if (personal.username) {
+      try {
+        localStorage.setItem(
+          `marvel-watchverse.active.${personal.username}`,
+          JSON.stringify(m),
+        );
+      } catch {
+        /* Progressi e backup restano disponibili. */
+      }
+    }
+  };
+  return marathon && personal.username ? (
+    <MarathonFrame
+      key={marathon.id}
+      personal={personal}
+      marathon={marathon}
+      selectMarathon={select}
+    />
+  ) : (
+    <Watchverse
+      tracker={personal}
+      personal={personal}
+      marathon={null}
+      selectMarathon={select}
+    />
+  );
+}
+function MarathonFrame({
+  personal,
+  marathon,
+  selectMarathon,
+}: {
+  personal: Tracker;
+  marathon: Marathon;
+  selectMarathon: (m: Marathon | null) => void;
+}) {
+  const shared = useTracker({
+    marathonId: marathon.id,
+    username: personal.username,
+  });
+  const tracker: Tracker = {
+    ...shared,
+    preferences: personal.preferences,
+    setPreferences: personal.setPreferences,
+    restore: (b) => {
+      shared.setWatched((w) => mergeWatched(w, b.watched));
+      personal.setPreferences(b.preferences);
+    },
+  };
+  return (
+    <Watchverse
+      tracker={tracker}
+      personal={personal}
+      marathon={marathon}
+      selectMarathon={selectMarathon}
+    />
+  );
+}
+function Watchverse({
+  tracker,
+  personal,
+  marathon,
+  selectMarathon,
+}: {
+  tracker: Tracker;
+  personal: Tracker;
+  marathon: Marathon | null;
+  selectMarathon: (m: Marathon | null) => void;
+}) {
   const [page, setPage] = useState(pageFromHash);
   const [selected, setSelected] = useState<Title | null>(null);
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
-  const tracker = useTracker();
+  const [login, setLogin] = useState(false);
   const { watched, preferences: p, setPreferences: change, toggle } = tracker;
-  const activeTitles = modeTitles(titles, p.nerdMode);
+  const activeTitles = pathTitles(titles, p);
   const s = stats(activeTitles, watched);
   useEffect(() => {
     const handle = () => {
@@ -71,7 +166,9 @@ export default function App() {
       new Blob([JSON.stringify(makeBackup(watched, p), null, 2)], {
         type: "application/json",
       }),
-      "marvel-watchverse-backup.json",
+      marathon
+        ? `marvel-watchverse-marathon-${marathon.id}-backup.json`
+        : "marvel-watchverse-backup.json",
     );
   const excel = async () => {
     setBusy(true);
@@ -111,7 +208,44 @@ export default function App() {
   const props = { p, change, watched, toggle, open: setSelected };
   return (
     <MotionConfig reducedMotion="user">
-      <Header page={page} percent={s.percent} onExport={json} />
+      <Header
+        page={page}
+        percent={s.percent}
+        onExport={json}
+        username={personal.username}
+        onLogin={() => setLogin(true)}
+      />
+      {marathon && (
+        <div
+          className="marathon-banner"
+          role="region"
+          aria-label="Maratona attiva"
+        >
+          <div>
+            <span className="eyebrow">MARATONA CONDIVISA</span>
+            <strong>{marathon.name}</strong>
+            <span>
+              {tracker.syncStatus === "synced"
+                ? "Progressi sincronizzati"
+                : tracker.syncStatus === "syncing"
+                  ? "Sincronizzazione…"
+                  : "Progressi conservati sul dispositivo"}
+              {tracker.pendingCount
+                ? ` · ${tracker.pendingCount} modifiche in attesa`
+                : ""}
+            </span>
+            {tracker.syncError && (
+              <span className="profile-error">{tracker.syncError}</span>
+            )}
+          </div>
+          <button
+            className="button secondary"
+            onClick={() => selectMarathon(null)}
+          >
+            Torna al mio profilo
+          </button>
+        </div>
+      )}
       <main id="main-content" tabIndex={-1}>
         <motion.div
           key={page}
@@ -175,12 +309,15 @@ export default function App() {
             <Universes
               watched={watched}
               nerdMode={p.nerdMode}
+              advancedNerdMode={p.advancedNerdMode}
+              formats={p.formats}
               exploreCategory={(category) => {
                 change({
                   ...defaults,
                   order: p.order,
                   categories: [category],
                   nerdMode: p.nerdMode,
+                  advancedNerdMode: p.advancedNerdMode,
                 });
                 location.hash = "archive";
               }}
@@ -190,7 +327,17 @@ export default function App() {
                   order: p.order,
                   universes: [universe],
                   nerdMode: p.nerdMode,
+                  advancedNerdMode: p.advancedNerdMode,
                 });
+                location.hash = "archive";
+              }}
+            />
+          ) : page === "friends" ? (
+            <Social
+              username={personal.username}
+              onLogin={() => setLogin(true)}
+              openMarathon={(m) => {
+                selectMarathon(m);
                 location.hash = "archive";
               }}
             />
@@ -198,18 +345,21 @@ export default function App() {
             <>
               <div className="profile-container">
                 <ProfilePanel
-                  username={tracker.username}
-                  status={tracker.syncStatus}
-                  pending={tracker.pendingCount}
-                  error={tracker.syncError}
-                  onSave={tracker.saveUsername}
-                  onRetry={() => void tracker.sync()}
+                  username={personal.username}
+                  status={personal.syncStatus}
+                  pending={personal.pendingCount}
+                  error={personal.syncError}
+                  onSave={personal.saveUsername}
+                  onRetry={() => void personal.sync()}
                 />
               </div>
               <Progress
                 watched={watched}
                 order={p.order}
                 nerdMode={p.nerdMode}
+                advancedNerdMode={p.advancedNerdMode}
+                formats={p.formats}
+                marathonName={marathon?.name}
                 open={setSelected}
                 exportJSON={json}
                 exportXLSX={excel}
@@ -263,6 +413,12 @@ export default function App() {
           toggle={() => toggle(selected.id)}
           close={() => setSelected(null)}
           open={setSelected}
+        />
+      )}
+      {login && (
+        <LoginDialog
+          close={() => setLogin(false)}
+          onSave={personal.saveUsername}
         />
       )}
     </MotionConfig>

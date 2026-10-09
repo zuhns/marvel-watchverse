@@ -1,6 +1,6 @@
 # MARVEL WATCHVERSE
 
-**Ogni storia. Ogni universo.** Archivio cinematografico fan-made in italiano, con catalogo statico, vere locandine, percorsi di visione e tracker personale senza login.
+**Ogni storia. Ogni universo.** Archivio cinematografico fan-made in italiano, con vere locandine, percorsi di visione, profili per nome utente, amici e maratone condivise.
 
 - Sito: https://zuhns.github.io/marvel-watchverse/
 - Repository: https://github.com/zuhns/marvel-watchverse
@@ -10,7 +10,13 @@
 
 Esplora film, singole stagioni, cortometraggi e speciali. Formati, universi e franchise ammettono selezioni multiple: basta selezionare le caselle o i pulsanti desiderati. Le scelte nello stesso filtro sono alternative; filtri diversi si combinano. Le produzioni future sono separate dai titoli pubblicati e non aumentano il denominatore dei progressi.
 
-Il percorso predefinito parte dal **1998, con Blade**. Attiva **Modalità Nerd** per includere le produzioni storiche dal 1967 in tutti gli ordini di visione. Il percorso e le statistiche seguono la modalità scelta; i progressi storici restano conservati quando Nerd è disattivata. La preferenza viene ricordata nel browser.
+L'apertura iniziale usa **Film + Serie**, **Percorso consigliato** e le due modalità Nerd disattivate. I progressi esistenti sono preservati; le preferenze della versione precedente vengono aggiornate una volta a questi valori. Successivamente le scelte esplicite vengono ricordate nel browser.
+
+**Nerd** aggiunge i percorsi TV laterali scelti dal proprietario: Blade (la serie, non i film), The Gifted, Legion, Helstrom, SHIELD, Agent Carter, Inhumans, Runaways, Cloak & Dagger e le altre continuità alternative. È una scelta editoriale di visione, non una dichiarazione sul canone ufficiale.
+
+**Nerd Multiverso** aggiunge Avengers EMH, Disk Wars, Fantastic Four animato 2006, Future Avengers, Hit-Monkey, Iron Man Armored Adventures, i film animati indipendenti, Marvel animato 2010s, Spectacular Spider-Man, Spider-Man animato 2017, Spider-Man Unlimited, Spidey and Friends, Super Hero Squad, X-Men animato 1992, X-Men Evolution e Wolverine and the X-Men. Include anche l'archivio storico precedente al 1998, mantenendo accessibili le produzioni dal 1967. I due interruttori sono indipendenti: aggiungono i propri contenuti al percorso principale. Corti e speciali richiedono la selezione del relativo formato.
+
+Il percorso e le statistiche seguono le modalità scelte. Disattivare una modalità nasconde i suoi contenuti senza cancellarne i progressi.
 
 Tre ordini di visione:
 
@@ -20,9 +26,13 @@ Tre ordini di visione:
 
 I progressi usano ID stabili e timestamp in `localStorage`, chiave `marvel-watchverse.v1`. Cambiare ordine o filtri non cambia lo stato visto. I vecchi backup con filtri singoli vengono migrati automaticamente. La pagina progressi mostra dati complessivi e per universo, gli ultimi titoli visti e il prossimo capitolo.
 
-In **I miei progressi** puoi associare un nome utente al browser. Il nome viene normalizzato in minuscolo e resta memorizzato, senza un comando per cambiarlo o uscire. Inserendo lo stesso nome su un altro dispositivo accedi agli stessi progressi quando il servizio cloud è configurato. Il profilo usa solo il nome: chi lo conosce può leggere e modificare i progressi, come richiesto dal proprietario. Non ci sono email o password. Il sito GitHub Pages resta pubblico.
+Il pulsante **Accedi** in alto a destra apre il profilo per nome utente. Il nome viene normalizzato in minuscolo e resta memorizzato, senza un comando per cambiarlo o uscire. Inserendo lo stesso nome su un altro dispositivo accedi agli stessi progressi. Il profilo usa solo il nome: chi lo conosce può leggere e modificare i progressi, come richiesto dal proprietario. Non ci sono email o password. Il sito GitHub Pages resta pubblico.
 
 La sincronizzazione mantiene una coda locale delle modifiche, funziona nuovamente al ritorno della connessione e legge gli aggiornamenti ogni 15 secondi quando la pagina è visibile. Ogni titolo viene aggiornato separatamente; l'ultima modifica prevale, comprese le rimozioni, secondo il timestamp del dispositivo. Usa un orologio di sistema corretto. Al primo collegamento, i progressi locali si uniscono a quelli del profilo senza ripristinare titoli rimossi nel cloud. Le preferenze dei filtri restano specifiche del dispositivo. Se il cloud non è configurato o non risponde, l'interfaccia lo segnala e conserva i dati locali.
+
+In **Amici & Maratone**, aggiungi il nome esatto di un profilo già creato. La lista è personale: non invia una richiesta di amicizia. Selezionando un amico vedi conteggi, percentuali per universo e titoli visti o da vedere in sola lettura.
+
+Per una **maratona**, scegli un nome e il nome utente della persona da invitare. L'invito compare nella sua pagina Amici & Maratone, dove può accettarlo o rifiutarlo. Entrambi aprono lo stesso percorso condiviso, con progressi inizialmente vuoti. Segnare un titolo nella maratona non cambia i progressi personali. Il banner identifica sempre la maratona attiva; **Torna al mio profilo** ripristina il proprio percorso. La selezione della maratona e la sua coda di modifiche sopravvivono al refresh. L'API controlla l'appartenenza accettata prima di leggere o modificare i progressi comuni. Non vengono inviate email o notifiche esterne.
 
 **Backup JSON** esporta progressi e preferenze. L’importazione valida tutto prima di aggiornare lo stato e unisce i titoli visti ai dati esistenti. Un import non cancella progressi: per togliere un titolo visto, usa il suo pulsante nel catalogo.
 
@@ -69,7 +79,7 @@ reports/                     fonti, verifiche poster e screenshot QA
 .github/workflows/deploy.yml  test, build e GitHub Pages
 ```
 
-Il frontend non cerca immagini su Wikipedia, non contiene token e non chiama un’API di metadati. Legge esclusivamente i due JSON locali. Le locandine remote TMDB usano una dimensione da 500 px. Ogni immagine ha un rapporto 2:3 stabile, lazy loading nell’archivio, skeleton e fallback con titolo/franchise in caso di indisponibilità. Il caricamento progressivo parte da 30 titoli (12 nella Home).
+Il frontend legge il catalogo e il manifest poster dai JSON locali, senza token o API di metadati. Progressi, amici e maratone usano la Edge Function Supabase. Le locandine remote TMDB usano una dimensione da 500 px. Ogni immagine ha un rapporto 2:3 stabile, lazy loading nell’archivio, skeleton e fallback con titolo/franchise in caso di indisponibilità. Il caricamento progressivo parte da 30 titoli (12 nella Home).
 
 Le esportazioni Excel vengono caricate in un chunk separato soltanto quando servono. I font remoti hanno fallback di sistema. Le animazioni rispettano `prefers-reduced-motion`. Navigazione hash, `BASE_URL` e favicon funzionano sotto il prefisso GitHub Pages.
 
@@ -108,12 +118,14 @@ GitHub Pages deve usare **Settings → Pages → Source: GitHub Actions**. Ogni 
 ### Attivare la sincronizzazione Supabase
 
 1. Crea un progetto Supabase separato nell'organizzazione scelta dal proprietario.
-2. Applica lo schema `supabase/schemas/watchverse.sql` al database vuoto. Le tabelle hanno RLS e non sono accessibili con le chiavi pubbliche; la funzione SQL è concessa solo a `service_role`.
+2. Applica `supabase/schemas/watchverse.sql` e poi `supabase/schemas/social.sql` al database vuoto. Le tabelle hanno RLS e non sono accessibili con le chiavi pubbliche; le funzioni SQL sono concesse solo a `service_role`.
 3. Distribuisci la Edge Function `watchverse-sync` con i due file in `supabase/functions/watchverse-sync/`. La verifica JWT è disattivata intenzionalmente perché l'accesso richiesto è basato sul solo nome. La chiave di servizio viene letta dall'ambiente Supabase e resta nel backend.
 4. Imposta la variabile GitHub Actions **VITE_SYNC_URL** all'URL pubblico `https://<project-ref>.supabase.co/functions/v1/watchverse-sync`, poi avvia il workflow. In locale usa la stessa variabile in `.env.local`, escluso da Git.
 5. Verifica con due browser separati: stesso nome, titolo visto, lettura dall'altro browser, rimozione e riapertura. Non inserire chiavi Supabase nel frontend o nel repository.
 
 La funzione consente l'origine GitHub Pages del progetto e le porte locali 4173/5173. Se cambi hosting, aggiorna l'elenco in `handler.ts`. Il servizio non espone un elenco dei profili. La configurazione dell'URL deve avvenire dopo la distribuzione e la verifica del backend.
+
+Il backend di produzione è attivo nel progetto indicato dal proprietario, `mddtitqobohlvfaxilfx`. Il workflow usa l'URL pubblico della funzione nella variabile GitHub Actions `VITE_SYNC_URL`; nessuna chiave di servizio è inclusa nella build.
 
 ## Fonti e limiti
 

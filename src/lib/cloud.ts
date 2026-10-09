@@ -15,13 +15,18 @@ export async function syncProgress(
   username: string,
   changes: ProgressChange[] = [],
   url = syncURL,
+  marathonId?: string,
 ): Promise<CloudRow[]> {
   if (!url)
     throw Error("La sincronizzazione cloud deve ancora essere attivata.");
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, changes }),
+    body: JSON.stringify({
+      username,
+      changes,
+      ...(marathonId ? { marathonId } : {}),
+    }),
     signal: AbortSignal.timeout(15000),
   });
   if (!response.ok)

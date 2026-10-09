@@ -73,6 +73,7 @@ test("le undici locandine obbligatorie sono immagini reali decodificate", async 
 }) => {
   await page.goto("#archive");
   await page.getByRole("switch", { name: "Modalità Nerd" }).check();
+  await page.getByRole("switch", { name: "Nerd Multiverso" }).check();
   for (const name of [
     "Iron Man",
     "Avengers: Endgame",

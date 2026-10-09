@@ -9,6 +9,8 @@ import {
   stats,
   nextTitle,
   modeTitles,
+  multiverseUniverses,
+  contentTier,
 } from "../src/lib/catalog";
 import {
   parseBackup,
@@ -121,14 +123,45 @@ describe("ordini e filtri", () => {
       filterTitles(titles, defaults, watched).every((t) => t.year >= 1998),
     ).toBe(true);
     expect(
-      filterTitles(titles, { ...defaults, nerdMode: true }, watched).some(
-        (t) => t.id === old.id,
-      ),
+      filterTitles(
+        titles,
+        { ...defaults, advancedNerdMode: true },
+        watched,
+      ).some((t) => t.id === old.id),
     ).toBe(true);
     expect(modeTitles(titles, false).length).toBeLessThan(
-      modeTitles(titles, true).length,
+      modeTitles(titles, true, true).length,
     );
     expect(watched[old.id]).toBeDefined();
+  });
+  it("parte con Film e Serie e separa tutti i percorsi Nerd richiesti", () => {
+    expect(defaults.formats).toEqual(["movie", "series"]);
+    expect(defaults.order).toBe("recommended");
+    expect(defaults.nerdMode || defaults.advancedNerdMode).toBe(false);
+    for (const universe of multiverseUniverses) {
+      const list = titles.filter((t) => t.universe === universe);
+      expect(list.length, universe).toBeGreaterThan(0);
+      expect(list.every((t) => contentTier(t) === "multiverse")).toBe(true);
+      expect(modeTitles(list, true, false)).toEqual([]);
+      expect(modeTitles(list, false, true)).toEqual(list);
+    }
+    for (const universe of [
+      "The Gifted",
+      "Legion",
+      "Blade",
+      "Marvel Television — SHIELD",
+      "Helstrom — Continuità indipendente",
+    ]) {
+      const list = titles.filter((t) => t.universe === universe);
+      expect(list.length, universe).toBeGreaterThan(0);
+      expect(modeTitles(list, false, false)).toEqual([]);
+      expect(modeTitles(list, true, false)).toEqual(list);
+    }
+    expect(
+      modeTitles(titles, false, false).some(
+        (t) => t.originalTitle === "Blade" && t.type === "movie",
+      ),
+    ).toBe(true);
   });
 });
 describe("backup e persistenza", () => {

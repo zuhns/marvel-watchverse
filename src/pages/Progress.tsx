@@ -15,11 +15,14 @@ import {
 } from "../lib/catalog";
 import { StatsPanel, ProgressBar } from "../components/StatsPanel";
 import { PosterImage } from "../components/PosterImage";
-import type { Watched, Order, Title } from "../types";
+import type { Watched, Order, Title, Format } from "../types";
 export function Progress({
   watched,
   order,
   nerdMode,
+  advancedNerdMode,
+  formats,
+  marathonName,
   open,
   exportJSON,
   exportXLSX,
@@ -29,13 +32,18 @@ export function Progress({
   watched: Watched;
   order: Order;
   nerdMode: boolean;
+  advancedNerdMode: boolean;
+  formats: Format[];
+  marathonName?: string;
   open: (t: Title) => void;
   exportJSON: () => void;
   exportXLSX: () => void;
   importFile: (f: File) => void;
   busy: boolean;
 }) {
-  const titles = modeTitles(catalog, nerdMode);
+  const titles = modeTitles(catalog, nerdMode, advancedNerdMode).filter(
+    (t) => !formats.length || formats.includes(t.type),
+  );
   const next = nextTitle(titles, order, watched);
   const recent = titles
     .filter((t) => watched[t.id])
@@ -47,13 +55,14 @@ export function Progress({
     <section className="page-section">
       <div className="eyebrow">OGNI STORIA CONTA</div>
       <h1 className="page-title">
-        IL TUO
+        {marathonName ? "LA NOSTRA" : "IL TUO"}
         <br />
-        <span>WATCHVERSE.</span>
+        <span>{marathonName ?? "WATCHVERSE."}</span>
       </h1>
       <p className="page-intro">
-        La tua maratona, un capitolo alla volta. Associa il tuo nome utente per
-        ritrovarla su tutti i dispositivi.
+        {marathonName
+          ? "Un nuovo viaggio insieme. Questi progressi appartengono alla maratona e restano separati dai profili personali."
+          : "La tua maratona, un capitolo alla volta. Associa il tuo nome utente per ritrovarla su tutti i dispositivi."}
       </p>
       <StatsPanel titles={titles} watched={watched} />
       <div className="progress-layout">

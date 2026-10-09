@@ -40,7 +40,12 @@ export function FilterBar({
         <button
           className="reset-button"
           onClick={() =>
-            change({ ...defaults, order: p.order, nerdMode: p.nerdMode })
+            change({
+              ...defaults,
+              order: p.order,
+              nerdMode: p.nerdMode,
+              advancedNerdMode: p.advancedNerdMode,
+            })
           }
         >
           <RotateCcw size={15} />
@@ -133,8 +138,30 @@ export function FilterBar({
         </label>
         <p>
           {p.nerdMode
-            ? "Archivio completo: anche gli adattamenti storici dal 1967."
-            : "Percorso moderno dal 1998 (Blade). Attiva Nerd per recuperare anche le produzioni più datate."}
+            ? "Serie laterali aggiunte: SHIELD, Legion, The Gifted, Blade e altre storie extra."
+            : "Aggiungi i percorsi TV laterali: SHIELD, Legion, The Gifted, Blade e altre serie extra."}
+        </p>
+      </div>
+      <div className="nerd-control">
+        <label>
+          <input
+            type="checkbox"
+            role="switch"
+            aria-label="Nerd Multiverso"
+            checked={p.advancedNerdMode}
+            onChange={(e) =>
+              change({ ...p, advancedNerdMode: e.target.checked })
+            }
+          />
+          <Glasses size={17} />
+          <strong>Nerd Multiverso</strong>
+          <span className="nerd-indicator">
+            {p.advancedNerdMode ? "ON" : "OFF"}
+          </span>
+        </label>
+        <p>
+          Animazione extra: Avengers EMH, X-Men, Spectacular Spider-Man,
+          Hit-Monkey e le altre serie. Include l’archivio storico dal 1967.
         </p>
       </div>
     </div>

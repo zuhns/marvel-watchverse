@@ -1,7 +1,7 @@
 project_id = "marvel-watchverse"
 
 [db.migrations]
-schema_paths = ["./schemas/*.sql"]
+schema_paths = ["./schemas/watchverse.sql", "./schemas/social.sql"]
 
 [functions.watchverse-sync]
 # Accesso intenzionalmente basato sul solo username, scelto dall'utente.

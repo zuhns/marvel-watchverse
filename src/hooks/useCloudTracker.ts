@@ -5,7 +5,12 @@ import {
   useState,
   type SetStateAction,
 } from "react";
-import { loadState, saveState, mergeWatched } from "../lib/storage";
+import {
+  loadState,
+  saveState,
+  mergeWatched,
+  STORAGE_KEY,
+} from "../lib/storage";
 import { readProfile, rememberProfile } from "../lib/profile";
 import {
   syncProgress,
@@ -38,12 +43,27 @@ function loadPending(username: string | null): Record<string, ProgressChange> {
     return {};
   }
 }
-export function useTracker() {
-  const [initial] = useState(() => loadState(localStorage));
-  const [username, setUsername] = useState(() => readProfile(localStorage));
+export function useTracker(
+  scope: { marathonId?: string; username?: string | null } = {},
+) {
+  const scopeSuffix = scope.marathonId ? `.marathon.${scope.marathonId}` : "";
+  const storage = {
+    getItem: (key: string) =>
+      localStorage.getItem(key === STORAGE_KEY ? key + scopeSuffix : key),
+    setItem: (key: string, value: string) =>
+      localStorage.setItem(
+        key === STORAGE_KEY ? key + scopeSuffix : key,
+        value,
+      ),
+  };
+  const [initial] = useState(() => loadState(storage));
+  const [username, setUsername] = useState(
+    () => scope.username ?? readProfile(localStorage),
+  );
+  const profileKey = username ? username + scopeSuffix : null;
   const [watched, setWatchedState] = useState<Watched>(initial.watched);
   const watchedRef = useRef(watched);
-  const pendingRef = useRef(loadPending(username));
+  const pendingRef = useRef(loadPending(profileKey));
   const [pendingCount, setPendingCount] = useState(
     Object.keys(pendingRef.current).length,
   );
@@ -64,7 +84,7 @@ export function useTracker() {
     if (username) {
       try {
         localStorage.setItem(
-          pendingKey(username),
+          pendingKey(profileKey!),
           JSON.stringify(pendingRef.current),
         );
       } catch {
@@ -73,10 +93,10 @@ export function useTracker() {
         );
       }
     }
-  }, [username]);
+  }, [username, profileKey]);
   useEffect(() => {
     try {
-      saveState(localStorage, watched, preferences);
+      saveState(storage, watched, preferences);
       setStorageError("");
     } catch {
       setStorageError(
@@ -96,12 +116,12 @@ export function useTracker() {
     let success = false;
     try {
       let rows;
-      const linked = localStorage.getItem(linkedKey(username)) === "true";
+      const linked = localStorage.getItem(linkedKey(profileKey!)) === "true";
       if (!linked) {
-        rows = await syncProgress(username);
+        rows = await syncProgress(username, [], undefined, scope.marathonId);
         const existing = new Set(rows.map((r) => r.title_id));
         for (const [id, v] of Object.entries(watchedRef.current))
-          if (!existing.has(id) && !pendingRef.current[id])
+          if (!scope.marathonId && !existing.has(id) && !pendingRef.current[id])
             pendingRef.current[id] = {
               id,
               watchedAt: v.watchedAt,
@@ -116,13 +136,14 @@ export function useTracker() {
         );
       }
       const sent = Object.values(pendingRef.current);
-      if (linked || sent.length) rows = await syncProgress(username, sent);
+      if (linked || sent.length)
+        rows = await syncProgress(username, sent, undefined, scope.marathonId);
       pendingRef.current = ackPending(pendingRef.current, sent);
       const next = reconcileCloud(rows ?? [], pendingRef.current);
       watchedRef.current = next;
       setWatchedState(next);
       persistPending();
-      localStorage.setItem(linkedKey(username), "true");
+      localStorage.setItem(linkedKey(profileKey!), "true");
       setSyncStatus(
         Object.keys(pendingRef.current).length ? "syncing" : "synced",
       );
@@ -142,7 +163,7 @@ export function useTracker() {
         setChanges((n) => n + 1);
       }
     }
-  }, [username, persistPending]);
+  }, [username, persistPending, profileKey, scope.marathonId]);
   const setWatched = useCallback(
     (action: SetStateAction<Watched>) => {
       const current = watchedRef.current;

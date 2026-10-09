@@ -41,6 +41,7 @@ export interface Preferences {
   universes: string[];
   formats: Format[];
   nerdMode: boolean;
+  advancedNerdMode: boolean;
   state: string;
   availability: string;
   search: string;

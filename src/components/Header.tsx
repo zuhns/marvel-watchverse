@@ -1,20 +1,25 @@
 import { useState } from "react";
-import { Menu, X, Search, Download } from "lucide-react";
+import { Menu, X, Search, Download, UserRound } from "lucide-react";
 export const navigation = [
   ["home", "Home"],
   ["archive", "Archivio"],
   ["orders", "Ordini di visione"],
   ["universes", "Universi"],
   ["progress", "I miei progressi"],
+  ["friends", "Amici & Maratone"],
 ] as const;
 export function Header({
   page,
   percent,
   onExport,
+  username,
+  onLogin,
 }: {
   page: string;
   percent: number;
   onExport: () => void;
+  username: string | null;
+  onLogin: () => void;
 }) {
   const [open, setOpen] = useState(false);
   return (
@@ -36,6 +41,25 @@ export function Header({
         ))}
       </nav>
       <div className="header-tools">
+        {username ? (
+          <a
+            href="#progress"
+            className="account-button"
+            aria-label={`Profilo di ${username}`}
+          >
+            <UserRound size={18} />
+            <span>{username}</span>
+          </a>
+        ) : (
+          <button
+            className="account-button"
+            aria-label="Accedi con nome utente"
+            onClick={onLogin}
+          >
+            <UserRound size={18} />
+            <span>Accedi</span>
+          </button>
+        )}
         <a
           href="#archive"
           className="icon-button"

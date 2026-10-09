@@ -5,7 +5,7 @@ import {
   sortTitles,
   filterTitles,
   orderLabels,
-  modeTitles,
+  pathTitles,
 } from "../lib/catalog";
 import { OrderSelector } from "../components/OrderSelector";
 import { FilterBar } from "../components/FilterBar";
@@ -28,7 +28,7 @@ export function Archive({
 }) {
   const [limit, setLimit] = useState(compact ? 12 : 30);
   useEffect(() => setLimit(compact ? 12 : 30), [p, compact]);
-  const sorted = sortTitles(modeTitles(titles, p.nerdMode), p.order);
+  const sorted = sortTitles(pathTitles(titles, p), p.order);
   const filtered = filterTitles(sorted, p, watched);
   const positions = new Map(sorted.map((t, i) => [t.id, i + 1]));
   const show = filtered.slice(0, limit);

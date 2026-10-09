@@ -15,6 +15,12 @@ describe("database dei progressi", () => {
         "utf8",
       ),
     );
+    await db.exec(
+      readFileSync(
+        new URL("../supabase/schemas/social.sql", import.meta.url),
+        "utf8",
+      ),
+    );
     await db.exec("set role service_role");
   }, 30000);
   afterAll(async () => {
@@ -73,5 +79,70 @@ describe("database dei progressi", () => {
       await db.exec("reset role");
     }
     await db.exec("set role service_role");
+  });
+  it("amici e maratone richiedono profili reali, accettazione e appartenenza", async () => {
+    const social = async (
+      name: string,
+      action: string,
+      target: string | null = null,
+      label: string | null = null,
+      group: string | null = null,
+    ) =>
+      (
+        await db.query<{
+          data: {
+            friends: string[];
+            marathons: { id: string; status: string }[];
+            progress: unknown[];
+          };
+        }>("select public.watchverse_social($1,$2,$3,$4,$5::uuid) as data", [
+          name,
+          action,
+          target,
+          label,
+          group,
+        ])
+      ).rows[0].data;
+    await expect(social("alice", "friend_add", "missing")).rejects.toThrow(
+      "Profile not found",
+    );
+    expect((await social("alice", "friend_add", "bob")).friends).toEqual([
+      "bob",
+    ]);
+    expect((await social("alice", "friend_view", "bob")).progress).toEqual([]);
+    const group = (
+      await social("alice", "marathon_create", "bob", "Prima maratona")
+    ).marathons[0].id;
+    const groupSync = (name: string, changes: object[] = []) =>
+      db.query(
+        "select * from public.watchverse_marathon_sync($1,$2::uuid,$3::jsonb)",
+        [name, group, JSON.stringify(changes)],
+      );
+    expect((await groupSync("alice")).rows).toEqual([]);
+    await expect(groupSync("bob")).rejects.toThrow("Marathon access denied");
+    expect(
+      (await social("bob", "marathon_accept", null, null, group)).marathons[0]
+        .status,
+    ).toBe("accepted");
+    await groupSync("bob", [
+      {
+        id: "iron-man",
+        watchedAt: "2026-10-09T12:00:00Z",
+        changedAt: "2026-10-09T12:00:00Z",
+      },
+    ]);
+    expect((await groupSync("alice")).rows).toHaveLength(1);
+    expect(await sync("bob")).toEqual([]); // Il profilo personale non viene modificato.
+    await expect(groupSync("outsider")).rejects.toThrow(
+      "Marathon access denied",
+    );
+    await db.exec("set role anon");
+    await expect(
+      db.query("select * from public.watchverse_marathon_progress"),
+    ).rejects.toThrow(/permission denied/);
+    await expect(social("alice", "social")).rejects.toThrow(
+      /permission denied/,
+    );
+    await db.exec("reset role; set role service_role");
   });
 });
