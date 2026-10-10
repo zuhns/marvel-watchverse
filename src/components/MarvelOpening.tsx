@@ -55,6 +55,7 @@ export function MarvelOpening() {
     }
   });
   const [playing, setPlaying] = useState(false),
+    [ready, setReady] = useState(false),
     [failed, setFailed] = useState(false);
   const frame = useRef<HTMLIFrameElement>(null),
     player = useRef<Player | null>(null),
@@ -82,6 +83,7 @@ export function MarvelOpening() {
           events: {
             onReady: (event) => {
               if (!cancelled) {
+                setReady(true);
                 event.target.setVolume(35);
                 event.target.playVideo();
               }
@@ -165,11 +167,16 @@ export function MarvelOpening() {
             Guarda l’opening originale ↗
           </a>
         ) : (
-          <button onClick={() => player.current?.playVideo?.()}>
+          <button
+            disabled={!ready}
+            onClick={() => player.current?.playVideo?.()}
+          >
             <Play size={11} />
-            {playing
-              ? "Marvel Studios · Opening theme"
-              : "Tocca per avviare la musica"}
+            {!ready
+              ? "Preparo l’opening…"
+              : playing
+                ? "Marvel Studios · Opening theme"
+                : "Tocca per avviare la musica"}
           </button>
         )}
       </div>
