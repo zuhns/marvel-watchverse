@@ -149,6 +149,14 @@ La funzione consente l'origine GitHub Pages del progetto e le porte locali 4173/
 
 Il backend di produzione è attivo nel progetto indicato dal proprietario, `mddtitqobohlvfaxilfx`. Il workflow usa l'URL pubblico della funzione nella variabile GitHub Actions `VITE_SYNC_URL`; nessuna chiave di servizio è inclusa nella build.
 
+## Dedica, musica ed Easter egg
+
+Il footer dedica il sito a Veronica. L'atmosfera della pagina Universi è attiva di default al **10%**: si interrompe in pausa, quando la scheda del browser è nascosta e quando si lascia Universi. Se il browser blocca l'autoplay, parte al primo clic o tocco; opening e schiocco sospendono temporaneamente l'atmosfera per evitare sovrapposizioni.
+
+Alla prima visita del browser compare l'opening originale Marvel Studios del 2016, nella pubblicazione di **Entertainment Access**: https://www.youtube.com/watch?v=ZPjlwJ0SeOs. È riprodotto attraverso il player ufficiale YouTube visibile, con controlli e chiusura; il player termina a 35 secondi per escludere la schermata promozionale del canale. Non viene estratto o redistribuito il brano. `marvel-watchverse.opening.v1` ricorda l'avvio o la chiusura, evitando di ripeterlo alle visite successive. Una nuova installazione del browser o la cancellazione dei dati del sito conta come nuova visita.
+
+Sei Gemme sono nascoste nelle pagine e possono essere incastonate nel Guanto. La raccolta è salvata sul dispositivo in `marvel-watchverse.infinity.v1`. Con tutte le Gemme, un clic sul Guanto dissolve metà dei **film** del catalogo, arrotondando per difetto: le serie restano. Particelle tratte dalle locandine accompagnano una composizione oscura originale. Se nessun film è visibile, lo schiocco porta all'Archivio. “Riporta indietro le storie” ripristina tutto; anche ricaricare il sito annulla lo schiocco. L'effetto non cambia né cancella progressi personali o delle maratone. Con movimento ridotto usa una breve dissolvenza senza particelle o lampi.
+
 ## Fonti e limiti
 
 Consulta `reports/catalog-sources.md` e i report delle locandine. Le sinossi, quando disponibili, sono brevi estratti descrittivi della fonte. Durate o date non confermate restano esplicitamente mancanti. Le future uscite sono soggette a cambiamenti e il catalogo non si aggiorna automaticamente con il passare del tempo.

@@ -1,4 +1,9 @@
 import { test, expect } from "@playwright/test";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() =>
+    localStorage.setItem("marvel-watchverse.opening.v1", "seen"),
+  );
+});
 
 test("le animazioni conservano visibili i nuovi contenuti e rispettano il movimento ridotto", async ({
   page,

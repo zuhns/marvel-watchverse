@@ -1,4 +1,9 @@
 import { test, expect } from "@playwright/test";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() =>
+    localStorage.setItem("marvel-watchverse.opening.v1", "seen"),
+  );
+});
 
 test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", async ({
   page,
@@ -149,34 +154,31 @@ test("atmosfera audio reale: attivazione, volume, pausa e uscita dal terminale",
   page,
 }) => {
   await page.addInitScript(() => {
-    const Original = window.AudioContext;
-    const contexts: AudioContext[] = [];
+    const Original = window.Audio;
+    const players: HTMLAudioElement[] = [];
     const samples: AnalyserNode[] = [];
-    Object.assign(window, { tvaAudioTest: { contexts, samples } });
-    window.AudioContext = class extends Original {
-      constructor(options?: AudioContextOptions) {
-        super(options);
-        contexts.push(this);
-      }
-      createDynamicsCompressor() {
-        const compressor = super.createDynamicsCompressor();
-        const analyser = this.createAnalyser();
-        analyser.fftSize = 2048;
-        compressor.connect(analyser);
-        samples.push(analyser);
-        return compressor;
-      }
+    Object.assign(window, { tvaAudioTest: { players, samples } });
+    (window as any).Audio = function (src: string) {
+      const player = new Original(src),
+        context = new AudioContext();
+      const analyser = context.createAnalyser();
+      analyser.fftSize = 2048;
+      context.createMediaElementSource(player).connect(analyser);
+      analyser.connect(context.destination);
+      document.addEventListener("pointerdown", () => void context.resume());
+      players.push(player);
+      samples.push(analyser);
+      return player;
     };
   });
   await page.goto("#universes");
   const state = () =>
     page.evaluate(
-      () => (window as any).tvaAudioTest.contexts[0]?.state ?? "absent",
+      () => (window as any).tvaAudioTest.players[0]?.paused ?? true,
     );
-  expect(await state()).toBe("absent");
-  await page.getByRole("button", { name: "Attiva atmosfera sonora" }).click();
-  await expect.poll(state).toBe("running");
-  await expect(page.getByLabel("Volume atmosfera")).toHaveValue("35");
+  await expect(page.getByLabel("Volume atmosfera")).toHaveValue("10");
+  await page.locator(".tva-official-logo").click();
+  await expect.poll(state).toBe(false);
   const rms = () =>
     page.evaluate(() => {
       const analyser = (window as any).tvaAudioTest.samples[0] as AnalyserNode;
@@ -190,14 +192,19 @@ test("atmosfera audio reale: attivazione, volume, pausa e uscita dal terminale",
   await page.getByLabel("Volume atmosfera").fill("50");
   await expect.poll(rms).toBeGreaterThan(0.0001);
   await page.getByRole("button", { name: "Pausa animazioni" }).click();
-  await expect.poll(state).toBe("suspended");
+  await expect.poll(state).toBe(true);
   await page.getByRole("button", { name: "Riprendi animazioni" }).click();
-  await expect.poll(state).toBe("running");
+  await expect.poll(state).toBe(false);
   await page
     .getByRole("button", { name: "Disattiva atmosfera sonora" })
     .click();
-  await expect.poll(state).toBe("suspended");
+  await expect.poll(state).toBe(true);
   await page.goto("#archive");
-  await expect.poll(state).toBe("closed");
+  await expect.poll(state).toBe(true);
+  expect(
+    await page.evaluate(() =>
+      (window as any).tvaAudioTest.players[0].getAttribute("src"),
+    ),
+  ).toBeNull();
   await expect(page.locator(".tva-audio-error")).toHaveCount(0);
 });

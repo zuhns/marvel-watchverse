@@ -2,6 +2,7 @@ import { SacredTimeline } from "../components/SacredTimeline";
 import { confirmedEarths, type Earth } from "../lib/multiverse";
 import type { Title, Watched } from "../types";
 import "../styles/tva.css";
+import { Gem } from "../components/InfinityQuest";
 export function Universes({
   watched,
   open,
@@ -30,6 +31,7 @@ export function Universes({
             </span>
           </div>
           <div className="tva-file-stamp">
+            <Gem id="power" className="gem-tva" />
             <span>DIVISIONE OSSERVAZIONE</span>
             <b>TERMINALE 07</b>
             <small>{confirmedEarths.length} TERRE IDENTIFICATE</small>

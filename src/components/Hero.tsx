@@ -2,6 +2,7 @@ import { ArrowRight, Play, ArrowDown } from "lucide-react";
 import { PosterImage } from "./PosterImage";
 import { titles } from "../lib/catalog";
 import type { Title } from "../types";
+import { Gem, useInfinity } from "./InfinityQuest";
 export function Hero({
   next,
   onOpen,
@@ -9,6 +10,7 @@ export function Hero({
   next?: Title;
   onOpen: (t: Title) => void;
 }) {
+  const infinity = useInfinity();
   const selections = [
     "Avengers: Endgame",
     "Spider-Man: No Way Home",
@@ -59,6 +61,7 @@ export function Hero({
             Continua da dove eri rimasto <ArrowRight size={14} />
           </button>
         )}
+        <Gem id="space" className="gem-home" />
         <div className="hero-footnote">
           <span>UN ARCHIVIO. INFINITE CONNESSIONI.</span>
           <a href="#archive" aria-label="Vai all’archivio">
@@ -67,16 +70,19 @@ export function Hero({
         </div>
       </div>
       <div className="hero-collage" aria-label="Le storie del multiverso">
-        {selections.map((t, i) => (
-          <button
-            key={t.id}
-            className={`hero-poster hero-poster-${i}`}
-            onClick={() => onOpen(t)}
-            aria-label={`Dettagli: ${t.title}`}
-          >
-            <PosterImage title={t} priority />
-          </button>
-        ))}
+        {selections.map((t, i) =>
+          infinity.phase === "snapped" && infinity.targets.has(t.id) ? null : (
+            <button
+              key={t.id}
+              data-infinity-title={t.id}
+              className={`hero-poster hero-poster-${i} ${infinity.phase === "dusting" && infinity.targets.has(t.id) ? "infinity-dusting" : ""}`}
+              onClick={() => onOpen(t)}
+              aria-label={`Dettagli: ${t.title}`}
+            >
+              <PosterImage title={t} priority />
+            </button>
+          ),
+        )}
         <div className="collage-caption">
           <span className="live-dot" /> IL MULTIVERSO TI ASPETTA
         </div>

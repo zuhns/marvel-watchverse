@@ -19,6 +19,7 @@ import { validateUsername } from "../lib/profile";
 import { titles, stats, labels, normalize, sortTitles } from "../lib/catalog";
 import { StatsPanel, ProgressBar } from "../components/StatsPanel";
 import { PosterImage } from "../components/PosterImage";
+import { Gem } from "../components/InfinityQuest";
 
 export function Social({
   username,
@@ -111,6 +112,7 @@ export function Social({
   );
   return (
     <section className="page-section social-page">
+      <Gem id="time" className="gem-social" />
       <div className="eyebrow">LE STORIE SI CONDIVIDONO</div>
       <h1 className="page-title">
         IL TUO <span>TEAM.</span>

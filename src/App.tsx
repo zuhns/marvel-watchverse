@@ -20,6 +20,12 @@ import { useTracker } from "./hooks/useTracker";
 import type { Title } from "./types";
 import { earthMode } from "./lib/multiverse";
 import { usePremiumMotion } from "./hooks/usePremiumMotion";
+import {
+  InfinityProvider,
+  Gem,
+  GauntletDiscovery,
+} from "./components/InfinityQuest";
+import { MarvelOpening } from "./components/MarvelOpening";
 const pageFromHash = () =>
   location.hash === "#orders"
     ? "archive"
@@ -62,20 +68,25 @@ export default function App() {
       }
     }
   };
-  return marathon && personal.username ? (
-    <MarathonFrame
-      key={marathon.id}
-      personal={personal}
-      marathon={marathon}
-      selectMarathon={select}
-    />
-  ) : (
-    <Watchverse
-      tracker={personal}
-      personal={personal}
-      marathon={null}
-      selectMarathon={select}
-    />
+  return (
+    <InfinityProvider>
+      <MarvelOpening />
+      {marathon && personal.username ? (
+        <MarathonFrame
+          key={marathon.id}
+          personal={personal}
+          marathon={marathon}
+          selectMarathon={select}
+        />
+      ) : (
+        <Watchverse
+          tracker={personal}
+          personal={personal}
+          marathon={null}
+          selectMarathon={select}
+        />
+      )}
+    </InfinityProvider>
   );
 }
 function MarathonFrame({
@@ -360,19 +371,16 @@ function Watchverse({
           <span>MARVEL</span>
           <b>WATCHVERSE</b>
         </a>
-        <p>
-          Progetto fan-made indipendente. Non affiliato a Marvel, Disney, Sony o
-          TMDB.
+        <p className="veronica-dedication">
+          <strong>Per Veronica, il mio universo preferito.</strong>
           <br />
-          Locandine e personaggi appartengono ai rispettivi titolari. Metadati e
-          immagini:{" "}
-          <a href="https://www.themoviedb.org" target="_blank" rel="noreferrer">
-            TMDB
-          </a>
-          . This product uses the TMDB API but is not endorsed or certified by
-          TMDB.
+          Questo sito è per noi, per tutte le storie da guardare insieme.
+          <br />
+          Ti amo tanto. In ogni universo, sceglierei sempre te.
+          <Gem id="soul" className="gem-dedication" />
         </p>
         <div className="footer-links">
+          <GauntletDiscovery />
           <a href="https://github.com/zuhns/marvel-watchverse">
             GitHub
             <ArrowUpRight size={13} />

@@ -13,6 +13,7 @@ import { FilterBar } from "../components/FilterBar";
 import { MovieCard } from "../components/MovieCard";
 import type { Preferences, Watched, Title } from "../types";
 import { earths } from "../lib/multiverse";
+import { Gem, useInfinity } from "../components/InfinityQuest";
 export function Archive({
   p,
   change,
@@ -28,13 +29,19 @@ export function Archive({
   open: (t: Title) => void;
   compact?: boolean;
 }) {
+  const infinity = useInfinity();
   const [limit, setLimit] = useState(compact ? 12 : 30);
   useEffect(() => setLimit(compact ? 12 : 30), [p, compact]);
   const earth = earths.find((e) => e.id === p.earthId);
   const sorted = sortTitles(pathTitles(earth?.titles ?? titles, p), p.order);
   const filtered = filterTitles(sorted, p, watched);
   const positions = new Map(sorted.map((t, i) => [t.id, i + 1]));
-  const show = filtered.slice(0, limit);
+  const remaining = filtered.filter(
+    (t) => infinity.phase !== "snapped" || !infinity.targets.has(t.id),
+  );
+  const show = filtered
+    .slice(0, limit)
+    .filter((t) => infinity.phase !== "snapped" || !infinity.targets.has(t.id));
   const groups =
     p.order === "chronology"
       ? [...new Set(show.map((t) => t.timelineGroup))].map((name) => ({
@@ -45,6 +52,7 @@ export function Archive({
   return (
     <section className="archive-section">
       <div className="section-heading">
+        <Gem id="reality" className="gem-archive" />
         <div>
           <div className="eyebrow">
             {compact ? "IL PROSSIMO CAPITOLO" : "L’ARCHIVIO COMPLETO"}
@@ -98,7 +106,7 @@ export function Archive({
       )}
       <div className="results-info">
         <span>
-          <b>{filtered.length}</b> storie nel tuo percorso
+          <b>{remaining.length}</b> storie nel tuo percorso
         </span>
         <span>{orderLabels[p.order]}</span>
       </div>
@@ -120,7 +128,7 @@ export function Archive({
                     <h3>{name}</h3>
                   </div>
                   <span className="chronology-count">
-                    {filtered.filter((t) => t.timelineGroup === name).length}{" "}
+                    {remaining.filter((t) => t.timelineGroup === name).length}{" "}
                     storie
                   </span>
                 </header>

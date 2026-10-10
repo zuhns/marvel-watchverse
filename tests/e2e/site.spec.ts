@@ -1,5 +1,10 @@
 import { test, expect } from "@playwright/test";
 import { readFileSync, writeFileSync } from "node:fs";
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() =>
+    localStorage.setItem("marvel-watchverse.opening.v1", "seen"),
+  );
+});
 const catalog = JSON.parse(readFileSync("src/data/titles.json", "utf8")) as {
   id: string;
   originalTitle: string;

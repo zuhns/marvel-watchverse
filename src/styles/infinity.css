@@ -1,0 +1,467 @@
+.hidden-gem {
+  position: relative;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--gem);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  vertical-align: middle;
+  isolation: isolate;
+}
+.hidden-gem svg {
+  width: 10px;
+  height: 15px;
+  opacity: 0.66;
+  filter: drop-shadow(0 0 6px var(--gem));
+  transition:
+    width 0.3s,
+    opacity 0.3s,
+    transform 0.3s;
+}
+.hidden-gem:hover svg,
+.hidden-gem:focus-visible svg {
+  width: 15px;
+  opacity: 1;
+  transform: rotate(-8deg);
+}
+.hidden-gem:focus-visible {
+  outline: 1px solid var(--gem);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+.gem-spark {
+  position: absolute;
+  inset: 5px;
+  background: radial-gradient(circle, var(--gem), transparent 65%);
+  opacity: 0.09;
+  animation: gem-breathe 3s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes gem-breathe {
+  50% {
+    opacity: 0.26;
+    transform: scale(1.2);
+  }
+}
+.hero-footnote {
+  position: relative;
+}
+.gem-home {
+  position: absolute;
+  right: 11%;
+  bottom: 30px;
+}
+.hero-copy {
+  position: relative;
+}
+.archive-section .section-heading {
+  position: relative;
+}
+.gem-archive {
+  position: absolute;
+  right: 18%;
+  top: -11px;
+}
+.tva-file-stamp {
+  position: relative;
+}
+.gem-tva {
+  position: absolute;
+  right: -10px;
+  bottom: -23px;
+}
+.page-section:has(> .gem-progress),
+.social-page {
+  position: relative;
+}
+.gem-progress {
+  position: absolute;
+  top: 52px;
+  right: 8%;
+}
+.gem-social {
+  position: absolute;
+  top: 80px;
+  right: 21%;
+}
+.veronica-dedication {
+  position: relative;
+  color: #aeb1bd;
+  line-height: 1.85;
+}
+.veronica-dedication strong {
+  display: inline-block;
+  color: #f1d9c7;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.gem-dedication {
+  margin-left: 2px;
+  height: 24px;
+}
+.gauntlet-discovery {
+  width: 32px;
+  height: 42px;
+  opacity: 0.65;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  align-self: flex-end;
+}
+.gauntlet-discovery:hover {
+  opacity: 1;
+  transform: rotate(-7deg);
+}
+.gauntlet-art {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+.infinity-pocket {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 65;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 14px 9px 9px;
+  background: #16121df0;
+  border: 1px solid #d7ae5845;
+  border-radius: 40px;
+  box-shadow: 0 8px 30px #0008;
+  backdrop-filter: blur(12px);
+  color: #d8bc80;
+  font-size: 10px;
+}
+.infinity-pocket .gauntlet-art {
+  width: 25px;
+  height: 33px;
+}
+.infinity-notice {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 75;
+  max-width: min(520px, 76vw);
+  padding: 13px 20px;
+  background: #1d1725f5;
+  color: #e5d8fa;
+  border: 1px solid #b38ae645;
+  border-radius: 9px;
+  box-shadow: 0 8px 50px #0008;
+  font-size: 12px;
+  animation: notice-arrive 0.35s ease-out;
+  pointer-events: none;
+}
+@keyframes notice-arrive {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+}
+.infinity-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 490px;
+  max-width: 94vw;
+  max-height: 92dvh;
+  padding: 34px 34px 26px;
+  overflow: auto;
+  color: #f4edf9;
+  border: 1px solid #b6914b66;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 50% 38%, #55412735, transparent 65%),
+    linear-gradient(145deg, #191621, #0c0b10);
+  box-shadow:
+    0 30px 140px #000b,
+    inset 0 0 45px #d0a44206;
+  text-align: center;
+  animation: relic-arrive 0.4s ease-out;
+}
+.infinity-dialog::backdrop {
+  background: #040207d9;
+  backdrop-filter: blur(10px);
+}
+@keyframes relic-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}
+.infinity-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: -20px -20px -20px 0;
+  z-index: 2;
+  background: #ffffff09;
+}
+.infinity-dialog .eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #ba9d68;
+}
+.infinity-dialog h2 {
+  font:
+    46px/0.96 "TVA Display",
+    sans-serif;
+  font-weight: 700;
+  margin: 14px 0;
+}
+.infinity-dialog h2 span {
+  color: #d8b778;
+}
+.infinity-dialog > p {
+  max-width: 340px;
+  margin: 0 auto;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #a8a0b4;
+}
+.gauntlet-relic {
+  display: block;
+  position: relative;
+  margin: 16px auto 10px;
+  width: 215px;
+  height: 253px;
+  transition: transform 0.45s;
+  filter: drop-shadow(0 15px 16px #000a);
+}
+.gauntlet-relic:disabled {
+  cursor: default;
+}
+.gauntlet-relic.charged {
+  cursor: pointer;
+  filter: drop-shadow(0 0 18px #d4ab5435);
+}
+.gauntlet-relic.charged:hover {
+  transform: rotate(-5deg) scale(1.04);
+}
+.gauntlet-relic:focus-visible {
+  outline: 1px solid #d8b778;
+  outline-offset: 8px;
+  border-radius: 40%;
+}
+.gem-inventory {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  margin-top: 14px;
+}
+.gem-inventory button {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 3px;
+  color: var(--gem);
+  border: 1px solid #ffffff0b;
+  border-radius: 9px;
+  background: #ffffff03;
+}
+.gem-inventory svg {
+  width: 17px;
+  height: 22px;
+}
+.gem-inventory span {
+  font-size: 8px;
+  color: #b4aabc;
+}
+.gem-inventory .missing {
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+.gem-inventory .found {
+  filter: drop-shadow(0 0 5px color-mix(in srgb, var(--gem) 30%, transparent));
+  cursor: pointer;
+}
+.gem-inventory .found:hover {
+  border-color: var(--gem);
+}
+.gem-inventory .inserted {
+  opacity: 0.65;
+  border-color: color-mix(in srgb, var(--gem) 35%, transparent);
+}
+.infinity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 0;
+  font-size: 9px;
+  color: #a99bb7;
+}
+.infinity-instruction {
+  font-size: 10px;
+  color: #c5b292;
+}
+.infinity-restore {
+  width: 100%;
+  margin-top: 8px;
+}
+.infinity-dusting {
+  pointer-events: none;
+  mask-image: linear-gradient(105deg, transparent 38%, #000 52%);
+  mask-size: 300% 100%;
+  mask-position: 100% 0;
+  animation: infinity-disintegrate 2.45s ease-in forwards !important;
+}
+@keyframes infinity-disintegrate {
+  0% {
+    mask-position: 100% 0;
+    filter: none;
+  }
+  45% {
+    filter: sepia(0.4) saturate(0.5);
+  }
+  100% {
+    mask-position: 0 0;
+    filter: sepia(0.9) saturate(0.1);
+    opacity: 0;
+  }
+}
+.snap-atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+.stardust-canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+.snap-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 55% 40%,
+    #bc884126,
+    #2b0a4138 60%,
+    #0000
+  );
+  animation: snap-light 1.7s ease-out forwards;
+}
+@keyframes snap-light {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.marvel-opening {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 356px;
+  max-width: calc(100vw - 40px);
+  z-index: 55;
+  border: 1px solid #ffffff20;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #100c11f5;
+  box-shadow: 0 20px 80px #000b;
+  animation: relic-arrive 0.5s ease-out;
+}
+.opening-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 8px 7px 14px;
+  font-size: 10px;
+  color: #e4c8c9;
+}
+.opening-caption .icon-button {
+  width: 28px;
+  height: 28px;
+}
+.marvel-opening iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  min-height: 200px;
+  border: 0;
+}
+.opening-status {
+  padding: 10px 14px;
+  color: #a99aa7;
+  font-size: 9px;
+}
+.opening-status button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+@media (max-width: 600px) {
+  .infinity-dialog {
+    padding: 29px 22px 22px;
+  }
+  .infinity-dialog h2 {
+    font-size: 39px;
+  }
+  .gauntlet-relic {
+    width: 180px;
+    height: 212px;
+  }
+  .infinity-pocket {
+    right: 14px;
+    bottom: 14px;
+  }
+  .infinity-notice {
+    bottom: 70px;
+    max-width: 88vw;
+    width: max-content;
+    font-size: 10px;
+  }
+  .gem-progress {
+    right: 4%;
+  }
+  .gem-social {
+    right: 6%;
+  }
+  .marvel-opening {
+    width: 356px;
+    left: 12px;
+    bottom: 12px;
+  }
+  .gem-archive {
+    right: 3%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gem-spark,
+  .snap-flash {
+    animation: none;
+  }
+  .snap-atmosphere {
+    display: none;
+  }
+  .infinity-dusting {
+    mask: none;
+    animation: infinity-gentle-fade 0.3s ease-out forwards !important;
+  }
+  .gauntlet-relic,
+  .hidden-gem svg {
+    transition: none;
+  }
+  .infinity-dialog,
+  .infinity-notice,
+  .marvel-opening {
+    animation: none;
+  }
+}
+@keyframes infinity-gentle-fade {
+  to {
+    opacity: 0;
+  }
+}

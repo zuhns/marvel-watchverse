@@ -193,7 +193,9 @@ export function SacredTimeline({
                 {sound.loading
                   ? "Sintonizzo il flusso…"
                   : sound.enabled
-                    ? "Audio attivo"
+                    ? sound.waiting
+                      ? "Audio pronto · tocca"
+                      : "Audio attivo"
                     : "Attiva atmosfera"}
               </span>
             </button>

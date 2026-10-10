@@ -2,6 +2,7 @@ import { Check, Plus, ArrowUpRight } from "lucide-react";
 import { PosterImage } from "./PosterImage";
 import { labels } from "../lib/catalog";
 import type { Title } from "../types";
+import { useInfinity } from "./InfinityQuest";
 export function MovieCard({
   title,
   index,
@@ -15,8 +16,14 @@ export function MovieCard({
   onOpen: () => void;
   onToggle: () => void;
 }) {
+  const infinity = useInfinity();
+  if (infinity.phase === "snapped" && infinity.targets.has(title.id))
+    return null;
   return (
-    <article className={`movie-card ${seen ? "seen" : ""}`}>
+    <article
+      data-infinity-title={title.id}
+      className={`movie-card ${seen ? "seen" : ""} ${infinity.phase === "dusting" && infinity.targets.has(title.id) ? "infinity-dusting" : ""}`}
+    >
       <button
         className="poster-button"
         onClick={onOpen}

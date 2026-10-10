@@ -16,6 +16,7 @@ import {
 import { StatsPanel, ProgressBar } from "../components/StatsPanel";
 import { PosterImage } from "../components/PosterImage";
 import type { Watched, Order, Title, Format } from "../types";
+import { Gem } from "../components/InfinityQuest";
 export function Progress({
   watched,
   order,
@@ -53,6 +54,7 @@ export function Progress({
     .slice(0, 8);
   return (
     <section className="page-section">
+      <Gem id="mind" className="gem-progress" />
       <div className="eyebrow">OGNI STORIA CONTA</div>
       <h1 className="page-title">
         {marathonName ? "LA NOSTRA" : "IL TUO"}

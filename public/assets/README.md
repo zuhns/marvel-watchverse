@@ -6,5 +6,8 @@
 - `fonts/jost.ttf`: Jost di Owen Earl, https://github.com/google/fonts/tree/main/ofl/jost; licenza in `fonts/jost-OFL.txt`.
 - `fonts/archivo-narrow.ttf`: Archivo Narrow, https://github.com/google/fonts/tree/main/ofl/archivonarrow; licenza in `fonts/archivo-narrow-OFL.txt`.
 - `temporal-score.m4a`: composizione originale MARVEL WATCHVERSE di 96 secondi, generata da `scripts/compose-temporal-score.mjs`. Non contiene registrazioni o campioni della colonna sonora di Loki.
+- `infinity-snap.m4a`: composizione originale di 14 secondi, generata da `scripts/compose-infinity-score.mjs`: sub-bassi, coro sintetico dissonante, campane e vento. Non contiene campioni di colonne sonore Marvel. Analisi in `reports/infinity-score-analysis.json`.
+- Opening di prima visita: player ufficiale YouTube, video pubblicato da Entertainment Access https://www.youtube.com/watch?v=ZPjlwJ0SeOs. Perception documenta la realizzazione della sequenza in https://www.experienceperception.com/work/marvel-studios-rebrand/. Musica: Michael Giacchino. Nessun file del video o del brano è incluso nel repository.
+- Guanto e Gemme: illustrazioni SVG create nel codice del sito, ispirate ai personaggi e agli oggetti Marvel.
 
 Il logo e Miss Minutes appartengono ai rispettivi titolari e non rientrano nella licenza MIT del codice. Progetto fan-made indipendente, non affiliato a Marvel o Disney. I font dei testi sono una scelta grafica ispirata alla segnaletica TVA; non vengono presentati come font ufficiali della serie.
