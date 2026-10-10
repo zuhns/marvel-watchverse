@@ -1,0 +1,19 @@
+{
+  "productions": 186,
+  "titles": 255,
+  "available": 141,
+  "requests": 3,
+  "errors": [],
+  "unresolved": [
+    {
+      "key": "show:4552",
+      "title": "The Amazing Spider-Man — Stagione 1",
+      "source": "https://www.justwatch.com/it/cerca?q=The%20Amazing%20Spider-Man"
+    },
+    {
+      "key": "movie:1106299",
+      "title": "The Spider Within: A Spider-Verse Story",
+      "source": "https://www.justwatch.com/it/cerca?q=The%20Spider%20Within%3A%20A%20Spider-Verse%20Story"
+    }
+  ]
+}

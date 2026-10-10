@@ -125,7 +125,15 @@ Lo script cerca per identificativo univoco, controlla anno e tipologia, usa il p
 
 Le locandine non sono redistribuite localmente: restano sui server della fonte. Per esse il repository contiene solo riferimenti e metadati. Un URL verificato può diventare indisponibile in futuro: aggiorna il manifest e consulta il report prima di ogni aggiornamento importante.
 
-## Pubblicazione
+## Disponibilità streaming in Italia
+
+Le schede usano `public/data/streaming-it.json`, ricavato dalle **pagine pubbliche JustWatch**: non dall'API partner e senza token. `pnpm streaming:sync` verifica ogni produzione del catalogo, confrontando tipo, anno e titolo italiano/originale. Le stagioni condividono la disponibilità della serie, indicata esplicitamente nell'interfaccia. Il report `reports/streaming-coverage.json` elenca le corrispondenze mancanti e gli errori.
+
+Il workflow Pages aggiorna e ripubblica i dati ogni giorno alle 05:00 UTC e negli avvii manuali. Gli aggiornamenti programmati vengono pubblicati nel sito senza creare commit giornalieri. Le richieste sono sequenziali e distanziate; il parser interpreta soltanto dati JSON delle pagine. In caso di errori conserva le precedenti disponibilità e le loro date; un guasto esteso interrompe la pubblicazione. Cambiamenti nel sito JustWatch possono richiedere un aggiornamento del parser.
+
+Abbonamento, noleggio, acquisto e offerte gratuite sono separati. I prezzi indicati sono i minimi segnalati per il titolo, non il costo dell'abbonamento. Ogni scheda mostra fonte JustWatch e data del controllo; dopo tre giorni segnala che i dati potrebbero essere cambiati. I collegamenti HTTPS dei servizi aprono il titolo nel sito o nell'app quando il sistema operativo e la piattaforma supportano i link universali. Non si forza l'apertura di applicazioni tramite schemi inventati.
+
+## Pubblicazione su GitHub Pages
 
 GitHub Pages deve usare **Settings → Pages → Source: GitHub Actions**. Ogni push a `main` esegue installazione con lockfile, validazione, test e build, poi pubblica `dist`. Il workflow usa soltanto `GITHUB_TOKEN` e l’OIDC di Pages; non serve alcuna chiave TMDB per la build.
 

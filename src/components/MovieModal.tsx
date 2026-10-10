@@ -8,6 +8,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { PosterImage } from "./PosterImage";
+import { WatchAvailability } from "./WatchAvailability";
 import { titles, labels } from "../lib/catalog";
 import type { Title } from "../types";
 export function MovieModal({
@@ -28,6 +29,9 @@ export function MovieModal({
     .filter((t) => t.franchise === title.franchise)
     .sort((a, b) => a.releaseOrder - b.releaseOrder);
   const n = saga.findIndex((t) => t.id === title.id);
+  useEffect(() => {
+    if (ref.current) ref.current.scrollTop = 0;
+  }, [title.id]);
   useEffect(() => {
     const dialog = ref.current!;
     const focused = document.activeElement as HTMLElement | null;
@@ -106,6 +110,7 @@ export function MovieModal({
             {title.synopsis ||
               "Consulta la fonte collegata per la sinossi e i dettagli di questa produzione."}
           </p>
+          <WatchAvailability key={title.id} title={title} />
           <dl>
             <div>
               <dt>Franchise</dt>

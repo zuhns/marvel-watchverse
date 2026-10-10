@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *"
 permissions:
   contents: read
   pages: write
@@ -21,6 +23,9 @@ jobs:
       - run: corepack enable
       - run: corepack prepare pnpm@11.25.0 --activate
       - run: pnpm install --frozen-lockfile
+      - name: Refresh public JustWatch data for Italy
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: pnpm streaming:sync
       - run: pnpm validate
       - run: pnpm test
       - run: pnpm build

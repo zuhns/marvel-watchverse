@@ -11,7 +11,8 @@
     "test:e2e": "playwright test",
     "validate": "tsx scripts/validate-catalog.ts",
     "posters:check": "tsx scripts/check-posters.ts",
-    "posters:sync": "tsx scripts/sync-posters.ts"
+    "posters:sync": "tsx scripts/sync-posters.ts",
+    "streaming:sync": "tsx scripts/sync-streaming.ts"
   },
   "dependencies": {
     "exceljs": "^4.4.0",

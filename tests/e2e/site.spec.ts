@@ -8,6 +8,88 @@ const catalog = JSON.parse(readFileSync("src/data/titles.json", "utf8")) as {
 const posters = JSON.parse(
   readFileSync("src/data/posters.json", "utf8"),
 ) as Record<string, { url: string | null }>;
+test("scheda centrata, piattaforme italiane e collegamento al film", async ({
+  page,
+}) => {
+  await page.goto("#archive");
+  await page.getByRole("textbox", { name: "Cerca titoli" }).fill("Iron Man");
+  await page
+    .getByRole("button", { name: "Dettagli: Iron Man", exact: true })
+    .click();
+  const dialog = page.getByRole("dialog");
+  const disney = dialog.getByRole("link", {
+    name: "Disney Plus · In abbonamento · Apri Iron Man",
+    exact: true,
+  });
+  await expect(disney).toBeVisible();
+  await expect(disney).toHaveAttribute(
+    "href",
+    /https:\/\/www\.disneyplus\.com\/browse\/entity-/,
+  );
+  await expect(
+    dialog.getByRole("heading", { name: "Noleggio", exact: true }),
+  ).toBeVisible();
+  await expect(
+    dialog.getByRole("heading", { name: "Acquisto", exact: true }),
+  ).toBeVisible();
+  await expect
+    .poll(async () => {
+      const box = await dialog.boundingBox();
+      const viewport = page.viewportSize()!;
+      return box
+        ? Math.max(
+            Math.abs(box.x + box.width / 2 - viewport.width / 2),
+            Math.abs(box.y + box.height / 2 - viewport.height / 2),
+          )
+        : 100;
+    })
+    .toBeLessThan(2);
+  expect(await dialog.evaluate((e) => e.scrollWidth <= e.clientWidth + 1)).toBe(
+    true,
+  );
+  await dialog.evaluate((element) => {
+    element.scrollTop = element.scrollHeight;
+  });
+  await expect(
+    dialog.getByRole("button", { name: "Chiudi dettagli" }),
+  ).toBeInViewport();
+  await dialog.evaluate((element) => {
+    element.scrollTop = 0;
+  });
+  // A platform icon navigates to the exact provider URL, without actually leaving the test.
+  const target = await disney.getAttribute("href");
+  await page.route("https://www.disneyplus.com/**", (route) =>
+    route.fulfill({
+      contentType: "text/html",
+      body: "<h1>Film sulla piattaforma</h1>",
+    }),
+  );
+  await disney.click();
+  await expect(page).toHaveURL(target!);
+});
+test("indisponibilità dei dati non blocca dettagli e progressi", async ({
+  page,
+}) => {
+  await page.route("**/data/streaming-it.json", (route) =>
+    route.fulfill({ status: 503, body: "Unavailable" }),
+  );
+  await page.goto("#archive");
+  await page.getByRole("textbox", { name: "Cerca titoli" }).fill("Iron Man");
+  await page
+    .getByRole("button", { name: "Dettagli: Iron Man", exact: true })
+    .click();
+  await expect(
+    page.getByText(
+      "Disponibilità non confermata: consulta la ricerca su JustWatch.",
+      { exact: true },
+    ),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Dati JustWatch" }),
+  ).toHaveAttribute("href", /justwatch\.com\/it\/cerca/);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).not.toBeVisible();
+});
 test("ricerca, ordini, tracker, persistenza, dettagli e backup", async ({
   page,
 }) => {

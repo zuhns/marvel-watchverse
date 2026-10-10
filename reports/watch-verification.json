@@ -1,0 +1,184 @@
+{
+  "base": "http://127.0.0.1:4173/marvel-watchverse/",
+  "errors": [],
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "box": {
+        "x": 270,
+        "y": 60,
+        "width": 900,
+        "height": 880
+      },
+      "links": [
+        {
+          "label": "Disney Plus · In abbonamento · Apri Iron Man",
+          "href": "https://www.disneyplus.com/browse/entity-0c520152-b81f-4c20-9310-003debd1947e"
+        },
+        {
+          "label": "Apple TV Store · Noleggio · Apri Iron Man",
+          "href": "https://tv.apple.com/it/movie/iron-man/umc.cmc.219lnb4s678o8roez3o905h7r?at=1000l3V2&ct=app_tv&itscg=30200&itsct=justwatch_tv&playableId=tvs.sbd.9001%3A776715885"
+        },
+        {
+          "label": "Timvision · Noleggio · Apri Iron Man",
+          "href": "https://www.timvision.it/h/TVOD50290457_92900100?autoplay=true&utm_source=googleAssistant&utm_medium=app-to-app"
+        },
+        {
+          "label": "Rakuten TV · Noleggio · Apri Iron Man",
+          "href": "https://www.rakuten.tv/it/movies/iron-man-2008"
+        },
+        {
+          "label": "Amazon Video · Noleggio · Apri Iron Man",
+          "href": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.94a9f7c1-cbcf-da56-dc31-8e00a4f14a63"
+        },
+        {
+          "label": "Apple TV Store · Acquisto · Apri Iron Man",
+          "href": "https://tv.apple.com/it/movie/iron-man/umc.cmc.219lnb4s678o8roez3o905h7r?at=1000l3V2&ct=app_tv&itscg=30200&itsct=justwatch_tv&playableId=tvs.sbd.9001%3A776715885"
+        },
+        {
+          "label": "Timvision · Acquisto · Apri Iron Man",
+          "href": "https://www.timvision.it/h/TVOD50290457_92900100?autoplay=true&utm_source=googleAssistant&utm_medium=app-to-app"
+        },
+        {
+          "label": "Rakuten TV · Acquisto · Apri Iron Man",
+          "href": "https://www.rakuten.tv/it/movies/iron-man-2008"
+        },
+        {
+          "label": "Amazon Video · Acquisto · Apri Iron Man",
+          "href": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.94a9f7c1-cbcf-da56-dc31-8e00a4f14a63"
+        }
+      ],
+      "icons": [
+        {
+          "src": "https://images.justwatch.com/icon/313118777/s100/disneyplus.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/338253243/s100/itunes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/344848278/s100/timvision.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/128599720/s100/wuaki.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/340823436/s100/amazon.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/338253243/s100/itunes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/344848278/s100/timvision.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/128599720/s100/wuaki.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/340823436/s100/amazon.png",
+          "loaded": true
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "box": {
+        "x": 11.703125,
+        "y": 33.765625,
+        "width": 366.59375,
+        "height": 776.46875
+      },
+      "links": [
+        {
+          "label": "Disney Plus · In abbonamento · Apri Iron Man",
+          "href": "https://www.disneyplus.com/browse/entity-0c520152-b81f-4c20-9310-003debd1947e"
+        },
+        {
+          "label": "Apple TV Store · Noleggio · Apri Iron Man",
+          "href": "https://tv.apple.com/it/movie/iron-man/umc.cmc.219lnb4s678o8roez3o905h7r?at=1000l3V2&ct=app_tv&itscg=30200&itsct=justwatch_tv&playableId=tvs.sbd.9001%3A776715885"
+        },
+        {
+          "label": "Timvision · Noleggio · Apri Iron Man",
+          "href": "https://www.timvision.it/h/TVOD50290457_92900100?autoplay=true&utm_source=googleAssistant&utm_medium=app-to-app"
+        },
+        {
+          "label": "Rakuten TV · Noleggio · Apri Iron Man",
+          "href": "https://www.rakuten.tv/it/movies/iron-man-2008"
+        },
+        {
+          "label": "Amazon Video · Noleggio · Apri Iron Man",
+          "href": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.94a9f7c1-cbcf-da56-dc31-8e00a4f14a63"
+        },
+        {
+          "label": "Apple TV Store · Acquisto · Apri Iron Man",
+          "href": "https://tv.apple.com/it/movie/iron-man/umc.cmc.219lnb4s678o8roez3o905h7r?at=1000l3V2&ct=app_tv&itscg=30200&itsct=justwatch_tv&playableId=tvs.sbd.9001%3A776715885"
+        },
+        {
+          "label": "Timvision · Acquisto · Apri Iron Man",
+          "href": "https://www.timvision.it/h/TVOD50290457_92900100?autoplay=true&utm_source=googleAssistant&utm_medium=app-to-app"
+        },
+        {
+          "label": "Rakuten TV · Acquisto · Apri Iron Man",
+          "href": "https://www.rakuten.tv/it/movies/iron-man-2008"
+        },
+        {
+          "label": "Amazon Video · Acquisto · Apri Iron Man",
+          "href": "https://app.primevideo.com/detail?gti=amzn1.dv.gti.94a9f7c1-cbcf-da56-dc31-8e00a4f14a63"
+        }
+      ],
+      "icons": [
+        {
+          "src": "https://images.justwatch.com/icon/313118777/s100/disneyplus.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/338253243/s100/itunes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/344848278/s100/timvision.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/128599720/s100/wuaki.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/340823436/s100/amazon.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/338253243/s100/itunes.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/344848278/s100/timvision.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/128599720/s100/wuaki.png",
+          "loaded": true
+        },
+        {
+          "src": "https://images.justwatch.com/icon/340823436/s100/amazon.png",
+          "loaded": true
+        }
+      ],
+      "overflow": false
+    }
+  ]
+}
