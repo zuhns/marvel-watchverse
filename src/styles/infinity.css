@@ -312,50 +312,33 @@
   pointer-events: none;
   animation: none !important;
 }
+.infinity-dusting .poster-button,
+.infinity-dusting .poster-image img {
+  transform: none !important;
+}
 .infinity-dusting .card-caption,
 .infinity-dusting:not([data-dust-ready="true"]) .poster-button,
 .hero-poster.infinity-dusting:not([data-dust-ready="true"]) {
   animation: infinity-gentle-fade 2.8s ease-in forwards;
 }
 .infinity-dusting[data-dust-ready="true"] .poster-button,
-.hero-poster.infinity-dusting[data-dust-ready="true"] {
+.hero-poster.infinity-dusting[data-dust-ready="true"] .poster-image {
   opacity: 0 !important;
+}
+.hero-poster.infinity-dusting[data-dust-ready="true"] {
+  overflow: visible;
+  box-shadow: none;
+  border-color: transparent;
 }
 .infinity-vacant {
   visibility: hidden !important;
   pointer-events: none;
   animation: none !important;
 }
-.snap-atmosphere {
-  position: fixed;
-  inset: 0;
+.poster-dust-canvas {
+  position: absolute;
   pointer-events: none;
-  z-index: 60;
-}
-.stardust-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-}
-.snap-flash {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    ellipse at 55% 40%,
-    #bc884126,
-    #2b0a4138 60%,
-    #0000
-  );
-  animation: snap-light 1.7s ease-out forwards;
-}
-@keyframes snap-light {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  z-index: 4;
 }
 .opening-audio-toggle {
   position: fixed;

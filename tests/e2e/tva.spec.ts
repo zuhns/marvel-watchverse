@@ -15,6 +15,7 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
     if (r.url().includes("tva-timeline.png")) textures.push(r.url());
   });
   await page.goto("#universes");
+  await page.locator(".temporal-viewport").scrollIntoViewIfNeeded();
   const canvas = page.locator(".temporal-canvas");
   await expect(canvas).toHaveAttribute("data-rendered", "ready");
   await expect(canvas).toHaveAttribute("data-motion", "flowing");
@@ -119,6 +120,7 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
   expect(await canvas.getAttribute("data-time")).toBe(still);
   await page.getByRole("button", { name: "Riprendi animazioni" }).click();
   await page.emulateMedia({ reducedMotion: "reduce" });
+  await viewport.scrollIntoViewIfNeeded();
   await expect(canvas).toHaveAttribute("data-motion", "flowing");
   const reduced = Number(await canvas.getAttribute("data-time"));
   await expect
@@ -143,6 +145,7 @@ test("il flusso rimane animato anche senza WebGL", async ({ page }) => {
     } as typeof original;
   });
   await page.goto("#universes");
+  await page.locator(".temporal-viewport").scrollIntoViewIfNeeded();
   const canvas = page.locator(".temporal-canvas");
   await expect(canvas).toHaveAttribute("data-renderer", "canvas-procedural");
   await expect(canvas).toHaveAttribute("data-rendered", "ready");

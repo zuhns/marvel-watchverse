@@ -24,6 +24,11 @@ test("le animazioni restano attive con gli effetti Windows disattivati", async (
   await expect(page.locator(".movie-card").first()).toContainText("Spider-Man");
   await expect(page.locator(".movie-card").first()).toHaveCSS("opacity", "1");
   await page.goto("#universes");
+  await page.locator(".temporal-viewport").scrollIntoViewIfNeeded();
+  await expect(page.locator(".temporal-canvas")).toHaveAttribute(
+    "data-activity",
+    "running",
+  );
   await expect(page.locator(".temporal-canvas")).toHaveAttribute(
     "data-motion",
     "flowing",

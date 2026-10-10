@@ -458,24 +458,41 @@ export function createTemporalRenderer(
   const engine = webgl(canvas, anchors) ?? fallback(canvas, anchors);
   if (!engine) return () => {};
   let disposed = false,
+    visible = true,
     frame = 0,
     last = 0,
     lastDraw = 0,
     time = 0,
     dirty = true,
     key = "";
+  const compact = matchMedia("(max-width: 768px), (pointer: coarse)").matches;
+  const monitor = canvas.closest(".temporal-viewport") ?? canvas;
+  const wake = () => {
+    if (!disposed && !frame && !document.hidden && visible)
+      frame = requestAnimationFrame(draw);
+  };
   const resize = () => {
-    const ratio = Math.min(devicePixelRatio, 1.25);
+    const budget = compact ? 420_000 : 1_200_000;
+    const ratio = Math.min(
+      compact ? 1 : Math.min(devicePixelRatio, 1.25),
+      Math.sqrt(budget / Math.max(1, canvas.clientWidth * canvas.clientHeight)),
+    );
     canvas.width = Math.round(canvas.clientWidth * ratio);
     canvas.height = Math.round(canvas.clientHeight * ratio);
     dirty = true;
+    wake();
   };
   const observer = new ResizeObserver(resize);
   observer.observe(canvas);
-  resize();
   canvas.dataset.renderer = engine.kind;
   const draw = (now: number) => {
+    frame = 0;
     if (disposed) return;
+    if (document.hidden || !visible) {
+      last = 0;
+      canvas.dataset.activity = "idle";
+      return;
+    }
     const state = controls(),
       running = !state.paused && !document.hidden;
     if (last && running) time += Math.min((now - last) / 1000, 0.2);
@@ -483,21 +500,67 @@ export function createTemporalRenderer(
     const nextKey = `${state.paused}/${state.selected}/${state.hovered}`;
     if (nextKey !== key) dirty = true;
     key = nextKey;
-    if (dirty || (running && now - lastDraw >= 1000 / 30)) {
+    if (dirty || (running && now - lastDraw >= 1000 / (compact ? 24 : 30))) {
       dirty = false;
       lastDraw = now;
       engine.draw(time, state);
       canvas.dataset.rendered = "ready";
       canvas.dataset.motion = state.paused ? "still" : "flowing";
       canvas.dataset.time = time.toFixed(3);
+      canvas.dataset.activity = state.paused ? "paused" : "running";
     }
-    frame = requestAnimationFrame(draw);
+    if (running) wake();
+    else last = 0;
   };
-  frame = requestAnimationFrame(draw);
+  const update = () => {
+    dirty = true;
+    canvas.dataset.motion = controls().paused ? "still" : "flowing";
+    wake();
+  };
+  const visibility = () => {
+    if (document.hidden) {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      last = 0;
+      canvas.dataset.activity = "idle";
+    } else wake();
+  };
+  const checkViewport = () => {
+    // Read the current bounds: an observer entry can precede a rapid scroll.
+    const rect = monitor.getBoundingClientRect();
+    visible =
+      rect.width > 0 &&
+      rect.height > 0 &&
+      rect.bottom > -64 &&
+      rect.top < innerHeight + 64 &&
+      rect.right > -64 &&
+      rect.left < innerWidth + 64;
+    if (visible) wake();
+    else {
+      cancelAnimationFrame(frame);
+      frame = 0;
+      last = 0;
+      canvas.dataset.activity = "idle";
+    }
+  };
+  const viewport = new IntersectionObserver(checkViewport, {
+    rootMargin: "64px",
+  });
+  // Observe the monitor window, not the oversized canvas inside its panning area.
+  viewport.observe(monitor);
+  window.addEventListener("scroll", checkViewport, { passive: true });
+  canvas.addEventListener("watchverse:temporal-controls", update);
+  document.addEventListener("visibilitychange", visibility);
+  resize();
   return () => {
     disposed = true;
     cancelAnimationFrame(frame);
     observer.disconnect();
+    viewport.disconnect();
+    window.removeEventListener("scroll", checkViewport);
+    canvas.removeEventListener("watchverse:temporal-controls", update);
+    document.removeEventListener("visibilitychange", visibility);
     engine.dispose();
+    canvas.width = canvas.height = 0;
   };
 }

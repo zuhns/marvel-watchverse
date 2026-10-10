@@ -52,6 +52,7 @@ export function TemporalScreen({
   const signature = earths.map((e) => e.id).join(",");
   useEffect(() => {
     state.current = { paused: paused, selected, hovered };
+    canvas.current?.dispatchEvent(new Event("watchverse:temporal-controls"));
   }, [paused, selected, hovered]);
   useEffect(() => {
     if (!canvas.current) return;

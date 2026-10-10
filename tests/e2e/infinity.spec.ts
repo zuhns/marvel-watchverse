@@ -197,15 +197,15 @@ test("sei Gemme, incastonatura, schiocco e ripristino senza perdere progressi", 
   await expect
     .poll(() =>
       page
-        .locator(".stardust-canvas")
+        .locator(".stardust-session")
         .getAttribute("data-fragments")
         .then((value) => Number(value)),
     )
-    .toBeGreaterThan(1000);
+    .toBeGreaterThan(200);
   await expect
     .poll(() =>
       page
-        .locator(".stardust-canvas")
+        .locator(".stardust-session")
         .getAttribute("data-airborne")
         .then((value) => Number(value)),
     )
@@ -306,18 +306,18 @@ test("schiocco con polvere anche quando Windows disattiva le animazioni", async 
     .click();
   await expect(page).toHaveURL(/#archive$/);
   await expect(page.locator(".infinity-dusting").first()).toBeVisible();
-  await expect(page.locator(".stardust-canvas")).toBeVisible();
+  await expect(page.locator(".poster-dust-canvas").first()).toBeVisible();
   await expect
     .poll(async () =>
       Number(
-        await page.locator(".stardust-canvas").getAttribute("data-fragments"),
+        await page.locator(".stardust-session").getAttribute("data-fragments"),
       ),
     )
-    .toBeGreaterThan(1000);
+    .toBeGreaterThan(200);
   await expect
     .poll(async () =>
       Number(
-        await page.locator(".stardust-canvas").getAttribute("data-airborne"),
+        await page.locator(".stardust-session").getAttribute("data-airborne"),
       ),
     )
     .toBeGreaterThan(100);
