@@ -119,10 +119,14 @@ test("terminale TVA: flusso, suggerimenti, Terre confermate ed esplorazione", as
   expect(await canvas.getAttribute("data-time")).toBe(still);
   await page.getByRole("button", { name: "Riprendi animazioni" }).click();
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(canvas).toHaveAttribute("data-motion", "still");
-  const reduced = await canvas.getAttribute("data-time");
-  await page.waitForTimeout(250);
-  expect(await canvas.getAttribute("data-time")).toBe(reduced);
+  await expect(canvas).toHaveAttribute("data-motion", "flowing");
+  const reduced = Number(await canvas.getAttribute("data-time"));
+  await expect
+    .poll(async () => Number(await canvas.getAttribute("data-time")))
+    .toBeGreaterThan(reduced + 0.2);
+  await expect
+    .poll(() => minutes.evaluate((el: HTMLVideoElement) => el.paused))
+    .toBe(false);
   expect(errors).toEqual([]);
 });
 

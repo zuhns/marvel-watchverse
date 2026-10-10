@@ -72,7 +72,7 @@ test("Terre interattive, crossover, dossier esatto e animazioni accessibili", as
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator(".temporal-canvas")).toHaveAttribute(
     "data-motion",
-    "still",
+    "flowing",
   );
   for (const width of info.project.name === "mobile"
     ? [320, 390, 768]

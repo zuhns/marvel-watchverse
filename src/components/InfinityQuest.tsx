@@ -4,7 +4,6 @@ import {
   useEffect,
   useRef,
   useState,
-  useId,
   type ReactNode,
   type CSSProperties,
 } from "react";
@@ -19,6 +18,7 @@ import {
 import { titles } from "../lib/catalog";
 import { setCinematicAudio } from "../lib/cinematicAudio";
 import { Stardust } from "./Stardust";
+import { GemShape, GauntletArt } from "./InfinityArt";
 type Phase = "idle" | "dusting" | "snapped";
 type Quest = {
   collected: GemId[];
@@ -50,111 +50,9 @@ export function Gem({ id, className = "" }: { id: GemId; className?: string }) {
       aria-label={`Raccogli la Gemma ${gem.name}`}
       title="Una luce insolita…"
     >
-      <GemShape />
+      <GemShape id={id} />
       <span className="gem-spark" />
     </button>
-  );
-}
-function GemShape() {
-  return (
-    <svg viewBox="0 0 32 38" aria-hidden="true">
-      <path d="M16 1 28 9 31 22 16 37 1 22 4 9Z" fill="currentColor" />
-      <path d="m16 1 7 12-7 24-7-24Z" fill="#fff" opacity=".2" />
-      <path d="M4 9h24L16 37Z" fill="#fff" opacity=".12" />
-      <path d="m4 9 12-8 12 8-12 4Z" fill="#fff" opacity=".45" />
-      <path d="m1 22 8-9 7 24Z" fill="#050310" opacity=".25" />
-    </svg>
-  );
-}
-const sockets: Record<GemId, [number, number]> = {
-  soul: [25, 19],
-  reality: [40, 13],
-  power: [54, 13],
-  space: [68, 19],
-  time: [84, 52],
-  mind: [48, 59],
-};
-export function GauntletArt({
-  inserted = [],
-  small = false,
-}: {
-  inserted?: GemId[];
-  small?: boolean;
-}) {
-  const uid = useId().replace(/:/g, "");
-  return (
-    <svg className="gauntlet-art" viewBox="0 0 240 280" aria-hidden="true">
-      <defs>
-        <linearGradient id={`${uid}gold`} x1="0" y1="0" x2="1" y2=".6">
-          <stop stopColor="#423018" />
-          <stop offset=".25" stopColor="#b59142" />
-          <stop offset=".43" stopColor="#f7d57e" />
-          <stop offset=".58" stopColor="#6c491d" />
-          <stop offset=".8" stopColor="#d5aa4f" />
-          <stop offset="1" stopColor="#43311b" />
-        </linearGradient>
-        <linearGradient id={`${uid}plate`} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#e4be6a" />
-          <stop offset=".5" stopColor="#8a6029" />
-          <stop offset="1" stopColor="#392716" />
-        </linearGradient>
-        <filter id={`${uid}glow`}>
-          <feGaussianBlur stdDeviation="3" />
-        </filter>
-      </defs>
-      <g
-        fill={`url(#${uid}gold)`}
-        stroke="#d7ae58"
-        strokeWidth="1.1"
-        strokeLinejoin="round"
-      >
-        <path d="m55 240-14-58-5-80 5-51q4-10 16-5l9 13 1 45 6-10-3-58q0-12 11-13 13-2 17 12l5 55 5-6-2-54q0-14 13-14t15 14l4 56 7 8 2-43q1-12 13-11t12 13l-1 64 7 38 19-25q7-10 17-2t1 21l-26 49-15 59-11 21Z" />
-        <path
-          d="m49 111 26-14 18-3 18 5 22-6 34 14 7 37-20 43-57 26-42-23Z"
-          fill={`url(#${uid}plate)`}
-        />
-        <path d="m57 208 97 5 6 30-101 12Z" />
-        <path d="m58 254 99-8-1 27H66Z" />
-        <path d="m51 128 20-18 23 9-5 34-26 27-7-31Z" />
-        <path d="m130 111 25-2 13 35-21 37-19-12Z" />
-        <path
-          d="m89 118 31-8 21 23-13 48-24 16-27-26Z"
-          fill={`url(#${uid}gold)`}
-        />
-      </g>
-      <g fill="none" stroke="#f4d683" strokeWidth="1" opacity=".55">
-        <path d="m47 69 17-2m-19 14 20-2m8-32 25-2m-24 15 26-3m9-14 27-1m-27 14 28-1m16 9 20 1m-20 12 20 1M65 218l71 8-55 13m-22-39 20-13m66-7-14 24M66 260l79-3" />
-        <path d="m103 113 12 8-9 18m-8 39 8 10 14-14m-57-46 11 4-7 17m86-33-7 16" />
-      </g>
-      {gems.map((g) => {
-        const [x, y] = sockets[g.id];
-        const has = inserted.includes(g.id);
-        return (
-          <g key={g.id} transform={`translate(${x * 2.4} ${y * 2.8})`}>
-            <ellipse
-              rx={g.id === "mind" ? 16 : 10}
-              ry={g.id === "mind" ? 20 : 12}
-              fill="#251b14"
-              stroke="#e5bf66"
-              strokeWidth="3"
-            />
-            {has && (
-              <>
-                <ellipse
-                  rx="13"
-                  ry="16"
-                  fill={g.color}
-                  opacity=".6"
-                  filter={small ? undefined : `url(#${uid}glow)`}
-                />
-                <path d="m0-10 7 5 2 9-9 8-9-8 2-9Z" fill={g.color} />
-                <path d="m0-10 3 7-3 15-3-15Z" fill="#fff" opacity=".5" />
-              </>
-            )}
-          </g>
-        );
-      })}
-    </svg>
   );
 }
 export function InfinityProvider({ children }: { children: ReactNode }) {
@@ -273,15 +171,12 @@ export function InfinityProvider({ children }: { children: ReactNode }) {
     }
     const dissolve = () => {
       setTargets(snapTargets(movieIds, visibleMovies()));
-      finishTimer.current = setTimeout(
-        () => {
-          setPhase("snapped");
-          setNotice(
-            "L’equilibrio è compiuto. Puoi riportare indietro tutte le storie.",
-          );
-        },
-        matchMedia("(prefers-reduced-motion: reduce)").matches ? 450 : 5400,
-      );
+      finishTimer.current = setTimeout(() => {
+        setPhase("snapped");
+        setNotice(
+          "L’equilibrio è compiuto. Puoi riportare indietro tutte le storie.",
+        );
+      }, 5400);
     };
     if (visibleMovies().length) dissolve();
     else {
@@ -408,7 +303,7 @@ export function InfinityProvider({ children }: { children: ReactNode }) {
                 }
                 aria-label={`${found.inserted.includes(g.id) ? "Incastonata" : "Incastona"} Gemma ${g.name}`}
               >
-                <GemShape />
+                <GemShape id={g.id} />
                 <span>{g.name}</span>
               </button>
             ))}

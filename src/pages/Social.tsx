@@ -33,6 +33,9 @@ export function Social({
   const [data, setData] = useState<SocialData>({ friends: [], marathons: [] });
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+  const [refreshedAt, setRefreshedAt] = useState<Date | null>(null);
+  const requestBusy = useRef(false);
   const [friend, setFriend] = useState("");
   const [partner, setPartner] = useState("");
   const [name, setName] = useState("");
@@ -42,12 +45,18 @@ export function Social({
   const [limit, setLimit] = useState(30);
   const viewSequence = useRef(0);
   const refresh = useCallback(async () => {
-    if (!username || !cloudConfigured) return;
+    if (!username || !cloudConfigured || requestBusy.current) return;
+    requestBusy.current = true;
+    setRefreshing(true);
     try {
       setData(await socialRequest(username));
       setError("");
+      setRefreshedAt(new Date());
     } catch (e) {
       setError(e instanceof Error ? e.message : "Servizio non disponibile.");
+    } finally {
+      requestBusy.current = false;
+      setRefreshing(false);
     }
   }, [username]);
   useEffect(() => {
@@ -66,7 +75,8 @@ export function Social({
     action: string,
     values: { friend?: string; name?: string; marathonId?: string },
   ) {
-    if (!username) return;
+    if (!username || requestBusy.current) return;
+    requestBusy.current = true;
     setBusy(true);
     setError("");
     try {
@@ -76,10 +86,13 @@ export function Social({
       setError(e instanceof Error ? e.message : "Operazione non riuscita.");
       return false;
     } finally {
+      requestBusy.current = false;
       setBusy(false);
     }
   }
   async function showFriend(friend: string) {
+    if (requestBusy.current) return;
+    requestBusy.current = true;
     const sequence = ++viewSequence.current;
     setBusy(true);
     setError("");
@@ -98,6 +111,7 @@ export function Social({
     } catch (e) {
       setError(e instanceof Error ? e.message : "Profilo non disponibile.");
     } finally {
+      requestBusy.current = false;
       setBusy(false);
     }
   }
@@ -153,7 +167,7 @@ export function Social({
                 <button
                   className="icon-button"
                   aria-label="Aggiorna amici e inviti"
-                  disabled={busy}
+                  disabled={busy || refreshing}
                   onClick={() => void refresh()}
                 >
                   <RefreshCw size={17} />
@@ -187,7 +201,10 @@ export function Social({
                   maxLength={32}
                   required
                 />
-                <button className="button primary" disabled={busy}>
+                <button
+                  className="button primary"
+                  disabled={busy || refreshing}
+                >
                   <UserPlus size={16} /> Aggiungi amico
                 </button>
               </form>
@@ -197,7 +214,7 @@ export function Social({
                     <div className="friend-row" key={friend}>
                       <button
                         className={view?.username === friend ? "active" : ""}
-                        disabled={busy}
+                        disabled={busy || refreshing}
                         onClick={() => void showFriend(friend)}
                         aria-label={`Vedi progressi di ${friend}`}
                       >
@@ -210,7 +227,7 @@ export function Social({
                       <button
                         className="icon-button"
                         aria-label={`Rimuovi amico ${friend}`}
-                        disabled={busy}
+                        disabled={busy || refreshing}
                         onClick={async () => {
                           if (await action("friend_remove", { friend }))
                             if (view?.username === friend) setView(null);
@@ -231,9 +248,34 @@ export function Social({
               className="social-panel"
               aria-labelledby="marathons-heading"
             >
-              <h2 id="marathons-heading">
-                <Clapperboard size={23} /> Maratone
-              </h2>
+              <div className="social-heading marathon-heading">
+                <h2 id="marathons-heading">
+                  <Clapperboard size={23} /> Maratone
+                </h2>
+                <button
+                  className="text-link marathon-refresh"
+                  aria-label="Aggiorna richieste di maratona"
+                  disabled={busy || refreshing}
+                  onClick={() => void refresh()}
+                >
+                  <RefreshCw
+                    size={15}
+                    className={refreshing ? "refresh-spinning" : ""}
+                  />
+                  {refreshing ? "Aggiornamento…" : "Aggiorna richieste"}
+                </button>
+              </div>
+              <span
+                className="marathon-refresh-status"
+                role="status"
+                aria-live="polite"
+              >
+                {refreshing
+                  ? "Controllo nuovi inviti…"
+                  : refreshedAt
+                    ? `Richieste aggiornate alle ${refreshedAt.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" })}`
+                    : ""}
+              </span>
               <p>
                 Crea un percorso comune e invita una persona. Quando accetta,
                 potrete segnare i titoli visti insieme.
@@ -281,7 +323,10 @@ export function Social({
                     <option key={friend} value={friend} />
                   ))}
                 </datalist>
-                <button className="button primary" disabled={busy}>
+                <button
+                  className="button primary"
+                  disabled={busy || refreshing}
+                >
                   Crea e invia invito <ArrowRight size={16} />
                 </button>
               </form>
@@ -307,7 +352,7 @@ export function Social({
                         <div className="marathon-actions">
                           <button
                             className="button primary"
-                            disabled={busy}
+                            disabled={busy || refreshing}
                             onClick={() =>
                               void action("marathon_accept", {
                                 marathonId: m.id,
@@ -318,7 +363,7 @@ export function Social({
                           </button>
                           <button
                             className="button secondary"
-                            disabled={busy}
+                            disabled={busy || refreshing}
                             onClick={() =>
                               void action("marathon_decline", {
                                 marathonId: m.id,
@@ -365,7 +410,7 @@ export function Social({
               </h2>
               <button
                 className="text-link"
-                disabled={busy}
+                disabled={busy || refreshing}
                 onClick={() => void showFriend(view.username)}
               >
                 <RefreshCw size={15} /> Aggiorna progressi

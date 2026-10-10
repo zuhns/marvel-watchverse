@@ -169,6 +169,11 @@ test("sei Gemme, incastonatura, schiocco e ripristino senza perdere progressi", 
     await page
       .getByRole("button", { name: `Incastona Gemma ${gem}`, exact: true })
       .click();
+  await expect(page.locator(".gauntlet-relic .gauntlet-stone")).toHaveCount(6);
+  await expect(page.locator(".gauntlet-relic .stone-soul")).toHaveCSS(
+    "opacity",
+    "1",
+  );
   await page.screenshot({
     path: `reports/infinity-gauntlet-${test.info().project.name}.png`,
   });
@@ -277,7 +282,7 @@ test("sei Gemme, incastonatura, schiocco e ripristino senza perdere progressi", 
     .toBe(true);
 });
 
-test("schiocco dal footer esplorabile anche con movimento ridotto", async ({
+test("schiocco con polvere anche quando Windows disattiva le animazioni", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -301,9 +306,25 @@ test("schiocco dal footer esplorabile anche con movimento ridotto", async ({
     .click();
   await expect(page).toHaveURL(/#archive$/);
   await expect(page.locator(".infinity-dusting").first()).toBeVisible();
-  await expect(page.locator(".stardust-canvas")).toBeHidden();
+  await expect(page.locator(".stardust-canvas")).toBeVisible();
   await expect
-    .poll(() => page.locator(".movie-card:not(.infinity-vacant)").count())
+    .poll(async () =>
+      Number(
+        await page.locator(".stardust-canvas").getAttribute("data-fragments"),
+      ),
+    )
+    .toBeGreaterThan(1000);
+  await expect
+    .poll(async () =>
+      Number(
+        await page.locator(".stardust-canvas").getAttribute("data-airborne"),
+      ),
+    )
+    .toBeGreaterThan(100);
+  await expect
+    .poll(() => page.locator(".movie-card:not(.infinity-vacant)").count(), {
+      timeout: 8000,
+    })
     .toBeLessThan(30);
   await expect(page.locator(".movie-card")).toHaveCount(30);
   await page

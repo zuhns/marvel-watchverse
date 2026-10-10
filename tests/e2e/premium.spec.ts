@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
-test("le animazioni conservano visibili i nuovi contenuti e rispettano il movimento ridotto", async ({
+test("le animazioni restano attive con gli effetti Windows disattivati", async ({
   page,
 }) => {
   await page.goto("#archive");
@@ -19,14 +19,26 @@ test("le animazioni conservano visibili i nuovi contenuti e rispettano il movime
   await expect(added).toHaveAttribute("data-reveal", "visible");
   await expect(added).toHaveCSS("opacity", "1");
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await expect(page.locator('[data-reveal="pending"]')).toHaveCount(0);
+  await expect(first).toHaveCSS("transition-duration", "0.65s, 0.7s");
   await page.getByLabel("Cerca titoli").fill("Spider-Man");
   await expect(page.locator(".movie-card").first()).toContainText("Spider-Man");
   await expect(page.locator(".movie-card").first()).toHaveCSS("opacity", "1");
   await page.goto("#universes");
   await expect(page.locator(".temporal-canvas")).toHaveAttribute(
     "data-motion",
-    "still",
+    "flowing",
+  );
+  const time = Number(
+    await page.locator(".temporal-canvas").getAttribute("data-time"),
+  );
+  await expect
+    .poll(async () =>
+      Number(await page.locator(".temporal-canvas").getAttribute("data-time")),
+    )
+    .toBeGreaterThan(time + 0.2);
+  await expect(page.locator(".hardware-meter i").first()).toHaveCSS(
+    "animation-name",
+    "instrument-level",
   );
   await expect(page.locator(".crt-carry-handle")).toBeVisible();
   await expect(page.locator(".tva-crt")).toBeVisible();

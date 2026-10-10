@@ -8,6 +8,6 @@
 - `temporal-score.m4a`: composizione originale MARVEL WATCHVERSE di 96 secondi, generata da `scripts/compose-temporal-score.mjs`. Non contiene registrazioni o campioni della colonna sonora di Loki.
 - `infinity-snap.m4a`: composizione originale di 14 secondi, generata da `scripts/compose-infinity-score.mjs`: sub-bassi, coro sintetico dissonante, campane e vento. Non contiene campioni di colonne sonore Marvel. Analisi in `reports/infinity-score-analysis.json`.
 - Opening di prima visita: lettore audio nativo; nessun player YouTube. Il file della sigla deve ancora essere fornito e non è incluso nel repository. Configurazione in `public/data/opening-audio.json`.
-- Guanto e Gemme: illustrazioni SVG create nel codice del sito, ispirate ai personaggi e agli oggetti Marvel.
+- `infinity-gauntlet-v2.webp`: asset CGI generato con lo strumento integrato image_gen, ispirato al Guanto di Infinity War; non è un asset originale del film. Metallo trasparente con sedi vuote, gemme e luminescenze SVG animate nel codice. Prompt e riferimento alla replica Hasbro in `reports/gauntlet-design.md`.
 
 Il logo e Miss Minutes appartengono ai rispettivi titolari e non rientrano nella licenza MIT del codice. Progetto fan-made indipendente, non affiliato a Marvel o Disney. I font dei testi sono una scelta grafica ispirata alla segnaletica TVA; non vengono presentati come font ufficiali della serie.

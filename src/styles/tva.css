@@ -1177,12 +1177,6 @@
     max-width: none;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .tva-page * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
 
 /* Industrial TVA: charcoal equipment, orange enamel and amber instruments. */
 .tva-site-header.site-header {
@@ -1905,11 +1899,7 @@
     font-size: 16px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .hardware-meter i {
-    animation: none;
-  }
-}
+
 .hardware-plaque img {
   width: 58px;
   height: 27px;

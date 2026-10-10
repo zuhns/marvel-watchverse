@@ -223,7 +223,7 @@ function Watchverse({
   };
   const props = { p, change, watched, toggle, open: setSelected };
   return (
-    <MotionConfig reducedMotion="user">
+    <MotionConfig reducedMotion="never">
       <Header
         page={page}
         percent={s.percent}

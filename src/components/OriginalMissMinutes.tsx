@@ -1,24 +1,24 @@
 import { useEffect, useRef, useState } from "react";
-import { useTemporalMotion } from "../hooks/useTemporalMotion";
+
 export function TvaMascot({ paused = false }: { paused?: boolean }) {
   const video = useRef<HTMLVideoElement>(null);
   const [fallback, setFallback] = useState(false);
-  const reduced = useTemporalMotion();
+
   useEffect(() => {
     const element = video.current;
     const apply = () => {
       if (!element) return;
-      if (paused || reduced || document.hidden) element.pause();
+      if (paused || document.hidden) element.pause();
       else void element.play().catch(() => setFallback(true));
     };
     apply();
     document.addEventListener("visibilitychange", apply);
     return () => document.removeEventListener("visibilitychange", apply);
-  }, [paused, reduced, fallback]);
+  }, [paused, fallback]);
   return fallback ? (
     <img
       className="miss-minutes"
-      src={`${import.meta.env.BASE_URL}assets/${paused || reduced ? "miss-minutes-poster.png" : "miss-minutes-original.gif"}`}
+      src={`${import.meta.env.BASE_URL}assets/${paused ? "miss-minutes-poster.png" : "miss-minutes-original.gif"}`}
       alt="Miss Minutes, guida della TVA"
     />
   ) : (

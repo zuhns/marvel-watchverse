@@ -9,7 +9,7 @@ import {
   VolumeX,
 } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useTemporalMotion } from "../hooks/useTemporalMotion";
+
 import {
   confirmedEarths,
   earthById,
@@ -55,7 +55,7 @@ export function SacredTimeline({
   const [mapFormat, setMapFormat] = useState<Format | "all">("all");
   const [limit, setLimit] = useState(12);
   const [menuHover, setMenuHover] = useState<number | null>(null);
-  const reduced = useTemporalMotion();
+
   const sound = useTvaAmbience(paused);
   const selected = earthById(selectedId);
   const available = confirmedEarths.filter(
@@ -100,7 +100,7 @@ export function SacredTimeline({
             initial={false}
             animate={{ left: ((menuPosition + 0.5) / 3) * 100 + "%" }}
             transition={{
-              duration: reduced ? 0 : 0.55,
+              duration: 0.55,
               ease: [0.22, 1, 0.36, 1],
             }}
           >
@@ -277,7 +277,7 @@ export function SacredTimeline({
           onClick={(e) => {
             e.preventDefault();
             document.getElementById("earth-dossier")?.scrollIntoView({
-              behavior: reduced ? "instant" : "smooth",
+              behavior: "smooth",
               block: "start",
             });
           }}

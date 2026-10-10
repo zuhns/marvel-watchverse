@@ -304,6 +304,30 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.marathon-heading {
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+.marathon-refresh {
+  font-size: 11px;
+  gap: 7px;
+  white-space: nowrap;
+}
+.marathon-refresh-status {
+  display: block;
+  min-height: 16px;
+  margin: 3px 0 10px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.refresh-spinning {
+  animation: request-refresh 0.9s linear infinite;
+}
+@keyframes request-refresh {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .social-panel form {
   display: flex;
   gap: 10px;
@@ -2320,18 +2344,7 @@ footer p a {
     display: none;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *:before,
-  *:after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
+
 .franchise-progress {
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -3393,15 +3406,7 @@ footer p a {
     max-width: calc(100% - 35px);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  .tva-observatory * {
-    animation: none !important;
-    transition: none !important;
-  }
-}
+
 .earth-progress .progress-track > div {
   background: var(--earth-color);
 }
@@ -3893,27 +3898,7 @@ footer {
     display: none;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    transition-delay: 0ms !important;
-  }
-  [data-reveal] {
-    opacity: 1 !important;
-    translate: none !important;
-  }
-  .hero-copy > * {
-    opacity: 1;
-    transform: none;
-  }
-}
+
 .continue-card {
   border: 1px solid #ffffff1c;
   background: linear-gradient(115deg, #211820, #11131a);

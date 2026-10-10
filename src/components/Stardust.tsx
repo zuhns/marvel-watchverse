@@ -28,7 +28,6 @@ type Poster = {
 export function Stardust({ targets }: { targets: Set<string> }) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const canvas = ref.current!,
       ctx = canvas.getContext("2d");
     if (!ctx) return;

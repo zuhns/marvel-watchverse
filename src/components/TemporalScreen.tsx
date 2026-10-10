@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Minus, Plus, MoveHorizontal, Crosshair } from "lucide-react";
-import { useTemporalMotion } from "../hooks/useTemporalMotion";
+
 import type { Earth } from "../lib/multiverse";
 import {
   createTemporalRenderer,
@@ -34,11 +34,11 @@ export function TemporalScreen({
 }) {
   const [hovered, setHovered] = useState<string | null>(null);
   const [zoom, setZoom] = useState(1);
-  const reduced = useTemporalMotion();
+
   const viewport = useRef<HTMLDivElement>(null),
     canvas = useRef<HTMLCanvasElement>(null);
   const state = useRef<TemporalControls>({
-    paused: paused || !!reduced,
+    paused: paused,
     selected,
     hovered,
   });
@@ -51,8 +51,8 @@ export function TemporalScreen({
   const nodes = [{ earth: root, x: 0.52, y: 0.62 }, ...anchors];
   const signature = earths.map((e) => e.id).join(",");
   useEffect(() => {
-    state.current = { paused: paused || !!reduced, selected, hovered };
-  }, [paused, reduced, selected, hovered]);
+    state.current = { paused: paused, selected, hovered };
+  }, [paused, selected, hovered]);
   useEffect(() => {
     if (!canvas.current) return;
     return createTemporalRenderer(
@@ -108,7 +108,7 @@ export function TemporalScreen({
   const pan = (amount: number) =>
     viewport.current?.scrollBy({
       left: amount,
-      behavior: reduced ? "instant" : "smooth",
+      behavior: "smooth",
     });
   return (
     <div className="tva-crt">
@@ -177,9 +177,17 @@ export function TemporalScreen({
                   }
                   data-earth-id={earth.id}
                   onMouseEnter={() => setHovered(earth.id)}
-                  onMouseLeave={() => setHovered(null)}
+                  onMouseLeave={() =>
+                    setHovered((current) =>
+                      current === earth.id ? null : current,
+                    )
+                  }
                   onFocus={() => setHovered(earth.id)}
-                  onBlur={() => setHovered(null)}
+                  onBlur={() =>
+                    setHovered((current) =>
+                      current === earth.id ? null : current,
+                    )
+                  }
                   onClick={() => onSelect(earth)}
                   onKeyDown={(e) => {
                     if (
@@ -255,7 +263,7 @@ export function TemporalScreen({
             </span>
             <span className="crt-live">
               <i />
-              {paused || reduced ? "IMMAGINE FERMA" : "FLUSSO TEMPORALE ATTIVO"}
+              {paused ? "IMMAGINE FERMA" : "FLUSSO TEMPORALE ATTIVO"}
             </span>
           </div>
         </div>
@@ -269,7 +277,7 @@ export function TemporalScreen({
           </div>
           <div className="hardware-readout">
             <small>TEMPORAL LINK</small>
-            <b>{paused || reduced ? "HOLD" : "ONLINE"}</b>
+            <b>{paused ? "HOLD" : "ONLINE"}</b>
             <div className="hardware-meter">
               {Array.from({ length: 9 }, (_, i) => (
                 <i key={i} style={{ animationDelay: `${i * -0.27}s` }} />
@@ -332,7 +340,7 @@ export function TemporalScreen({
               if (node)
                 viewport.current!.scrollTo({
                   left: node.offsetLeft - viewport.current!.clientWidth / 2,
-                  behavior: reduced ? "instant" : "smooth",
+                  behavior: "smooth",
                 });
             }}
           >
