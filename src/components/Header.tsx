@@ -35,6 +35,7 @@ export function Header({
             href={`#${id}`}
             key={id}
             className={page === id ? "current" : ""}
+            aria-current={page === id ? "page" : undefined}
             onClick={() => setOpen(false)}
           >
             {label}

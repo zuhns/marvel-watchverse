@@ -32,7 +32,7 @@ attribute vec4 aShape;
 attribute vec3 aStyle;
 uniform float uTime, uDpr, uSelected, uHovered;
 uniform vec2 uResolution;
-varying float vSide, vAlong, vSeed, vAlpha, vActive;
+varying float vSide, vAlong, vSeed, vAlpha, vActive, vDepth;
 vec2 curve(float s) {
   float seed=aShape.z, kind=aStyle.y;
   float x=mix(aStart.x,aEnd.x,s);
@@ -41,11 +41,14 @@ vec2 curve(float s) {
   float y;
   if(kind<.5) {
     y=.625+sin(x*9.0-uTime*.22)*.038+cos(x*21.0+uTime*.35)*.015;
-    y+=sin(seed)*.024+cos(seed*3.0)*.011+noise*.011;
-    y+=sin(x*(14.0+sin(seed)*8.0)-uTime*1.1+seed)*.014;
+    float coil=x*(12.0+sin(seed)*5.0)-uTime*.42+seed;
+    y+=sin(coil)*(.022+cos(seed)*.014)+noise*.009;
+    y+=cos(seed*3.0)*.012+sin(x*21.0-uTime*.7+seed)*.011;
   } else {
     float envelope=sin(s*3.14159265);
-    y=mix(aStart.y,aEnd.y,pow(s,1.32));
+    float origin=aStart.y;
+    if(kind<1.5) origin=.625+sin(aStart.x*9.0-uTime*.22)*.038+cos(aStart.x*21.0+uTime*.35)*.015;
+    y=mix(origin,aEnd.y,pow(s,1.32));
     y+=envelope*(sin(s*7.0+seed*.12+uTime*.5)*.018+noise*.012);
     y+=envelope*sin(seed)*.009;
     x+=envelope*sin(seed*.3+uTime*.35)*.008;
@@ -57,23 +60,26 @@ void main() {
   vec2 p=curve(s);
   vec2 tangent=normalize((curve(min(1.0,s+.006))-curve(max(0.0,s-.006)))*uResolution);
   vec2 normal=vec2(-tangent.y,tangent.x);
-  p+=normal*aShape.y*aShape.w*uDpr/uResolution;
+  float depth=.5+.5*cos(s*12.0-uTime*.42+aShape.z);
+  p+=normal*aShape.y*aShape.w*(.7+depth*.75)*uDpr/uResolution;
   gl_Position=vec4(p.x*2.0-1.0,1.0-p.y*2.0,0.0,1.0);
   vSide=aShape.y; vAlong=s; vSeed=aShape.z; vAlpha=aStyle.x;
+  vDepth=depth;
   vActive=(abs(aStyle.z-uSelected)<.1||abs(aStyle.z-uHovered)<.1)?1.0:0.0;
 }
 `;
 const fragment = `
 precision highp float;
 uniform float uTime;
-varying float vSide, vAlong, vSeed, vAlpha, vActive;
+varying float vSide, vAlong, vSeed, vAlpha, vActive, vDepth;
 void main() {
-  float glow=exp(-vSide*vSide*4.5);
+  float glow=exp(-vSide*vSide*(2.8+vDepth*5.0));
   float pulse=pow(.5+.5*sin(vAlong*38.0-uTime*4.7+vSeed),8.0);
   float surge=.65+.35*sin(vAlong*14.0-uTime*1.3+vSeed*.2);
   vec3 color=mix(vec3(.37,.68,1.0),vec3(.8,.52,.94),.5+.5*sin(vSeed*1.7));
   color=mix(color,vec3(.9,.96,1.0),pulse*.8+vActive*.15);
-  float energy=glow*vAlpha*(surge+pulse*1.6)*(1.0+vActive*.5);
+  float detail=.72+.28*sin(vAlong*380.0-uTime*12.0+vSeed*4.0);
+  float energy=glow*vAlpha*(surge+pulse*1.3)*detail*(.45+vDepth*.8)*(1.0+vActive*.4);
   gl_FragColor=vec4(color*energy,1.0);
 }
 `;
@@ -84,17 +90,25 @@ varying vec2 vUv;
 uniform float uTime;
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y);}
+float fbm(vec2 p){float n=0.,a=.5;for(int i=0;i<4;i++){n+=noise(p)*a;p=mat2(.8,-.6,.6,.8)*p*2.08+3.7;a*=.5;}return n;}
 void main(){
  vec2 p=vUv;
  float middle=.625+sin(p.x*9.-uTime*.22)*.038+cos(p.x*21.+uTime*.35)*.015;
- float mist=noise(vec2(p.x*7.+uTime*.11,p.y*14.-uTime*.03));
- mist+=noise(vec2(p.x*19.-uTime*.25,p.y*31.))* .35;
- float halo=exp(-pow(abs(p.y-middle)/( .026+mist*.029),1.6));
- vec3 color=vec3(.002,.011,.029)+vec3(.1,.2,.36)*halo*(.3+mist*.2);
- color+=vec3(.026,.035,.075)*mist;
- vec2 grid=vec2(p.x*180.+uTime*1.8,p.y*110.);
- float star=step(.993,hash(floor(grid)))*exp(-length(fract(grid)-.5)*14.);
- color+=vec3(.3,.5,.8)*star*(.65+.35*sin(uTime+grid.x));
+ vec2 flow=vec2(p.x*6.-uTime*.12,(p.y-middle)*15.);
+ float mist=fbm(flow+vec2(fbm(flow*.8+uTime*.03),fbm(flow*.9-5.)));
+ float halo=exp(-pow(abs(p.y-middle)/(.038+mist*.07),1.65));
+ float cloud=pow(mist,1.9)*halo;
+ vec3 color=vec3(.006,.011,.026)+mix(vec3(.08,.20,.34),vec3(.28,.12,.28),mist)*cloud*1.9;
+ color+=vec3(.04,.055,.12)*fbm(p*vec2(5.,10.)+vec2(-uTime*.014,0.))*.55;
+ for(int layer=0;layer<3;layer++){
+   float z=float(layer);
+   vec2 grid=vec2(p.x*(125.+z*80.)+uTime*(.9+z*.8),p.y*(72.+z*35.));
+   vec2 cell=floor(grid),delta=fract(grid)-.5;
+   float seed=hash(cell+z*43.);
+   float dust=step(.993-z*.002,seed)*exp(-dot(delta*vec2(.7,1.4),delta*vec2(.7,1.4))*(50.+z*30.));
+   float drift=.3+.7*pow(.5+.5*sin(uTime*.6+seed*70.),3.);
+   color+=mix(vec3(.52,.68,.9),vec3(.86,.65,.8),seed)*dust*drift*(.17+halo*.6);
+ }
  color*=1.-smoothstep(.23,.86,length((p-.5)*vec2(.9,1.1)));
  gl_FragColor=vec4(color,1.);
 }`;
@@ -112,19 +126,22 @@ void main() {
    vec2 direction=vec2(cos(angle),sin(angle));
    glow+=texture2D(uScene,uv+direction*uTexel*4.).rgb*.045;
    glow+=texture2D(uScene,uv+direction*uTexel*11.).rgb*.026;
+   glow+=texture2D(uScene,uv+direction*uTexel*23.).rgb*.014;
  }
- gl_FragColor=vec4(line*.67+glow*2.4,1.);
+ vec3 light=line*.7+glow*2.1;
+ light=vec3(1.)-exp(-light*1.4);
+ gl_FragColor=vec4(light,1.);
 }`;
 function strands(anchors: TemporalAnchor[]) {
   const rand = random(7021986),
     result: Strand[] = [];
-  for (let i = 0; i < 46; i++)
+  for (let i = 0; i < 64; i++)
     result.push({
       start: { x: -0.03, y: 0.625 },
       end: { x: 1.03, y: 0.625 },
       seed: i * 0.71,
-      width: i < 8 ? 12 + i : 0.8 + rand() * 3,
-      alpha: i < 8 ? 0.012 : 0.045 + rand() * 0.05,
+      width: i < 12 ? 12 + i * 1.5 : 0.55 + rand() * 2.2,
+      alpha: i < 12 ? 0.009 : 0.055 + rand() * 0.065,
       kind: 0,
       route: -1,
     });

@@ -20,6 +20,11 @@ export function Hero({
     .filter(Boolean) as Title[];
   return (
     <section className="hero">
+      <div className="hero-orbit" aria-hidden="true">
+        <i />
+        <i />
+        <i />
+      </div>
       <div className="hero-grain" />
       <div className="hero-copy">
         <div className="eyebrow">
@@ -56,7 +61,9 @@ export function Hero({
         )}
         <div className="hero-footnote">
           <span>UN ARCHIVIO. INFINITE CONNESSIONI.</span>
-          <ArrowDown size={17} />
+          <a href="#archive" aria-label="Vai all’archivio">
+            <ArrowDown size={17} />
+          </a>
         </div>
       </div>
       <div className="hero-collage" aria-label="Le storie del multiverso">

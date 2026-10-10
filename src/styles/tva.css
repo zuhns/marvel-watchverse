@@ -1183,3 +1183,737 @@
     transition: none !important;
   }
 }
+
+/* Industrial TVA: charcoal equipment, orange enamel and amber instruments. */
+.tva-site-header.site-header {
+  background: #111311ed;
+  color: #f2eadb;
+  border-color: #da6a283d;
+}
+.tva-site-header .brand span {
+  background: #cf5e27;
+  color: #fff5e8;
+}
+.tva-site-header.site-header nav a {
+  color: #aca99e;
+}
+.tva-site-header.site-header nav a:hover,
+.tva-site-header.site-header nav a.current {
+  color: #ffaf6c;
+  border-color: #e77b38;
+}
+.tva-site-header .account-button,
+.tva-site-header .icon-button,
+.tva-site-header .completion {
+  color: #e4d9c7;
+}
+.tva-site-header .completion-dot {
+  border-color: #75452b;
+  border-top-color: #ed8d48;
+}
+.tva-page {
+  --tva-ink: #e8dfcd;
+  --tva-rust: #f29450;
+  --tva-paper: #1b1d18;
+  color: var(--tva-ink);
+  background:
+    radial-gradient(ellipse at 85% 0%, #76402220, transparent 45%),
+    radial-gradient(ellipse at 5% 35%, #414a2b15, transparent 50%), #151713;
+  padding-top: 40px;
+  position: relative;
+  isolation: isolate;
+}
+.tva-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.17;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.4' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.tva-page button:focus-visible,
+.tva-page a:focus-visible,
+.tva-page select:focus-visible,
+.tva-page input:focus-visible {
+  outline-color: #ffaf65;
+}
+.tva-page-heading {
+  border-color: #d8915130;
+}
+.tva-wordmark > span {
+  border-color: #e8dfcd3d;
+  color: #d5c9b3;
+}
+.tva-official-logo {
+  filter: brightness(0) saturate(100%) invert(54%) sepia(63%) saturate(721%)
+    hue-rotate(338deg) brightness(102%) contrast(90%);
+}
+.tva-file-stamp {
+  color: #daaa77;
+}
+.tva-file-stamp small {
+  color: #a59f8f;
+  font-size: 9px;
+}
+.tva-kicker {
+  color: #c79263;
+  font-size: 9px;
+}
+.tva-page-intro {
+  padding: 34px 0 38px;
+}
+.tva-page-intro h1 {
+  color: #efe8d8;
+  font-size: clamp(44px, 5vw, 74px);
+}
+.tva-page-intro h1 em {
+  color: #f0924d;
+}
+.tva-page-intro > p {
+  color: #b4b1a3;
+  border-color: #cc9b663d;
+}
+.tva-route-navigation {
+  border-color: #cc9b662b;
+}
+.tva-menu-mascot {
+  filter: drop-shadow(0 8px 8px #0008);
+}
+.minutes-message {
+  color: #c1aa8a;
+}
+.tva-page .tva-sector-tabs {
+  border-color: #76654b6b;
+  border-radius: 3px;
+  box-shadow: 0 6px 16px #0003;
+}
+.tva-page .tva-sector-tabs button {
+  color: #c8c0ad;
+  background: linear-gradient(#303028, #22241e);
+  border-color: #6e644340;
+  transition:
+    background 0.35s,
+    color 0.35s,
+    box-shadow 0.35s;
+}
+.tva-page .tva-sector-tabs button > span {
+  color: #ab8b67;
+}
+.tva-page .tva-sector-tabs button[aria-pressed="true"] {
+  color: #201a13;
+  background: linear-gradient(#e58f4d, #c36b35);
+  box-shadow: inset 0 1px 0 #ffe6b944;
+}
+.tva-page .tva-sector-tabs button[aria-pressed="true"] > span {
+  color: #5e341d;
+}
+.tva-page .tva-sector-tabs button:hover {
+  color: #f7d8b2;
+  background: #4a3928;
+}
+.tva-page .tva-sector-tabs button[aria-pressed="true"]:hover {
+  color: #1f1710;
+  background: #efa15b;
+}
+.tva-instrument-bar {
+  color: #c3b395;
+  padding: 23px 2px 28px;
+}
+.tva-instrument-bar > label {
+  font-size: 9px;
+}
+.tva-instrument-bar select,
+.tva-page .earth-navigation select {
+  color: #e5d5b8;
+  background: #22261f;
+  border-color: #74664b;
+  font-size: 12px;
+}
+.tva-page .tva-motion,
+.tva-sound {
+  color: #d6cab1;
+  border-color: #8172526b;
+  background: linear-gradient(#3b3c30, #292d24);
+  box-shadow:
+    0 3px 0 #080b08,
+    inset 0 1px 0 #e6d6ac18;
+  font-size: 11px;
+  padding: 9px 13px;
+}
+.tva-page .tva-motion:hover,
+.tva-sound:hover {
+  color: #ffe4bb;
+  border-color: #c08c58;
+  background: #474332;
+}
+.tva-sound[aria-pressed="true"] {
+  background: #bc672f;
+  color: #fff1d6;
+  border-color: #efad68;
+}
+.tva-volume {
+  accent-color: #e89551;
+}
+.tva-audio-error {
+  color: #f8b48e;
+}
+
+/* Physical enclosure: enamel body, recessed black glass, retrofitted side rack. */
+.tva-crt {
+  position: relative;
+  border: 1px solid #eea4659c;
+  border-radius: 16px 16px 10px 10px;
+  padding: 22px 25px 0;
+  margin-top: 10px;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #ffffff02 0,
+      #ffffff02 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(135deg, #c8753b, #9e4c25 38%, #b9602e 76%, #d08346);
+  box-shadow:
+    inset 0 2px 1px #ffdcb663,
+    inset 2px 0 2px #ffc38433,
+    inset -5px -5px 8px #49261280,
+    0 0 0 5px #10140f,
+    0 18px 0 -10px #050805,
+    0 32px 65px #0008;
+}
+.crt-carry-handle {
+  position: absolute;
+  width: 145px;
+  height: 16px;
+  border: 5px solid #31342c;
+  border-bottom: 0;
+  border-radius: 7px 7px 0 0;
+  top: -17px;
+  left: calc(50% - 72px);
+  box-shadow:
+    inset 0 2px 0 #777264,
+    0 -1px 0 #000;
+}
+.crt-screw {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(125deg, #afa28b, #323a2d);
+  border: 1px solid #472915;
+  box-shadow: 0 1px 1px #0008;
+}
+.crt-screw::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  top: 2px;
+  left: 1px;
+  border-top: 1px solid #282e23;
+  transform: rotate(-35deg);
+}
+.crt-screw.top-left {
+  top: 10px;
+  left: 10px;
+}
+.crt-screw.top-right {
+  top: 10px;
+  right: 10px;
+}
+.crt-screw.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+.crt-screw.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+.crt-bezel-label {
+  color: #251b13;
+  font-weight: 650;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  padding: 0 8px 17px;
+  text-shadow: 0 1px 0 #ffc38030;
+}
+.crt-chassis {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 100px;
+  gap: 20px;
+}
+.crt-glass {
+  min-width: 0;
+  border: 11px solid #222820;
+  border-radius: 30px / 35px;
+  background: #050914;
+  box-shadow:
+    0 0 0 2px #121b14,
+    0 0 0 4px #65391f80,
+    inset 0 0 30px #000,
+    0 4px 3px #edb07f55;
+}
+.crt-glass::after {
+  background:
+    radial-gradient(ellipse at 50% 45%, transparent 40%, #02050466 95%),
+    linear-gradient(
+      135deg,
+      #ffe2bc0c,
+      transparent 28%,
+      transparent 80%,
+      #e7dfca04
+    );
+  box-shadow: inset 0 0 26px 10px #0009;
+}
+.temporal-world {
+  height: 535px;
+  background: #070b14;
+}
+.crt-scanlines {
+  opacity: 0.075;
+}
+.crt-hud {
+  color: #c8ab80;
+  text-shadow: 0 0 8px #ba733866;
+}
+.crt-hud small,
+.crt-live {
+  color: #bbaf96;
+}
+.crt-live i {
+  background: #ecc089;
+  box-shadow: 0 0 9px #e99851;
+}
+.crt-hardware {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  background: linear-gradient(90deg, #172016, #292e21 55%, #171e15);
+  border: 1px solid #111c11;
+  border-radius: 4px;
+  padding: 17px 9px;
+  box-shadow:
+    inset 2px 2px 5px #000a,
+    1px 1px 0 #f5c28955;
+}
+.hardware-plaque {
+  font-family: "TVA Display", sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  color: #cfb187;
+  letter-spacing: -2px;
+  line-height: 1;
+  text-align: center;
+}
+.hardware-plaque span {
+  display: block;
+  font-family: "TVA Sans", sans-serif;
+  font-size: 7px;
+  letter-spacing: 1px;
+  margin-top: 7px;
+  color: #9b997f;
+}
+.hardware-readout {
+  width: 100%;
+  background: #0c1009;
+  padding: 10px 5px;
+  text-align: center;
+  border: 1px solid #424938;
+  box-shadow:
+    inset 0 0 13px #000,
+    0 1px 0 #9a8d5c30;
+  color: #e5a65d;
+}
+.hardware-readout small {
+  font-size: 5px;
+  letter-spacing: 1px;
+  display: block;
+}
+.hardware-readout b {
+  font-size: 11px;
+  font-weight: 500;
+  text-shadow: 0 0 8px #efa35366;
+}
+.hardware-meter {
+  display: flex;
+  gap: 3px;
+  height: 24px;
+  align-items: end;
+  justify-content: center;
+  padding-top: 6px;
+}
+.hardware-meter i {
+  width: 3px;
+  height: 14px;
+  background: #cf9149;
+  box-shadow: 0 0 5px #d9904c55;
+  transform-origin: bottom;
+  animation: instrument-level 3.4s ease-in-out infinite alternate;
+}
+.hardware-dial {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    #bcaf885c 0deg 2deg,
+    transparent 2deg 26deg
+  );
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-bottom: 9px;
+}
+.hardware-dial i {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #484d3d, #0d140c 65%);
+  border: 2px solid #171e13;
+  box-shadow:
+    0 3px 7px #000c,
+    inset 1px 1px 0 #8a8d6877;
+  position: relative;
+}
+.hardware-dial i::before {
+  content: "";
+  height: 13px;
+  width: 2px;
+  background: #d9b781;
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  transform: rotate(-28deg);
+  transform-origin: 1px 16px;
+}
+.hardware-dial span {
+  position: absolute;
+  bottom: -16px;
+  color: #b4b393;
+  font-size: 6px;
+  letter-spacing: 2px;
+}
+.hardware-dial.small {
+  transform: scale(0.85);
+}
+.hardware-vents {
+  flex: 1;
+  min-height: 65px;
+  width: 66px;
+  background: repeating-linear-gradient(
+    0deg,
+    #080f07 0 3px,
+    #39402c 3px 5px,
+    transparent 5px 8px
+  );
+  border-radius: 2px;
+  opacity: 0.8;
+}
+.hardware-port {
+  text-align: center;
+}
+.hardware-port i {
+  display: block;
+  margin: 0 auto 9px;
+  width: 17px;
+  height: 17px;
+  background: radial-gradient(circle, #040705 30%, #8d916d 35%, #131c10 60%);
+  border: 2px solid #6d6e50;
+  border-radius: 50%;
+  box-shadow: 0 2px 3px #000;
+}
+.hardware-port span {
+  color: #a8a486;
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+.crt-console {
+  color: #2e2417;
+  min-height: 77px;
+  padding: 9px 8px;
+}
+.crt-status {
+  font-size: 9px;
+  font-weight: 600;
+}
+.crt-led {
+  background: #edbc62;
+  box-shadow:
+    0 0 9px #e9b0618c,
+    inset 0 1px 1px #fff5bc;
+  border-color: #714122;
+}
+.crt-led.paused {
+  background: #553b24;
+}
+.crt-vents {
+  width: 95px;
+  height: 19px;
+  background: repeating-linear-gradient(
+    90deg,
+    #2a261cb3 0 3px,
+    #e9a26438 3px 4px,
+    transparent 4px 7px
+  );
+}
+.crt-explore-controls {
+  font-size: 9px;
+}
+.crt-explore-controls > i {
+  border-color: #452d2070;
+}
+.crt-explore-controls button {
+  background: linear-gradient(#414333, #232b1d);
+  border-color: #172115;
+  box-shadow:
+    0 3px 0 #57331f,
+    inset 0 1px 0 #949d6955;
+  color: #dbd0b2;
+  border-radius: 2px;
+  min-height: 32px;
+  min-width: 32px;
+}
+.crt-explore-controls button:hover {
+  background: #4d513a;
+  color: #ffdfa5;
+}
+.tva-page .tva-map-footer,
+.tva-page .tva-pagination {
+  color: #b8b09a;
+  font-size: 9px;
+}
+.tva-selected-signal > i {
+  background: #ee9652;
+  box-shadow: 0 0 8px #eaa05655;
+}
+.tva-selected-signal {
+  font-size: 9px;
+}
+.tva-selected-signal b {
+  font-size: 12px;
+  color: #edb780;
+}
+.tva-page .tva-pagination button {
+  border-color: #82745470;
+  color: #d6c6a6;
+}
+.tva-page .earth-navigation {
+  border-color: #e7c49626;
+}
+.tva-page .earth-navigation label {
+  color: #bdb29a;
+}
+.tva-page .earth-navigation label > span {
+  font-size: 9px;
+}
+.tva-page .earth-navigation .text-link,
+.tva-page .earth-list-toolbar > .text-link {
+  color: #f0a666;
+}
+.tva-page .earth-dossier {
+  background: linear-gradient(135deg, #292b223d, #161b1580);
+  border-color: #8d794d45;
+  box-shadow: 0 16px 45px #0002;
+  border-top: 2px solid #a76234;
+}
+.tva-page .earth-classification {
+  color: #ddb382;
+  border-color: #bd89515c;
+}
+.tva-page .earth-identity h2 {
+  color: #eab075;
+}
+.tva-page .earth-identity h3 {
+  color: #e7e1d2;
+  font-size: 18px;
+}
+.tva-page .earth-identity p {
+  color: #a9ab99;
+  font-size: 12px;
+}
+.tva-page .earth-progress {
+  border-color: #e7c49626;
+}
+.tva-page .earth-progress .eyebrow {
+  color: #b6a48a;
+}
+.tva-page .earth-progress > strong {
+  color: #e9ab6d;
+}
+.tva-page .earth-progress > span:last-child {
+  color: #aaa38d;
+}
+.tva-page .progress-track {
+  background: #090e08;
+}
+.tva-page .earth-progress .progress-track > div {
+  background: linear-gradient(90deg, #bc652e, #f0b76e);
+}
+.tva-page .earth-canon-note {
+  background: #b9783310;
+  border-color: #cb813d;
+}
+.tva-page .earth-canon-note p {
+  color: #b8b3a0;
+}
+.tva-page .earth-canon-note a {
+  color: #e7b178;
+}
+.tva-page .earth-format-tabs button {
+  background: #24281f;
+  color: #bbb49e;
+  border-color: #7c73554d;
+  font-size: 11px;
+}
+.tva-page .earth-format-tabs button[aria-pressed="true"] {
+  background: #b86834;
+  color: #fff1d6;
+  border-color: #e09c59;
+}
+.tva-page .earth-result-count {
+  color: #aca791;
+  font-size: 10px;
+}
+.tva-page .card-caption h3 {
+  color: #e8e0d0;
+}
+.tva-page .card-meta,
+.tva-page .watch-button {
+  color: #b5af9b;
+}
+.tva-page .watch-button:hover,
+.tva-page .watch-button.active {
+  color: #f2ae6d;
+}
+.tva-page .button.secondary {
+  background: #42432b22;
+  color: #e6bf8e;
+  border-color: #b3956466;
+}
+.tva-page .load-more span {
+  color: #aba28a;
+}
+.tva-page .earth-crossovers {
+  border-color: #d8b98c2b;
+}
+.tva-page .earth-crossovers .eyebrow {
+  color: #e4a364;
+}
+.tva-page .earth-crossovers p {
+  color: #b2ad9a;
+}
+.tva-page .earth-crossovers button {
+  background: #2d3124;
+  border-color: #a3865259;
+  color: #deceae;
+}
+.tva-closing-strip {
+  color: #d2b68d;
+  border-color: #d8b98c2b;
+}
+.tva-closing-strip p {
+  color: #a49f8e;
+  font-size: 10px;
+}
+@keyframes instrument-level {
+  0% {
+    transform: scaleY(0.3);
+    opacity: 0.5;
+  }
+  45% {
+    transform: scaleY(0.85);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0.5);
+    opacity: 0.7;
+  }
+}
+@media (max-width: 700px) {
+  .tva-site-header.site-header nav.open {
+    background: #191d15f5;
+    border-color: #b88b4e55;
+  }
+  .tva-page {
+    padding-top: 25px;
+  }
+  .tva-page-intro {
+    padding: 24px 0;
+  }
+  .tva-kicker {
+    font-size: 7px;
+  }
+  .tva-page-intro h1 {
+    font-size: 45px;
+  }
+  .tva-file-stamp small {
+    font-size: 7px;
+  }
+  .tva-page .tva-sector-tabs button {
+    font-size: 10px;
+  }
+  .tva-instrument-bar {
+    padding: 16px 0 28px;
+  }
+  .tva-page .tva-motion,
+  .tva-sound {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .tva-crt {
+    padding: 17px 12px 0;
+    border-radius: 12px;
+  }
+  .crt-chassis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .crt-hardware {
+    display: none;
+  }
+  .crt-glass {
+    border-width: 7px;
+    border-radius: 23px / 27px;
+  }
+  .temporal-world {
+    height: 405px;
+  }
+  .crt-bezel-label {
+    font-size: 7px;
+    padding: 0 4px 12px;
+  }
+  .crt-console {
+    padding: 13px 3px;
+    gap: 12px;
+  }
+  .crt-status {
+    font-size: 7px;
+  }
+  .crt-explore-controls {
+    font-size: 8px;
+  }
+  .crt-explore-controls button {
+    min-width: 30px;
+  }
+  .tva-selected-signal {
+    font-size: 7px;
+  }
+  .tva-selected-signal b {
+    font-size: 10px;
+  }
+  .tva-page .earth-identity h3 {
+    font-size: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hardware-meter i {
+    animation: none;
+  }
+}
+.hardware-plaque img {
+  width: 58px;
+  height: 27px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(77%) sepia(21%) saturate(466%)
+    hue-rotate(352deg) brightness(89%) contrast(88%);
+}

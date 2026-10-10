@@ -112,146 +112,184 @@ export function TemporalScreen({
     });
   return (
     <div className="tva-crt">
+      <div className="crt-carry-handle" aria-hidden="true" />
+      <span className="crt-screw top-left" aria-hidden="true" />
+      <span className="crt-screw top-right" aria-hidden="true" />
+      <span className="crt-screw bottom-left" aria-hidden="true" />
+      <span className="crt-screw bottom-right" aria-hidden="true" />
       <div className="crt-bezel-label">
-        <span>TVA · TEMPORAL OBSERVATION UNIT</span>
-        <span>MOD. 07 / COLOR</span>
+        <span>TVA · CHRONOMONITOR</span>
+        <span>R&A / TEMPORAL MODIFICATION 07</span>
       </div>
-      <div className="crt-glass">
-        <div
-          className="temporal-viewport"
-          ref={viewport}
-          tabIndex={0}
-          aria-label="Esplora la linea temporale: trascina o scorri, usa Tab e le frecce tra le Terre"
-          onPointerDown={(e) => {
-            if (
-              e.pointerType !== "mouse" ||
-              (e.target as HTMLElement).closest("button")
-            )
-              return;
-            dragging.current = {
-              x: e.clientX,
-              left: e.currentTarget.scrollLeft,
-            };
-            e.currentTarget.setPointerCapture(e.pointerId);
-            e.currentTarget.classList.add("dragging");
-          }}
-          onPointerMove={(e) => {
-            if (dragging.current)
-              e.currentTarget.scrollLeft =
-                dragging.current.left - (e.clientX - dragging.current.x);
-          }}
-          onPointerUp={(e) => {
-            dragging.current = null;
-            e.currentTarget.classList.remove("dragging");
-          }}
-          onPointerCancel={(e) => {
-            dragging.current = null;
-            e.currentTarget.classList.remove("dragging");
-          }}
-        >
+      <div className="crt-chassis">
+        <div className="crt-glass">
           <div
-            className="temporal-world"
-            style={{ width: `${zoom * 100}%`, minWidth: `${1100 * zoom}px` }}
+            className="temporal-viewport"
+            ref={viewport}
+            tabIndex={0}
+            aria-label="Esplora la linea temporale: trascina o scorri, usa Tab e le frecce tra le Terre"
+            onPointerDown={(e) => {
+              if (
+                e.pointerType !== "mouse" ||
+                (e.target as HTMLElement).closest("button")
+              )
+                return;
+              dragging.current = {
+                x: e.clientX,
+                left: e.currentTarget.scrollLeft,
+              };
+              e.currentTarget.setPointerCapture(e.pointerId);
+              e.currentTarget.classList.add("dragging");
+            }}
+            onPointerMove={(e) => {
+              if (dragging.current)
+                e.currentTarget.scrollLeft =
+                  dragging.current.left - (e.clientX - dragging.current.x);
+            }}
+            onPointerUp={(e) => {
+              dragging.current = null;
+              e.currentTarget.classList.remove("dragging");
+            }}
+            onPointerCancel={(e) => {
+              dragging.current = null;
+              e.currentTarget.classList.remove("dragging");
+            }}
           >
-            <canvas
-              ref={canvas}
-              className="temporal-canvas"
-              aria-hidden="true"
-            />
-            {nodes.map(({ earth, x, y }) => (
-              <button
-                key={earth.id}
-                className={`earth-beacon ${selected === earth.id ? "selected" : ""}`}
-                style={{ left: `${x * 100}%`, top: `${y * 100}%` }}
-                aria-label={`Esplora ${earth.designation}: ${earth.name}`}
-                aria-pressed={selected === earth.id}
-                aria-controls="earth-dossier"
-                aria-describedby={
-                  hovered === earth.id ? "earth-preview" : undefined
-                }
-                data-earth-id={earth.id}
-                onMouseEnter={() => setHovered(earth.id)}
-                onMouseLeave={() => setHovered(null)}
-                onFocus={() => setHovered(earth.id)}
-                onBlur={() => setHovered(null)}
-                onClick={() => onSelect(earth)}
-                onKeyDown={(e) => {
-                  if (
-                    ![
-                      "ArrowRight",
-                      "ArrowLeft",
-                      "Home",
-                      "End",
-                      "Escape",
-                    ].includes(e.key)
-                  )
-                    return;
-                  e.preventDefault();
-                  if (e.key === "Escape") {
-                    setHovered(null);
-                    return;
+            <div
+              className="temporal-world"
+              style={{ width: `${zoom * 100}%`, minWidth: `${1100 * zoom}px` }}
+            >
+              <canvas
+                ref={canvas}
+                className="temporal-canvas"
+                aria-hidden="true"
+              />
+              {nodes.map(({ earth, x, y }) => (
+                <button
+                  key={earth.id}
+                  className={`earth-beacon ${selected === earth.id ? "selected" : ""}`}
+                  style={{ left: `${x * 100}%`, top: `${y * 100}%` }}
+                  aria-label={`Esplora ${earth.designation}: ${earth.name}`}
+                  aria-pressed={selected === earth.id}
+                  aria-controls="earth-dossier"
+                  aria-describedby={
+                    hovered === earth.id ? "earth-preview" : undefined
                   }
-                  const buttons = Array.from(
-                    e.currentTarget.parentElement!.querySelectorAll<HTMLButtonElement>(
-                      ".earth-beacon",
-                    ),
-                  );
-                  const index = buttons.indexOf(e.currentTarget);
-                  const next =
-                    e.key === "Home"
-                      ? 0
-                      : e.key === "End"
-                        ? buttons.length - 1
-                        : (index +
-                            (e.key === "ArrowRight" ? 1 : -1) +
-                            buttons.length) %
-                          buttons.length;
-                  buttons[next].focus({ preventScroll: true });
-                  buttons[next].scrollIntoView({
-                    block: "nearest",
-                    inline: "center",
-                    behavior: "instant",
-                  });
-                }}
-              >
-                <span className="beacon-ring" aria-hidden="true" />
-                <span className="beacon-code">
-                  {earth.designation.replace("Terra-", "E—")}
-                </span>
-              </button>
-            ))}
-            {preview && (
-              <div
-                id="earth-preview"
-                role="tooltip"
-                className={`earth-preview ${preview.y > 0.5 ? "above" : "below"}`}
-                style={{
-                  left: previewLeft ?? `${preview.x * 100}%`,
-                  top: `${preview.y * 100}%`,
-                }}
-              >
-                <span>SEGNALE IDENTIFICATO</span>
-                <strong>{preview.earth.designation}</strong>
-                <b>{preview.earth.name}</b>
-                <p>{preview.earth.description}</p>
-                <small>
-                  {preview.earth.titles.length} storie · Clicca per aprire il
-                  dossier
-                </small>
-              </div>
-            )}
+                  data-earth-id={earth.id}
+                  onMouseEnter={() => setHovered(earth.id)}
+                  onMouseLeave={() => setHovered(null)}
+                  onFocus={() => setHovered(earth.id)}
+                  onBlur={() => setHovered(null)}
+                  onClick={() => onSelect(earth)}
+                  onKeyDown={(e) => {
+                    if (
+                      ![
+                        "ArrowRight",
+                        "ArrowLeft",
+                        "Home",
+                        "End",
+                        "Escape",
+                      ].includes(e.key)
+                    )
+                      return;
+                    e.preventDefault();
+                    if (e.key === "Escape") {
+                      setHovered(null);
+                      return;
+                    }
+                    const buttons = Array.from(
+                      e.currentTarget.parentElement!.querySelectorAll<HTMLButtonElement>(
+                        ".earth-beacon",
+                      ),
+                    );
+                    const index = buttons.indexOf(e.currentTarget);
+                    const next =
+                      e.key === "Home"
+                        ? 0
+                        : e.key === "End"
+                          ? buttons.length - 1
+                          : (index +
+                              (e.key === "ArrowRight" ? 1 : -1) +
+                              buttons.length) %
+                            buttons.length;
+                    buttons[next].focus({ preventScroll: true });
+                    buttons[next].scrollIntoView({
+                      block: "nearest",
+                      inline: "center",
+                      behavior: "instant",
+                    });
+                  }}
+                >
+                  <span className="beacon-ring" aria-hidden="true" />
+                  <span className="beacon-code">
+                    {earth.designation.replace("Terra-", "E—")}
+                  </span>
+                </button>
+              ))}
+              {preview && (
+                <div
+                  id="earth-preview"
+                  role="tooltip"
+                  className={`earth-preview ${preview.y > 0.5 ? "above" : "below"}`}
+                  style={{
+                    left: previewLeft ?? `${preview.x * 100}%`,
+                    top: `${preview.y * 100}%`,
+                  }}
+                >
+                  <span>SEGNALE IDENTIFICATO</span>
+                  <strong>{preview.earth.designation}</strong>
+                  <b>{preview.earth.name}</b>
+                  <p>{preview.earth.description}</p>
+                  <small>
+                    {preview.earth.titles.length} storie · Clicca per aprire il
+                    dossier
+                  </small>
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="crt-scanlines" aria-hidden="true" />
+          <div className="crt-hud" aria-hidden="true">
+            <span>
+              SCANSIONE MULTIVERSALE<small>LA SACRA LINEA TEMPORALE</small>
+            </span>
+            <span className="crt-live">
+              <i />
+              {paused || reduced ? "IMMAGINE FERMA" : "FLUSSO TEMPORALE ATTIVO"}
+            </span>
           </div>
         </div>
-        <div className="crt-scanlines" aria-hidden="true" />
-        <div className="crt-hud" aria-hidden="true">
-          <span>
-            SCANSIONE MULTIVERSALE<small>LA SACRA LINEA TEMPORALE</small>
-          </span>
-          <span className="crt-live">
+        <aside className="crt-hardware" aria-hidden="true">
+          <div className="hardware-plaque">
+            <img
+              src={`${import.meta.env.BASE_URL}assets/tva-logo.svg`}
+              alt=""
+            />
+            <span>R&A — 07</span>
+          </div>
+          <div className="hardware-readout">
+            <small>TEMPORAL LINK</small>
+            <b>{paused || reduced ? "HOLD" : "ONLINE"}</b>
+            <div className="hardware-meter">
+              {Array.from({ length: 9 }, (_, i) => (
+                <i key={i} style={{ animationDelay: `${i * -0.27}s` }} />
+              ))}
+            </div>
+          </div>
+          <div className="hardware-dial">
             <i />
-            {paused || reduced ? "IMMAGINE FERMA" : "FLUSSO TEMPORALE ATTIVO"}
-          </span>
-        </div>
+            <span>PHASE</span>
+          </div>
+          <div className="hardware-dial small">
+            <i />
+            <span>GAIN</span>
+          </div>
+          <div className="hardware-vents" />
+          <div className="hardware-port">
+            <i />
+            <span>CH. 616</span>
+          </div>
+        </aside>
       </div>
       <div className="crt-console">
         <div className="crt-status">

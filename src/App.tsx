@@ -19,6 +19,7 @@ import { makeBackup, parseBackup, mergeWatched } from "./lib/storage";
 import { useTracker } from "./hooks/useTracker";
 import type { Title } from "./types";
 import { earthMode } from "./lib/multiverse";
+import { usePremiumMotion } from "./hooks/usePremiumMotion";
 const pageFromHash = () =>
   location.hash === "#orders"
     ? "archive"
@@ -120,6 +121,7 @@ function Watchverse({
   selectMarathon: (m: Marathon | null) => void;
 }) {
   const [page, setPage] = useState(pageFromHash);
+  usePremiumMotion(page);
   const [selected, setSelected] = useState<Title | null>(null);
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
@@ -252,9 +254,10 @@ function Watchverse({
       <main id="main-content" tabIndex={-1}>
         <motion.div
           key={page}
-          initial={{ opacity: 0, y: 10 }}
+          className="page-transition"
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
+          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         >
           {page === "home" ? (
             <>
@@ -277,10 +280,13 @@ function Watchverse({
                 </div>
                 <Archive {...props} compact />
                 <div className="discover-banner">
+                  <div className="discover-portal" aria-hidden="true">
+                    <i />
+                    <i />
+                    <i />
+                  </div>
                   <div>
-                    <div className="eyebrow">
-                      NON ESISTE UNA SOLA LINEA TEMPORALE
-                    </div>
+                    <div className="eyebrow">TVA / ACCESSO MULTIVERSALE</div>
                     <h2>Esci dai confini del tuo universo.</h2>
                   </div>
                   <a className="button secondary" href="#universes">
