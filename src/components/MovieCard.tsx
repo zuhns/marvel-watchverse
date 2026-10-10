@@ -17,12 +17,15 @@ export function MovieCard({
   onToggle: () => void;
 }) {
   const infinity = useInfinity();
-  if (infinity.phase === "snapped" && infinity.targets.has(title.id))
-    return null;
+  const affected = infinity.targets.has(title.id);
+  const vacant = infinity.phase === "snapped" && affected;
+  const dusting = infinity.phase === "dusting" && affected;
   return (
     <article
       data-infinity-title={title.id}
-      className={`movie-card ${seen ? "seen" : ""} ${infinity.phase === "dusting" && infinity.targets.has(title.id) ? "infinity-dusting" : ""}`}
+      inert={vacant || dusting}
+      aria-hidden={vacant || undefined}
+      className={`movie-card ${seen ? "seen" : ""} ${dusting ? "infinity-dusting" : ""} ${vacant ? "infinity-vacant" : ""}`}
     >
       <button
         className="poster-button"

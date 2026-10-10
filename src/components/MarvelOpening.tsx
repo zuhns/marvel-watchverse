@@ -1,185 +1,117 @@
 import { useEffect, useRef, useState } from "react";
-import { X, Play } from "lucide-react";
+import { VolumeX } from "lucide-react";
 import { setCinematicAudio } from "../lib/cinematicAudio";
-export const openingStorageKey = "marvel-watchverse.opening.v1";
-type Player = {
-  playVideo: () => void;
-  pauseVideo: () => void;
-  setVolume: (n: number) => void;
-  destroy: () => void;
-};
-type PlayerEvent = { data: number; target: Player };
-type YoutubeApi = {
-  Player: new (
-    iframe: HTMLIFrameElement,
-    options: { events: Record<string, (event: PlayerEvent) => void> },
-  ) => Player;
-};
-declare global {
-  interface Window {
-    YT?: YoutubeApi;
-    onYouTubeIframeAPIReady?: () => void;
-  }
-}
-let apiPromise: Promise<YoutubeApi> | undefined;
-function loadApi() {
-  if (window.YT?.Player) return Promise.resolve(window.YT);
-  return (apiPromise ||= new Promise<YoutubeApi>((resolve, reject) => {
-    const timer = setTimeout(() => {
-      apiPromise = undefined;
-      reject(new Error("Opening unavailable"));
-    }, 15000);
-    window.onYouTubeIframeAPIReady = () => {
-      clearTimeout(timer);
-      if (window.YT) resolve(window.YT);
-    };
-    const script = document.createElement("script");
-    script.src = "https://www.youtube.com/iframe_api";
-    script.async = true;
-    script.onerror = () => {
-      clearTimeout(timer);
-      apiPromise = undefined;
-      reject(new Error("Opening unavailable"));
-    };
-    document.head.append(script);
-  }));
-}
-// Original 2016 opening, published by Entertainment Access. The visible YouTube
-// player streams the sequence; no recording is extracted or redistributed.
+export const openingStorageKey = "marvel-watchverse.opening-audio.v2";
+/** A standalone audio recording is required; never embed a hidden video player. */
 export function MarvelOpening() {
-  const [visible, setVisible] = useState(() => {
-    try {
-      return localStorage.getItem(openingStorageKey) !== "seen";
-    } catch {
-      return true;
-    }
-  });
-  const [playing, setPlaying] = useState(false),
-    [ready, setReady] = useState(false),
-    [failed, setFailed] = useState(false);
-  const frame = useRef<HTMLIFrameElement>(null),
-    player = useRef<Player | null>(null),
-    started = useRef(false);
-  const markSeen = () => {
-    try {
-      localStorage.setItem(openingStorageKey, "seen");
-    } catch {
-      /* Once within this visit. */
-    }
-  };
-  const dismiss = () => {
-    player.current?.pauseVideo?.();
-    markSeen();
-    setCinematicAudio(false, "opening");
-    setVisible(false);
-  };
+  const [source, setSource] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const audio = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
-    if (!visible) return;
     let cancelled = false;
-    void loadApi()
-      .then((api) => {
-        if (cancelled || !frame.current) return;
-        player.current = new api.Player(frame.current, {
-          events: {
-            onReady: (event) => {
-              if (!cancelled) {
-                setReady(true);
-                event.target.setVolume(35);
-                event.target.playVideo();
-              }
-            },
-            onStateChange: (event) => {
-              if (cancelled) return;
-              if (event.data === 1) {
-                started.current = true;
-                markSeen();
-                setPlaying(true);
-                setCinematicAudio(true, "opening");
-              } else if (event.data === 0) dismiss();
-              else if (event.data === 2) {
-                setPlaying(false);
-                setCinematicAudio(false, "opening");
-              }
-            },
-            onError: () => {
-              if (!cancelled) {
-                setFailed(true);
-                setCinematicAudio(false, "opening");
-              }
-            },
-          },
-        });
+    void fetch(`${import.meta.env.BASE_URL}data/opening-audio.json`)
+      .then((response) => (response.ok ? response.json() : null))
+      .then((settings) => {
+        if (
+          !cancelled &&
+          typeof settings?.src === "string" &&
+          /^assets\/[A-Za-z0-9/_-]+\.(mp3|m4a|ogg|wav)$/.test(settings.src)
+        )
+          setSource(`${import.meta.env.BASE_URL}${settings.src}`);
       })
       .catch(() => {
-        if (!cancelled) setFailed(true);
+        /* No audio is requested without a configured recording. */
       });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  useEffect(() => {
+    if (!source) return;
+    try {
+      if (localStorage.getItem(openingStorageKey) === "seen") return;
+    } catch {
+      /* Use session state. */
+    }
+    const player = new Audio(source);
+    audio.current = player;
+    player.volume = 0.35;
+    player.preload = "auto";
+    let cancelled = false,
+      started = false,
+      attempting = false,
+      stopped = false;
+    const release = () => {
+      setCinematicAudio(false, "opening");
+      if (!cancelled) setPlaying(false);
+    };
     const start = () => {
-      if (!started.current) player.current?.playVideo?.();
+      if (started || attempting || stopped || document.hidden) return;
+      attempting = true;
+      void player
+        .play()
+        .then(() => {
+          if (cancelled || stopped) {
+            player.pause();
+            return;
+          }
+          started = true;
+          setPlaying(true);
+          setCinematicAudio(true, "opening");
+          try {
+            localStorage.setItem(openingStorageKey, "seen");
+          } catch {
+            /* Only this session. */
+          }
+        })
+        .catch(() => {
+          /* Autoplay denial retries on the first trusted gesture. */
+        })
+        .finally(() => {
+          attempting = false;
+        });
+    };
+    const stop = () => {
+      stopped = true;
+      player.pause();
+      release();
     };
     const visibility = () => {
-      if (document.hidden) player.current?.pauseVideo?.();
+      if (document.hidden) stop();
     };
+    player.onended = release;
+    player.onerror = stop;
     document.addEventListener("pointerdown", start);
     document.addEventListener("keydown", start);
     document.addEventListener("visibilitychange", visibility);
-    window.addEventListener("watchverse:stop-opening", dismiss);
+    window.addEventListener("watchverse:stop-opening", stop);
+    start();
     return () => {
       cancelled = true;
       document.removeEventListener("pointerdown", start);
       document.removeEventListener("keydown", start);
       document.removeEventListener("visibilitychange", visibility);
-      window.removeEventListener("watchverse:stop-opening", dismiss);
-      player.current?.destroy?.();
-      player.current = null;
-      setCinematicAudio(false, "opening");
+      window.removeEventListener("watchverse:stop-opening", stop);
+      player.pause();
+      player.removeAttribute("src");
+      player.load();
+      audio.current = null;
+      release();
     };
-  }, [visible]);
-  if (!visible) return null;
+  }, [source]);
+  if (!playing) return null;
   return (
-    <aside
-      className="marvel-opening"
-      aria-label="Opening Marvel · Prima visita"
+    <button
+      className="opening-audio-toggle"
+      aria-label="Silenzia sigla Marvel"
+      title="Silenzia sigla"
+      onClick={() => {
+        audio.current?.pause();
+        setPlaying(false);
+        setCinematicAudio(false, "opening");
+      }}
     >
-      <div className="opening-caption">
-        <span>Il nostro universo comincia qui.</span>
-        <button
-          className="icon-button"
-          onClick={dismiss}
-          aria-label="Chiudi opening Marvel"
-        >
-          <X size={16} />
-        </button>
-      </div>
-      <iframe
-        ref={frame}
-        src={`https://www.youtube-nocookie.com/embed/ZPjlwJ0SeOs?autoplay=1&enablejsapi=1&playsinline=1&rel=0&end=35&origin=${encodeURIComponent(location.origin)}`}
-        title="Marvel Studios opening originale · Comic-Con 2016"
-        allow="autoplay; fullscreen"
-        referrerPolicy="strict-origin-when-cross-origin"
-      />
-      <div className="opening-status">
-        {failed ? (
-          <a
-            href="https://www.youtube.com/watch?v=ZPjlwJ0SeOs"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Guarda l’opening originale ↗
-          </a>
-        ) : (
-          <button
-            disabled={!ready}
-            onClick={() => player.current?.playVideo?.()}
-          >
-            <Play size={11} />
-            {!ready
-              ? "Preparo l’opening…"
-              : playing
-                ? "Marvel Studios · Opening theme"
-                : "Tocca per avviare la musica"}
-          </button>
-        )}
-      </div>
-    </aside>
+      <VolumeX size={16} />
+    </button>
   );
 }

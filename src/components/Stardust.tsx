@@ -1,5 +1,30 @@
 import { useEffect, useRef } from "react";
-/** Poster fragments are drawn directly: no pixel readback or CORS bypass. */
+type Fragment = {
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  delay: number;
+  vx: number;
+  vy: number;
+  turn: number;
+  life: number;
+};
+type Poster = {
+  node: HTMLElement;
+  image: HTMLImageElement;
+  cx: number;
+  cy: number;
+  w: number;
+  h: number;
+  angle: number;
+  sx: number;
+  sy: number;
+  sw: number;
+  sh: number;
+  fragments: Fragment[];
+};
+/** Display-only canvas: draw the existing posters directly, without pixel readback. */
 export function Stardust({ targets }: { targets: Set<string> }) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -16,66 +41,157 @@ export function Stardust({ targets }: { targets: Set<string> }) {
       seed = (seed * 1664525 + 1013904223) >>> 0;
       return seed / 4294967296;
     };
-    const particles: {
-      x: number;
-      y: number;
-      sx: number;
-      sy: number;
-      size: number;
-      delay: number;
-      vx: number;
-      vy: number;
-      turn: number;
-      image: HTMLImageElement | null;
-    }[] = [];
+    const posters: Poster[] = [];
     document
       .querySelectorAll<HTMLElement>("[data-infinity-title]")
       .forEach((node) => {
         if (!targets.has(node.dataset.infinityTitle!)) return;
-        const image = node.querySelector<HTMLImageElement>(".poster-image img"),
-          box = (image || node).getBoundingClientRect();
-        if (box.top >= innerHeight || box.bottom <= 0 || !box.width) return;
-        const count = Math.min(260, Math.floor((box.width * box.height) / 280));
-        for (let i = 0; i < count && particles.length < 2200; i++) {
-          const rx = random(),
-            ry = random();
-          particles.push({
-            x: box.left + rx * box.width,
-            y: box.top + ry * box.height,
-            sx: rx * (image?.naturalWidth || 1),
-            sy: ry * (image?.naturalHeight || 1),
-            size: 1 + random() * 3.1,
-            delay: 0.15 + rx * 1.05 + random() * 0.3,
-            vx: 25 + random() * 95,
-            vy: -22 - random() * 65,
-            turn: random() * Math.PI * 2,
-            image: image?.complete && image.naturalWidth ? image : null,
-          });
+        const image = node.querySelector<HTMLImageElement>(".poster-image img");
+        if (!image?.complete || !image.naturalWidth) return;
+        const box = image.getBoundingClientRect();
+        if (
+          box.top >= innerHeight ||
+          box.bottom <= 0 ||
+          box.left >= innerWidth ||
+          box.right <= 0 ||
+          !box.width
+        )
+          return;
+        let angle = 0;
+        for (
+          let ancestor: HTMLElement | null = image;
+          ancestor;
+          ancestor = ancestor.parentElement
+        ) {
+          const transform = getComputedStyle(ancestor).transform;
+          if (transform !== "none") {
+            const matrix = new DOMMatrixReadOnly(transform);
+            angle += Math.atan2(matrix.b, matrix.a);
+          }
         }
+        const scale =
+          box.width /
+          (Math.abs(Math.cos(angle)) * image.clientWidth +
+            Math.abs(Math.sin(angle)) * image.clientHeight);
+        const w = image.clientWidth * scale,
+          h = image.clientHeight * scale;
+        const fit = Math.max(w / image.naturalWidth, h / image.naturalHeight),
+          sw = w / fit,
+          sh = h / fit;
+        const poster: Poster = {
+          node,
+          image,
+          cx: box.left + box.width / 2,
+          cy: box.top + box.height / 2,
+          w,
+          h,
+          angle,
+          sx: (image.naturalWidth - sw) / 2,
+          sy: (image.naturalHeight - sh) / 2,
+          sw,
+          sh,
+          fragments: [],
+        };
+        // A jagged front releases the actual colored cover pieces into the wind.
+        const step = Math.max(4, Math.sqrt((w * h) / 1700));
+        for (let y = 0; y < h; y += step)
+          for (let x = 0; x < w; x += step) {
+            const noise =
+              0.15 * Math.sin(y * 0.06) +
+              0.12 * Math.sin(x * 0.11 + y * 0.08) +
+              random() * 0.38;
+            poster.fragments.push({
+              x,
+              y,
+              w: Math.min(step, w - x),
+              h: Math.min(step, h - y),
+              delay: 0.25 + (x / w) * 2.4 + noise,
+              vx: 28 + random() * 110,
+              vy: -24 - random() * 100,
+              turn: random() * Math.PI * 2,
+              life: 1.5 + random() * 0.65,
+            });
+          }
+        posters.push(poster);
       });
-    let frame = 0;
+    canvas.dataset.fragments = String(
+      posters.reduce((count, poster) => count + poster.fragments.length, 0),
+    );
     const started = performance.now();
+    let frame = 0,
+      lastFrame = -100;
     const render = (now: number) => {
+      if (now - lastFrame < 25) {
+        frame = requestAnimationFrame(render);
+        return;
+      }
+      lastFrame = now;
       const t = (now - started) / 1000;
       ctx.clearRect(0, 0, innerWidth, innerHeight);
-      for (const p of particles) {
-        const age = t - p.delay;
-        if (age < 0 || age > 1.65) continue;
-        const progress = age / 1.65;
-        const x = p.x + p.vx * age + Math.sin(age * 4 + p.turn) * age * 13,
-          y = p.y + p.vy * age + Math.cos(age * 3 + p.turn) * age * 12;
-        ctx.globalAlpha = Math.min(1, age * 12) * (1 - progress) ** 1.4;
-        const size = p.size * (1 - progress * 0.6);
-        if (p.image) ctx.drawImage(p.image, p.sx, p.sy, 3, 3, x, y, size, size);
-        else {
-          ctx.fillStyle = "#bca990";
-          ctx.fillRect(x, y, size, size);
+      let airborne = 0,
+        dissolved = 0;
+      for (const p of posters) {
+        const ox = -p.w / 2,
+          oy = -p.h / 2;
+        ctx.save();
+        ctx.translate(p.cx, p.cy);
+        ctx.rotate(p.angle);
+        ctx.beginPath();
+        ctx.roundRect(ox, oy, p.w, p.h, 8);
+        ctx.clip();
+        ctx.beginPath();
+        for (const f of p.fragments)
+          if (t < f.delay) ctx.rect(ox + f.x, oy + f.y, f.w + 0.4, f.h + 0.4);
+        ctx.clip();
+        ctx.globalAlpha = 1;
+        ctx.drawImage(p.image, p.sx, p.sy, p.sw, p.sh, ox, oy, p.w, p.h);
+        ctx.restore();
+        for (const f of p.fragments) {
+          const age = t - f.delay;
+          if (age < 0) continue;
+          dissolved++;
+          if (age > f.life) continue;
+          airborne++;
+          const progress = age / f.life;
+          const px = ox + f.x,
+            py = oy + f.y;
+          const x =
+            p.cx +
+            px * Math.cos(p.angle) -
+            py * Math.sin(p.angle) +
+            f.vx * age +
+            Math.sin(age * 5 + f.turn) * age * 17;
+          const y =
+            p.cy +
+            px * Math.sin(p.angle) +
+            py * Math.cos(p.angle) +
+            f.vy * age +
+            Math.cos(age * 4 + f.turn) * age * 12;
+          const size = 1 - progress * 0.83;
+          ctx.globalAlpha = (1 - progress) ** 1.2;
+          ctx.drawImage(
+            p.image,
+            p.sx + (f.x / p.w) * p.sw,
+            p.sy + (f.y / p.h) * p.sh,
+            (f.w / p.w) * p.sw,
+            (f.h / p.h) * p.sh,
+            x,
+            y,
+            f.w * size,
+            f.h * size,
+          );
         }
+        p.node.dataset.dustReady = "true";
       }
-      if (t < 3.3) frame = requestAnimationFrame(render);
+      canvas.dataset.airborne = String(airborne);
+      canvas.dataset.dissolved = String(dissolved);
+      if (t < 5.4) frame = requestAnimationFrame(render);
     };
     frame = requestAnimationFrame(render);
-    return () => cancelAnimationFrame(frame);
+    return () => {
+      cancelAnimationFrame(frame);
+      posters.forEach((p) => delete p.node.dataset.dustReady);
+    };
   }, [targets]);
   return (
     <div className="snap-atmosphere" aria-hidden="true">

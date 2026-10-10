@@ -309,24 +309,21 @@
 }
 .infinity-dusting {
   pointer-events: none;
-  mask-image: linear-gradient(105deg, transparent 38%, #000 52%);
-  mask-size: 300% 100%;
-  mask-position: 100% 0;
-  animation: infinity-disintegrate 2.45s ease-in forwards !important;
+  animation: none !important;
 }
-@keyframes infinity-disintegrate {
-  0% {
-    mask-position: 100% 0;
-    filter: none;
-  }
-  45% {
-    filter: sepia(0.4) saturate(0.5);
-  }
-  100% {
-    mask-position: 0 0;
-    filter: sepia(0.9) saturate(0.1);
-    opacity: 0;
-  }
+.infinity-dusting .card-caption,
+.infinity-dusting:not([data-dust-ready="true"]) .poster-button,
+.hero-poster.infinity-dusting:not([data-dust-ready="true"]) {
+  animation: infinity-gentle-fade 2.8s ease-in forwards;
+}
+.infinity-dusting[data-dust-ready="true"] .poster-button,
+.hero-poster.infinity-dusting[data-dust-ready="true"] {
+  opacity: 0 !important;
+}
+.infinity-vacant {
+  visibility: hidden !important;
+  pointer-events: none;
+  animation: none !important;
 }
 .snap-atmosphere {
   position: fixed;
@@ -359,48 +356,19 @@
     opacity: 0;
   }
 }
-.marvel-opening {
+.opening-audio-toggle {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 356px;
-  max-width: calc(100vw - 40px);
-  z-index: 55;
+  bottom: 22px;
+  left: 22px;
+  z-index: 65;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
   border: 1px solid #ffffff20;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #100c11f5;
-  box-shadow: 0 20px 80px #000b;
-  animation: relic-arrive 0.5s ease-out;
-}
-.opening-caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 7px 8px 7px 14px;
-  font-size: 10px;
-  color: #e4c8c9;
-}
-.opening-caption .icon-button {
-  width: 28px;
-  height: 28px;
-}
-.marvel-opening iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16/9;
-  min-height: 200px;
-  border: 0;
-}
-.opening-status {
-  padding: 10px 14px;
-  color: #a99aa7;
-  font-size: 9px;
-}
-.opening-status button {
-  display: flex;
-  align-items: center;
-  gap: 7px;
+  border-radius: 50%;
+  background: #100c11e6;
+  color: #d7c6d0;
 }
 @media (max-width: 600px) {
   .infinity-dialog {
@@ -429,10 +397,9 @@
   .gem-social {
     right: 6%;
   }
-  .marvel-opening {
-    width: 356px;
-    left: 12px;
-    bottom: 12px;
+  .opening-audio-toggle {
+    left: 14px;
+    bottom: 14px;
   }
   .gem-archive {
     right: 3%;
@@ -455,8 +422,7 @@
     transition: none;
   }
   .infinity-dialog,
-  .infinity-notice,
-  .marvel-opening {
+  .infinity-notice {
     animation: none;
   }
 }

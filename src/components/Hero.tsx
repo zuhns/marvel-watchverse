@@ -70,19 +70,22 @@ export function Hero({
         </div>
       </div>
       <div className="hero-collage" aria-label="Le storie del multiverso">
-        {selections.map((t, i) =>
-          infinity.phase === "snapped" && infinity.targets.has(t.id) ? null : (
-            <button
-              key={t.id}
-              data-infinity-title={t.id}
-              className={`hero-poster hero-poster-${i} ${infinity.phase === "dusting" && infinity.targets.has(t.id) ? "infinity-dusting" : ""}`}
-              onClick={() => onOpen(t)}
-              aria-label={`Dettagli: ${t.title}`}
-            >
-              <PosterImage title={t} priority />
-            </button>
-          ),
-        )}
+        {selections.map((t, i) => (
+          <button
+            key={t.id}
+            data-infinity-title={t.id}
+            inert={infinity.phase !== "idle" && infinity.targets.has(t.id)}
+            aria-hidden={
+              (infinity.phase === "snapped" && infinity.targets.has(t.id)) ||
+              undefined
+            }
+            className={`hero-poster hero-poster-${i} ${infinity.phase === "dusting" && infinity.targets.has(t.id) ? "infinity-dusting" : ""} ${infinity.phase === "snapped" && infinity.targets.has(t.id) ? "infinity-vacant" : ""}`}
+            onClick={() => onOpen(t)}
+            aria-label={`Dettagli: ${t.title}`}
+          >
+            <PosterImage title={t} priority />
+          </button>
+        ))}
         <div className="collage-caption">
           <span className="live-dot" /> IL MULTIVERSO TI ASPETTA
         </div>

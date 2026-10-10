@@ -39,9 +39,7 @@ export function Archive({
   const remaining = filtered.filter(
     (t) => infinity.phase !== "snapped" || !infinity.targets.has(t.id),
   );
-  const show = filtered
-    .slice(0, limit)
-    .filter((t) => infinity.phase !== "snapped" || !infinity.targets.has(t.id));
+  const show = filtered.slice(0, limit);
   const groups =
     p.order === "chronology"
       ? [...new Set(show.map((t) => t.timelineGroup))].map((name) => ({

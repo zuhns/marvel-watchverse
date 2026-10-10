@@ -273,12 +273,15 @@ export function InfinityProvider({ children }: { children: ReactNode }) {
     }
     const dissolve = () => {
       setTargets(snapTargets(movieIds, visibleMovies()));
-      finishTimer.current = setTimeout(() => {
-        setPhase("snapped");
-        setNotice(
-          "L’equilibrio è compiuto. Puoi riportare indietro tutte le storie.",
-        );
-      }, 3300);
+      finishTimer.current = setTimeout(
+        () => {
+          setPhase("snapped");
+          setNotice(
+            "L’equilibrio è compiuto. Puoi riportare indietro tutte le storie.",
+          );
+        },
+        matchMedia("(prefers-reduced-motion: reduce)").matches ? 450 : 5400,
+      );
     };
     if (visibleMovies().length) dissolve();
     else {
